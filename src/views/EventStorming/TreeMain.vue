@@ -22,7 +22,7 @@
                             <v-card outlined class="margin-test" v-for="(item,idx) in items" :to="item.to">
                                 <v-list-item three-line style="padding-left: 0">
                                     <v-img
-                                            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+                                            :src="imgSrc(item)"
                                             height="110px"
                                             max-width="110px"
                                             style="margin-right: 20px;"
@@ -56,8 +56,10 @@
                                     <v-list-item-avatar
                                             tile
                                             size="90"
-                                            color="grey"
-                                    ></v-list-item-avatar>
+
+                                    >
+                                        <img :src="imgSrc(item)">
+                                    </v-list-item-avatar>
 
                                     <v-list-item-content>
                                         <div class="overline mb-4">Content {{idx + 1}}</div>
@@ -89,6 +91,28 @@
         },
         methods: {
             // route
+            imgSrc(item) {
+                console.log(item.to)
+                var me = this
+                var menu1 = this.$route.params.menu1;
+                var menu2 = this.$route.params.menu2;
+                var tmp = item.to.split('/')
+                var src = '/contents';
+
+                console.log(tmp)
+
+                for(var i = 1; i < tmp.length; i++) {
+                    if(i==1) {
+                        src = src.concat('/' + this.value['menuNumber'][this.$route.params.menu1]+ '_' + menu1 )
+                     } else {
+                        src = src.concat('/' + tmp[i])
+                    }
+                }
+
+                src = src.concat('.png')
+                console.log(src)
+                return src
+            }
         },
         computed: {
             breadCrumb() {
@@ -149,7 +173,6 @@
                     })
                 }
             })
-
 
             this.$http.get(`/contents/${this.value['menuNumber'][this.$route.params.menu1]}_${menu1}/${menu2}/index.md`).then(function (result) {
                 me.md = result.data

@@ -124,29 +124,30 @@
             var tempRootPathList = []
             console.log(templateFiles.keys())
             templateFiles.keys().forEach(function (tempFiles) {
-                var tempFileStructure = tempFiles.replace('./', '').split('/')
-                // 최상위 메뉴 초기화
-                if (!tempRootPathList[tempFileStructure[0].split('_')[1].toLowerCase()]) {
-                    // var numberTmp = []
-                    // numberTmp[tempFileStructure[0].split('_')[1]] =
-                    me.menuNumber[tempFileStructure[0].split('_')[1].toLowerCase()] = tempFileStructure[0].split('_')[0]
-                    tempRootPathList[tempFileStructure[0].split('_')[1].toLowerCase()] = []
-                }
-
-                // 최상위 메뉴에 넣어줌
-                if (tempFileStructure[1].includes('.md')) {
-                    tempRootPathList[tempFileStructure[0].split('_')[1].toLowerCase()].push(tempFileStructure[1])
-                } else {
-                    // 2단계 메뉴 초기화
-                    if (!tempRootPathList[tempFileStructure[0].split('_')[1].toLowerCase()][tempFileStructure[1]]) {
-                        tempRootPathList[tempFileStructure[0].split('_')[1].toLowerCase()][tempFileStructure[1]] = []
+                if(tempFiles.includes('.md')) {
+                    var tempFileStructure = tempFiles.replace('./', '').split('/')
+                    // 최상위 메뉴 초기화
+                    if (!tempRootPathList[tempFileStructure[0].split('_')[1].toLowerCase()]) {
+                        // var numberTmp = []
+                        // numberTmp[tempFileStructure[0].split('_')[1]] =
+                        me.menuNumber[tempFileStructure[0].split('_')[1].toLowerCase()] = tempFileStructure[0].split('_')[0]
+                        tempRootPathList[tempFileStructure[0].split('_')[1].toLowerCase()] = []
                     }
 
-                    // 2단계 메뉴 넣어줌
+                    // 최상위 메뉴에 넣어줌
+                    if (tempFileStructure[1].includes('.md')) {
+                        tempRootPathList[tempFileStructure[0].split('_')[1].toLowerCase()].push(tempFileStructure[1])
+                    } else {
+                        // 2단계 메뉴 초기화
+                        if (!tempRootPathList[tempFileStructure[0].split('_')[1].toLowerCase()][tempFileStructure[1]]) {
+                            tempRootPathList[tempFileStructure[0].split('_')[1].toLowerCase()][tempFileStructure[1]] = []
+                        }
+
+                        // 2단계 메뉴 넣어줌
                         tempRootPathList[tempFileStructure[0].split('_')[1].toLowerCase()][tempFileStructure[1]].push(tempFileStructure[2])
 
+                    }
                 }
-
             })
 
             this.tempRootPathList = tempRootPathList
