@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "aae5c18e3e616e4724ecce951d6fba2c",
+    "revision": "60e901dae3c1eba1f542d9b3d3dfcd5e",
     "url": "/app.html"
   },
   {
@@ -180,7 +180,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/04_Resources/01_MSA 관련 자료.md"
   },
   {
-    "revision": "c815ec7ee9f962bad38a9cae49938650",
+    "revision": "4966cd6ed1cadb9ea057394df788e6c3",
     "url": "/contents/04_Resources/02_MSA 추천도서.md"
   },
   {
@@ -192,7 +192,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_Community/Overview.md"
   },
   {
-    "revision": "55dc63504f8190b026bf",
+    "revision": "74d0da955a2601920ece",
     "url": "/css/app.68a75cad.css"
   },
   {
@@ -880,8 +880,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/media/image9.png"
   },
   {
-    "revision": "55dc63504f8190b026bf",
-    "url": "/js/app.f09e4647.js"
+    "revision": "74d0da955a2601920ece",
+    "url": "/js/app.504c07fe.js"
   },
   {
     "revision": "c82492cd1ca98d9d163e",

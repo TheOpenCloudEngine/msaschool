@@ -1,21 +1,5 @@
 # MSA 분석기법 – Sb DDD2(Domain Driven Design)
 
-``` js
-function $initHighlight(block, cls) {
-  try {
-    if (cls.search(/\bno\-highlight\b/) != -1)
-      return process(block, true, 0x0F) +
-             ` class="${cls}"`;
-  } catch (e) {
-    /* handle exception */
-  }
-  for (var i = 0 / 2; i < classes.length; i++) {
-    if (checkCondition(classes[i]) === undefined)
-      console.log('undefined');
-  }
-}
-```
-
 ## DDD 개요
 
  소프트웨어의 개발이 어려운 이유는 업무의 복잡성에서 시작된다. 개발자가 소프트웨어를 구현하는 복잡성보다 소프트웨어로 
