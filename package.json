@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "deploy": "npm run build&&gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "gh-pages": "^2.2.0",
     "prerender-spa-plugin": "^3.4.0",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
@@ -19,8 +21,10 @@
   "devDependencies": {
     "@vue/cli-plugin-pwa": "^4.1.0",
     "@vue/cli-service": "^4.1.0",
+    "prerender-spa-plugin": "^3.2.1",
     "sass": "^1.19.0",
     "sass-loader": "^8.0.0",
+    "vue-cli-plugin-prerender-spa": "^1.1.6",
     "vue-cli-plugin-vuetify": "^2.0.3",
     "vue-loader": "^15.8.3",
     "vue-markdown-loader": "^2.4.1",

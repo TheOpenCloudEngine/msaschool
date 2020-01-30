@@ -7,6 +7,7 @@
         </v-breadcrumbs>
         <v-divider></v-divider>
         <vue-markdown
+                class="markdown-body"
                 :source="md"
         >
         </vue-markdown>

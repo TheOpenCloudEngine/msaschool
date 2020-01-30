@@ -13,13 +13,47 @@
                 <v-responsive
                         width="100%"
                 >
+                    <v-divider style="margin-bottom: 10px;"></v-divider>
+
                     <vue-markdown
+                            class="markdown-body"
                             :source="md"
                     >
+                        <!--<article-->
+                                <!--class="markdown-body"-->
+                        <!--&gt; {{md}}</article>-->
                     </vue-markdown>
+                </v-responsive>
+                <v-responsive
+                        width="100%"
+                >
+                    <v-divider style="margin-bottom: 10px;"></v-divider>
+                    Explore More
+                    <v-row align="center" justify="center">
+                        <v-col v-for="(item,idx) in items"
+                               style="margin: 10px;"
+                               cols="12"
+                               sm="3"
+                               v-if="idx < 3"
+                        >
+                            <v-card outlined class="margin-test" :to="item.to">
+                                <v-list-item three-line>
+                                    <v-list-item-avatar
+                                            tile
+                                            size="90"
+                                            color="grey"
+                                    ></v-list-item-avatar>
 
-                    <v-divider></v-divider>
-                    <a>Explore More</a>
+                                    <v-list-item-content>
+                                        <div class="overline mb-4">Content {{idx + 1}}</div>
+                                        <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
+                                        <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully
+                                        </v-list-item-subtitle>
+                                    </v-list-item-content>
+                                </v-list-item>
+                            </v-card>
+                        </v-col>
+                    </v-row>
                 </v-responsive>
             </template>
         </v-row>
@@ -34,7 +68,8 @@
         },
         data() {
             return {
-                md: ''
+                md: '',
+                items: []
             }
         },
         computed: {
@@ -87,8 +122,17 @@
             var me = this;
             let menu1 = this.$route.params.menu1;
 
+            this.value.items.forEach(function (item) {
+                if (item.to.includes(menu1) && !item.to.includes('overview')) {
+                    console.log(console.log(item))
+                    me.items.push(item)
+                }
+            })
+
             this.$http.get(`/contents/${this.value['menuNumber'][this.$route.params.menu1]}_${menu1}/Overview.md`).then(function (result) {
-                me.md = result.data
+                me.$nextTick(function () {
+                    me.md = result.data
+                })
             })
         }
     }
