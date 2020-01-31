@@ -189,13 +189,13 @@
         <lastmod>2020-01-31T08:54:00+00:00</lastmod>
         <priority>0.80</priority>
     </url>
-    <url>
-        <loc>
-            https://msaschool.io/bizdevops/04_integration/02_%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%20&%20Saga
-        </loc>
-        <lastmod>2020-01-31T08:54:00+00:00</lastmod>
-        <priority>0.80</priority>
-    </url>
+    <!--<url>-->
+        <!--<loc>-->
+            <!--https://msaschool.io/bizdevops/04_integration/02_%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98%20&%20Saga-->
+        <!--</loc>-->
+        <!--<lastmod>2020-01-31T08:54:00+00:00</lastmod>-->
+        <!--<priority>0.80</priority>-->
+    <!--</url>-->
     <url>
         <loc>
             https://msaschool.io/bizdevops/04_integration/03_Data%20Projection
