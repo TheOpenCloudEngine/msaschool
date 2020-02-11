@@ -10,10 +10,10 @@ const routes = [
     {
         path: '/',
         name: 'home',
-        redirect: '/introduction/overview'
+        redirect: '/introduction/01_MSASchool%20이란'
     },
     {
-        path: '/:menu1/overview',
+        path: '/:menu1/01_*',
         name: 'overview',
         component: Overview,
     },

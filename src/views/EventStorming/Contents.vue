@@ -1,5 +1,5 @@
 <template>
-    <v-container class="grey lighten-5">
+    <v-container>
         <v-breadcrumbs :items="breadCrumb" large>
             <template v-slot:divider>
                 <v-icon>mdi-chevron-right</v-icon>
@@ -68,7 +68,7 @@
                         disabled = true;
                     }
                     // console.log(href)
-                    if(text.includes('-')) {
+                    if (text.includes('-')) {
                         text = text.replace('-', '/')
                     }
                     var breadTmp = {
@@ -76,7 +76,6 @@
                         disabled: disabled,
                         href: href
                     }
-                    console.log(breadTmp)
                     tmp.push(breadTmp)
                     // this.$route.params[key]
                 })
@@ -90,12 +89,17 @@
             let menu1 = this.$route.params.menu1;
             let menu2 = this.$route.params.menu2;
             let menu3 = this.$route.params.menu3;
+
+            menu1 = menu1.substring(0, 1).toUpperCase() + menu1.substring(1)
+            menu2 = menu2.substring(0, 1).toUpperCase() + menu2.substring(1)
+
+
             if (menu3) {
-                this.$http.get(`/contents/${this.value['menuNumber'][this.$route.params.menu1]}_${menu1}/${menu2}/${menu3}.md`).then(function (result) {
+                this.$http.get(`/contents/${this.value['menuNumber'][this.$route.params.menu1]}_${menu1.substring(0, 1).toUpperCase() + menu1.substring(1)}/${menu2}/${menu3}.md`).then(function (result) {
                     me.md = result.data
                 })
             } else {
-                this.$http.get(`/contents/${this.value['menuNumber'][this.$route.params.menu1]}_${menu1}/${menu2}.md`).then(function (result) {
+                this.$http.get(`/contents/${this.value['menuNumber'][this.$route.params.menu1]}_${menu1.substring(0, 1).toUpperCase() + menu1.substring(1)}/${menu2}.md`).then(function (result) {
                     me.md = result.data
                 })
             }

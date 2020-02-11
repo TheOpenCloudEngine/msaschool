@@ -1,5 +1,5 @@
 <template>
-    <v-container class="grey lighten-5">
+    <v-container>
         <v-row no-gutters>
             <template>
                 <v-col>
@@ -13,22 +13,25 @@
                         width="100%"
                 >
                     <v-divider></v-divider>
-                    <vue-markdown
-                            :source="md"
-                    >
-                    </vue-markdown>
+                    <v-col cols="6">
+                        <vue-markdown
+                                class="markdown-body"
+                                :source="md"
+                        >
+                        </vue-markdown>
+                    </v-col>
                     <v-row>
                         <v-col cols="12">
                             <v-card outlined class="margin-test" v-for="(item,idx) in items" :to="item.to">
                                 <v-list-item three-line style="padding-left: 0">
                                     <v-img
                                             :src="imgSrc(item)"
-                                            height="110px"
-                                            max-width="110px"
+                                            height="120px"
+                                            max-width="120px"
                                             style="margin-right: 20px;"
                                     ></v-img>
                                     <v-list-item-content>
-                                        <div class="overline mb-4">Content {{idx +1}}</div>
+                                        <div class="overline mb-1">Content {{idx +1}}</div>
                                         <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
                                         <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully
                                         </v-list-item-subtitle>
@@ -42,33 +45,30 @@
                 <v-responsive
                         width="100%"
                 >
-                    <v-divider style="margin-bottom: 10px;"></v-divider>
-                    Explore More
-                    <v-row align="center" justify="center">
+                    <!--<v-divider></v-divider>-->
+                    <div class="em-title col">Explore More</div>
+                    <v-row align="center" justify="center" style="max-width:1050px;margin:0 auto;">
                         <v-col v-for="(item,idx) in items"
-                               style="margin: 10px;"
+                               style="margin:10px;overflow-x:hidden;"
                                cols="12"
                                sm="3"
                                v-if="idx < 3"
                         >
-                            <v-card outlined class="margin-test" :to="item.to">
-                                <v-list-item three-line>
-                                    <v-list-item-avatar
-                                            tile
-                                            size="90"
-
-                                    >
-                                        <img :src="imgSrc(item)">
-                                    </v-list-item-avatar>
-
-                                    <v-list-item-content>
-                                        <div class="overline mb-4">Content {{idx + 1}}</div>
-                                        <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
-                                        <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully
-                                        </v-list-item-subtitle>
-                                    </v-list-item-content>
-                                </v-list-item>
-                            </v-card>
+                            <router-link style="text-decoration:none" :to="item.to">
+                                <v-list-item-avatar
+                                        tile
+                                        width="100%"
+                                        height="auto"
+                                >
+                                    <img :src="imgSrc(item)" class="img">
+                                </v-list-item-avatar>
+                                <v-list-item-content>
+                                    <div class="overline mb-1">Content {{idx + 1}}</div>
+                                    <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
+                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully
+                                    </v-list-item-subtitle>
+                                </v-list-item-content>
+                            </router-link>
                         </v-col>
                     </v-row>
                 </v-responsive>
@@ -92,25 +92,40 @@
         methods: {
             // route
             imgSrc(item) {
-                console.log(item.to)
                 var me = this
                 var menu1 = this.$route.params.menu1;
                 var menu2 = this.$route.params.menu2;
+
+                menu1 = menu1.substring(0, 1).toUpperCase() + menu1.substring(1)
+                menu2 = menu2.substring(0, 1).toUpperCase() + menu2.substring(1)
                 var tmp = item.to.split('/')
                 var src = '/contents';
 
-                console.log(tmp)
 
-                for(var i = 1; i < tmp.length; i++) {
-                    if(i==1) {
-                        src = src.concat('/' + this.value['menuNumber'][this.$route.params.menu1]+ '_' + menu1 )
-                     } else {
-                        src = src.concat('/' + tmp[i])
+                for (var i = 1; i < tmp.length; i++) {
+                    if (i == 1) {
+                        src = src.concat('/' + this.value['menuNumber'][this.$route.params.menu1] + '_' + menu1.substring(0, 1).toUpperCase() + menu1.substring(1))
+                    } else {
+                        var tmpSrc = ''
+                        console.log(tmp[i])
+                        if (tmp[i].includes('_')) {
+                            var tmpSplit = tmp[i].split('_')
+                            for (var y = 0; y < tmpSplit.length; y++) {
+                                if (y == 0) {
+                                    tmpSrc = tmpSrc.concat(tmpSplit[y])
+                                } else {
+                                    tmpSrc = tmpSrc.concat('_' + tmpSplit[y].substring(0, 1).toUpperCase() + tmpSplit[y].substring(1))
+
+                                    if (y == tmpSplit.length - 1) {
+                                        src = src.concat('/' + tmpSrc)
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
 
                 src = src.concat('.png')
-                console.log(src)
                 return src
             }
         },
@@ -129,7 +144,6 @@
                         text = me.$route.params[key].split('_')[1]
 
                         for (var i = 0; i < idx + 1; i++) {
-                            console.log(`/${me.$route.params[Object.keys(me.$route.params)[i]]}`);
                             if (i == 1) {
                                 href = href.concat(`/${me.$route.params[Object.keys(me.$route.params)[i]]}/index`);
                             } else {
@@ -145,7 +159,6 @@
                     if (idx == me.$route.params.length - 1) {
                         disabled = true;
                     }
-                    console.log(href)
                     var breadTmp = {
                         text: text,
                         disabled: disabled,
@@ -162,9 +175,11 @@
         },
         mounted() {
             var me = this;
-            console.log(this.value)
             var menu1 = this.$route.params.menu1;
             var menu2 = this.$route.params.menu2;
+
+            menu1 = menu1.substring(0, 1).toUpperCase() + menu1.substring(1)
+            menu2 = menu2.substring(0, 1).toUpperCase() + menu2.substring(1)
 
             this.value.items.forEach(function (item) {
                 if (item.route == menu2) {
@@ -174,7 +189,7 @@
                 }
             })
 
-            this.$http.get(`/contents/${this.value['menuNumber'][this.$route.params.menu1]}_${menu1}/${menu2}/index.md`).then(function (result) {
+            this.$http.get(`/contents/${this.value['menuNumber'][this.$route.params.menu1]}_${menu1.substring(0, 1).toUpperCase() + menu1.substring(1)}/${menu2}/index.md`).then(function (result) {
                 me.md = result.data
             })
         }
@@ -184,5 +199,8 @@
 <style scoped>
     .margin-test {
         margin-bottom: 10px;
+    }
+    li a {
+        text-decoration: none;
     }
 </style>

@@ -1,60 +1,85 @@
 <template>
-    <v-container class="grey lighten-5">
+    <v-container>
         <v-row no-gutters>
             <template>
-                <v-col>
-                    <v-breadcrumbs :items="breadCrumb" large>
-                        <template v-slot:divider>
-                            <v-icon>mdi-chevron-right</v-icon>
-                        </template>
-                    </v-breadcrumbs>
-                </v-col>
-
                 <v-responsive
                         width="100%"
                 >
-                    <v-divider style="margin-bottom: 10px;"></v-divider>
+                    <v-divider></v-divider>
 
-                    <vue-markdown
-                            class="markdown-body"
-                            :source="md"
-                    >
-                        <!--<article-->
-                                <!--class="markdown-body"-->
-                        <!--&gt; {{md}}</article>-->
-                    </vue-markdown>
+                    <!--                    <v-row class="hero-section">-->
+                    <v-row dense>
+                        <v-col cols="12">
+                            <vue-markdown
+                                    class="markdown-body"
+                                    :source="md"
+                            >
+                            </vue-markdown>
+                        </v-col>
+                    </v-row>
+
                 </v-responsive>
                 <v-responsive
                         width="100%"
                 >
-                    <v-divider style="margin-bottom: 10px;"></v-divider>
-                    Explore More
-                    <v-row align="center" justify="center">
+                    <!--<v-divider></v-divider>-->
+                    <div class="em-title col">Explore More</div>
+                    <v-row align="center" justify="center" style="max-width:1050px;margin:0 auto;">
                         <v-col v-for="(item,idx) in items"
-                               style="margin: 10px;"
+                               style="margin:0px;overflow-x:hidden;"
                                cols="12"
                                sm="3"
                                v-if="idx < 3"
                         >
-                            <v-card outlined class="margin-test" :to="item.to">
-                                <v-list-item three-line>
-                                    <v-list-item-avatar
-                                            tile
-                                            size="90"
-                                            color="grey"
-                                    >
-                                        <img :src="imgSrc(item)">
-                                    </v-list-item-avatar>
+                            <router-link style="text-decoration:none" v-if="item.children" :to="item.route +'/index'">
+                                <v-list-item-avatar
+                                        tile
+                                        width="100%"
+                                        height="auto"
+                                >
+                                    <img :src="imgSrc(item)" class="img">
 
-                                    <v-list-item-content>
-                                        <div class="overline mb-4">Content {{idx + 1}}</div>
-                                        <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
-                                        <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully
-                                        </v-list-item-subtitle>
-                                    </v-list-item-content>
-                                </v-list-item>
-                            </v-card>
+                                    <!-- BizDevOps Explore More 이미지 -->
+                                    <!--
+                                        <img src="/contents/03_method-1.png" class="img" alt="Analysis">
+                                        <img src="/contents/03_method-2.png" class="img" alt="Design">
+                                        <img src="/contents/03_method-3.png" class="img" alt="Implementation">
+                                     -->
+
+                                </v-list-item-avatar>
+                                <v-list-item-content>
+                                    <div class="overline mb-1">Content {{idx + 1}}</div>
+                                    <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
+                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully
+                                    </v-list-item-subtitle>
+                                </v-list-item-content>
+                            </router-link>
+                            <router-link style="text-decoration:none" v-else :to="item.to">
+
+                                <v-list-item-avatar
+                                        tile
+                                        width="100%"
+                                        height="auto"
+                                >
+                                    <img :src="imgSrc(item)" class="img">
+
+                                    <!-- BizDevOps Explore More 이미지 -->
+                                    <!--
+                                        <img src="/contents/03_method-1.png" class="img" alt="Analysis">
+                                        <img src="/contents/03_method-2.png" class="img" alt="Design">
+                                        <img src="/contents/03_method-3.png" class="img" alt="Implementation">
+                                     -->
+
+                                </v-list-item-avatar>
+                                <v-list-item-content>
+                                    <div class="overline mb-1">Content {{idx + 1}}</div>
+                                    <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
+                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully
+                                    </v-list-item-subtitle>
+                                </v-list-item-content>
+                            </router-link>
                         </v-col>
+
                     </v-row>
                 </v-responsive>
             </template>
@@ -85,11 +110,25 @@
 
                 console.log(tmp)
 
-                for(var i = 1; i < tmp.length; i++) {
-                    if(i==1) {
-                        src = src.concat('/' + this.value['menuNumber'][this.$route.params.menu1]+ '_' + menu1 )
+                for (var i = 1; i < tmp.length; i++) {
+                    if (i == 1) {
+                        src = src.concat('/' + this.value['menuNumber'][this.$route.params.menu1] + '_' + menu1.substring(0, 1).toUpperCase() + menu1.substring(1))
                     } else {
-                        src = src.concat('/' + tmp[i])
+                        var tmpSrc = ''
+                        if (i == tmp.length - 1) {
+                            var tmpSplit = tmp[i].split('_')
+                            for (var y = 0; y < tmpSplit.length; y++) {
+                                if (y == 0) {
+                                    tmpSrc = tmpSrc.concat(tmpSplit[y])
+                                } else {
+                                    tmpSrc = tmpSrc.concat('_' + tmpSplit[y].substring(0, 1).toUpperCase() + tmpSplit[y].substring(1))
+
+                                    if (y == tmpSplit.length - 1) {
+                                        src = src.concat('/' + tmpSrc)
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -147,15 +186,19 @@
         mounted() {
             var me = this;
             let menu1 = this.$route.params.menu1;
+            let menu2 = this.$route.params.pathMatch;
+            console.log(menu2)
+            menu2 = '01_' + menu2
+
 
             this.value.items.forEach(function (item) {
                 if (item.to.includes(menu1) && !item.to.includes('overview')) {
-                    console.log(console.log(item))
+                    console.log(item)
                     me.items.push(item)
                 }
             })
 
-            this.$http.get(`/contents/${this.value['menuNumber'][this.$route.params.menu1]}_${menu1}/Overview.md`).then(function (result) {
+            this.$http.get(`/contents/${this.value['menuNumber'][this.$route.params.menu1]}_${menu1.substring(0, 1).toUpperCase() + menu1.substring(1)}/${menu2}.md`).then(function (result) {
                 me.$nextTick(function () {
                     me.md = result.data
                 })
@@ -165,5 +208,8 @@
 </script>
 
 <style scoped>
+    li a {
+        text-decoration: none;
+    }
 
 </style>

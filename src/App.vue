@@ -1,21 +1,23 @@
-<template>
+<template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
     <v-app id="inspire">
         <v-navigation-drawer
                 v-model="drawer"
-                :clipped="$vuetify.breakpoint.lgAndUp"
+                hide-overlay
                 app
+                clipped
                 color="#f5f5f5"
         >
             <v-list shaped>
                 <template v-for="item in items">
-                    <v-list-group
-                            :eager="true"
-                            v-if="item.children"
-                            :key="item.text"
-                            :to="item.to"
-                            :value="item.model"
-                            @click="route(item)"
-                            no-action
+                    <v-list-group mandatory
+                                  :eager="true"
+                                  v-if="item.children"
+                                  :key="item.text"
+                                  :to="item.to"
+                                  :href="item.href"
+                                  :value="item.model"
+                                  @click="route(item)"
+                                  no-action
                     >
                         <template v-slot:activator>
                             <v-list-item-content :to="item.to"
@@ -38,13 +40,15 @@
                             </v-list-item-content>
                         </v-list-item>
                     </v-list-group>
+
                     <v-list-item
                             v-else
                             link
-                            v-model="item.model"
+                            :value="item.model"
                             :key="item.text"
                             :to="item.to"
-                            color="primary"
+                            :href="item.href"
+                            color="#4527A0"
                             @click="deselectAll"
                     >
                         <v-list-item-content>
@@ -60,20 +64,24 @@
         <v-app-bar
                 :clipped-left="$vuetify.breakpoint.lgAndUp"
                 app
-                color="#f5f5f5"
-                height="80"
+                color="#f3f3f3"
+                height="84"
         >
             <v-app-bar-nav-icon @click.stop="drawer = !drawer"/>
             <v-toolbar-title
                     style="width: 300px"
                     class="ml-0 pl-4"
             >
-                <v-img width="80%" src="/img/icons/msa_school.png"></v-img>
+                <span class="logo">
+                <v-img max-width="173px" max-height="40px" min-width="170px" min-height="32px"
+                       src="/img/icons/msa_school.png"
+                       onclick="window.location.href='/'"></v-img>
+                </span>
             </v-toolbar-title>
             <v-tabs
                     v-model="tab"
                     background-color="transparent"
-                    color="basil"
+                    color="#673ab7"
                     style="width: 300px"
             >
                 <v-tab
@@ -95,6 +103,10 @@
                 <router-view :key="$route.fullPath" v-model="lists"></router-view>
             </v-container>
         </v-content>
+
+        <v-footer inset>
+            Copyright © <span>uEngine.</span> All rights reserved.
+        </v-footer>
     </v-app>
 </template>
 
@@ -107,15 +119,7 @@
         beforeUpdate() {
             var me = this
             var id = this.$route.params.menu1
-            this.$nextTick(function () {
-                if (id == 'bizdevops') {
-                    me.tab = '/bizdevops/overview'
-                } else if (id == 'eventstorming') {
-                    me.tab = '/resources/overview'
-                } else if (id == 'cloudplatform') {
-                    me.tab = '/cloudplatform/overview'
-                }
-            })
+
         },
         created() {
             var me = this
@@ -124,7 +128,7 @@
             var tempRootPathList = []
             console.log(templateFiles.keys())
             templateFiles.keys().forEach(function (tempFiles) {
-                if(tempFiles.includes('.md')) {
+                if (tempFiles.includes('.md')) {
                     var tempFileStructure = tempFiles.replace('./', '').split('/')
                     // 최상위 메뉴 초기화
                     if (!tempRootPathList[tempFileStructure[0].split('_')[1].toLowerCase()]) {
@@ -156,7 +160,7 @@
         computed: {
             lists: function () {
                 var me = this
-                return { menuNumber: me.menuNumber, items: me.items }
+                return {menuNumber: me.menuNumber, items: me.items}
             },
             items: function () {
                 var id = this.$route.params.menu1
@@ -164,9 +168,6 @@
                     var fileList = this.tempRootPathList[id.toLowerCase()];
                     var result = [];
 
-                    result.push(
-                        {text: '00_Overview', to: '/' + id + '/overview'}
-                    )
                     if (fileList) {
                         var keys = Object.keys(fileList);
 
@@ -183,9 +184,12 @@
                                             }
                                         })
                                         var text = data.split('_')[1].replace('.md', '');
-                                        if(text.includes('-')) {
-                                            text= text.replace('-', '/')
+                                        if (text.includes('--')) {
+                                            text = text.replace('--', '&')
+                                        } else if (text.includes('-')) {
+                                            text = text.replace('-', '/')
                                         }
+
                                         if (!valid) {
                                             var ttt = {
                                                 text: key,
@@ -218,23 +222,24 @@
                                 })
                             } else {
                                 // 서브메뉴 없을 때
-                                if(!fileList[key].includes('Overview')) {
-                                    var tmp = {
-                                        text: fileList[key].replace('.md', ''),
-                                        to: '/' + id + '/' + fileList[key].replace('.md', '').trim()
-                                    }
-                                    result.push(tmp)
+                                var tmp = {
+                                    text: fileList[key].replace('.md', ''),
+                                    to: '/' + id + '/' + fileList[key].replace('.md', '').trim()
                                 }
+                                result.push(tmp)
+
                             }
                         })
-                    }
-                    result.sort(function (a, b) {
-                        return a.text < b.text ? -1 : a.text > b.text ? 1 : 0;
-                    })
 
-                    result.forEach(function (item) {
-                        item.text = item.text.split('_')[1]
-                    })
+                        result.sort(function (a, b) {
+                            return a.text < b.text ? -1 : a.text > b.text ? 1 : 0;
+                        })
+
+                        result.forEach(function (item) {
+                            item.text = item.text.split('_')[1]
+                        })
+                    }
+
 
                     return result
                 }
@@ -244,8 +249,23 @@
                 // var id = this.$route.params.menu1
                 var result = [];
                 Object.keys(this.tempRootPathList).forEach(function (item) {
-                    let tmp = {name: item, to: `/${item}/overview`, model: true}
-                    result.push(tmp)
+                    if (item == 'introduction') {
+                        let tmp = {name: item, to: `/${item}/01_MSA School 이란`, model: true}
+                        result.push(tmp)
+                    } else if (item == 'planning') {
+                        let tmp = {name: item, to: `/${item}/01_MSA 최종목표`, model: true}
+                        result.push(tmp)
+                    } else if (item == 'bizdevops') {
+                        let tmp = {name: item, to: `/${item}/01_BizDevOps 개요`, model: true}
+                        result.push(tmp)
+                    } else if (item == 'library') {
+                        let tmp = {name: item, to: `/${item}/02_msa 방법론/index`, model: true}
+                        result.push(tmp)
+                    } else if (item == 'community') {
+                        let tmp = {name: item, to: `/${item}/01_MSASchool 이란`, model: true}
+                        result.push(tmp)
+                    }
+
                 })
                 return result
             }
