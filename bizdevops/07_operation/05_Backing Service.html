@@ -1,0 +1,712 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><!--[if IE]><link rel="icon" href="/favicon.ico"><![endif]--><title>MSA School</title><script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/github-gist.min.css"><link rel="stylesheet" href="/github-markdown.css"><script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js" defer></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"><script>hljs.initHighlightingOnLoad();</script><link rel="stylesheet" href="/cur.css"><link href="/css/app.ebb8c3aa.css" rel="preload" as="style"><link href="/css/chunk-vendors.998356c1.css" rel="preload" as="style"><link href="/js/app.b161d75b.js" rel="preload" as="script"><link href="/js/chunk-vendors.39e5a000.js" rel="preload" as="script"><link href="/css/chunk-vendors.998356c1.css" rel="stylesheet"><link href="/css/app.ebb8c3aa.css" rel="stylesheet"><link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#4DBA87"><meta name="apple-mobile-web-app-capable" content="no"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="msaschool"><link rel="apple-touch-icon" href="/img/icons/apple-touch-icon-152x152.png"><link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#4DBA87"><meta name="msapplication-TileImage" content="/img/icons/msapplication-icon-144x144.png"><meta name="msapplication-TileColor" content="#000000"><style type="text/css" id="vuetify-theme-stylesheet">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+.v-application .primary--text {
+  color: #1976d2 !important;
+  caret-color: #1976d2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff !important;
+  border-color: #c7fdff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff !important;
+  caret-color: #c7fdff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff !important;
+  border-color: #a8e0ff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff !important;
+  caret-color: #a8e0ff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff !important;
+  border-color: #8ac5ff !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff !important;
+  caret-color: #8ac5ff !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff !important;
+  border-color: #6aaaff !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff !important;
+  caret-color: #6aaaff !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef !important;
+  border-color: #488fef !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef !important;
+  caret-color: #488fef !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6 !important;
+  border-color: #005eb6 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6 !important;
+  caret-color: #005eb6 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b !important;
+  border-color: #00479b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b !important;
+  caret-color: #00479b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180 !important;
+  border-color: #003180 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180 !important;
+  caret-color: #003180 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67 !important;
+  border-color: #001e67 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67 !important;
+  caret-color: #001e67 !important;
+}
+.v-application .secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}
+.v-application .secondary--text {
+  color: #424242 !important;
+  caret-color: #424242 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1 !important;
+  border-color: #c1c1c1 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1 !important;
+  caret-color: #c1c1c1 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b !important;
+  border-color: #8b8b8b !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b !important;
+  caret-color: #8b8b8b !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272 !important;
+  border-color: #727272 !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272 !important;
+  caret-color: #727272 !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959 !important;
+  border-color: #595959 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959 !important;
+  caret-color: #595959 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c !important;
+  caret-color: #2c2c2c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717 !important;
+  border-color: #171717 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717 !important;
+  caret-color: #171717 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style></head><body><noscript><div>We're sorry but msaschool doesn't work properly without JavaScript enabled.<br>Please enable it to continue.</div></noscript><div data-app="true" class="v-application v-application--is-ltr theme--light" id="inspire"><div class="v-application--wrap"><nav class="v-navigation-drawer v-navigation-drawer--clipped v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--is-mobile theme--light" style="height: 100vh; top: 0px; transform: translateX(-100%); width: 256px; background-color: rgb(245, 245, 245); border-color: rgb(245, 245, 245);" data-booted="true"><div class="v-navigation-drawer__content"><div class="v-list v-sheet v-sheet--tile theme--light v-list--shaped"><a href="/bizdevops/01_BizDevOps 개요" class="v-list-item v-list-item--link theme--light" tabindex="0" style="color: rgb(69, 39, 160); caret-color: rgb(69, 39, 160);"><div class="v-list-item__content"><div class="v-list-item__title"> BizDevOps 개요 </div></div></a><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Analysis </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/02_analysis/01_관심사 분리" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 관심사 분리 </div></div></a><a href="/bizdevops/02_analysis/02_에자일 환경분석" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 에자일 환경분석 </div></div></a><a href="/bizdevops/02_analysis/03_모노리식의 한계" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 모노리식의 한계 </div></div></a><a href="/bizdevops/02_analysis/04_접근법과 분석패턴" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 접근법과 분석패턴 </div></div></a><a href="/bizdevops/02_analysis/05_DDD--도메인모델" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> DDD&amp;도메인모델 </div></div></a></div></div></div><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Design </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/03_design/01_EventStorming" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> EventStorming </div></div></a><a href="/bizdevops/03_design/02_EventStorming 설계도구" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> EventStorming 설계도구 </div></div></a><a href="/bizdevops/03_design/03_도구를 통한 MSA 설계" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 도구를 통한 MSA 설계 </div></div></a><a href="/bizdevops/03_design/04_CI-CD 설계" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> CI/CD 설계 </div></div></a><a href="/bizdevops/03_design/05_커스텀 템플릿 설계" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 커스텀 템플릿 설계 </div></div></a></div></div></div><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Implementation </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/04_implementation/01_Hexagonal Architecture" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Hexagonal Architecture </div></div></a><a href="/bizdevops/04_implementation/02_MSA Chassis" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> MSA Chassis </div></div></a><a href="/bizdevops/04_implementation/03_스티키 노트별 구현방안" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 스티키 노트별 구현방안 </div></div></a><a href="/bizdevops/04_implementation/04_모노리스 전환이슈" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 모노리스 전환이슈 </div></div></a><a href="/bizdevops/04_implementation/05_프론트엔드 서비스" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 프론트엔드 서비스 </div></div></a><a href="/bizdevops/04_implementation/06_백엔드 서비스" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 백엔드 서비스 </div></div></a></div></div></div><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Integration </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/05_integration/01_통합 패턴" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 통합 패턴 </div></div></a><a href="/bizdevops/05_integration/02_트랜잭션--Saga" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 트랜잭션&amp;Saga </div></div></a><a href="/bizdevops/05_integration/03_Data Projection" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Data Projection </div></div></a><a href="/bizdevops/05_integration/04_CQRS" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> CQRS </div></div></a></div></div></div><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Deployment </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/06_deployment/01_CI-CD" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> CI/CD </div></div></a><a href="/bizdevops/06_deployment/02_파이프라인" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 파이프라인 </div></div></a><a href="/bizdevops/06_deployment/03_배포전략" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 배포전략 </div></div></a></div></div></div><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Operation </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/07_operation/01_Operation 아키텍쳐" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Operation 아키텍쳐 </div></div></a><a href="/bizdevops/07_operation/02_API Gateway" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> API Gateway </div></div></a><a href="/bizdevops/07_operation/03_Service Mesh" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Service Mesh </div></div></a><a href="/bizdevops/07_operation/04_Container Management" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Container Management </div></div></a><a href="/bizdevops/07_operation/05_Backing Service" class="v-list-item--active v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Backing Service </div></div></a><a href="/bizdevops/07_operation/06_Telemetry" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Telemetry </div></div></a></div></div></div><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Cloud Platform </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/08_cloud platform/01_Google Cloud Platform" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Google Cloud Platform </div></div></a><a href="/bizdevops/08_cloud platform/02_MS Azure" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> MS Azure </div></div></a></div></div></div></div></div><div class="v-navigation-drawer__border"></div></nav><header class="v-sheet v-sheet--tile theme--light v-toolbar v-app-bar v-app-bar--fixed" style="height: 84px; margin-top: 0px; transform: translateY(0px); left: 0px; right: 0px; background-color: rgb(243, 243, 243); border-color: rgb(243, 243, 243);" data-booted="true"><div class="v-toolbar__content" style="height: 84px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light"></i></span></button><div class="v-toolbar__title ml-0 pl-4" style="width: 300px;"><span class="logo"><div class="v-responsive v-image" onclick="window.location.href='/'" style="min-height: 32px; min-width: 170px; max-height: 40px; max-width: 173px;"><div class="v-responsive__sizer" style="padding-bottom: 23.2258%;"></div><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-position: center center;"></div><div class="v-image__image v-image__image--cover fade-transition-enter fade-transition-enter-active" style="background-image: url(&quot;http://localhost:8000/img/icons/msa_school.png&quot;); background-position: center center;"></div><div class="v-responsive__content" style="width: 310px;"></div></div></span></div><div class="v-tabs theme--light" style="width: 300px;"><div role="tablist" class="v-item-group theme--light v-slide-group v-tabs-bar v-tabs-bar--is-mobile transparent" style="color: rgb(103, 58, 183); caret-color: rgb(103, 58, 183);" data-booted="true"><div class="v-slide-group__prev v-slide-group__prev--disabled"><!----></div><div class="v-slide-group__wrapper"><div class="v-slide-group__content v-tabs-bar__content"><div class="v-tabs-slider-wrapper" style="height: 2px; left: 0px; width: 0px;"><div class="v-tabs-slider"></div></div><a href="/introduction/01_MSA School 이란" class="v-tab" tabindex="0" aria-selected="true" role="tab"> introduction </a><a href="/planning/01_MSA 최종목표" class="v-tab" tabindex="0" aria-selected="false" role="tab"> planning </a><a href="/bizdevops/01_BizDevOps 개요" class="v-tab" tabindex="0" aria-selected="false" role="tab"> bizdevops </a><a href="/library/02_msa 방법론/index" class="v-tab" tabindex="0" aria-selected="false" role="tab"> library </a><a href="/community/01_MSASchool 이란" class="v-tab" tabindex="0" aria-selected="false" role="tab"> community </a></div></div></div></div><div class="spacer"></div><div class="v-responsive v-image" style="max-width: 100px; width: 100px; margin-top: 5px;"><div class="v-responsive__sizer" style="padding-bottom: 25.8442%;"></div><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-position: center center;"></div><div class="v-image__image v-image__image--cover fade-transition-enter fade-transition-enter-active" style="background-image: url(&quot;http://localhost:8000/img/icons/logo_uengine.png&quot;); background-position: center center;"></div><div class="v-responsive__content" style="width: 770px;"></div></div></div></header><main class="v-content" style="padding: 84px 0px 0px;" data-booted="true"><div class="v-content__wrap"><div class="container container--fluid"><div data-v-7f0f36b0="" class="container"><ul data-v-7f0f36b0="" class="v-breadcrumbs v-breadcrumbs--large theme--light"><li><a href="/bizdevops/overview" class="v-breadcrumbs__item">bizdevops</a></li><li class="v-breadcrumbs__divider"><i data-v-7f0f36b0="" aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-right theme--light"></i></li><li><a href="/bizdevops/07_operation/index" class="v-breadcrumbs__item">operation</a></li><li class="v-breadcrumbs__divider"><i data-v-7f0f36b0="" aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-right theme--light"></i></li><li><a href="/bizdevops/07_operation/05_Backing Service" class="v-breadcrumbs__item">Backing Service</a></li></ul><hr data-v-7f0f36b0="" role="separator" aria-orientation="horizontal" class="v-divider theme--light"><div data-v-7f0f36b0="" class="markdown-body"><h1>Backing Services</h1>
+<p>마이크로서비스에서 Backing Service는 메세지의 송신자와 수신자가 직접 통신하지 않고 메시지큐를 활용한 비동기 통신<br>
+프로토콜을 사용한다. 마이크로서비스간의 통신이 필요한 비즈니스의 경우 실시간으로 진행되도록 구성한 마이크로서비스들은<br>
+장애 발생, 트래픽 증가 또는 소스 반영 등의 이벤트가 발생할 경우 마이크로서비스 오케스트레이션을 진행하며 또다른<br>
+마이크로서비스를 신규 생성, 재생성 등의 작업을 수행하게 된다. 그래서 강결합 구조의 실시간 트랜잭션 기반의<br>
+서비스를 제공하면 트랜잭션이 끊어지기 때문에 서비스 요청을 보존할 수 없고 에러가 발생하게 된다… 그래서 서비스 영속성을<br>
+지속하기 위하여 메시지 큐를 활용하고 리소스와의 결합을 느슨하게 하여 언제든지 붙이거나 떼어낼 수 있도록 Backing<br>
+Service를 구성하여야 한다. 또한 마이크로서비스들간의 비동기 처리가 필요하거나 타 마이크로서비스의 데이터 접근이 빈번하여<br>
+API 호출 과다 발생 시에도 데이터 공유 혹은 데이터 대상 리포팅을 준실시간 동기화를 수행하도록 한다. 이 문서에서는<br>
+데이터베이스에 대해서는 다루지 않으나 마이크로서비스 설계시 반드시 데이터베이스와의 Backing<br>
+Service 구현도 고려되어야 한다.</p>
+<p><strong>Backing Service 패턴</strong></p>
+<p><strong>[point-to-point 아키텍처 패턴]</strong></p>
+<p><img src="/img/03_Bizdevops/07/05/image112.png" alt=""></p>
+<p>Point-to-point 패턴에서는 하나의 마이크로서비스가 다른 마이크로서비스의 호출이 필요한 경우 동기식 방식으로 직접<br>
+호출하지 않고 메시지큐로 메시지를 보내는 방식으로 통신을 한다. 메시지 큐로 보내진 메시지는 대기열에 배치되고<br>
+메시지큐에서 마이크로서비스로 직접 메시지를 보내거나 수신하는 마이크로서비스가 polling 하는 패턴이다.<br>
+Point-to-point 패턴에서 메시지 큐에서는 수신하는 마이크로서비스에 대한 정보를 알고 있어야 메시지를 보낼 수 있다.<br>
+예를 들어 메시지큐에 다수의 마이크로 서비스가 메시지를 보냈다 하더라도 각각의 메시지들은 반드시 하나의 마이크로서비스에<br>
+맵핑되게 된다. 간단한 비동기성 메시지 처리에 적합하며 송신 마이크로서비스와 수신 마이크로서비스가 분리되어 서로에게 영향을<br>
+끼치지 않는 장점이 있다. 그러나 메시지큐의 작업이 많아 부하가 걸릴 경우 마찬가지로 장애를 일으키는 단점이 있다.</p>
+<p><strong>[경쟁 소비자 아키텍처 패턴]</strong></p>
+<blockquote>
+<p><img src="/img/03_Bizdevops/07/05/image113.png" alt=""></p>
+<p>경쟁 소비자 패턴의 경우 다수의 메시지를 분산처리하기 위한 환경에 적합하다. 수신 마이크로서비스 ( 이하 소비자 )가 여러<br>
+메시지를 동시에 처리할 수 있도록 다수의 경쟁 소비자를 단일 채널에 생성한다. 송신 마이크로서비스 ( 이하 송신자 )가<br>
+메시지를 메시지큐로 전달하게 되면 소비자들 중에서 하나의 수신자가 메시지를 받을 수 있다. Point-to-point<br>
+방식에서는 사용량이 갑작스럽게 증가하는 경우 서비스 장애나 많은 수의 메시지들로 인하여 오버로드가 발생할 수<br>
+있다. 그래서 경쟁 소비자 패턴을 이용하여 시스템은 소비자 서비스의 여러 인스턴스를 실행하여 부하를 분산 시킨다. 경쟁 소비자<br>
+패턴은 작업이 독립적이고 동시에 실행 가능할 경우, 작업의 양이 매우 가변적이어서 확장성이 필요한 경우, 고가용성을 제공하며<br>
+작업 처리 실패 시 복원되어야 할 경우 유용하다. 그러나 워크로드를 개별 작업으로 분리가 어렵고 종속성이 큰 경우,<br>
+동기적으로 작업을 수행하며 작업 프로세스에서 하나의 작업이 완료될때까지 기다려야 할 경우 특정 순서대로 작업을<br>
+수행할 경우는 부적합하며 실제 내부는 point-to-point 방식으로 동작하며 생산자와 소비자의 coupling 이슈는<br>
+해결되지 않는다.</p>
+</blockquote>
+<p><strong>[Pub/ Sub 아키텍처 패턴]</strong></p>
+<ol>
+<li>Pub/Sub 아키텍처</li>
+</ol>
+<blockquote>
+<p><img src="/img/03_Bizdevops/07/05/image114.png" alt=""></p>
+<p>Pub/Sub ( publish / subscription ) 패턴에서는 하나의 마이크로서비스가 교환기를 통하여 다수의<br>
+마이크로 서비스에게 메시지를 전달하는 패턴으로 한꺼번에 많은 소비자에게 메시지를 전달하는 구조에 적합하다.<br>
+Pub/sub 패턴에서는 메시지를 전송하는 게시자(publisher)와 해당 메시지를 수신하는<br>
+구독자(subscription), 게시자로부터 메시지를 전달받아 메시지큐로 전송하는 교환기(exchange)로<br>
+나누게 된다. ( 교환기가 없는 Apache Kafka 같은 솔루션의 경우는 게시자의 메시지 로직 생성을 통하여<br>
+혹은 Kafka 내부의 Partition중 하나를 통하여 메시지를 전송하여 교환기의 기능의 수행이 가능하다. )<br>
+게시자는 전달하고자 하는 메시지를 교환기로 보내고 교환기는 다시 메시지 큐로 보내어 게시를 하게 되고 수신자<br>
+중에서 구독을 신청한 하나의 수신자를 지정하여 메시지를 보내거나 polling을 통하여 마이크로서비스가 메시지 큐에<br>
+접근하여 메시지를 가져간다. Pub/sub 패턴에서는 메시지큐에서 소비자의 정보에 대해서 알고 있으므로,<br>
+소비자(구독자)로부터 공급자(게시자)를 분리할 수 있고 그래서 서로에 대한 정보를 알 필요가 없다.<br>
+그래서 병렬 작업, 메시지 캐싱, 트리 기반 또는 네트워크 기반의 라우팅을 통하여 기존의 클라이언트-서버 환경보다<br>
+뛰어난 확장성을 제공한다. 그러나 서비스의 호출이 많은 서비스의 경우 마찬가지로 높은 부하로 인하여 확장성은 감소한다.</p>
+</blockquote>
+<ol start="2">
+<li>라우팅 추가 pub/sub 아키텍처</li>
+</ol>
+<blockquote>
+<p><img src="/img/03_Bizdevops/07/05/image115.png" alt=""></p>
+<p>기본적인 pub/sub 구조에서 메시지를 브로드캐스트 하였다면 교환기에 라우팅 기능을 추가하여 필터를 통하여 원하는 메시지를<br>
+원하는 역할의 메시지큐로 보내어 이를 처리하도록 한다. 예를 들어 로그시스템의 경우 모든 로그를 수신하여 디스크에 저장할<br>
+경우 많은 유지 비용이 발생하게 된다. 필터를 통하여 교환기에서 error 담당 메시지큐로 error 메시지만 보내고 이를<br>
+디스크에 저장할 경우 error 메시지를 저장하는 유지비용만 발생하게 된다. 또한 메시지를 전용으로 처리하기 때문에 다수의<br>
+마이크로서비스로 부하를 분산하였던 방식에서 메시지큐까지도 부하를 분산하여 처리가 가능하다.</p>
+</blockquote>
+<ol start="3">
+<li>토픽 아키텍처</li>
+</ol>
+<blockquote>
+<p><img src="/img/03_Bizdevops/07/05/image116.png" alt=""></p>
+<p>토픽 아키텍처의 경우 Pub/sub 구조에 교환기에서 direct로 메시지를 송신하지 않고 토픽을 게시하는 방식으로 이전에<br>
+소개한 아키텍처들은 direct로 메시지큐와 통신을 하며 하나의 메시지가 한 명의 소비자에 의해 수신되었다면 토픽의<br>
+경우는 메시지를 게시하면 관심 있는 모든 구독자가 메시지 사본을 받게 된다. Point-to-point 방식의<br>
+Message queue와 비교하여 가용성과 확장성이 좋으며 point-to-multipoint 방식으로 구성된다. 또한<br>
+메시지큐도 게시자와 수신자의 정보를 알고 있을 필요가 없으며 메시지가 수신자에게 도착하면 게시자에게 알림이<br>
+전송된다. 메시지는 토픽에서 직접 수신되지 않으며 구독에서 수신한다. 구독은 필터를 통하여 전달받는 메시지를<br>
+제한할 수 있다. 이 때 메시지의 사본을 구독하는 마이크로서비스가 없을 수도 있으며 메시지는 구독으로 식별된 메시지<br>
+큐에서 대기 (메시지 대기열)하는 위험이 있다.</p>
+</blockquote>
+<ol start="4">
+<li>RPC 아키텍처</li>
+</ol>
+<blockquote>
+<p><img src="/img/03_Bizdevops/07/05/image117.png" alt=""></p>
+<p>RPC ( Remote Procedure Call ) 아키텍처 패턴은 메시지큐에서 양방향 통신을 가능하도록 하는 아키텍처<br>
+패턴이다. 원격자의 함수를 실행시키고 결과를 회신받아야하는 아키텍처에서 구성하게 되며 어느 요청에 어느 큐가<br>
+응답해야하는지 명백하지 않기 때문에 고유의 ID를 부여하여 이를 해결하게 된다. 공급자와 소비자가 모두 소스를<br>
+수행하게 되며 공급자가 응답 정보를 담은 메시지를 먼저 게시하고 소비자는 소스를 통하여 다시 reply를 회신하는<br>
+패턴이다.</p>
+</blockquote>
+<p><strong>Ba</strong>c<strong>king Service구성 시 고려사항</strong></p>
+<p><strong>[데이터 영속성]</strong></p>
+<p>- 기존의 DBMS를 활용한 ACID 트랜잭션에 따른 데이터 무결성을 달성할 수 없으나 메시지큐를 사용하여 데이터의 최종적인<br>
+일관성 유지가 가능하다. 메시지큐에서는 디스크나 네트워크 메시지 복제 본, DBMS등에 저장하여 메시지의 영속성을<br>
+보장한다. 또한 게시자로부터 메시지 전송이 완료되면 노드나 시스템의 충돌이 발생하여도 대기열에 포함되고 결국<br>
+Delivery를 함으로써 데이터의 영속성을 보장하게 된다. 또한 메시지를 보내고 처리되었음을 보장해 주는 방법으로<br>
+message를 처리하는 마이크로서비스에서 confirm 메시지를 보냄으로써 생산자에게 메시지가 처리되었음을 완료해줌으로써<br>
+영속성을 보장한다. 하지만 rollaback의 경우는 메시지 큐는 메시지를 재전달을 수행하는 방법과 에러를 발생시키는<br>
+방법이 있다. 반드시 rollback을 수행하여야 한다면 모놀리식 아키텍처에서는 하나의 transaction에 대해서<br>
+처리를 하였다면 마이크로서비스에서는 서비스마다 rollback발생 시 처리하는 로직을 개발하여야 한다.</p>
+<p><strong>[내구성]</strong></p>
+<p>- 내구성을 확보하기 위하여 메시지를 메모리, 디스크, DBMS 중에 어느 곳에 보관할지 선정이 필요하다. 메시지를 디스크에<br>
+저장할 경우 메시지의 영속성이 보장되며 기존 메시징 시스템에서는 처리되지 않고 남아있는 메시지의 수가 많을수록 시스템의<br>
+성능이 크게 감소 되었으나 디스크에 저장할 경우 남아 있는 메시지가 많아도 성능이 크게 감소하지 않는다. 또한 실시간<br>
+처리, 주기적인 batch 작업에 사용할 데이터성(性) 메시지도 보관이 가능하며broker에게 한꺼번에 전달할 수<br>
+있어TCP/IP 라운드트립 횟수를 줄일 수 있다. 그러나 메모리 처리 방식에 비해서는 처리 속도는 감소한다.</p>
+<p>데이터베이스에 저장할 경우 디스크에서 읽어 들이는 방식보다 메모리에 데이터베이스 복제본을 두고 메시지를 전송하기 때문에 성능이<br>
+향상되며 메시지의 내용과 상태의 확인이 용이하다. 그러나 데이터베이스 유지비용과 스토리지 비용이 이중으로 발생하며 데이터의<br>
+삭제 주기를 설정하지 않으면 오히려 성능이 감소하며 유지비용이 증가한다.</p>
+<p>메모리에서 메시지를 처리할 경우 메모리는 휘발성이므로 시스템이 다운되거나 변경이 발생할 경우 캐시되어 있던 모든 메시지가<br>
+삭제된다.</p>
+<p>그래서 내구성을 확보하기 위하여 디스크, DB, 메모리 등을 혼합하여 내구성을 확보하게 된다. Lazy Queue는 전달되는 모든<br>
+메시지를 파일 시스템으로 직접 보내고 소비자가 큐에 도착할 때 RAM에 메시지를 로드하면서 작동하며 &nbsp;디스크 읽기를 최적화하기<br>
+위해 메시지가 일괄 적으로 로드된다. 또 다른 하이브리드 방식으로는 메시지 큐에서 메시지가 지속되어야 하는지 여부를<br>
+판별하여 지속 될 경우 RAM에 있는 메시지를 디스크로 복제한다. 램에 있는 메시지는 계속하여 캐시되어 있으며<br>
+메시지가 전달될 때 빠르게 전달하게 되면서 성능을 확보하게 된다.</p>
+<p>이 밖에도 CSP에서는 메시지큐 생성 시 사용자는 메시지를 어느 곳에 저장해야 할 지 고민할 필요가 없다. CSP내부에서 메시지<br>
+큐들은 여러 개로 복제되어 메시지를 보관하기 때문이다. 제공하는 방식은 표준 대기열 방식에서는 최소 1회의 메시지<br>
+delivery를 지원하며 FIFO 대기열은 1회의 메시지 처리를 보장한다. 만약에 메시지의 저장이 필요하다면 기존의 디스크,<br>
+DB도 다른 서비스를 연계하여 사용할 수 있다.</p>
+<p><strong>[보안]</strong></p>
+<p>– 메시지 큐에 접근할 수 있는 마이크로서비스들에 대하여 보안 정책을 구성하여야 한다. 메시지큐는 생산자와 소비자가 메시지 큐에<br>
+허용되지 않은 서비스들 혹은 외부의 요청이 발생하였을 경우 이에 대하여 IP 허용, SSL 통신을 활용한 TLS를 구성하여<br>
+접근제한을 둘 수 있다. CSP의 경우 메시지큐로의 인증 및 엑세스를 제어하고 서버-클라이언트 메시지 암호화를 통하여<br>
+보안을 설정한다.</p>
+<p>라이프사이클 – 메시지가 계속 누적될 경우 메시지큐의 성능 저하, 장애를 유발할 수 있다.</p>
+<p>필터링 – Pub/sub 패턴의 경우 게시/구독에 대한 일부 시스템은 필터링 데이터를 지원하므로 구독자의 경우 미리 지정된 기준과<br>
+일치하는 메시지만 확인이 가능하다.</p>
+<p>재전송 – 메시지의 발송 후 수신 실패 시 재전송 횟수를 정한다. 재전송 횟수가 많을수록 메시지 큐의 성능 저하 및 대기열에<br>
+메시지가 누적되어 장애를 유발하기 떄문에 적절한 재전송 횟수를 지정하는 것이 필요하다. 반드시 전달되어야 하는 경우<br>
+재전송 횟수를 늘리기 보다는 Error 메시지 출력이나 rollaback을 수행할 수 있도록 마이크로서비스를 개발하여야<br>
+한다.</p>
+<p>라우팅 – point-to-point 메시지 큐 패턴을 적용한 시스템의 경우 메시지에 대한 라우팅을 고려하여야 한다.</p>
+<p>일괄 처리 – 메시지가 메시지 큐에서 바로 처리되어야 하는지 아니면 다수의 큐가 쌓일 때까지 대기하였다가 한번에 전송할지<br>
+정의하여야 한다.</p>
+<p>대기열 – 메시지 큐에서 메시지는 처리되고 삭제되기 전까지 대기열로 가게 된다. 이때 메시지가 대기열에 있는 경우에 메시지를<br>
+대기열로 보낼지 아니면 일정 개수의 메시지가 존재할 때 메시지 대기열에 넣을지 아니면 모든 대기열에 메시지를 넣을지<br>
+전달되는 메시지에 대한 대기열을 지정하여야 한다. 각 메시지는 하나의 소비자가 한 번만 처리하도록 한다.</p>
+<p>FIFO, 표준대기열 – 표준 대기열은 작업당 무제한의 트랜잭션 (TPS)를 지원하며 최소 1회의 메시지 전송을 지원한다.<br>
+메시지의 순서에 대해서 정렬 기능은 제공하더라도 전송한 순서와 동일한 순서로 전송되지 않을 수도 있다. 예를 들어<br>
+short polling 방식의 경우 메시지 큐에 메시지가 A-B-C-D의 순서로 들어오게 되면 메시지 큐는 분산된 메시지 큐들에<br>
+각각 들어가게 되고 분산된 메시지 큐에서는 메시지를 보낼 때 A-B-C-D 순이 아닌 polling 요청이 먼저 온 메시지 큐에서<br>
+메시지를 발송하게 되므로 A-C-D-B의 순으로도 메시지의 전송이 이루어질 수 있다. FIFO방식은 정확히 1회의 메시지 처리를<br>
+제공하며 메시지 송신 및 수신 순서에 맞춰서 반드시 메시지를 보내게 된다. 작업 및 이벤트 순서가 중요한 메시지들이 있을 경우<br>
+적용하며 중복을 허용하지 않아 각 마이크로서비스간의 메시징을 강화해준다. 각 메시지 내부에는 중복 전송을 제거하기 위한 유니크한<br>
+ID가 존재하며 전송시에 해당 ID를 확인한다.</p>
+<p>비용 – 모놀리식 아키텍처에서 메시지큐를 활용하지 않았을 경우 하나의 트랜젝션에 대한 네트워크 트래픽이 발생하였다. 마이크로서비스<br>
+아키텍처에서 메시지큐를 도입하였을 때는 네트워크 트래픽이 메시지큐를 한번 더 거쳐서 서비스간의 통신이 발생하기 때문에 네트워크<br>
+트래픽 비용이 증가하는 이슈가 발생한다. ( CSP의 경우 발송 건마다 요금 차감 )</p>
+<p>부인 방지 - 게시자는 일부 또는 모든 가입자가 메시지를 수신하였는지 확인이 필요하다. 수신이 확인되지 않을 경우 메시지가 재전송<br>
+혹은 대기하게 되므로 시스템의 성능에 대하여 영향을 미친다.</p>
+</div></div></div></div></main><footer class="v-footer v-sheet v-sheet--tile theme--light v-footer--inset" data-booted="true"> Copyright © <span>uEngine.</span> All rights reserved. </footer></div></div><script src="/js/chunk-vendors.39e5a000.js" defer></script><script src="/js/app.b161d75b.js" defer></script></body></html>

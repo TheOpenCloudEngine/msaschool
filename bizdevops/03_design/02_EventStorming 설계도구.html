@@ -1,0 +1,765 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><!--[if IE]><link rel="icon" href="/favicon.ico"><![endif]--><title>MSA School</title><script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/github-gist.min.css"><link rel="stylesheet" href="/github-markdown.css"><script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js" defer></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"><script>hljs.initHighlightingOnLoad();</script><link rel="stylesheet" href="/cur.css"><link href="/css/app.ebb8c3aa.css" rel="preload" as="style"><link href="/css/chunk-vendors.998356c1.css" rel="preload" as="style"><link href="/js/app.b161d75b.js" rel="preload" as="script"><link href="/js/chunk-vendors.39e5a000.js" rel="preload" as="script"><link href="/css/chunk-vendors.998356c1.css" rel="stylesheet"><link href="/css/app.ebb8c3aa.css" rel="stylesheet"><link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#4DBA87"><meta name="apple-mobile-web-app-capable" content="no"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="msaschool"><link rel="apple-touch-icon" href="/img/icons/apple-touch-icon-152x152.png"><link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#4DBA87"><meta name="msapplication-TileImage" content="/img/icons/msapplication-icon-144x144.png"><meta name="msapplication-TileColor" content="#000000"><style type="text/css" id="vuetify-theme-stylesheet">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+.v-application .primary--text {
+  color: #1976d2 !important;
+  caret-color: #1976d2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff !important;
+  border-color: #c7fdff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff !important;
+  caret-color: #c7fdff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff !important;
+  border-color: #a8e0ff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff !important;
+  caret-color: #a8e0ff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff !important;
+  border-color: #8ac5ff !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff !important;
+  caret-color: #8ac5ff !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff !important;
+  border-color: #6aaaff !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff !important;
+  caret-color: #6aaaff !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef !important;
+  border-color: #488fef !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef !important;
+  caret-color: #488fef !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6 !important;
+  border-color: #005eb6 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6 !important;
+  caret-color: #005eb6 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b !important;
+  border-color: #00479b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b !important;
+  caret-color: #00479b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180 !important;
+  border-color: #003180 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180 !important;
+  caret-color: #003180 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67 !important;
+  border-color: #001e67 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67 !important;
+  caret-color: #001e67 !important;
+}
+.v-application .secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}
+.v-application .secondary--text {
+  color: #424242 !important;
+  caret-color: #424242 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1 !important;
+  border-color: #c1c1c1 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1 !important;
+  caret-color: #c1c1c1 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b !important;
+  border-color: #8b8b8b !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b !important;
+  caret-color: #8b8b8b !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272 !important;
+  border-color: #727272 !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272 !important;
+  caret-color: #727272 !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959 !important;
+  border-color: #595959 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959 !important;
+  caret-color: #595959 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c !important;
+  caret-color: #2c2c2c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717 !important;
+  border-color: #171717 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717 !important;
+  caret-color: #171717 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style></head><body><noscript><div>We're sorry but msaschool doesn't work properly without JavaScript enabled.<br>Please enable it to continue.</div></noscript><div data-app="true" class="v-application v-application--is-ltr theme--light" id="inspire"><div class="v-application--wrap"><nav class="v-navigation-drawer v-navigation-drawer--clipped v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--is-mobile theme--light" style="height: 100vh; top: 0px; transform: translateX(-100%); width: 256px; background-color: rgb(245, 245, 245); border-color: rgb(245, 245, 245);" data-booted="true"><div class="v-navigation-drawer__content"><div class="v-list v-sheet v-sheet--tile theme--light v-list--shaped"><a href="/bizdevops/01_BizDevOps 개요" class="v-list-item v-list-item--link theme--light" tabindex="0" style="color: rgb(69, 39, 160); caret-color: rgb(69, 39, 160);"><div class="v-list-item__content"><div class="v-list-item__title"> BizDevOps 개요 </div></div></a><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Analysis </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/02_analysis/01_관심사 분리" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 관심사 분리 </div></div></a><a href="/bizdevops/02_analysis/02_에자일 환경분석" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 에자일 환경분석 </div></div></a><a href="/bizdevops/02_analysis/03_모노리식의 한계" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 모노리식의 한계 </div></div></a><a href="/bizdevops/02_analysis/04_접근법과 분석패턴" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 접근법과 분석패턴 </div></div></a><a href="/bizdevops/02_analysis/05_DDD--도메인모델" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> DDD&amp;도메인모델 </div></div></a></div></div></div><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Design </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/03_design/01_EventStorming" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> EventStorming </div></div></a><a href="/bizdevops/03_design/02_EventStorming 설계도구" class="v-list-item--active v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> EventStorming 설계도구 </div></div></a><a href="/bizdevops/03_design/03_도구를 통한 MSA 설계" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 도구를 통한 MSA 설계 </div></div></a><a href="/bizdevops/03_design/04_CI-CD 설계" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> CI/CD 설계 </div></div></a><a href="/bizdevops/03_design/05_커스텀 템플릿 설계" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 커스텀 템플릿 설계 </div></div></a></div></div></div><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Implementation </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/04_implementation/01_Hexagonal Architecture" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Hexagonal Architecture </div></div></a><a href="/bizdevops/04_implementation/02_MSA Chassis" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> MSA Chassis </div></div></a><a href="/bizdevops/04_implementation/03_스티키 노트별 구현방안" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 스티키 노트별 구현방안 </div></div></a><a href="/bizdevops/04_implementation/04_모노리스 전환이슈" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 모노리스 전환이슈 </div></div></a><a href="/bizdevops/04_implementation/05_프론트엔드 서비스" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 프론트엔드 서비스 </div></div></a><a href="/bizdevops/04_implementation/06_백엔드 서비스" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 백엔드 서비스 </div></div></a></div></div></div><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Integration </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/05_integration/01_통합 패턴" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 통합 패턴 </div></div></a><a href="/bizdevops/05_integration/02_트랜잭션--Saga" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 트랜잭션&amp;Saga </div></div></a><a href="/bizdevops/05_integration/03_Data Projection" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Data Projection </div></div></a><a href="/bizdevops/05_integration/04_CQRS" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> CQRS </div></div></a></div></div></div><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Deployment </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/06_deployment/01_CI-CD" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> CI/CD </div></div></a><a href="/bizdevops/06_deployment/02_파이프라인" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 파이프라인 </div></div></a><a href="/bizdevops/06_deployment/03_배포전략" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 배포전략 </div></div></a></div></div></div><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Operation </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/07_operation/01_Operation 아키텍쳐" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Operation 아키텍쳐 </div></div></a><a href="/bizdevops/07_operation/02_API Gateway" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> API Gateway </div></div></a><a href="/bizdevops/07_operation/03_Service Mesh" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Service Mesh </div></div></a><a href="/bizdevops/07_operation/04_Container Management" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Container Management </div></div></a><a href="/bizdevops/07_operation/05_Backing Service" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Backing Service </div></div></a><a href="/bizdevops/07_operation/06_Telemetry" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Telemetry </div></div></a></div></div></div><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Cloud Platform </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/08_cloud platform/01_Google Cloud Platform" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Google Cloud Platform </div></div></a><a href="/bizdevops/08_cloud platform/02_MS Azure" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> MS Azure </div></div></a></div></div></div></div></div><div class="v-navigation-drawer__border"></div></nav><header class="v-sheet v-sheet--tile theme--light v-toolbar v-app-bar v-app-bar--fixed" style="height: 84px; margin-top: 0px; transform: translateY(0px); left: 0px; right: 0px; background-color: rgb(243, 243, 243); border-color: rgb(243, 243, 243);" data-booted="true"><div class="v-toolbar__content" style="height: 84px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light"></i></span></button><div class="v-toolbar__title ml-0 pl-4" style="width: 300px;"><span class="logo"><div class="v-responsive v-image" onclick="window.location.href='/'" style="min-height: 32px; min-width: 170px; max-height: 40px; max-width: 173px;"><div class="v-responsive__sizer" style="padding-bottom: 23.2258%;"></div><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-position: center center;"></div><div class="v-image__image v-image__image--cover fade-transition-enter fade-transition-enter-active" style="background-image: url(&quot;http://localhost:8000/img/icons/msa_school.png&quot;); background-position: center center;"></div><div class="v-responsive__content" style="width: 310px;"></div></div></span></div><div class="v-tabs theme--light" style="width: 300px;"><div role="tablist" class="v-item-group theme--light v-slide-group v-tabs-bar v-tabs-bar--is-mobile transparent" style="color: rgb(103, 58, 183); caret-color: rgb(103, 58, 183);" data-booted="true"><div class="v-slide-group__prev v-slide-group__prev--disabled"><!----></div><div class="v-slide-group__wrapper"><div class="v-slide-group__content v-tabs-bar__content"><div class="v-tabs-slider-wrapper" style="height: 2px; left: 0px; width: 0px;"><div class="v-tabs-slider"></div></div><a href="/introduction/01_MSA School 이란" class="v-tab" tabindex="0" aria-selected="true" role="tab"> introduction </a><a href="/planning/01_MSA 최종목표" class="v-tab" tabindex="0" aria-selected="false" role="tab"> planning </a><a href="/bizdevops/01_BizDevOps 개요" class="v-tab" tabindex="0" aria-selected="false" role="tab"> bizdevops </a><a href="/library/02_msa 방법론/index" class="v-tab" tabindex="0" aria-selected="false" role="tab"> library </a><a href="/community/01_MSASchool 이란" class="v-tab" tabindex="0" aria-selected="false" role="tab"> community </a></div></div></div></div><div class="spacer"></div><div class="v-responsive v-image" style="max-width: 100px; width: 100px; margin-top: 5px;"><div class="v-responsive__sizer" style="padding-bottom: 25.8442%;"></div><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-position: center center;"></div><div class="v-image__image v-image__image--cover fade-transition-enter fade-transition-enter-active" style="background-image: url(&quot;http://localhost:8000/img/icons/logo_uengine.png&quot;); background-position: center center;"></div><div class="v-responsive__content" style="width: 770px;"></div></div></div></header><main class="v-content" style="padding: 84px 0px 0px;" data-booted="true"><div class="v-content__wrap"><div class="container container--fluid"><div data-v-7f0f36b0="" class="container"><ul data-v-7f0f36b0="" class="v-breadcrumbs v-breadcrumbs--large theme--light"><li><a href="/bizdevops/overview" class="v-breadcrumbs__item">bizdevops</a></li><li class="v-breadcrumbs__divider"><i data-v-7f0f36b0="" aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-right theme--light"></i></li><li><a href="/bizdevops/03_design/index" class="v-breadcrumbs__item">design</a></li><li class="v-breadcrumbs__divider"><i data-v-7f0f36b0="" aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-right theme--light"></i></li><li><a href="/bizdevops/03_design/02_EventStorming 설계도구" class="v-breadcrumbs__item">EventStorming 설계도구</a></li></ul><hr data-v-7f0f36b0="" role="separator" aria-orientation="horizontal" class="v-divider theme--light"><div data-v-7f0f36b0="" class="markdown-body"><h1>EventStorming 설계 도구</h1>
+<p>이벤트스토밍을 온라인 환경에서 수행하도록 해 주는 도구인~</p>
+<h2><strong>도구 소개</strong></h2>
+<p>EventStorming2Code 도구는 소프트웨어를 통한EventStorming(이벤트스토밍) 수행과 그 결과물인<br>
+스티커기반(Sticker-based) 모델을 마이크로서비스형(Microservices Native) 코드로 자동 생성해 주는 툴이다.</p>
+<p><img src="/img/03_Bizdevops/03/02/image43.png" alt=""></p>
+<p>이벤트스토밍(Event Storming)은 Event와 BrainStorming의 합성어로서, 이벤트 기반 시스템의 설계와 개발을<br>
+빠르게할 수 있는 기법이다. 기존의 UML, BPMN 등의 이해도와 전무성을 갖추지 않더라도 현업, 업무전문가, 도메인전문가<br>
+들이 모여 화이트보드 벽면에 주요 이벤트(Event)를 중심으로 업무들간의 상호 연관성을 스티키 노트(Sticker)를 가지고<br>
+협업해 나간다.</p>
+<p>이벤트를 유발시키는 행위(사용자의 의사결정)와 해당 이벤트에 연이어 반응하는 액션들을 <sup>1)</sup>모든 이해 관계자들이,<br>
+<sup>2)</sup>짧은 시간 내에, <sup>3)</sup>시각적으로 모델링 한다. 궁극적으로 마이크로서비스를 여러 개로 쪼개는데 활용 가능하다.</p>
+<p>EventStorming2Code는 이러한 오프라인 이벤트스토밍이 공간적인 제약과, 화이트보드 벽면에 부착된 스티커가 물리적<br>
+요인으로 쉽게 떨어질 수 있다는 점을 보완하여 고안된 온라인 도구이다.</p>
+<p>또한, 결과 모델을 순공학(Forward Engineering) 기능을 통해 단위 마이크로서비스 코드 생성이 가능하고,<br>
+마이크로서비스가 운영될 클라우드 환경에 필요한 도커 파일(Docker file)과 CI(Continuous Integration),<br>
+CD(Continuous Deployment) 배포 파이프라인(Pipeline) 등 자동화된 환경 구성(Configuration) 파일도 생성해 준다.</p>
+<p>이를 통해, 도구를 적용하는 기업이 가진 표준 프레임워크(Framework)에 맞도록 커스터마이징 할 수도 있다.</p>
+<h2><strong>주요 Features</strong></h2>
+<ul>
+<li>
+<p><strong>Web-based Event Storming environment</strong></p>
+<ul>
+<li>
+<p>6 types of Event Sticker<br>
+(Event, Policy, Command, Aggregate, External System, Read Model)</p>
+</li>
+<li>
+<p>Bounded Context and Context Mapping (Relation between<br>
+Microservices)</p>
+</li>
+<li>
+<p>English word suggestion</p>
+</li>
+</ul>
+</li>
+</ul>
+<!-- end list -->
+<ul>
+<li>
+<p><strong>Code Generation</strong></p>
+<ul>
+<li>
+<p>MSA Implementation Source Codes (Default: Spring-boot)</p>
+</li>
+<li>
+<p>Dockerfile</p>
+</li>
+<li>
+<p>Pipeline YAML file for CI/CD DevOps</p>
+</li>
+<li>
+<p>Helm Chart for Kubernetes Deployment</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Custom Templates for Microservice’s Polyglot language</strong></p>
+<ul>
+<li>
+<p>Template customizing support (Any language is available)</p>
+</li>
+<li>
+<p>Local and remote(Github) template add-in support</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2><strong>도구의 목적</strong></h2>
+<h3><strong>[EDA(Event Driven Architecture) 기반 3세대 MSA의 유행]</strong></h3>
+<p>치열한 경쟁 구도에서 살아남기 위해서는 고객이 실제 우리 제품에 대해 관심이 있는지를 빠른 시장 출시를 통해 파악한 후,<br>
+관심과 호응도가 높을 시, 제대로 구현하는 “Fail Fast”, “Fail Cheap”의 에자일한 접근 전략이 필요하다.</p>
+<p>이러한 대안으로 제시된 기존 SOA(Service Oriented Architecture)에서는 생산성을 극대화하기 위해 하나의<br>
+정해진 데이터베이스, 잘 짜여진 API와 스키마를 준수하면서 공통 서비스를 도출하고 이를 재사용하면서 이루려했다.</p>
+<p>그러나 빠르고 기민하게 요구사항을 받아들이고 반영해야 하는 비즈니스 라이프사이클 상에서 표준화(Standardization)는<br>
+오히려 팀별 자발적 생산성을 저해하는 커다란 걸림돌이 되고 있다.</p>
+<p>그래서 등장한 것이 마이크로서비스 아키텍처이다. 마이크로서비스는 서비스를 함축적 (Implementation Hiding)으로<br>
+제공하자는 측면에서 SOA 사상과 유사하나, 서비스 레벨 뿐만 아니라 데이터베이스 레벨까지 철저하게 분리하자는 것이<br>
+SOA와 크게 구분되는 점이다.</p>
+<p>1세대 MSA의 최대 단점은 피크타임 시, 쪼개진 서비스간 동기식 호출(Request &amp; Reponse)에 따른<br>
+Blocking 우려와 한 서비스의 장애가 타 서비스로 전파될 수 있는 약점이 존재한다는 것이다.</p>
+<p>그래서 등장한 개념이 서비스간 Pub/Sub을 통해 이벤트 기반으로 통신하는 EDA 아키텍처이다.<br>
+서비스간 공유된 메시지 큐에 발생한 사실(Event)에 대해 신고하고, 내가 관심있는 사실만 참고하여 후행 액션을 수행하는 매카니즘을 가지는데, 이를 적용한 것이 EDA기반 MSA이다.</p>
+<p>서비스별 코레오그래피 방식의 자율적 실행으로, 타 서비스의 장애에 전혀 영향받지 않으며 타임 커플링이<br>
+원천적으로 배제된 <strong>Non-Blocking 아키텍처</strong>를 가진다.</p>
+<p><img src="/img/03_Bizdevops/03/02/image44.png" alt=""></p>
+<h3><strong>[MSA 코드 자동 생성]</strong></h3>
+<p>오프라인 이벤트스토밍 환경에선 이벤트스토밍 결과 모델을 참조하여 개발자가 수작업으로 코딩해야 한다.</p>
+<p>코딩은 전적으로 팀내 개발자의 몫으로, 스티커 분량 만큼 개발 대상도 늘어난다. 더욱이 개발자가 이벤트 기반 MSA 코딩에<br>
+익숙하지 않을 경우, 어떻게 시작해야 하는지에 대한 러닝 커브로 인해 얘기치 않은 병목 구간이 될 수도 있다.</p>
+<p>또한, 웹 스케일 기반 서비스일 경우, 서비스 구현에 최적화된 언어(Language)를 사용하는 것이 서버 사이드<br>
+퍼포먼스를 높여 사용자의 응답시간(Response Time)을 줄이는 점에서 유리하다.</p>
+<p>ES2Cd 도구는 이벤트스토밍 결과에 대해 개발자가 설정한 폴리글랏 언어로 MSA 소스 코드를 자동으로 생성하여 준다.<br>
+도구를 통해 수행된 결과는 순공학(Forward Engineering) 코드 생성 모듈을 통해 MSA 소스코드로 생성된다.<br>
+또한, 사용자 정의 가능한 확장 템플릿을 통해 각 MSA마다 서비스에 최적화된 언어를 적용할 수 있도록 지원한다.</p>
+<p>또한, 워크로드 분산 엔진(Workload Distribution Engine) 기반의 클라우드 배포를 위한 Dockerfile과<br>
+CI/CD 파이프라인, 컨테이너 Runtime 환경에서 MSA를 쉽게 생성할 수 있도록 Helm Chart 스크립트까지도 자동으로<br>
+생성해 준다.</p>
+<p>이처럼 본 도구를 사용하게 되면, MSA 소스코드는 물론, DevOps 담당자가 클라우드 운영에 필요한 메타<br>
+정보(Configuration)를 수작업으로 작성해야 하는 번거로움을 줄일 수 있다.</p>
+<h3><strong>[Polyglot MSA를 위한 User-defined 템플릿]</strong></h3>
+<p>과거 모노리식 어플리케이션은 간단한 경우, 어플리케이션 서버와 DB서버 두개만 관리하면 되지만, MSA에서는 기본적으로<br>
+한 서버에 하나의 서비스만 실행되므로, 서비스 수만큼의 이기종 인스턴스 서버와 각 서비스에 최적화된 데이터베이스<br>
+적용이 가능하다.<br>
+즉 모든 서비스마다 반드시 동일한 개발 언어, 동일한 프레임워크로 구성될 필요가 없는 것이다.</p>
+<p>예를 들어 TPS(시간당 트랜잭션)가 높고, 읽기 작업이 많은 MSA서비스는 Node, Redis 기반으로 구현하고, 트랜잭션 및<br>
+안정성이 중요한 MSA 서비스에는 Spring, RDB를 적용할 수 있는데 이를 ‘Polyglot Architecture(폴리글랏 아키텍처)’ 라고 한다.</p>
+<p>ES2Cd 도구는 이러한 폴리글랏 아키텍처를 지원하기 위해 팀플릿 기반 MSA 코드 생성을 지원한다.<br>
+ES2Cd의 커스텀 템플릿 기능을 활용하여 기본 제공 템플릿 외에 개발자가 템플릿을 추가하여 EventStorming결과가<br>
+원하는 템플릿에 맞추어 코드가 생성될 수 있도록 한다.</p>
+<h3><strong>[시, 공간 제약없는 온라인 협업 환경]</strong></h3>
+<p>이벤트스토밍은 현업, UI/UX 전문가, 백엔드 개발자, 데이터베이스 전문가들이 함께 협업할 수 있는 공간을 필요로 한다.<br>
+초기에는 오프라인에서 모든 팀들이 (1회 최대) 2시간안에 비즈니스의 핵심 업무와 서포팅 업무간의 경계를 한정한다. 수<br>
+차례에 걸처 서비스들간 경계 영역이 식별되고 나면, 각 팀별 이벤트스토밍 결과 모델을 ES2CD 도구에 적재하는 것을<br>
+권장한다.</p>
+<p>이는 서비스 규모에 비례한 넓은 공간과 이벤트스토밍이 완전 종료되는 시점까지 해당 공간을 점유하고 있어야 한다는<br>
+것으로부터 자유로울 수 있다.</p>
+<p><img src="/img/03_Bizdevops/03/02/image45.png" alt=""></p>
+<p>EventStorming2Code 도구를 사용하게 되면, 액터간 협업이 도구가 제공하는 캔버스 상에서 가능해 지므로 시, 공간적<br>
+제약이 없어진다.</p>
+<p>또한, 이벤트스토밍이 매일 2시간씩 2~3주 동안 수행되더라도 스티키 노트의 분실이나, 훼손의 우려가 없으며, 결과물 또한<br>
+전자적으로 자동 관리된다는 장점이 있다.</p>
+<h3><strong>도입 효과</strong></h3>
+<p>ES2Cd 도구는 이벤트스토밍(EventStorming)이라는 DDD 구현 방법론이 가지는 장점들을 그대로 가지면서<br>
+이벤트스토밍에 필요한 충분한 공간적인 요소가 요구되지 않고, 벽면에 부착되는 다양한 스티커 노트들의 분실 및<br>
+훼손의 우려가 없다.</p>
+<table class="table">
+<thead>
+<tr>
+<th><strong>구 분</strong></th>
+<th><strong>오프라인 EventStorming</strong></th>
+<th><strong>ES2Cd</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Support Phase</td>
+<td>분석, 설계</td>
+<td>분석, 설계, 개발, 운영</td>
+</tr>
+<tr>
+<td>시공간적 제약</td>
+<td>충분한 화이트보드 공간 필요</td>
+<td>제약 없음</td>
+</tr>
+<tr>
+<td>MSA 코드 구현</td>
+<td>MSA 구현 스킬을 보유한 개발자에 의한 수작업 개발</td>
+<td>도구에서 초기 소스코드 자동생성</td>
+</tr>
+<tr>
+<td>Ployglot MSA</td>
+<td>팀별 자체 구현</td>
+<td>사용자정의 확장 템플릿으로 자동생성 지원</td>
+</tr>
+<tr>
+<td>DevOps 지원</td>
+<td>없음</td>
+<td>CI/CD 파이프라인 자동생성</td>
+</tr>
+<tr>
+<td>결과물 관리 용이성</td>
+<td>분실 및 훼손 우려 높음</td>
+<td>결과물 버전관리 및 전자적 보관</td>
+</tr>
+</tbody>
+</table>
+<p>오프라인 이벤트스토밍으로 DDD기반 도메인 분석 및 설계가 가능하지만, ES2Cd는 분석에서부터 운영에 이르는<br>
+MSA 전 주기를 지원한다.<br>
+기존 MSA 스킬을 보유한 개발자가 직접 수작업으로 개발하던 소스코드는 도구에서 초기 소스코드를 자동으로 생성해주며,<br>
+오프라인 이벤트스토밍에서는 불가능한 결과물 버전관리와 수행 결과물의 전자적 보관은 소프트웨어 기반의 이벤트스토밍<br>
+툴인 ES2Cd가 제공하는 당연한 이점이다.</p>
+<h3><strong>실행 환경</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th>지원 OS</th>
+<th>Windows, Linux, Mac OS 지원</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>지원 Cloud</td>
+<td><p>All Cloud Platform 지원</p>
+<p>(AWS, GCP, MS Azure, IBM/Oracle Cloud, OpenShift)</p></td>
+</tr>
+<tr class="even">
+<td>서비스 유형</td>
+<td>On-Premise, or SaaS</td>
+</tr>
+<tr class="odd">
+<td>필요 사양</td>
+<td>Memory 512MB 이상</td>
+</tr>
+<tr class="even">
+<td>지원 Browser</td>
+<td>크로스 브라우저 지원 (IE, Edge 등 MS계열 제외)</td>
+</tr>
+<tr class="odd">
+<td>설치 모듈</td>
+<td>없음</td>
+</tr>
+</tbody>
+</table>
+</div></div></div></div></main><footer class="v-footer v-sheet v-sheet--tile theme--light v-footer--inset" data-booted="true"> Copyright © <span>uEngine.</span> All rights reserved. </footer></div></div><script src="/js/chunk-vendors.39e5a000.js" defer></script><script src="/js/app.b161d75b.js" defer></script></body></html>

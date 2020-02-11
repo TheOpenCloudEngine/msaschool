@@ -1,0 +1,904 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><!--[if IE]><link rel="icon" href="/favicon.ico"><![endif]--><title>MSA School</title><script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/github-gist.min.css"><link rel="stylesheet" href="/github-markdown.css"><script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js" defer></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"><script>hljs.initHighlightingOnLoad();</script><link rel="stylesheet" href="/cur.css"><link href="/css/app.ebb8c3aa.css" rel="preload" as="style"><link href="/css/chunk-vendors.998356c1.css" rel="preload" as="style"><link href="/js/app.b161d75b.js" rel="preload" as="script"><link href="/js/chunk-vendors.39e5a000.js" rel="preload" as="script"><link href="/css/chunk-vendors.998356c1.css" rel="stylesheet"><link href="/css/app.ebb8c3aa.css" rel="stylesheet"><link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#4DBA87"><meta name="apple-mobile-web-app-capable" content="no"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="msaschool"><link rel="apple-touch-icon" href="/img/icons/apple-touch-icon-152x152.png"><link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#4DBA87"><meta name="msapplication-TileImage" content="/img/icons/msapplication-icon-144x144.png"><meta name="msapplication-TileColor" content="#000000"><style type="text/css" id="vuetify-theme-stylesheet">.v-application a { color: #1976d2; }
+.v-application .primary {
+  background-color: #1976d2 !important;
+  border-color: #1976d2 !important;
+}
+.v-application .primary--text {
+  color: #1976d2 !important;
+  caret-color: #1976d2 !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #c7fdff !important;
+  border-color: #c7fdff !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #c7fdff !important;
+  caret-color: #c7fdff !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #a8e0ff !important;
+  border-color: #a8e0ff !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #a8e0ff !important;
+  caret-color: #a8e0ff !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #8ac5ff !important;
+  border-color: #8ac5ff !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #8ac5ff !important;
+  caret-color: #8ac5ff !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #6aaaff !important;
+  border-color: #6aaaff !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #6aaaff !important;
+  caret-color: #6aaaff !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #488fef !important;
+  border-color: #488fef !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #488fef !important;
+  caret-color: #488fef !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #005eb6 !important;
+  border-color: #005eb6 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #005eb6 !important;
+  caret-color: #005eb6 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #00479b !important;
+  border-color: #00479b !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #00479b !important;
+  caret-color: #00479b !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #003180 !important;
+  border-color: #003180 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #003180 !important;
+  caret-color: #003180 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #001e67 !important;
+  border-color: #001e67 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #001e67 !important;
+  caret-color: #001e67 !important;
+}
+.v-application .secondary {
+  background-color: #424242 !important;
+  border-color: #424242 !important;
+}
+.v-application .secondary--text {
+  color: #424242 !important;
+  caret-color: #424242 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #c1c1c1 !important;
+  border-color: #c1c1c1 !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #c1c1c1 !important;
+  caret-color: #c1c1c1 !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #a6a6a6 !important;
+  border-color: #a6a6a6 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #a6a6a6 !important;
+  caret-color: #a6a6a6 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #8b8b8b !important;
+  border-color: #8b8b8b !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #8b8b8b !important;
+  caret-color: #8b8b8b !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #727272 !important;
+  border-color: #727272 !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #727272 !important;
+  caret-color: #727272 !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #595959 !important;
+  border-color: #595959 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #595959 !important;
+  caret-color: #595959 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #2c2c2c !important;
+  border-color: #2c2c2c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #2c2c2c !important;
+  caret-color: #2c2c2c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #171717 !important;
+  border-color: #171717 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #171717 !important;
+  caret-color: #171717 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #82b1ff !important;
+  border-color: #82b1ff !important;
+}
+.v-application .accent--text {
+  color: #82b1ff !important;
+  caret-color: #82b1ff !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #f8ffff !important;
+  border-color: #f8ffff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #f8ffff !important;
+  caret-color: #f8ffff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #daffff !important;
+  border-color: #daffff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #daffff !important;
+  caret-color: #daffff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #bce8ff !important;
+  border-color: #bce8ff !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #bce8ff !important;
+  caret-color: #bce8ff !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #9fccff !important;
+  border-color: #9fccff !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #9fccff !important;
+  caret-color: #9fccff !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #6596e2 !important;
+  border-color: #6596e2 !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #6596e2 !important;
+  caret-color: #6596e2 !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #467dc6 !important;
+  border-color: #467dc6 !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #467dc6 !important;
+  caret-color: #467dc6 !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #2364aa !important;
+  border-color: #2364aa !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #2364aa !important;
+  caret-color: #2364aa !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #004c90 !important;
+  border-color: #004c90 !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #004c90 !important;
+  caret-color: #004c90 !important;
+}
+.v-application .error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.v-application .error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.v-application .error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.v-application .error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.v-application .error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.v-application .info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.v-application .info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.v-application .info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.v-application .info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.v-application .info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.v-application .success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.v-application .success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.v-application .success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.v-application .success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.v-application .success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.v-application .warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.v-application .warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style></head><body><noscript><div>We're sorry but msaschool doesn't work properly without JavaScript enabled.<br>Please enable it to continue.</div></noscript><div data-app="true" class="v-application v-application--is-ltr theme--light" id="inspire"><div class="v-application--wrap"><nav class="v-navigation-drawer v-navigation-drawer--clipped v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--is-mobile theme--light" style="height: 100vh; top: 0px; transform: translateX(-100%); width: 256px; background-color: rgb(245, 245, 245); border-color: rgb(245, 245, 245);" data-booted="true"><div class="v-navigation-drawer__content"><div class="v-list v-sheet v-sheet--tile theme--light v-list--shaped"><a href="/bizdevops/01_BizDevOps 개요" class="v-list-item v-list-item--link theme--light" tabindex="0" style="color: rgb(69, 39, 160); caret-color: rgb(69, 39, 160);"><div class="v-list-item__content"><div class="v-list-item__title"> BizDevOps 개요 </div></div></a><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Analysis </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/02_analysis/01_관심사 분리" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 관심사 분리 </div></div></a><a href="/bizdevops/02_analysis/02_에자일 환경분석" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 에자일 환경분석 </div></div></a><a href="/bizdevops/02_analysis/03_모노리식의 한계" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 모노리식의 한계 </div></div></a><a href="/bizdevops/02_analysis/04_접근법과 분석패턴" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 접근법과 분석패턴 </div></div></a><a href="/bizdevops/02_analysis/05_DDD--도메인모델" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> DDD&amp;도메인모델 </div></div></a></div></div></div><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Design </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/03_design/01_EventStorming" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> EventStorming </div></div></a><a href="/bizdevops/03_design/02_EventStorming 설계도구" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> EventStorming 설계도구 </div></div></a><a href="/bizdevops/03_design/03_도구를 통한 MSA 설계" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 도구를 통한 MSA 설계 </div></div></a><a href="/bizdevops/03_design/04_CI-CD 설계" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> CI/CD 설계 </div></div></a><a href="/bizdevops/03_design/05_커스텀 템플릿 설계" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 커스텀 템플릿 설계 </div></div></a></div></div></div><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Implementation </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/04_implementation/01_Hexagonal Architecture" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Hexagonal Architecture </div></div></a><a href="/bizdevops/04_implementation/02_MSA Chassis" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> MSA Chassis </div></div></a><a href="/bizdevops/04_implementation/03_스티키 노트별 구현방안" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 스티키 노트별 구현방안 </div></div></a><a href="/bizdevops/04_implementation/04_모노리스 전환이슈" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 모노리스 전환이슈 </div></div></a><a href="/bizdevops/04_implementation/05_프론트엔드 서비스" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 프론트엔드 서비스 </div></div></a><a href="/bizdevops/04_implementation/06_백엔드 서비스" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 백엔드 서비스 </div></div></a></div></div></div><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Integration </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/05_integration/01_통합 패턴" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 통합 패턴 </div></div></a><a href="/bizdevops/05_integration/02_트랜잭션--Saga" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 트랜잭션&amp;Saga </div></div></a><a href="/bizdevops/05_integration/03_Data Projection" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Data Projection </div></div></a><a href="/bizdevops/05_integration/04_CQRS" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> CQRS </div></div></a></div></div></div><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Deployment </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/06_deployment/01_CI-CD" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> CI/CD </div></div></a><a href="/bizdevops/06_deployment/02_파이프라인" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 파이프라인 </div></div></a><a href="/bizdevops/06_deployment/03_배포전략" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> 배포전략 </div></div></a></div></div></div><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Operation </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/07_operation/01_Operation 아키텍쳐" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Operation 아키텍쳐 </div></div></a><a href="/bizdevops/07_operation/02_API Gateway" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> API Gateway </div></div></a><a href="/bizdevops/07_operation/03_Service Mesh" class="v-list-item--active v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Service Mesh </div></div></a><a href="/bizdevops/07_operation/04_Container Management" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Container Management </div></div></a><a href="/bizdevops/07_operation/05_Backing Service" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Backing Service </div></div></a><a href="/bizdevops/07_operation/06_Telemetry" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Telemetry </div></div></a></div></div></div><div class="v-list-group v-list-group--no-action" mandatory="" to="/bizdevops"><div tabindex="0" aria-expanded="false" role="button" class="v-list-group__header v-list-item v-list-item--link theme--light"><div to="/bizdevops" class="v-list-item__content"><div to="/bizdevops" class="v-list-item__title"> Cloud Platform </div></div><div class="v-list-item__icon v-list-group__header__append-icon"><i aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-down theme--light"></i></div></div><div class="v-list-group__items" style="display: none;"><div><a href="/bizdevops/08_cloud platform/01_Google Cloud Platform" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> Google Cloud Platform </div></div></a><a href="/bizdevops/08_cloud platform/02_MS Azure" class="v-list-item v-list-item--link theme--light" tabindex="0"><div class="v-list-item__content"><div class="v-list-item__title subtitle-2"> MS Azure </div></div></a></div></div></div></div></div><div class="v-navigation-drawer__border"></div></nav><header class="v-sheet v-sheet--tile theme--light v-toolbar v-app-bar v-app-bar--fixed" style="height: 84px; margin-top: 0px; transform: translateY(0px); left: 0px; right: 0px; background-color: rgb(243, 243, 243); border-color: rgb(243, 243, 243);" data-booted="true"><div class="v-toolbar__content" style="height: 84px;"><button type="button" class="v-app-bar__nav-icon v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--light"></i></span></button><div class="v-toolbar__title ml-0 pl-4" style="width: 300px;"><span class="logo"><div class="v-responsive v-image" onclick="window.location.href='/'" style="min-height: 32px; min-width: 170px; max-height: 40px; max-width: 173px;"><div class="v-responsive__sizer" style="padding-bottom: 23.2258%;"></div><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-position: center center;"></div><div class="v-image__image v-image__image--cover fade-transition-enter fade-transition-enter-active" style="background-image: url(&quot;http://localhost:8000/img/icons/msa_school.png&quot;); background-position: center center;"></div><div class="v-responsive__content" style="width: 310px;"></div></div></span></div><div class="v-tabs theme--light" style="width: 300px;"><div role="tablist" class="v-item-group theme--light v-slide-group v-tabs-bar v-tabs-bar--is-mobile transparent" style="color: rgb(103, 58, 183); caret-color: rgb(103, 58, 183);" data-booted="true"><div class="v-slide-group__prev v-slide-group__prev--disabled"><!----></div><div class="v-slide-group__wrapper"><div class="v-slide-group__content v-tabs-bar__content"><div class="v-tabs-slider-wrapper" style="height: 2px; left: 0px; width: 0px;"><div class="v-tabs-slider"></div></div><a href="/introduction/01_MSA School 이란" class="v-tab" tabindex="0" aria-selected="true" role="tab"> introduction </a><a href="/planning/01_MSA 최종목표" class="v-tab" tabindex="0" aria-selected="false" role="tab"> planning </a><a href="/bizdevops/01_BizDevOps 개요" class="v-tab" tabindex="0" aria-selected="false" role="tab"> bizdevops </a><a href="/library/02_msa 방법론/index" class="v-tab" tabindex="0" aria-selected="false" role="tab"> library </a><a href="/community/01_MSASchool 이란" class="v-tab" tabindex="0" aria-selected="false" role="tab"> community </a></div></div></div></div><div class="spacer"></div><div class="v-responsive v-image" style="max-width: 100px; width: 100px; margin-top: 5px;"><div class="v-responsive__sizer" style="padding-bottom: 25.8442%;"></div><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-position: center center;"></div><div class="v-image__image v-image__image--cover fade-transition-enter fade-transition-enter-active" style="background-image: url(&quot;http://localhost:8000/img/icons/logo_uengine.png&quot;); background-position: center center;"></div><div class="v-responsive__content" style="width: 770px;"></div></div></div></header><main class="v-content" style="padding: 84px 0px 0px;" data-booted="true"><div class="v-content__wrap"><div class="container container--fluid"><div data-v-7f0f36b0="" class="container"><ul data-v-7f0f36b0="" class="v-breadcrumbs v-breadcrumbs--large theme--light"><li><a href="/bizdevops/overview" class="v-breadcrumbs__item">bizdevops</a></li><li class="v-breadcrumbs__divider"><i data-v-7f0f36b0="" aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-right theme--light"></i></li><li><a href="/bizdevops/07_operation/index" class="v-breadcrumbs__item">operation</a></li><li class="v-breadcrumbs__divider"><i data-v-7f0f36b0="" aria-hidden="true" class="v-icon notranslate mdi mdi-chevron-right theme--light"></i></li><li><a href="/bizdevops/07_operation/03_Service Mesh" class="v-breadcrumbs__item">Service Mesh</a></li></ul><hr data-v-7f0f36b0="" role="separator" aria-orientation="horizontal" class="v-divider theme--light"><div data-v-7f0f36b0="" class="markdown-body"><h1>Service Mesh</h1>
+<p>마이크로서비스 구성 요소간에 상호 통신을 위해서는 서비스 디스커버리, 서비스 라우팅, 트래픽 관리, 보안등의 요구사항을<br>
+처리 할 수 있는 메커니즘이 필요하다. 이를 위해 <strong>Service Mesh</strong>로 알려진 기능이 마이크로서비스 아키텍처에 적용된다.</p>
+<p>마이크로서비스에서 가장 복잡한 것은 구축 및 배치가 아니다. 마이크로서비스가 독립적으로 배포되면 Docker 컨테이너<br>
+에서 실행되는 100개의 마이크로서비스가 Kubernetes를 사용하여 관리 될 수 있다.<br>
+마이크로 서비스 아키텍처가 가지는 모든 이점을 통해 모든 것을 관리하는 것은 어렵다.<br>
+트랜잭션이 실패하면 연결이 끊기는 부분, 특정 요청이 실패한 이유, 대기시간 문제가 있는 곳을 찾는 문제 등 해결하기 어려운 문제가 많다.<br>
+그렇기 때문에 서비스 계층을 추상화하고 서비스 간의 통신을 관리해야 할 필요성이 있다.</p>
+<p>Service Mesh는 모든 서비스의 인프라 레이어로서 두 서비스간의 통신을 처리한다. 이는 서비스A에서 서비스 B로의<br>
+요청(TCP/IP용어로 패킷)의 안정적인 전달을 처리한다. 실질적으로 Service Mesh는 Mesh의 일부인 서비스와<br>
+병렬로 프록시를 배치함으로써 구현된다.<br>
+응용프로그램 / 서비스는 프록시를 인식할 필요가 없으며, 응용 프로그램 코드에서 변경이 필요하지 않다.</p>
+<p>이는 큰 장점이다.</p>
+<h2><strong>API Management 와 Service Mesh</strong></h2>
+<p>API Gateway에서도 라우팅, 트래픽 관리, 보안, 서비스 디스커버리와 같은 다양한 요구사항을 처리 할 수 있는 메커니즘을<br>
+제공한다. Service Mesh와 API gateway의 역할 상의 차이점은 다음과 같다.</p>
+<h3><strong>[API Management]</strong></h3>
+<p>API Gateway는 API 관리 Manager와 다른 보안 컴포넌트, 인증컴포넌트들과 한 세트로 묶여서 API Management라<br>
+부르기도 한다. API Management 는 응용 프로그램의 진입 포인트를 관리하고, 응용 프로그램 자체가 다른 어플리케이션에<br>
+의해 사용 될 수 있도록 하는 방법을 관리한다. 예를 들어 응용 프로그램 사용자는 직접 클라이언트 또는 포털을<br>
+통해 사용할 수 있는 API를 기반으로 응용프로그램에 접근 또는 제어 할 수 있다. 즉, API Management에서는<br>
+응용프로그램에 대한 단일 엔드포인트를 제공하여, 응용프로그램을 포함한 시스템에 대한 아키텍처를 캡슐화하여,<br>
+각 클라이언트 또는 포탈에 맞게 적용된 API를 제공하며, 여기에는 인증, 모니터링, 로드밸런싱, 캐싱, 요청관리, 정적응답<br>
+처리와 같은 기능을 제공한다. API Management 에서 API Gateway를 마이크로서비스 앞에 두어, API Gateway가<br>
+모든 클라이언트의 요청의 진입점이 되도록 한다.</p>
+<p>API Management에서는 이러한 사용자를 개별적으로 트래픽, 엑세스 제어 측면에서 관리 할 수 있다. 또 한, API<br>
+Management에서 관리되는 API를 추상적으로 유지하고, 어플리케이션에 호출 하는 과정에 대해 요청 라우팅과 프로토콜<br>
+변환작업을 수행한다.</p>
+<p>즉, API Management는 마이크로서비스 구성 요소 그룹의 외부 경계를 보호하고 제어하는 역할을 담당한다.</p>
+<h3><strong>[Service Mesh]</strong></h3>
+<p>API Management가 마이크로서비스 구성 요소 그룹의 외부 경계에서 보호하고 제어하는 역할을 수행하는 것과 달리,<br>
+Service Mesh는 아래 그림에서와 같이 경계 내부에서 역할을 수행한다.</p>
+<p><img src="/img/03_Bizdevops/07/03/image100.png" alt=""></p>
+<p>모놀리식 아키텍처의 애플리케이션을 소형의 마이크로서비스 구성요소로 나누게 되면 각 구성요소가 다른 구성요소와 완전히 분리되는<br>
+이점을 얻게 된다. 이는 마이크로서비스 아키텍처가 제공하는 민첩성, 확장성, 복원성의 이점을 실현할 수 있다.<br>
+마이크로서비스는 독립적으로 구축되어 서로 커뮤니케이션 하게 되고, 장애가 개별적으로 발생하기 때문에 전체의 운영<br>
+중단으로 확대 되지 않는다. 서비스간의 커뮤니케이션이 바로 마이크로서비스를 가능하도록 하는 핵심이다. 커뮤니케이션을 통제하는<br>
+로직은 Service Mesh없이 각 서비스에 코딩 될 수 있다. 많은 라이브러리와 프레임워크를 이용하여 Circit<br>
+Breaker 패턴을 구현할 수 있으며, 로드밸런싱 및 버전 기반 라우팅 기능을 구현할 수있다. 하지만 이러한 기능 구현은<br>
+마이크로서비스 구성요소에 내장되어 코드의 복잡성을 증가시킨다.</p>
+<p>마이크로서비스 아키텍처에서는 kubernetes와 같은 컨테이너 오케스트레이션 도구를 통해 마이크로서비스 구성요소들을 대규모로<br>
+관리한다. Kubernetes 자체는 런타임 환경에서 다른 마이크로서비스에 대한 Service Discovery 기능을<br>
+기본으로 제공하고, 컨테이너에 대한 동적 로드 밸런싱 기능을 제공한다.</p>
+<p>Service Mesh는 애플리케이션 런타임 환경에서 새로운 기능을 추가로 요구하지 않는다. 아키텍처 내의 애플리케이션에는 요청이<br>
+A 지점에서 B지점으로 전달되는 방식을 지정하는 룰이 필요하다. Service Mesh는 개별 서비스로부터 서비스 간<br>
+커뮤니케이션을 통제하는 로직을 통해 인프라 계층에 이를 추상화하는 역할을 담당한다. Service<br>
+Mesh는 어플리케이션 내부 경계에서 마이크로서비스 간의 모든 직접적인 상호통신을 차단하고, 라우팅, 복원력 및 보안 패턴과 같은<br>
+요소를 마이크로서비스 자체와 완전히 독립적으로 도입하여 관리한다.</p>
+<p><strong>API Management, Service Mesh 비교</strong></p>
+<p><img src="/img/03_Bizdevops/07/03/image101.png" alt=""></p>
+<p>API Management와 Service Mesh는 서로 다른 범위에서 적용된다. API Management는 마이크로서비스<br>
+그룹의 API가 다른 그룹에 노출되는 방식에 중점을 두며, Service Mesh는 그룹 안에서 라우팅을 제공한다.</p>
+<p><span class="underline">API Management 는 일반적으로 Gateway 프록시 패턴을 사용해서<br>
+수행</span>된다. API 호출자는 API 구현내용을 알 필요 없다. Gateway를 호출하는 방법만 알면<br>
+Gateway가 API 구현내용에 대한 리디렉션을 대신 수행한다. 트래픽 관리 또는 경로 기반 라우팅 같은 상호 연결 패턴은<br>
+API Gateway에 의해 수행된다. (API gateway 구성은 API Management의 구성요소)</p>
+<p>이에 반해 <span class="underline">Service Mesh는 일반적으로 Side Car Proxy 패턴을<br>
+사용</span>한다. Gateway가 없으며, 호출자는 Mesh내에서 존재한다. 따라서 Mesh의 양쪽에는 호출자와<br>
+공급자가 있다. 호출자의 코드에는 공급자의 주소를 찾는 방법과 공급자의 호출에 대한 밸런싱을 유지하는 로직, 또한<br>
+재시도를 수행할지 또는 Circit Braker 와 같은 패턴을 구현할지 에 대한 내용이 들어가게된다. Service<br>
+Mesh를 이용하면 이런 Sevice Mesh기능을 제공하는 호출자의 코드는 어플리케이션 코드내 내장되는 것이 아니라<br>
+Sidecar와 같이 별개로 관리 된다. Sidecar의 작업의 대부분은 다운 스트림 호출을 관리하는 것이며, 이는 대부분의 상호<br>
+통신 패턴이 API Management에서와 같이 서버에서 관리되는 것이 아니라, 클라이언트에서 수행되고 있음을 의미한다.</p>
+<p>다음은 API Management와 Service Mesh의 차이점에 대한<br>
+표이다.</p>
+<table class="table">
+<thead>
+<tr>
+<th></th>
+<th>API Management</th>
+<th>Service Mesh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Service Discovery</td>
+<td>사용자가 서비스를 사용할 수 있는 API를 자체적으로 제공함</td>
+<td>필요한 서비스를 찾기 위해서는 클라이언트 Sidecar 에서 사용하는 서비스 레지스트리를 유지관리 해야 함</td>
+</tr>
+<tr>
+<td>라우팅 주체</td>
+<td>서버 측</td>
+<td>요청하는 서비스</td>
+</tr>
+<tr>
+<td>라우팅 구성요소</td>
+<td>별도의 네트워크(hop)을 도입하는 독립적인 API gateway 구성요소</td>
+<td>Local Network 스택의 일부가 되는 클라이언트의 sidecar</td>
+</tr>
+<tr>
+<td>로드밸런싱</td>
+<td>API Gateway는 단일 엔드포인트를 제공하고, 로드밸런싱 구성요소에 요청을 리디렉션하여 로드밸런싱 구성요소가 처리</td>
+<td>서비스 레지스트리에서 서비스 목록을 수신하고, 이를 기반으로 클라이언트 sidecar에서 로드밸런싱 알고리즘을 통해 수행</td>
+</tr>
+<tr>
+<td>범위</td>
+<td>하나의 API gateway가 많은 응용프로그램의 API를 노출</td>
+<td>Kubernetes 네임스페이스 내의 컨테이너와 같이 응용프로그램이 밀접하게 관련된 마이크로서비스 구성요소 세트로 제한</td>
+</tr>
+<tr>
+<td>네트워크</td>
+<td>외부 네트워크와 내부 애플리케이션 네트워크 사이에 위치함</td>
+<td>응용 프로그램의 네트워크 경계 내에서만 통신을 가능하게 함(예를 들어 Kubernetes 의 Namespace 네트워크 범위)</td>
+</tr>
+<tr>
+<td>로그 및 매트릭</td>
+<td>API Gateway를 통한 전체 호출에 대한 집계</td>
+<td>Mesh 범위 내에서 교차 컴포넌트 추적</td>
+</tr>
+<tr>
+<td>Analytics</td>
+<td>API 사용자, 공급자에 대한 모든 호출에 대해서 수집되고 분석 되어짐</td>
+<td>Mesh 내 모든 마이크로서비스 구성요소에 대해 다른 별도 구성요소를 통해 분석할 수 있음 (데이터 정렬/분석은 mesh 역할이 아님)</td>
+</tr>
+</tbody>
+</table>
+<p>사용되는 보안 모델에도 차이가 있다. 예를 들어 API Management는 노출된 API를 보호하기 위해 HTTP인증,<br>
+OAuth 및 애플리케이션 카/패스워드 쌍과 같은 기술을 상용하는 반면에, Service Mesh는 상호 서비스간에 TLS를<br>
+시행하는데 사용되며 Mesh내 구성요소간 세부적인 역할 기반 엑세스 제어를 지원한다.</p>
+<p>API Management (API Gateway)와 Service mesh는 서로 독립적인 역할을 가지고 있으며, 이들간의<br>
+경계를 파악하는 것이 매우 중요하다. API Gateway의 주된 목적은 네트워크 외부의 트래픽을 받아서 내부에<br>
+배포하는 것이고, Service Mesh는 네트워크 내의 트래픽을 라우팅하고 관리하는 데 있다. Service<br>
+Mesh는 API Gateway와 함께 작동하여, 외부 트래픽을 효율적으로 수신한 다음, 네트워크에서 트래픽을 효과적으로 라우팅<br>
+하도록 설계해야 한다. API Gateway와 Service Mesh가 있는 배포에서 클러스터 외부에서 들어오는 트래픽이 먼저<br>
+API Gateway를 통해 라우팅 된 다음, Service Mesh로 라우팅 된다. API Gateway는 인증, 라우팅 등의<br>
+오프로드 기능을 처리할 수 있는 반면에 Service Mesh는 마이크로서비스 아키텍처에 대한 세밀한 관찰과 제어 기능을<br>
+제공한다.</p>
+<p>최근 추세를 보면 Service Mesh 기술이 매우 빠르게 발전하고 있어서 API Gateway의 일부 기능을 지원하고 있다.<br>
+Docker 컨테이너와 Kubernetes와 같은 컨테이너 오케스트레이션 툴을 사용하는 조직이 늘어남에 따라 Service<br>
+Mesh와 API Gateway 기능이 병합될 가능성이 높다.</p>
+<p><strong>Service Mesh 패턴</strong></p>
+<p>[Library]</p>
+<p><img src="/img/03_Bizdevops/07/03/image102.png" alt=""></p>
+<p>라이브러리 방식은 간단하다. 각 마이크로 서비스 응용프로그램에는 Service Mesh 기능을 구현하는 라이브러리 코드가<br>
+포함된다.(Hystrix, Ribbon과 같은 라이브러리) 이는 하나의 개발 언어와 프레임워크 등의 환경에서 구현된<br>
+어플리케이션에 적합하다. 라이브러리 방식은 인프라 환경과의 많은 호환성을 필요로 하지 않는다. 컨테이너 오케스트레이션(eg.<br>
+Kubernetes)은 Hystrix 라이브러리가 적용되더라도 따로 설정하지 않아도 된다. 그러나 언어 사용에 있어서 라이브러리<br>
+방식은 제한이 있다. 이러한 라이브러리를 이용해 어플리케이션은 Service Mesh의 기능을 사용하게 되며, 이 작업은<br>
+마이크로서비스의 컨텍스트에서 수행되기 때문에 CPU, 메모리와 같은 리소스를 공정하게 할당하기가 쉽다.</p>
+<p><strong>[Node Agent (Shared host Proxy)]</strong></p>
+<p><img src="/img/03_Bizdevops/07/03/image103.png" alt=""></p>
+<p>노드 에이전트 방식에서 모든 노드(Container Instance, GCE)에서 실행되는 agent를 두고, 작업 부하를<br>
+처리한다. 이 방식에서 어플리케이션 구현 언어는 중요하지 않다. 노드 에이전트 방식의 대표 적인 예로 Linkerd<br>
+가 있다. 모든 노드에는 하나의 노드 Agent가 필요하기 떄문에 이 방식에서는 인프라와의 호환성이 필요하다. 수 백에서 수천<br>
+대의 인스턴스와 순간적으로 인스턴스를 다시 스케줄링 하는 오케스트레이션 도구에서 단일 요청이 서비스의 토폴로지를 따라가는<br>
+경로는 매우 복잡하며, 컨테이너를 사용하면 각 서비스를 쉽게 구성할 수 있기 때문에 라이브러리 방식은 마이크로서비스 환경에서<br>
+비효율적이다.</p>
+<p>노드 에이전트 방식에서 Service Mesh는 TCP/IP와 유사하다. TCP 스택이 네트워크 종단점간에 바이트를 안정적으로<br>
+전달하는 메커니즘을 추상화하는 것처럼 Service Mesh는 서비스간에 안정적으로 요청을 전달하는 메커니즘을 추상화한다.<br>
+TCP와 마찬가지로 Service Mesh도 실제 페이로드나 인코딩 방법에 신경 쓰지 않는다. 응용 프로그램의 목표(A에서 B로<br>
+보내기와 같은)를 가지고 있으면 TCP와 마찬가지로 Service Mesh는 목표를 달성하는 동시에 오류도 처리한다. TCP<br>
+와 달리 Service Mesh는 그 외 응용 프로그램 런타임에 대한 가시성과 제어기능 등을 제공한다. Service<br>
+mesh의 목표는 서비스 커뮤니케이션을 보이지 않는 인프라 영역에서 모니터링, 관리 및 제어할 수 있는 일종의 레이어로<br>
+추상화는 데 있다.</p>
+<p>노드 에이전트 방식의 작동 과정에 대한 이해를 돕기 위하여 Linkerd를 예로 들어 설명한다.</p>
+<p>Linkerd를 통해 서비스에 대한 요청이 있을 때 다음과 같이 처리 된다.</p>
+<p>[1] Linkerd는 동적 라우팅 규칙을 적용하여, 요청자가 의도한 서비스를 찾는다.</p>
+<p>[2] 올바른 대상 서비스를 찾으면 Linkerd는 해당 서비스 엔드포인트에서 노드(GCE)의 해당 풀을 검색한다.</p>
+<p>[3] Linkerd는 최근 요청에 대한 관찰된 대기시간을 포함하여 다양한 요인을 기반으로 빠른 응답을 반환할 가능성이 가장<br>
+높은 노드를 선택한다.</p>
+<p>[4] Linkerd는 노드에 요청을 보내고 결과의 대기 시간과 응답 유형을 기록한다.</p>
+<p>[5] 노드가 다운되거나 응답이 없거나 요청을 처리하지 못한 경우 Linkerd는 다른 노드에서 요청을 다시 시도한다.(단,<br>
+요청이 먹통인 경우 에만)</p>
+<p>[6] 노드가 오류를 지속적으로 반환하는 경우 Linkerd는 이를 로드밸런싱 풀에서 제거하여 나중에 주기적으로 다시<br>
+시도한다.(예, 노드에서 일시적인 오류가 발생할 수 있음)</p>
+<p>[7] 요청 마감시간이 경과하면 Linkerd는 추가 재시도를 하는 대신 사전에 요청을 실패 처리한다.</p>
+<p>[8] Linkerd는 위의 모든 동작을 매트릭화하여, 중앙 집중식 매트릭 시스템에 전송한다.</p>
+<p>노드 에이전트 방식의 경우 동일한 호스트에 많은 컨테이너가 존재하는 경우, Sidecar 방식에 비해 처리량이 높고, 리소스를<br>
+적게 사용한다. 그러나 노드에이전트(linkerd proxy)가 장애가 나는 경우 해당 호스트에 있는 모든 컨테이너에<br>
+요청을 전달 할 수 없게 되며, 다른 Service Mesh와 같이 사용할 수 없다.</p>
+<p><strong>[Sidecar (Recommended)]</strong></p>
+<p><img src="/img/03_Bizdevops/07/03/image104.png" alt=""></p>
+<p>Sidecar 방식은 Envoy와 함께 Istio에서 사용하는 방식이다. Sidecar 배포에서 모든 응용 프로그램 컨테이너에<br>
+추가로 Sidecar 컨테이너가 배포된다. Sidecar는 응용 프로그램 컨테이너로 들어오거나 나가는 모든 네트워크<br>
+트래픽을 처리한다. 이 방식은 라이브러리와 노드에이전트 방식과 큰 차이점을 가진다. 예를 들어 모든 노드에서 새<br>
+에이전트를 실행할 필요 없이 Sidecar를 배포할 수 있으므로(노드 에이전트를 배포하기 위해 인프라 전반에 협업이<br>
+필요하지 않음) 동일한 Sidecar의 복사 본을 여러 개 실행한다. 또한 Linkerd에서 마이크로서비스 그룹에<br>
+하나의 Service Mesh만을 사용하던 것과 달리 다른 Service Mesh와 같이 사용할 수 있다. Sidecar<br>
+방식에서 GKE의 경우, POD 정의에 프록시가 정의된다. 일반적으로 1Container 당 1 Sidecar 방식으로<br>
+사용되며, 단일 호스트로의 proxy오류 가능성을 제한하며, 동일한 호스트의 단일 호스트에는 영향을 미치지 않는다.</p>
+<p><strong>Service Mesh 주요 기능</strong></p>
+<p>Service Mesh의 주요한 목표는 서비스 통신 계층에 대한 가시성을 확보하고 동적으로 서비스를 디스커버리, 로드 밸런싱,<br>
+타임아웃처리, 폴백, 재시도, Circuit Breaker, 분산형 추적 과 같은 모든 마이크로서비스 통신 논리를 완벽하게<br>
+제어하는 데 있다. 서비스 간의 보안 정책 적용 및 가시성 확보 등은 트래픽 제어 및 trace 기능에 의해 제공된다.</p>
+<p>GCP의 GKE는 이미 기본적인 Service Mesh를 가지고 있다. 그것은 ‘서비스(Service)’ 리소스 이다. 필요한<br>
+Pod/Task를 대상으로 서비스 검색을 제공하고, 요청에 대한 라운드로빈 방식으로 밸런싱을 처리한다. 서비스는 클러스터의 각<br>
+호스트에서 iptable을 관리하여 재시도 및 논리 연결 해제 없이 라운드 로빈 로드밸런싱 방식과 같은 기초적인 기능만을<br>
+지원하고, 앞에 나열한 Service Mesh풍부한 기능은 기대할 수 없다. 그러나 컨테이너 클러스터 환경에서 Service<br>
+Mesh(Linkerd, istio, consul)을 구현하면 다음과 같은 기능을 쓸 수 있다.</p>
+<ol>
+<li>HTTP/HTTPS</li>
+</ol>
+<blockquote>
+<p>Service Mesh 프록시는 발신 측에서 HTTPS 캡슐화를 관리하고 수신 측에서 TLS 종단을 관리하여 응용 프로그램의<br>
+구성요소가 일반 HTTP 또는 gRPC 및 기타 프로토콜을 사용할 수 있게 한다. 또한 전송 중 암호화에 신경 쓰지 않아도<br>
+된다. 암호화는 프록시에 의해 처리된다.</p>
+</blockquote>
+<ol start="2">
+<li>보안 정책</li>
+</ol>
+<blockquote>
+<p>프록시는 어떤 서비스가 다른 서비스 및 엔드포인트에 액세스하도록 허용되는지를 알고 허락되지 않은 트래픽을 거부한다.</p>
+</blockquote>
+<ol start="3">
+<li>Circuit Breaking</li>
+</ol>
+<blockquote>
+<p>오버로드된 서비스 또는 엔드포인트에 엑세스 할 때, 자동으로 백오프 (대기시간이 너무 길어서 과도한 로드로 인해 엔드포인트가<br>
+완전히 실패할 수 있는 요청이 증가하는 것을 피하기 위해서)</p>
+</blockquote>
+<ol start="4">
+<li>지연시간 기반 로드밸런싱</li>
+</ol>
+<blockquote>
+<p>각 대상의 대기시간을 무시하는 라운드 로빈 스타일의 로드밸런싱 대신 각 백엔드 대상의 응답시간에 따라 스마트한 로드밸런싱을<br>
+사용한다.</p>
+</blockquote>
+<ol start="5">
+<li>대기열 기반의 로드밸런싱</li>
+</ol>
+<blockquote>
+<p>Service Mesh는 이전의 모든 요청을 보낸 곳과 처리 중이거나 완료 한 곳을 정확히 알고 있으므로 처리를 위해 가장<br>
+낮은 대기열을 가진 대상에 해당 로직을 기반으로 새로운 수신 요청을 보낸다.</p>
+</blockquote>
+<ol start="6">
+<li>요청 라우팅</li>
+</ol>
+<blockquote>
+<p>HTTP 헤더를 읽어서 요청을 로드밸런서 뒤에 있는 특정 대상으로 라우팅한다. 이 기능을 이용해 카나리아 배포 테스트 등을 할<br>
+수 있다. Service Mesh에서 제공하는 가장 강력한 기능 중 하나이다.</p>
+</blockquote>
+<ol start="7">
+<li>
+<p>Health Check, 재시도</p>
+</li>
+<li>
+<p>매트릭 및 Trace</p>
+</li>
+</ol>
+<blockquote>
+<p>대기시간 매트릭, 요청 성공/오류율</p>
+</blockquote>
+<p><strong>Service Mesh 종류</strong></p>
+<p>서비스 매시는 크게 MS Azure Service Fabric과 같이 PaaS의 일부로서 서비스 코드에 포함되는 유형과<br>
+Netflix OSS와 같이 라이브러리로 구현되어 API호출을 통해 매시에 결합되는 유형 및 Istio, Linkerd와 같이<br>
+Side Code 프락시를 사용하여 메시 기능을 마이크로서비스에 주입하는 유형으로 분류된다.</p>
+<p><img src="/img/03_Bizdevops/07/03/image105.png" alt=""></p>
+<p><strong>[AWS App Mesh<br>
+(<a href="https://aws.amazon.com/ko/app-mesh/features/"><span class="underline">https://aws.amazon.com/ko/app-mesh/features/</span></a>)]</strong></p>
+<p>AWS App Mesh를 사용하면 다양한 유형의 컴퓨팅 인프라 전반에 구축된 서비스에 대한 일관된 가시성 및 네트워크 트래픽 제어<br>
+기능을 제공하여 손쉽게 서비스를 실행할 수 있으며, 모니터링 데이터 수집 방식이나 서비스 간에 트래픽이 라우팅 되는 방식을<br>
+변경하기 위해 애플리케이션 코드를 업데이트할 필요가 없다. App Mesh는 모니터링 데이터를 내보내도록 각<br>
+서비스를 구성하고, 애플리케이션 전반에 일관된 통신 제어 로직을 구현한다. 이를 통해 오류의 정확한 위치를 신속하게<br>
+찾아내고 오류가 있거나 코드 변경 사항을 배포해야 하는 경우 네트워크 트래픽을 자동으로 다시 라우팅 할 수 있다.</p>
+<p>AWS Fargate, Amazon ECS, Amazon EKS, Kubernetes on EC2와 함께 App Mesh를<br>
+사용하면 규모에 맞춰 컨테이너화된 마이크로서비스를 효과적으로 사용할 수 있다.</p>
+<p>AWS APP Mesh의 주요 기능은 다음과 같다.</p>
+<ol>
+<li>
+<p>일관된 마이크로서비스 통신 : App Mesh는 통신 모니터링과 제어에 필요한 논리를 각각의 마이크로서비스 대한 모든<br>
+네트워크 트래픽을 관리하는 프록시로 나눈다.</p>
+</li>
+<li>
+<p>오픈소스 프록시 : App Mesh는 마이크로서비스 컨테이너로 오가는 모든 트래픽을 관리하기 위해 오픈소스인 Envoy<br>
+프록시를 설정한다.</p>
+</li>
+<li>
+<p>가시성 : App Mesh는 마이크로서비스 간 모든 통신에 대한 수치, 로그, 트레이스를 모으기 때문에 에러 발생 부분을<br>
+빠르게 처리할 수 있다. 이 기능은 AWS 서비스와 오픈 소스를 이용하여 실행 가능하다.</p>
+</li>
+<li>
+<p>트래픽 제어 : App Mesh는 어플리케이션 내부 코드 수정이나 로드밸런서를 사용하는 일 없이 마이크로서비스들을 바로<br>
+연결할 수 있도록 하며, 각 마이크로서비스가 시작할 때, 마이크로서비스의 프록시가 App Mesh에 연결하고<br>
+어플리케이션 내 다른 마이크로서비스들의 위치를 담고 있는 데이터를 받는다.</p>
+</li>
+</ol>
+<p><strong>Istio<br>
+(<a href="https://istio.io/docs/concepts/what-is-istio/"><span class="underline">https://istio.io/docs/concepts/what-is-istio/</span></a>)</strong></p>
+<p>Istio는 Google, IBM, Redhat, Lyft, VMware와 같이 다수의 대형업체들이 참여하여 Service<br>
+Mesh의 개념을 쉽게 구현할 수 있는 일종의 프레임워크(?)의 형태로 제공하는 오픈소스이다. 그리고 이를 통해 대규모의<br>
+마이크로서비스 환경이라고 하여도 서비스를 연결, 보안, 제어 및 관찰할 수 있는 방안을 쉽게 하도록 지원하고<br>
+있다.</p>
+<p>Istio의 주요 기능은 다음과 같다.</p>
+<ol>
+<li>
+<p>트래픽 관리 : Istio의 간단한 룰 설정과 트래픽 라우팅은 사용자로 하여금 서비스 간 트래픽과 API 요청의 흐름을<br>
+조절할 수 있게 한다. Istio는 circuit breakers, timeouts, retries 같은 서비스<br>
+레벨의 속성들의 설정을 단순화 하고, A/B Testing, Canary Rollouts, 백분위 단위의<br>
+traffic 분산으로 단계적 rollouts 같은 중요한 일들을 설정하기 쉽도록 한다.</p>
+</li>
+<li>
+<p>보안 : Istio는 마이크로 서비스 간 통신의 인증, 승인, 암호화를 확장 가능한 방식으로 제공 및 관리할 수 있다.<br>
+특히, Istio 가 기본적으로 기반 보안 통신 채널을 제공하므로 이를 통해 개발자는 애플리케이션 수준 보안에<br>
+집중할 수 있으며, 별도의 보안에 대한 고민 없이도 Istio 가 안전한 보안 커뮤니케이션을 지원할 수 있다…</p>
+</li>
+<li>
+<p>관측 : Istio는 기본적으로 추적, 모니터링, 로깅을 제공 가능하며 이를 통해 Service Mesh 배포에 대한<br>
+심층적인 정보를 제공하여 서비스의 성능과 다른 프로세스에 미치는 성능의 영향을 확인하고 문제를 빠르고 효과적으로<br>
+감지 및 분류할 수 있도록 지원할 수 있다…</p>
+</li>
+<li>
+<p>플랫폼 지원 : Istio는 플랫폼에 독립적이고, 다양한 클라우드, On-premise, Kubernetes, Mesos<br>
+같은 다양한 환경에서 돌아가도록 설계 되었다.</p>
+</li>
+<li>
+<p>통합 및 사용자 정의 : Istio의 정책 실행 구성요소는 ACLs, Logging, Monitoring, Quotas,<br>
+Auditing 등 기존의 솔루션들과 통합되도록 확장 및 사용자 정의가 가능하다.</p>
+</li>
+</ol>
+<p><strong>Service Mesh 고려사항</strong></p>
+<p>Service Mash Pattern에서 설명한 것처럼 Service Mesh 패턴은 다양하다. 패턴들을 크게 두 가지로 크게<br>
+분류하면 호스트 공유 프록시 패턴과 Side car 컨테이너 방식이라 할 수 있다.</p>
+<p><img src="/img/03_Bizdevops/07/03/image106.png" alt=""></p>
+<p><strong>[Host Shared Proxy 패턴]</strong></p>
+<p>Kubernetes 용어로는 Daemonset이라 부른다. 동일한 호스트에 많은 컨테이너가 존재하고 연결 풀링을 활용하여 처리량을<br>
+향상 시키는 경우에는 더 적게 리소스를 사용한다. 그러나 하나의 프록시가 실패하면 해당 호스트에 있는 모든 컨테이너들이 종료<br>
+된다. 대표적인 service mesh 제품은 linkerd이다.</p>
+<p><strong>[Sidecar 컨테이너 패턴]</strong></p>
+<p>메인 응용 어플리케이선 컨테이너 서비스와 함께 실행되도록 각 pod 또는 task 정의에 프록시가 주입된다. 단일 호스트로의<br>
+프록시 오류 가능성을 제한하며 동일한 호스트의 다른 호스트에는 영향을 미치지 않는다. Linkerd 역시 sidecar<br>
+컨테이너에 주입하여 사용할 수 있다. 이 방식의 대표적인 service mesh 제품은 istio이다.</p>
+<p>**Service Mesh 구성에 따른 마이크로서비스 아키텍처 차이 **</p>
+<p>이해를 돕기 위하여 아키텍처를 구성한 조직에서 일어날 수 있는 일을 시나리오로 작성하였다.</p>
+<p><strong>[Service Mesh 미 구성 아키텍처]</strong></p>
+<p><img src="/img/03_Bizdevops/07/03/image107.png" alt=""></p>
+<p>위 그림은 Service mesh가 고려되지 않은 마이크로서비스 아키텍처를 나타낸다. 방문자 패턴과 환경 설정을 학습하여<br>
+웹사이트에서 자신의 경험을 개인화하고, 사용자에게 좋아하는 주제 업데이트를 알리는 등의 일을 하는 응용<br>
+프로그램을 제공한다. 수천 개의 컨테이너와 수백 개의 노드에 퍼져 있는 모든 마이크로서비스들에서 발생하는 많은<br>
+복잡한 프로세스가 있다고 가정한다. 이 예에서 각 마이크로서비스에는 통신과 관련된 코드가 있다. 재시도 정책, 시간초과,<br>
+예외처리(네트워크 오류의 경우) 등을 설정한다. 또한 팀은 스칼라, goLang, Nodejs, java,<br>
+Python등 다양한 언어로 응용 프로그램 개발을 하고 있다. 모든 구성 요소는 네트워크를 통해 REST API 또는<br>
+gRPC를 통해 서로 통신할 수 있으며, 각 팀은 각각의 언어를 사용하여 자신의 구성요소에 비즈니스 로직 뿐만 아니라 통신<br>
+논리를 구현하는데 시간과 노력을 쏟아야하며, 서로 다른 라이브러리 및 기능을 공유할 수 없다.</p>
+<p><strong>[Service Mesh 적용 아키텍처]</strong></p>
+<p><img src="/img/03_Bizdevops/07/03/image108.png" alt=""></p>
+<p>이 아키텍처의 주요한 특징은 Service Mesh컨트롤 플레인(또는 일부 저장소의 구성 파일을 통해 선택한 도구 및 배포 방법에<br>
+따라 다름)을 통해 동일한 위치에서 프록시를 구성하고 업데이트 할 수 있다는 점이다. 모든 수천 개의 프록시에 대한 규칙을<br>
+지정하여 라우팅, 밸런싱, 매트릭 수집, 보안 정책, Circuit Breaker, 암호화 전송 등의 모든 작업은<br>
+클러스터 관리자가 적용한 규칙 집합을 따르게 된다.</p>
+<p>마이크로서비스 통신 메커니즘을 별도의 아키텍처 계층으로 분리하는 Service Mesh의 개념은 수 천개의 프록시를 구성하고 유지<br>
+관리하는 복잡성을 감당할 만큼 유익한 지에 대한 의문이 들 수 있다.</p>
+<p>Istio는 완벽한 기능을 가진 Service Mesh의 예이며, 모든 데이터 플레인 프록시를 관리하는 여러 마스터 구성요소를<br>
+가지고 있다. (프록시는 Envoy 또는 Linkerd가 될 수 있지만 기본적으로 Envoy를 사용)</p>
+</div></div></div></div></main><footer class="v-footer v-sheet v-sheet--tile theme--light v-footer--inset" data-booted="true"> Copyright © <span>uEngine.</span> All rights reserved. </footer></div></div><script src="/js/chunk-vendors.39e5a000.js" defer></script><script src="/js/app.b161d75b.js" defer></script></body></html>

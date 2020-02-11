@@ -1,2 +1,0 @@
-# MSASchool 이란?
-
