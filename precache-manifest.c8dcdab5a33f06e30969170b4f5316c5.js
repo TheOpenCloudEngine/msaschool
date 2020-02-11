@@ -52,7 +52,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Gothic-A1/stylesheet2.css"
   },
   {
-    "revision": "48218c091877a07ee48719c80906d622",
+    "revision": "f1c8117544f618854419e4c9d059e286",
     "url": "/app.html"
   },
   {
@@ -336,15 +336,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_Community/03_액터별 교육/index.md"
   },
   {
-    "revision": "2923b0d306d1005af67667a95ec279da",
+    "revision": "1b45f043da17eefc489b8d1500aaa6f8",
     "url": "/contents/05_Community/04_교육상담 및 신청.md"
   },
   {
-    "revision": "76fba6afeb7c146b1d817af7581b9bd7",
+    "revision": "6de4bb1506633db0c924dec02d0290a3",
     "url": "/contents/05_Community/05_교육 수강기관.md"
   },
   {
-    "revision": "af88e9c90c5c4d0a52fa",
+    "revision": "388063bd936dbb1608d4",
     "url": "/css/app.ebb8c3aa.css"
   },
   {
@@ -1285,23 +1285,23 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "99ad64f04180fda6d8917f05130fb067",
-    "url": "/img/05_Commnunity/02/image129.png"
+    "url": "/img/05_Community/02/image129.png"
   },
   {
     "revision": "ddf5afb0e9145456eeef575d081e830e",
-    "url": "/img/05_Commnunity/02/image130.png"
+    "url": "/img/05_Community/02/image130.png"
   },
   {
     "revision": "d7b613ffd1726c046c6548d03c40d261",
-    "url": "/img/05_Commnunity/04/image131.png"
+    "url": "/img/05_Community/04/image131.png"
   },
   {
     "revision": "7a8826fc8f76fcbd4027b319ffde7b6d",
-    "url": "/img/05_Commnunity/04/image132.png"
+    "url": "/img/05_Community/04/image132.png"
   },
   {
     "revision": "24eb711d45d351ea22031d6f1818745d",
-    "url": "/img/05_Commnunity/05/image133.png"
+    "url": "/img/05_Community/05/image133.png"
   },
   {
     "revision": "ffbf977e989e97692a7d55a25a3c9933",
@@ -1312,8 +1312,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/index.003de827.png"
   },
   {
-    "revision": "af88e9c90c5c4d0a52fa",
-    "url": "/js/app.b161d75b.js"
+    "revision": "388063bd936dbb1608d4",
+    "url": "/js/app.461cddf2.js"
   },
   {
     "revision": "123f351a7f3db50e82d9",
