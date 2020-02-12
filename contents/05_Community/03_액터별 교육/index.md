@@ -1,6 +1,6 @@
 # 엑터별 교육
 
-**업무 담당자 과정 (3일)**
+## **업무 담당자 과정 (3일)**
 
 <table>
 <thead>
@@ -13,183 +13,183 @@
 <tr class="odd">
 <td><strong>Why MSA and agile</strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>Success stories on MSA: Amazon and Netflix</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>10 Attributes of Cloud Native Application</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>MSA and EDA architectural style</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>DevOps Process</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Values and effects</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Future: Serverless Computing</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td><strong>MSA Analysis and Design</strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>Domain-Driven Design</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Domain Event and Event-storming</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Domain modeling and Process Modeling</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Context-map and Bounded Context</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Service Decomposition and API Design Strategy</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td><p><strong>Lab: </strong></p>
 <p><strong>MSA Deploying &amp; DevOps Practice</strong></p></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>Cloud Platform Configuration</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Connect Source Repository with Cloud Build</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Zero down time Service Deployment</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Fault Isolation</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Contract Test</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Logging, Monitoring and Tracing</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td><strong>Workshop: Event Storming with a specific domain </strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>User Scenario explanation</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Team Separation and KPI statements</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Ice breaking with first step to event storming with instructor guide: What is Events, Policies, Commands and Aggregates</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>The first event storming by team’s autonomy: guided by facilitators (1~2 hours)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>First review for the first results: Best teams will be complimented.</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Correction and refinement (1 hour)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Finding Bounded Contexts and Microservices</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Finding key events needed to be mutually understood and shared team-widely. And standardize the naming and statements of key events. Finding read models for data projection and CQRS</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td><strong>Workshop: Event driven integration</strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>How to use Kafka publisher and consumer with the command line tools</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Publish event by a team, consumes the event by other teams.</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Business Process Execution by choreography and Eventual transactions</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Saga and compensation</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td><strong>Micro Service Integration Patterns</strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>Integrating mi-services with User Interfaces: Client-side rendering, SPA, MVVM, CORS exceptions and API Gateway</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Integrating micro services with direct-call (Request-Response)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>(Dynamic Service Binding, Service Registry)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Integrating mi-services with PubSub (Choreography with MQ/Kafka)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Integrating mi-services with Mediator (Orchestration with BPM)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Transaction Issues (Dynamic Discovery, API gateway, Event sourcing, CQRS)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Aggregating Data: REST, GraphQL, Cache, Materialized View</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Securty with OAuth and IAM</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td><strong>Delivering Micro Services and DevOps</strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>Container-based Application Patterns</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Containerizing Services and Container orchestration with Docker</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>DevOps tool chains: CI/CD with gitlab, orchestration with Docker SWARM and Kubernetes</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Zero down time deploy (canary) with Istio and Spinnaker</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Service Reliability Management with Circuit Breaking, Rate Limiting and Chaos Engineering (Istio)</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td><strong>Productivity on Microservices Development : Serverless Computing and Low-code Platforms</strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>Serverless Computing Platforms: Amazon Lambda and Firebase</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Front-end driven development: Vue and Firebase API</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Productivity with Low-code Cloud Development Platform: Microsoft PowerApps</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 </tbody>
 </table>
 
-**DevOps 운영자 과정 (3일)**
+## **DevOps 운영자 과정 (3일)**
 
 <table>
 <thead>
@@ -202,193 +202,193 @@
 <tr class="odd">
 <td><strong>Why MSA and agile</strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>Success stories on MSA: Amazon and Netflix</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>10 Attributes of Cloud Native Application</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>MSA and EDA architectural style</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>DevOps Process</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Values and effects</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Future: Serverless Computing</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td><strong>MSA Analysis and Design</strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>Domain-Driven Design</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Domain Event and Event-storming</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Domain modeling and Process Modeling</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Context-map and Bounded Context</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Service Decomposition and API Design Strategy</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td><p><strong>Lab: </strong></p>
 <p><strong>MSA Deploying &amp; DevOps Practice</strong></p></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>GCP(Google Cloud Platform) Configuration</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Connect Source Repository with GCB(Google Cloud Build)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Zero down time Service Deployment</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Fault Isolation</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Contract Test</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Logging, Monitoring and Tracing</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td><strong>Micro Service Integration Patterns</strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>Integrating mi-services with User Interfaces: Client-side rendering, SPA, MVVM, CORS exceptions and API Gateway</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Integrating micro services with direct-call (Request-Response)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>(Dynamic Service Binding, Service Registry)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Integrating mi-services with PubSub (Choreography with MQ/Kafka)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Integrating mi-services with Mediator (Orchestration with BPM)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Transaction Issues (Dynamic Discovery, API gateway, Event sourcing, CQRS)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Aggregating Data: REST, GraphQL, Cache, Materialized View</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Securty with OAuth and IAM</p>
-</blockquote></li>
+</li>
 <li></li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td><strong>Delivering Micro Services and DevOps</strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>Container-based Application Patterns</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Containerizing Services and Container orchestration with Docker</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>DevOps tool chains: CI/CD with gitlab, orchestration with Docker SWARM and Kubernetes</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Zero down time deploy (canary) with Istio and Spinnaker</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Service Reliability Management with Circuit Breaking, Rate Limiting and Chaos Engineering (Istio)</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td><strong>MSA Outer-Architecture</strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>Outer-Architecture and it's Components</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Managing Scalability with Workload Distribution Engine</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Container and Container Orchestrator</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Kubernetes Features and Architecture</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>master node Components</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Worker node Components</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Kubernetes Object Model</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td><strong>Basic Kubernetes practice</strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>Basic Kubernetes object Model</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Pod deployment via declarative YAML</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Volume, PersistentVolume, and PersistentVolumeClaims</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>ConfigMap and Secret</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td><strong>Advanced Kubernetes practice</strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>Authentication, Authorization, and Admission Control</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Access Services using Ingress</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Quota Management</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>DaemonSet and StatefulSet</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Helm installation</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Liveness and Readiness Probe</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Container lifecycle hooking</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 </tbody>
 </table>
 
-**MSA개발자 과정 (3일)**
+## **MSA개발자 과정 (3일)**
 
 <table>
 <thead>
@@ -401,192 +401,192 @@
 <tr class="odd">
 <td><strong>Why MSA and agile</strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>Success stories on MSA: Amazon and Netflix</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>10 Attributes of Cloud Native Application</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>MSA and EDA architectural style</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>DevOps Process</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Values and effects</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Future: Serverless Computing</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td><strong>MSA Analysis and Design</strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>Domain-Driven Design</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Domain Event and Event-storming</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Domain modeling and Process Modeling</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Context-map and Bounded Context</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Service Decomposition and API Design Strategy</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td><p><strong>Lab: </strong></p>
 <p><strong>MSA Deploying &amp; DevOps Practice</strong></p></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>GCP(Google Cloud Platform) Configuration</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Connect Source Repository with GCB(Google Cloud Build)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Zero down time Service Deployment</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Fault Isolation</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Contract Test</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Logging, Monitoring and Tracing</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td><strong>Workshop: Event Storming with a specific domain </strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>User Scenario explanation</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Team Separation and KPI statements</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Ice breaking with first step to event storming with instructor guide: What is Events, Policies, Commands and Aggregates</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>The first event storming by team’s autonomy: guided by facilitators (1~2 hours)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>First review for the first results: Best teams will be complimented.</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Correction and refinement (1 hour)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Finding Bounded Contexts and Microservices</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Finding key events needed to be mutually understood and shared team-widely. And standardize the naming and statements of key events. Finding read models for data projection and CQRS</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td><strong>Workshop: Event driven integration </strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>How to use Kafka publisher and consumer with the command line tools</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Publish event by a team, consumes the event by other teams.</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Business Process Execution by choreography and Eventual transactions</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Saga and compensation</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td><strong>Micro Service Implementation Patterns </strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>Transforming Monolith to Microservices</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Decomposing teams and micro services (Context map: Bounded Contexts and integration patterns)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Legacy Migration Strategies: Value-Focused Migration with Strangler Pattern and Anti-patterns</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Legacy Migration Tools: Service Mesh and Event Sourcing</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td><strong>Micro Service Implementation </strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>Transforming Event Storming to Implementations with Hexagonal Architecture</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Introduction to tools: Spring Boot, Kafka, JPA, Spring Data Rest, Spring Cloud Stream</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Example implementation of a domain:</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>How to generate a spring cloud project with the Spring Initializer and IntelliJ</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>How to map the aggregate stickers to “Entity” classes</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>How to map the command stickers to “RestRespository” and service classes</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>How to capture the moment of event publishing: Aggregate’s CRUD moment by using the JPA lifecycle hooks.</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Inserting domain event publish code in the aggregate with Spring Cloud Streams</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Listening domain event by the “EventListener”</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td><strong>Micro Service Integration Patterns</strong></td>
 <td><ul>
-<li><blockquote>
+<li>
 <p>Integrating mi-services with User Interfaces: Client-side rendering, SPA, MVVM, CORS exceptions and API Gateway</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Integrating micro services with direct-call (Request-Response)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>(Dynamic Service Binding, Service Registry)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Integrating mi-services with PubSub (Choreography with MQ/Kafka)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Integrating mi-services with Mediator (Orchestration with BPM)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Transaction Issues (Dynamic Discovery, API gateway, Event sourcing, CQRS)</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Aggregating Data: REST, GraphQL, Cache, Materialized View</p>
-</blockquote></li>
-<li><blockquote>
+</li>
+<li>
 <p>Securty with OAuth and IAM</p>
-</blockquote></li>
+</li>
 </ul></td>
 </tr>
 </tbody>

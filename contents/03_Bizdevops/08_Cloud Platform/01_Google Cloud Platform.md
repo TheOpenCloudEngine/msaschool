@@ -64,26 +64,25 @@ GKE(Google Kubernetes Engine)가 제공되는데, GKE는 오픈소스 소프트�
 **GCP 환경에서의 기술스텍
 (예시)**
 
-| 항 목                | 솔루션/ 툴                    | 서비스 유형             | 비고           |  |
-| ------------------ | ------------------------- | ------------------ | ------------ |  |
-| Java Framework     | Spring Boot 2.x           | OSS                | 개발 Framework |  |
-| Compute Engine     | Google Kubernetes Engine  | GCP managed        |              |  |
-|                    | Google Compute Engine     | GCP managed        |              |  |
-| RDBMS              | MySQL                     | GCP managed        |              |  |
-| NoSQL              | MongoDB                   | OSS                |              |  |
-| Storage            | Google Persistent Disk    | GCP managed        |              |  |
-| Git Repository     | Cloud Source Repository   | GCP managed        |              |  |
-| Container Registry | Google Container Registry | GCP managed        |              |  |
-| CI/CD              | Source Builder            | Google Cloud Build | GCP managed  |  |
-|                    | Deployment                | Spinnaker          | OSS          |  |
-| API Gateway        | Spring Cloud Gateway      | OSS                |              |  |
-| Service Mesh       | Istio                     | OSS                |              |  |
-| Streaming          | Apache Kafka              | OSS                |              |  |
-| Logging            | Stackdriver logging       | GCP managed        |              |  |
-| Monitoring         | Stackdriver monitoring    | GCP managed        |              |  |
-| Tracing            | Stackdriver tracing       | GCP managed        |              |  |
-
-\* OSS : Open Source Software
+|항 목                | 솔루션/ 툴                    | 서비스 유형             | 비고     |  
+| ------------------ | ------------------------- | ------------------ | ------------ | 
+| Java Framework     | Spring Boot 2.x           | OSS                | 개발 Framework |  
+| Compute Engine     | Google Kubernetes Engine  | GCP managed        |              |  
+|                    | Google Compute Engine     | GCP managed        |              |  
+| RDBMS              | MySQL                     | GCP managed        |              |  
+| NoSQL              | MongoDB                   | OSS                |              |  
+| Storage            | Google Persistent Disk    | GCP managed        |              |  
+| Git Repository     | Cloud Source Repository   | GCP managed        |              |  
+| Container Registry | Google Container Registry | GCP managed        |              |  
+| CI/CD              | Source Builder            | Google Cloud Build | GCP managed  |  
+|                    | Deployment                | Spinnaker          | OSS          |  
+| API Gateway        | Spring Cloud Gateway      | OSS                |              |  
+| Service Mesh       | Istio                     | OSS                |              |  
+| Streaming          | Apache Kafka              | OSS                |              |  
+| Logging            | Stackdriver logging       | GCP managed        |              |  
+| Monitoring         | Stackdriver monitoring    | GCP managed        |              |  
+| Tracing            | Stackdriver tracing       | GCP managed        |              |  
+###### \* OSS : Open Source Software
 
 기술스텍을 선정하기 위한 기준으로, 단순히 OSS 제품을 사용한다면 얻을 수 있는 이득은 가격적인 측면과 종속성을 줄일 수 있다는
 장점이 있는 반면, 유지보수 시 기술지원 한계의 단점이 있다. 반대로 CSP 제품의 경우 가격적인 부담과 Lock-in에 대한
