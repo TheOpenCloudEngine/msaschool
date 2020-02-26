@@ -10,7 +10,7 @@ const routes = [
     {
         path: '/',
         name: 'home',
-        redirect: '/introduction/01_MSASchool%20이란'
+        redirect: '/introduction/01_MSA School 이란'
     },
     {
         path: '/:menu1/01_*',

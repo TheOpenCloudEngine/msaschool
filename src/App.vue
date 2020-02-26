@@ -191,6 +191,7 @@
                                         }
 
                                         if (!valid) {
+                                            console.log("key", key.toLowerCase())
                                             var ttt = {
                                                 text: key,
                                                 route: key.toLowerCase(),
@@ -200,7 +201,7 @@
                                                 children: [
                                                     {
                                                         text: text,
-                                                        to: `/${id}/${key.toLowerCase()}/${data.replace('.md', '')}`
+                                                        to: `/${id}/${key}/${data.replace('.md', '')}`
                                                     }
                                                 ],
                                             }
@@ -208,7 +209,7 @@
                                         } else {
                                             var ttt = {
                                                 text: text,
-                                                to: `/${id}/${key.toLowerCase()}/${data.replace('.md', '')}`
+                                                to: `/${id}/${key}/${data.replace('.md', '')}`
                                             }
 
                                             result.forEach(function (subData, idx) {
@@ -262,7 +263,7 @@
                         let tmp = {name: item, to: `/${item}/02_msa 방법론/index`, model: true}
                         result.push(tmp)
                     } else if (item == 'community') {
-                        let tmp = {name: item, to: `/${item}/01_MSASchool 이란`, model: true}
+                        let tmp = {name: item, to: `/${item}/01_이벤트 및 공지`, model: true}
                         result.push(tmp)
                     }
 
@@ -284,7 +285,7 @@
                 var me = this
 
                 to.model = true
-                this.$router.push({path: to.to + '/' + to.route.toLowerCase() + '/index'})
+                this.$router.push({path: to.to + '/' + to.route + '/index'})
 
                 this.$nextTick(function () {
                     to.model = true
