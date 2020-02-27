@@ -193,7 +193,7 @@
                                             if(idx == 0) {
                                                 var ttt = {
                                                     text: key,
-                                                    route: key.toLowerCase(),
+                                                    route: key,
                                                     model: true,
                                                     folder: true,
                                                     to: `/${id}`,
@@ -207,7 +207,7 @@
                                             } else {
                                                 var ttt = {
                                                     text: key,
-                                                    route: key.toLowerCase(),
+                                                    route: key,
                                                     model: false,
                                                     folder: true,
                                                     to: `/${id}`,
@@ -228,7 +228,7 @@
                                             }
 
                                             result.forEach(function (subData, idx) {
-                                                if (subData.route == key.toLowerCase()) {
+                                                if (subData.route == key) {
                                                     result[idx].children.push(ttt)
                                                 }
 
