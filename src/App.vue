@@ -170,7 +170,7 @@
                     if (fileList) {
                         var keys = Object.keys(fileList);
 
-                        keys.forEach(function (key) {
+                        keys.forEach(function (key, idx) {
                             if (fileList[key] instanceof Array) {
 
                                 fileList[key].forEach(function (data) {
@@ -190,19 +190,36 @@
                                         }
 
                                         if (!valid) {
-                                            var ttt = {
-                                                text: key,
-                                                route: key.toLowerCase(),
-                                                model: false,
-                                                folder: true,
-                                                to: `/${id}`,
-                                                children: [
-                                                    {
-                                                        text: text,
-                                                        to: `/${id}/${key}/${data.replace('.md', '')}`
-                                                    }
-                                                ],
+                                            if(idx == 0) {
+                                                var ttt = {
+                                                    text: key,
+                                                    route: key.toLowerCase(),
+                                                    model: true,
+                                                    folder: true,
+                                                    to: `/${id}`,
+                                                    children: [
+                                                        {
+                                                            text: text,
+                                                            to: `/${id}/${key}/${data.replace('.md', '')}`
+                                                        }
+                                                    ],
+                                                }
+                                            } else {
+                                                var ttt = {
+                                                    text: key,
+                                                    route: key.toLowerCase(),
+                                                    model: false,
+                                                    folder: true,
+                                                    to: `/${id}`,
+                                                    children: [
+                                                        {
+                                                            text: text,
+                                                            to: `/${id}/${key}/${data.replace('.md', '')}`
+                                                        }
+                                                    ],
+                                                }
                                             }
+
                                             result.push(ttt)
                                         } else {
                                             var ttt = {

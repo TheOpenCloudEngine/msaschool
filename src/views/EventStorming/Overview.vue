@@ -131,18 +131,34 @@
                         width="100%"
                 >
                     <v-divider></v-divider>
-
-                    <v-row dense>
+                    <v-col cols="6">
+                        <vue-markdown
+                                class="markdown-body"
+                                :source="md"
+                        >
+                        </vue-markdown>
+                    </v-col>
+                    <v-row>
                         <v-col cols="12">
+                            <v-card outlined class="margin-test" v-for="(item,idx) in items" :to="item.to">
+                                <v-list-item three-line style="padding-left: 0">
+                                    <v-img
+                                            :src="imgSrc(item)"
+                                            height="120px"
+                                            max-width="120px"
+                                            style="margin-right: 20px;"
+                                    ></v-img>
+                                    <v-list-item-content>
+                                        <div class="overline mb-1">Content {{idx +1}}</div>
+                                        <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
+                                        <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully
+                                        </v-list-item-subtitle>
+                                    </v-list-item-content>
 
-                            <vue-markdown
-                                    class="markdown-body"
-                                    :source="md"
-                            >
-                            </vue-markdown>
+                                </v-list-item>
+                            </v-card>
                         </v-col>
                     </v-row>
-
                 </v-responsive>
                 <v-responsive
                         width="100%"
@@ -367,5 +383,7 @@
     li a {
         text-decoration: none;
     }
-
+    .margin-test {
+        margin-bottom: 10px;
+    }
 </style>
