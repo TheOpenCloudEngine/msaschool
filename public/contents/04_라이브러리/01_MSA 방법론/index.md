@@ -1,4 +1,4 @@
-### MSA 방법론
+## MSA 방법론
 
 해외 유명 벤더의 MSA 및 Cloud 전환을 위한 수행 방법론으로 IBM Garage for Cloud, Pivotal의 AppTx 가 대표적이다.
 
