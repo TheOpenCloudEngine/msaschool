@@ -230,7 +230,12 @@
                 var me = this
                 var menu1 = this.$route.params.menu1;
                 var menu2 = this.$route.params.menu2;
-                var tmp = item.to.split('/')
+                if (item.route) {
+                    var tmp = item.to.concat("/" + item.route).split('/')
+                } else {
+                    var tmp = item.to.split('/')
+                }
+
                 var src = '/contents';
 
                 for (var i = 1; i < tmp.length; i++) {
@@ -241,11 +246,11 @@
                         if (i == tmp.length - 1) {
                             var tmpSplit = tmp[i].split('_')
                             for (var y = 0; y < tmpSplit.length; y++) {
+                                console.log(tmpSplit)
                                 if (y == 0) {
                                     tmpSrc = tmpSrc.concat(tmpSplit[y])
                                 } else {
                                     tmpSrc = tmpSrc.concat('_' + tmpSplit[y].substring(0, 1).toUpperCase() + tmpSplit[y].substring(1))
-
                                     if (y == tmpSplit.length - 1) {
                                         src = src.concat('/' + tmpSrc)
                                     }
@@ -254,7 +259,7 @@
                         }
                     }
                 }
-
+                console.log(src)
                 src = src.concat('.png')
                 return src
             }
@@ -308,8 +313,30 @@
             let menu1 = this.$route.params.menu1;
 
             console.log("hit")
+
             if (menu1 == "MSASchool-소개") {
+                me.aaa = true
+
                 console.log("ini")
+            }
+        },
+        mounted() {
+            var me = this;
+            let menu1 = this.$route.params.menu1;
+            let menu2 = this.$route.params.pathMatch;
+            menu2 = '01_' + menu2
+            this.value.items.forEach(function (item) {
+                if (item.to.includes(menu1) && !item.to.includes('overview')) {
+                    me.items.push(item)
+                }
+            })
+
+            this.$http.get(`/contents/${this.value['menuNumber'][this.$route.params.menu1]}_${menu1.substring(0, 1).toUpperCase() + menu1.substring(1)}/${menu2}.md`).then(function (result) {
+                me.$nextTick(function () {
+                    me.md = result.data
+                })
+            })
+            me.$nextTick(function () {
                 $(document).on('ready', function () {
                     $(".variable").slick({
                         dots: true,
@@ -331,28 +358,7 @@
                         $(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
                     });
                 });
-
-                me.aaa = true
-
-            }
-        },
-        mounted() {
-            var me = this;
-            let menu1 = this.$route.params.menu1;
-            let menu2 = this.$route.params.pathMatch;
-            menu2 = '01_' + menu2
-            this.value.items.forEach(function (item) {
-                if (item.to.includes(menu1) && !item.to.includes('overview')) {
-                    me.items.push(item)
-                }
             })
-
-            this.$http.get(`/contents/${this.value['menuNumber'][this.$route.params.menu1]}_${menu1.substring(0, 1).toUpperCase() + menu1.substring(1)}/${menu2}.md`).then(function (result) {
-                me.$nextTick(function () {
-                    me.md = result.data
-                })
-            })
-            var me = this
         }
     }
 </script>

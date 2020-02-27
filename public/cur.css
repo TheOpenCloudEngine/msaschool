@@ -27,7 +27,7 @@ header {box-shadow:0 5px 5px 0 rgba(0,0,0,.15) !important;}
 .v-sheet .v-app-bar__nav-icon {display:none;margin-right:10px;}
 .v-sheet .v-toolbar__content, .v-sheet .v-toolbar__extension {padding:0px 40px !important}
 .v-tabs > div {max-width:900px;margin:0 auto;}
-.v-tabs-slider-wrapper {height:10px !important;max-width:145px !important;overflow:hidden;}
+.v-tabs-slider-wrapper {height:10px !important;max-width:180px !important;overflow:hidden;}
 .v-tab {font-size:1.125rem !important;text-transform:capitalize !important;letter-spacing:0.5px !important;min-width:120px !important;color:#5f6368 !important}
 .uengine {display:block;}
 
