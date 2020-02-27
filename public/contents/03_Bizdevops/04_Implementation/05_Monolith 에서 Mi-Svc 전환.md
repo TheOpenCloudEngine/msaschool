@@ -55,10 +55,128 @@ Service Registry 는 client/server side discovery , loadbalancer 라고 불리�
 
 ### Strangler Pattern
 
-스트랭글러 패턴이란 기존의 모노리스 시스템을 조금씩 쪼개서 마이크로 서비스로 변경하는 패턴이다. 스트랭글러 패턴은 스트랭글러 덩굴이 숙주 나무를 타고 자라다가 결국 숙주 나무를 죽이고 그 자리를 차지한다는 
+스트랭글러 패턴이란 기존의 모노리스 시스템을 조금씩 쪼개서 마이크로 서비스로 변경하는 패턴이다. 스트랭글러 패턴은 스트랭글러 덩굴이 숙주 나무를 타고 자라다가 결국 숙주 나무를 죽이고 그 자리를 차지하는 방식에서 나오게 된 말이다. 마이크로 서비스들이 기존의 거대한 레거시 시스템을 변화시키면서 결국 모노리스 시스템을 모두 마이크로 서비스로 점진적으로 변화시키는 패턴이다. 이는 Biz 임팩트 최소화를 통한 구조적 변화이다. 
 
-![](/img/03_Bizdevops/04/05/03_04_05_04.png)
+![Strangler Pattern](/img/03_Bizdevops/04/05/03_04_05_04.png)
+
+기존에서 분리된 서비스 영역이 기존 모노리스와 연동 될 수 있도록 해 주는 것이 필요하다.    
+연동은 다음과 같은 동기/비동기 방식으로 나누어 질 수 있다.  
+동기 방식은 레거시 시스템으로 하여금 기존 소스코드 수정 요인이 높다. 따라서 이벤트 기반 비동기 연동 (CQRS) 을 추천한다.
+
+### Find the seams and replace with proxy  
+
+![seams](/img/03_Bizdevops/04/05/03_04_05_05.png)
+
+모노리스 서비스에서 일부 기능을 마이크로 서비스로 떼어낸다면, 기존에는 내부 객체를 호출하던 부분을 Request/Response or Event Driven 방식으로 변경을 해줘야 한다. 이때 변경되는 부분을 해석해 주는 부분이 필요해 진다. 이 부분을 DDD 에서는 Anti-Corruption Layer 라고 부른다. 두개의 서비스를 해석해주는 Layer 라는 의미이다.  
+여기서 새로운 서비스를 Request/Response 방식으로 호출을 한다면, 동기식 방식이 된다. 동기식 방식은 기존 코드를 모두 api 호출하는 방식으로 바꾸기 때문에 소스코드의 수정이 많다. 이 소스코드의 수정을 최소화 시키려는 노력으로 Netflix 에서는 Feign Client 방식으로 Service 를 변경하는 방식을 제공한다.  
+
+#### Feign Client  
+
+Feign Client 의 사용 방법을 알아 보겠다.
+
+먼저 모노리스 시스템이 아래와 같이 구현되어 있다. Order.java 에서 주문이 들어왔을때 배송을 시작하도록 하는 코드 이다.
+
+```java
+public class Order {
+    /**
+     * 주문이 들어옴
+     */
+    @PostPersist
+    private void callDeliveryStart(){
+        // 배송 시작
+        DeliveryService deliveryService = Application.applicationContext.getBean(DeliveryService.class);
+        deliveryService.startDelivery(delivery);
+    }
+}
+```
+
+```java
+public interface DeliveryService {
+    void startDelivery(Delivery delivery);
+}
+```
+
+```java
+@Service
+public class DeliveryServiceImpl implements DeliveryService{
+
+    @Autowired
+    DeliveryRepository deliveryRepository;
+    /**
+     * 배송 시작
+     */
+    public void startDelivery(Delivery delivery){
+        deliveryRepository.save(delivery);
+    }
+}
+```
+
+해당 부분을 Feign Client 로 변경 한다면, DeliveryServiceImpl.java 는 더이상 필요가 없고, DeliveryService.java 에 @FeignClient 어노테이션이 붙게 되어진다. 그리고 Aggregate 인 Order.java 는 변경이 없다.  
 
 
-![](/img/03_Bizdevops/04/05/03_04_05_05.png)
-![](/img/03_Bizdevops/04/05/03_04_05_06.png)  
+```java
+/**
+ * 주문이 들어옴
+ */
+public class Order {
+    @PostPersist
+    private void callDeliveryStart(){
+        // 배송 시작
+        DeliveryService deliveryService = Application.applicationContext.getBean(DeliveryService.class);
+        deliveryService.startDelivery(delivery);
+    }
+}
+```
+
+```java
+@Service
+ @FeignClient(name ="delivery", url="${api.url.delivery}")
+public interface DeliveryService {
+    @RequestMapping(method = RequestMethod.POST, value = "/deliveries", consumes = "application/json")
+    void startDelivery(Delivery delivery);
+}
+```
+
+관련 소스는 다음을 참고하면 된다.  
+[모노리스 소스코드]: https://github.com/event-storming/monolith  
+[모노리스에서 delivery 를 원격 호출하는 order 서비스]: https://github.com/event-storming/reqres_orders  
+
+
+### Event Shunting  
+
+![Event Shunting](/img/03_Bizdevops/04/05/03_04_05_06.png)  
+
+새로운 서비스를 Event Driven 방식으로 호출을 한다면 비동기식 방식이 된다. 이 방식은 기존의 호출 코드는 남겨 놓고, 마지막에 이벤트를 발송하는 코드를 심어 주면 된다. 이러한 방식을 이벤트를 심어서 분기한다는 의미로 Event Shunting 이라고 부른다.  
+
+이 방식은 기존 레거시 시스템에 이벤트 발송하는 부분만 추가를 하기 때문에 레거시 시스템에 소스코드 변경이 적고, 에러가 발생할 확률이 줄어든다. 이렇게 발송한 이벤트를 신규 서비스에서는 사용을 하면 된다.
+
+만약 기존의 레거시 시스템을 전혀 수정을 할 수 없는 상황이라면 CDC (Change Data Capturing) 이 대안이 된다. CDC 기능은 소스코드가 아닌 DB 에서 변경되는 Log 를 모니터링 하여서 Event 로 자동 퍼블리시 하는 방식이다. 현재 대부분의 DB 에서 이 방식을 지원하고 있고, 오픈소스로는 Debezium, Eventuate Tram 등이 존재 한다.
+
+
+## **4. 중복된 기능과 데이터를 어떻게 할 것인가?**
+모노리스 시스템을 개발 할때, 우리는 공통된 기능들을 처리 하기 위해서 Util 등을 만들어 사용하였고, 혹은 공통 프레임워크를 적용하기 위하여 공통된 Library 를 만들어서 사용하곤 했었었다. 모노리스를 마이크로 서비스로 전환하게 됨으로서 이러한 공통 기능들을 어떻게 처리해야할지 고민해야 한다. 재사용 통한 경제성(SOA사상, 디펜던시발생)과 **자율적 창발** (낮은 간섭과 빠른 출시)의 트레이드 오프에서 후자의 전략을 선택 하는 것을 추천한다. **재사용하지 않고 중복 구현하는 것이 MSA 스러운 것** 이라고 할 수 있다. 또한 마이크로 서비스로 분리를 하면서 Polyglot 환경으로 간다면 고민을 할 필요가 없이 새로 구현을 해야 한다. java library 를 사용하였었는데 python 에서는 사용 할 수 없는 원리랑 같다.  
+
+다만 예외 상황도 발생 할 수 있다. 모든 서비스에서 공통적으로 사용하게 되는 (데이터 참조에 intensive 한 서비스 (인증정보 등)) Utility 서비스 성격으로 구현 하는 것이 좋다.  
+
+## **5. 서비스 분리에 따른 통합인증은 어떻게 할 것인가?** 
+
+![token](/img/03_Bizdevops/04/05/03_04_05_07.png)  
+
+통합 인증은 "어떻게하면 흩어져 있는 Application 들의 인증 관리를 중앙에서 쉽게 할 것인가” 하는 것인데, 이것을 푸는 방식 중 대표적인 것이 바로 OAuth2 이다. OAuth2 는 웹, 모바일 어플리케이션에서 타사의 API 권한 획득을 위한 프로토콜이다. Google, Facebook 등을 비롯한 대부분의 인터넷 기반 Application들이 OAuth2 또는 그 변종을 사용하여 스스로를 인증하거나 누군가에게 인증 서비스를 제공하고 있다. 또, 근래에는 OpenID Connect라는(예전의 URL 기반 OpenID와는 다르다) 것이 등장하여 OAuth의 개념을 보다 편리하게 쓸 수 있도록 한 기술도 등장한 상태이다.  
+
+기존의 모노리스 시스템에서는 서버측에 유저 정보를 저장하는 서버기반 인증을 많이 사용하였다. 서버기반 인증의 문제점은 사용자가 늘어났을때 메모리 사용량이 늘어난다. 또 마이크로 서비스에서 서버에서 인증을 처리하게 되면, 각 서비스마다 인증로직을 구현해야 한다. 이러한 방식을 해결하기 위하여 토큰 기반 인증 방식을 사용한다.  
+토큰 기반 인증 방식은 인증 서버에 토큰을 요청 하여 토큰이 발행되면 해당 토큰을 Client 에서 저장을 하고 서버에 요청을 할때마다 토큰을 함께 서버에 전달을 한다. 그리고 서버는 요청이 올때마다 토큰을 검증하는 방식이다.  
+Token 은 무의미한 문자열로, 기본적으로 정해진 규칙에 의해 발급된 것이 아니다. 그래서 증명확인이 필요할 때마다, 인증서버에 DBMS 접근이든 또다른 API를 활용하든 접근하여 유효성을 확인해야 한다. 이 Token 을 좀더 손쉽게 사용하기 위하여 나온 방식이 JWT (JSON Web Token) 이다. 매번 토큰의 유효성을 확인하는 과정을 건너뛰고 토큰 안에 위조여부 확인을 위한 값, 유효성 검증을 위한 값, 심지어는 인증정보 자체를 담아서 제공함으로써, Token 확인 단계를 인증서버에게 묻지 않고도 할 수 있도록 만든 것이다.
+
+토큰 기반 인증 방식의 장점은 다음과 같다.  
+- 확장성이 뛰어나다. 
+- 서버가 늘어나도 토큰을 인증하는 방식만 알고 있다면 영향이 없다.
+- JWT는 웹표준 RFC7591에 등록되어 있다. 따라서 여러 환경에서 지원이 가능하다. (.NET, Ruby, Java, Node.js, Python 등)
+  
+단점은 토큰을 Client 에 저장을 하기 때문에, 토큰을 탈취 당한다면 토큰의 유효시간 안에 인증이 유효하게 되어진다. 이를 해결하기 위하여 토큰의 유효시간을 조금 가져가고, refresh token 으로 토큰을 새로 요청하는 등의 방식을 사용한다.
+
+[7장 인증/인가](./07_인증_인가) page 에서 Oauth2.0 과 JWT 를 사용하는 방식에 대하여 자세히 설명한다.  
+ 
+  
+
+
