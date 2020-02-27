@@ -250,13 +250,14 @@
                 // var id = this.$route.params.menu1
                 var result = [];
                 Object.keys(this.tempRootPathList).forEach(function (item) {
-                    if (item == 'introduction') {
+                    if (item == 'MSASchool 소개') {
                         let tmp = {name: item, to: `/${item}/01_MSA School 이란`, model: true}
                         result.push(tmp)
                     } else if (item == 'planning') {
+                    } else if (item == 'MSA플래닝') {
                         let tmp = {name: item, to: `/${item}/01_MSA 최종목표`, model: true}
                         result.push(tmp)
-                    } else if (item == 'bizdevops') {
+                    } else if (item == 'BizDevOps') {
                         let tmp = {name: item, to: `/${item}/01_BizDevOps 개요`, model: true}
                         result.push(tmp)
                     } else if (item == 'library') {
