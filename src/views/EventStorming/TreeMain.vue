@@ -107,7 +107,6 @@
                         src = src.concat('/' + this.value['menuNumber'][this.$route.params.menu1] + '_' + menu1.substring(0, 1).toUpperCase() + menu1.substring(1))
                     } else {
                         var tmpSrc = ''
-                        console.log(tmp[i])
                         if (tmp[i].includes('_')) {
                             var tmpSplit = tmp[i].split('_')
                             for (var y = 0; y < tmpSplit.length; y++) {

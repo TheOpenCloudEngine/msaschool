@@ -49,7 +49,6 @@
 
                     if (idx != 0) {
                         text = me.$route.params[key].split('_')[1]
-                        console.log(text)
 
                         for (var i = 0; i < idx + 1; i++) {
                             // console.log(`/${me.$route.params[Object.keys(me.$route.params)[i]]}`);

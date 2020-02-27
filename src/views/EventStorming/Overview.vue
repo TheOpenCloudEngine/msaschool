@@ -22,7 +22,8 @@
                                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                                              data-parent="#accordion">
                                             <div class="card-body">
-                                                <p>Bring together a cross-functional team to explore a challenge from 360
+                                                <p>Bring together a cross-functional team to explore a challenge from
+                                                    360
                                                     degrees</p>
                                                 <img class="carousel-item_img"
                                                      src="/img/icons/img/introduction-1.png"
@@ -33,7 +34,8 @@
                                     </div>
                                     <div class="card">
                                         <div class="card-header card-header" id="headingTwo">
-                                            <button type="button" class="card-header-title collapsed" data-toggle="collapse"
+                                            <button type="button" class="card-header-title collapsed"
+                                                    data-toggle="collapse"
                                                     data-target="#collapseTwo">
                                                 <img src="/img/icons/img/ic-carousel-2.png"
                                                      srcset="/img/icons/img/ic-carousel-2.png 1x, /img/icons/img/ic-carousel-2@2x.png 2x, /img/icons/img/ic-carousel-2@3x.png 3x"
@@ -55,7 +57,8 @@
                                     </div>
                                     <div class="card">
                                         <div class="card-header card-header" id="headingThree">
-                                            <button type="button" class="card-header-title collapsed" data-toggle="collapse"
+                                            <button type="button" class="card-header-title collapsed"
+                                                    data-toggle="collapse"
                                                     data-target="#collapseThree">
                                                 <img src="/img/icons/img/ic-carousel-1.png"
                                                      srcset="/img/icons/img/ic-carousel-1.png 1x, /img/icons/img/ic-carousel-1@2x.png 2x, /img/icons/img/ic-carousel-1@3x.png 3x"
@@ -113,7 +116,8 @@
                                             <div style="margin-top: 350px;">
                                                 <p class="carousel-item_line1" style="max-width: 224px;">Make it real as
                                                     possible</p>
-                                                <p class="carousel-item_line2" style="max-width: 147px;">and test it fast</p>
+                                                <p class="carousel-item_line2" style="max-width: 147px;">and test it
+                                                    fast</p>
                                             </div>
                                         </div>
                                     </div>
@@ -223,14 +227,11 @@
         },
         methods: {
             imgSrc(item) {
-                console.log(item.to)
                 var me = this
                 var menu1 = this.$route.params.menu1;
                 var menu2 = this.$route.params.menu2;
                 var tmp = item.to.split('/')
                 var src = '/contents';
-
-                console.log(tmp)
 
                 for (var i = 1; i < tmp.length; i++) {
                     if (i == 1) {
@@ -255,7 +256,6 @@
                 }
 
                 src = src.concat('.png')
-                console.log(src)
                 return src
             }
         },
@@ -274,7 +274,6 @@
                         text = me.$route.params[key].split('_')[1]
 
                         for (var i = 0; i < idx + 1; i++) {
-                            console.log(`/${me.$route.params[Object.keys(me.$route.params)[i]]}`);
                             if (i == 1) {
                                 href = href.concat(`/${me.$route.params[Object.keys(me.$route.params)[i]]}/index`);
                             } else {
@@ -290,7 +289,6 @@
                     if (idx == me.$route.params.length - 1) {
                         disabled = true;
                     }
-                    console.log(href)
                     var breadTmp = {
                         text: text,
                         disabled: disabled,
@@ -306,7 +304,37 @@
             }
         },
         created() {
+            var me = this
+            let menu1 = this.$route.params.menu1;
 
+            console.log("hit")
+            if (menu1 == "MSASchool-소개") {
+                console.log("ini")
+                $(document).on('ready', function () {
+                    $(".variable").slick({
+                        dots: true,
+                        infinite: true,
+                        variableWidth: true
+                    });
+                });
+
+                $(document).ready(function () {
+                    // Add minus icon for collapse element which is open by default
+                    $(".collapse.show").each(function () {
+                        $(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+                    });
+
+                    // Toggle plus minus icon on show hide of collapse element
+                    $(".collapse").on('show.bs.collapse', function () {
+                        $(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+                    }).on('hide.bs.collapse', function () {
+                        $(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+                    });
+                });
+
+                me.aaa = true
+
+            }
         },
         mounted() {
             var me = this;
@@ -315,7 +343,6 @@
             menu2 = '01_' + menu2
             this.value.items.forEach(function (item) {
                 if (item.to.includes(menu1) && !item.to.includes('overview')) {
-                    console.log(item)
                     me.items.push(item)
                 }
             })
@@ -325,41 +352,7 @@
                     me.md = result.data
                 })
             })
-            console.log(menu2)
             var me = this
-            menu2 = '01_' + menu2
-            if(menu1 == "introduction"){
-                me.aaa = true
-                me.$nextTick(function () {
-                    $(document).on('ready', function() {
-                        $(".variable").slick({
-                            dots: true,
-                            infinite: true,
-                            variableWidth: true
-                        });
-                        console.log("click")
-                    });
-
-                    $(document).ready(function(){
-                        // Add minus icon for collapse element which is open by default
-                        $(".collapse.show").each(function(){
-                            console.log("click")
-                            $(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
-                        });
-
-                        // Toggle plus minus icon on show hide of collapse element
-                        $(".collapse").on('show.bs.collapse', function(){
-                            console.log("click")
-                            $(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
-                        }).on('hide.bs.collapse', function(){
-                            console.log("click")
-                            $(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
-                        });
-                    });
-                })
-
-            }
-
         }
     }
 </script>

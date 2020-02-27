@@ -126,7 +126,6 @@
             const templateFiles = require.context('../public/contents', true)
 
             var tempRootPathList = []
-            console.log(templateFiles.keys())
             templateFiles.keys().forEach(function (tempFiles) {
                 if (tempFiles.includes('.md')) {
                     var tempFileStructure = tempFiles.replace('./', '').split('/')
@@ -191,7 +190,6 @@
                                         }
 
                                         if (!valid) {
-                                            console.log("key", key.toLowerCase())
                                             var ttt = {
                                                 text: key,
                                                 route: key.toLowerCase(),
@@ -278,7 +276,8 @@
             test: '',
             tempRootPathList: [],
             reload: true,
-            menuNumber: []
+            menuNumber: [],
+            refresh: true
         }),
         methods: {
             route(to) {
@@ -298,6 +297,21 @@
                     if (item.model)
                         item.model = false;
                 })
+            }
+        },
+        watch: {
+            '$route'(to, from) {
+                var me = this
+                console.log(to, from)
+                console.log((to.params.menu1 != from.params.menu1))
+                console.log(
+                    (to.params.menu1 == 'MSASchool-소개')
+                )
+                console.log(to.params.pathMatch)
+                console.log((to.params.pathMatch == 'MSA School 이란'))
+                if ((to.params.menu1 != from.params.menu1) && (to.params.menu1 == 'MSASchool-소개') && (to.params.pathMatch == 'MSA School 이란')) {
+                    location.reload();
+                }
             }
         }
 
