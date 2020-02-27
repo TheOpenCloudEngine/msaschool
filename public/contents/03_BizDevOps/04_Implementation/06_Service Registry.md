@@ -1,4 +1,4 @@
-
+## ㅇ
 
 	client side discovery , loadbalancing
 		서비스 인스턴스의 네트워크 위치를 찾고 로드밸런싱하는 역할을 클라이언트가 담당하는 방식
