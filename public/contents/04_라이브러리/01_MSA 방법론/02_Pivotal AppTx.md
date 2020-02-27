@@ -1,4 +1,4 @@
-#### 0.0.0.1 Pivotal AppTx
+## Pivotal AppTx
 
 피보탈 AppTx는 크게 OKRs 단계, EventStorming 단계, Boris 단계, SnapE 단계, 구현(Implementation) 단계의 선순환 사이클로 구성된다.
 
