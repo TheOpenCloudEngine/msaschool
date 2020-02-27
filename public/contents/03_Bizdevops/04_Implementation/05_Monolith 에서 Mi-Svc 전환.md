@@ -48,3 +48,17 @@ Service Registry 는 client/server side discovery , loadbalancer 라고 불리�
     
 ## **3. 어떻게 (다시) 상호 연동시킬 것인가?**
 
+모노리스를 마이크로 서비스로 일괄적으로 변경하는 방법은 실패 가능성이 매우 크다. 리스크를 줄이기 위해서는 우선적으로 **Core Domain** 과 **Supportive Domain** 을 나눈 후에 **Supportive Domain** 을 조금씩 마이크로 서비스로 분리를 하는 방법이다. 서비스는 분리 하였지만 여전히 서로간의 통신은 하여야 하기 때문에 이런 경우에 사용하는 방법은 다음과 같다.
+
+* Find the seams and replace with proxy
+* Event Shunting  
+
+### Strangler Pattern
+
+스트랭글러 패턴이란 기존의 모노리스 시스템을 조금씩 쪼개서 마이크로 서비스로 변경하는 패턴이다. 스트랭글러 패턴은 스트랭글러 덩굴이 숙주 나무를 타고 자라다가 결국 숙주 나무를 죽이고 그 자리를 차지한다는 
+
+![](/img/03_Bizdevops/04/05/03_04_05_04.png)
+
+
+![](/img/03_Bizdevops/04/05/03_04_05_05.png)
+![](/img/03_Bizdevops/04/05/03_04_05_06.png)  
