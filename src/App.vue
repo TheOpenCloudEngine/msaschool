@@ -183,10 +183,10 @@
                                             }
                                         })
                                         var text = data.split('_')[1].replace('.md', '');
-                                        if (text.includes('--')) {
-                                            text = text.replace('--', '&')
-                                        } else if (text.includes('-')) {
-                                            text = text.replace('-', '/')
+                                        if (text.includes('---')) {
+                                            text = text.replace('---', '&')
+                                        } else if (text.includes('--')) {
+                                            text = text.replace('--', '/')
                                         }
 
                                         if (!valid) {
