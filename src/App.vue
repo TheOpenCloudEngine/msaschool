@@ -170,7 +170,7 @@
                     if (fileList) {
                         var keys = Object.keys(fileList);
 
-                        keys.forEach(function (key) {
+                        keys.forEach(function (key, idx) {
                             if (fileList[key] instanceof Array) {
 
                                 fileList[key].forEach(function (data) {
@@ -190,19 +190,36 @@
                                         }
 
                                         if (!valid) {
-                                            var ttt = {
-                                                text: key,
-                                                route: key.toLowerCase(),
-                                                model: false,
-                                                folder: true,
-                                                to: `/${id}`,
-                                                children: [
-                                                    {
-                                                        text: text,
-                                                        to: `/${id}/${key}/${data.replace('.md', '')}`
-                                                    }
-                                                ],
+                                            if(idx == 0) {
+                                                var ttt = {
+                                                    text: key,
+                                                    route: key.toLowerCase(),
+                                                    model: true,
+                                                    folder: true,
+                                                    to: `/${id}`,
+                                                    children: [
+                                                        {
+                                                            text: text,
+                                                            to: `/${id}/${key}/${data.replace('.md', '')}`
+                                                        }
+                                                    ],
+                                                }
+                                            } else {
+                                                var ttt = {
+                                                    text: key,
+                                                    route: key.toLowerCase(),
+                                                    model: false,
+                                                    folder: true,
+                                                    to: `/${id}`,
+                                                    children: [
+                                                        {
+                                                            text: text,
+                                                            to: `/${id}/${key}/${data.replace('.md', '')}`
+                                                        }
+                                                    ],
+                                                }
                                             }
+
                                             result.push(ttt)
                                         } else {
                                             var ttt = {
@@ -248,20 +265,21 @@
                 // var id = this.$route.params.menu1
                 var result = [];
                 Object.keys(this.tempRootPathList).forEach(function (item) {
+                    console.log(item)
                     if (item == 'MSASchool-소개') {
-                        let tmp = {name: item, to: `/${item}/01_MSA School 이란`, model: true}
+                        let tmp = {name: item, to: `/${item}/01_MSA School 이란`, model: true};
                         result.push(tmp)
                     } else if (item == 'MSA플래닝') {
-                        let tmp = {name: item, to: `/${item}/01_MSA 최종목표`, model: true}
+                        let tmp = {name: item, to: `/${item}/01_MSA 최종목표`, model: true};
                         result.push(tmp)
-                    } else if (item == 'Bizdevops') {
-                        let tmp = {name: item, to: `/${item}/01_BizDevOps 개요`, model: true}
+                    } else if (item == 'BizDevOps') {
+                        let tmp = {name: item, to: `/${item}/01_BizDevOps 개요`, model: true};
                         result.push(tmp)
                     } else if (item == '라이브러리') {
-                        let tmp = {name: item, to: `/${item}/01_MSA_방법론/index`, model: true}
+                        let tmp = {name: item, to: `/${item}/01_MSA 방법론/index`, model: true};
                         result.push(tmp)
                     } else if (item == '커뮤니티') {
-                        let tmp = {name: item, to: `/${item}/01_이벤트 및 공지`, model: true}
+                        let tmp = {name: item, to: `/${item}/01_이벤트 및 공지`, model: true};
                         result.push(tmp)
                     }
 
@@ -310,7 +328,7 @@
                 console.log(to.params.pathMatch)
                 console.log((to.params.pathMatch == 'MSA School 이란'))
                 if ((to.params.menu1 != from.params.menu1) && (to.params.menu1 == 'MSASchool-소개') && (to.params.pathMatch == 'MSA School 이란')) {
-                    location.reload();
+                    // location.reload();
                 }
             }
         }

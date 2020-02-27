@@ -1,4 +1,4 @@
-# MSA 성숙도레벨
+## MSA 성숙도레벨
 
 <table>
 <tbody>
