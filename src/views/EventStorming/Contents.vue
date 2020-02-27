@@ -26,7 +26,8 @@
                         href: '/aa/overview',
                     },
                 ],
-                md: ''
+                md: '',
+                aaa: true
             }
         },
         props: {
@@ -89,7 +90,7 @@
             let menu1 = this.$route.params.menu1;
             let menu2 = this.$route.params.menu2;
             let menu3 = this.$route.params.menu3;
-
+            me.aaa = true
             menu1 = menu1.substring(0, 1).toUpperCase() + menu1.substring(1)
             menu2 = menu2.substring(0, 1).toUpperCase() + menu2.substring(1)
 

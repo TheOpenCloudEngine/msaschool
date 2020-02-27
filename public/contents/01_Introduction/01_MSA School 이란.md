@@ -1,7 +1,5 @@
-# MSASchool 이란
+#   # MSASchool 이란
 ---
-![](/img/01_Introduction/01/image2.png)
-
 MSA 스쿨에 오신 것을 환영합니다.
 
 **MSA 스쿨은,**

@@ -2,14 +2,135 @@
     <v-container>
         <v-row no-gutters>
             <template>
+                <div v-if="aaa" style="width: 100%" class="introduction-page">
+                    <div class="hero-section">
+                        <div class="container">
+                            <div class="hero-section__left">
+                                <h2 class="hero-section-title">Transform the way your team works</h2>
+                                <!--accordion-->
+                                <div class="mat-accordion accordion" id="accordion">
+                                    <div class="card">
+                                        <div class="card-header card-header" id="headingOne">
+                                            <button type="button" class="card-header-title" data-toggle="collapse"
+                                                    data-target="#collapseOne">
+                                                <img src="/img/icons/img/ic-carousel-3.png"
+                                                     srcset="/img/icons/img/ic-carousel-3.png 1x, /img/icons/img/ic-carousel-3@2x.png 2x, /img/icons/img/ic-carousel-3@3x.png 3x"
+                                                     alt="carousel-item">
+                                                <!--<i class="fa fa-plus"></i>--> Collaborate
+                                            </button>
+                                        </div>
+                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                             data-parent="#accordion">
+                                            <div class="card-body">
+                                                <p>Bring together a cross-functional team to explore a challenge from 360
+                                                    degrees</p>
+                                                <img class="carousel-item_img"
+                                                     src="/img/icons/img/introduction-1.png"
+                                                     srcset="/img/icons/img/introduction-1.png 1x, /img/icons/img/introduction-1@2x.png 2x, /img/icons/img/introduction-1@3x.png 3x"
+                                                     alt="carousel-item">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header card-header" id="headingTwo">
+                                            <button type="button" class="card-header-title collapsed" data-toggle="collapse"
+                                                    data-target="#collapseTwo">
+                                                <img src="/img/icons/img/ic-carousel-2.png"
+                                                     srcset="/img/icons/img/ic-carousel-2.png 1x, /img/icons/img/ic-carousel-2@2x.png 2x, /img/icons/img/ic-carousel-2@3x.png 3x"
+                                                     alt="carousel-item">
+                                                <!--<i class="fa fa-plus"></i>--> Innovate
+                                            </button>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                             data-parent="#accordion">
+                                            <div class="card-body">
+                                                <p>Put the user at the center, jumpstart creativity and release Design
+                                                    Fixation</p>
+                                                <img class="carousel-item_img"
+                                                     src="/img/icons/img/introduction-2.png"
+                                                     srcset="/img/icons/img/introduction-2.png 1x, /img/icons/img/introduction-2@2x.png 2x, /img/icons/img/introduction-2@3x.png 3x"
+                                                     alt="carousel-item">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header card-header" id="headingThree">
+                                            <button type="button" class="card-header-title collapsed" data-toggle="collapse"
+                                                    data-target="#collapseThree">
+                                                <img src="/img/icons/img/ic-carousel-1.png"
+                                                     srcset="/img/icons/img/ic-carousel-1.png 1x, /img/icons/img/ic-carousel-1@2x.png 2x, /img/icons/img/ic-carousel-1@3x.png 3x"
+                                                     alt="carousel-item">
+                                                <!--<i class="fa fa-plus"></i>--> Accelerate
+                                            </button>
+                                        </div>
+                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                             data-parent="#accordion">
+                                            <div class="card-body">
+                                                <p>Make it real as possible and test it fast</p>
+                                                <img class="carousel-item_img"
+                                                     src="/img/icons/img/introduction-3.png"
+                                                     srcset="/img/icons/img/introduction-3.png 1x, /img/icons/img/introduction-3@2x.png 2x, /img/icons/img/introduction-3@3x.png 3x"
+                                                     alt="carousel-item">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--//accordion-->
+                            </div><!--//left-->
+                            <div class="hero-section__right">
+                                <div class="variable slider">
+                                    <div class="carousel-item item">
+                                        <div class="carousel-item_inner">
+                                            <img class="carousel-item_img"
+                                                 src="/img/icons/img/introduction-1.png"
+                                                 srcset="/img/icons/img/introduction-1.png 1x, /img/icons/img/introduction-1@2x.png 2x, /img/icons/img/introduction-1@3x.png 3x"
+                                                 alt="carousel-item">
+                                            <div style="margin-top: 244px;">
+                                                <p class="carousel-item_line1">Bring together a cross-functional team to
+                                                    explore</p>
+                                                <p class="carousel-item_line2">a challenge from 360 degrees</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item item">
+                                        <div class="carousel-item_inner">
+                                            <img class="carousel-item_img"
+                                                 src="/img/icons/img/introduction-2.png"
+                                                 srcset="/img/icons/img/introduction-2.png 1x, /img/icons/img/introduction-2@2x.png 2x, /img/icons/img/introduction-2@3x.png 3x"
+                                                 alt="carousel-item">
+                                            <div style="margin-top: 304px;">
+                                                <p class="carousel-item_line1">Put the user at the center, jumpstart
+                                                    creativity</p>
+                                                <p class="carousel-item_line2">and release Design Fixation</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item item">
+                                        <div class="carousel-item_inner">
+                                            <img class="carousel-item_img"
+                                                 src="/img/icons/img/introduction-3.png"
+                                                 srcset="/img/icons/img/introduction-3.png 1x, /img/icons/img/introduction-3@2x.png 2x, /img/icons/img/introduction-3@3x.png 3x"
+                                                 alt="carousel-item">
+                                            <div style="margin-top: 350px;">
+                                                <p class="carousel-item_line1" style="max-width: 224px;">Make it real as
+                                                    possible</p>
+                                                <p class="carousel-item_line2" style="max-width: 147px;">and test it fast</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div><!--//right-->
+                        </div>
+                    </div>
+                </div>
                 <v-responsive
                         width="100%"
                 >
                     <v-divider></v-divider>
 
-                    <!--                    <v-row class="hero-section">-->
                     <v-row dense>
                         <v-col cols="12">
+
                             <vue-markdown
                                     class="markdown-body"
                                     :source="md"
@@ -96,7 +217,8 @@
         data() {
             return {
                 md: '',
-                items: []
+                items: [],
+                aaa: true
             }
         },
         methods: {
@@ -183,14 +305,14 @@
                 return tmp
             }
         },
+        created() {
+
+        },
         mounted() {
             var me = this;
             let menu1 = this.$route.params.menu1;
             let menu2 = this.$route.params.pathMatch;
-            console.log(menu2)
             menu2 = '01_' + menu2
-
-
             this.value.items.forEach(function (item) {
                 if (item.to.includes(menu1) && !item.to.includes('overview')) {
                     console.log(item)
@@ -203,6 +325,40 @@
                     me.md = result.data
                 })
             })
+            console.log(menu2)
+            var me = this
+            menu2 = '01_' + menu2
+            if(menu1 == "introduction"){
+                me.$nextTick(function () {
+                    $(document).on('ready', function() {
+                        $(".variable").slick({
+                            dots: true,
+                            infinite: true,
+                            variableWidth: true
+                        });
+                        console.log("click")
+                    });
+
+                    $(document).ready(function(){
+                        // Add minus icon for collapse element which is open by default
+                        $(".collapse.show").each(function(){
+                            console.log("click")
+                            $(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+                        });
+
+                        // Toggle plus minus icon on show hide of collapse element
+                        $(".collapse").on('show.bs.collapse', function(){
+                            console.log("click")
+                            $(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+                        }).on('hide.bs.collapse', function(){
+                            console.log("click")
+                            $(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+                        });
+                    });
+                })
+
+            }
+
         }
     }
 </script>

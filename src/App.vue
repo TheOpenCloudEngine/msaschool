@@ -263,6 +263,7 @@
                         let tmp = {name: item, to: `/${item}/02_msa 방법론/index`, model: true}
                         result.push(tmp)
                     } else if (item == 'community') {
+                    } else if (item == '커뮤니티') {
                         let tmp = {name: item, to: `/${item}/01_이벤트 및 공지`, model: true}
                         result.push(tmp)
                     }

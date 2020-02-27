@@ -1,4 +1,4 @@
-# 스티키 노트별 구현방안
+# EventStorming 의 결과인 스티키 노트별 구현
 
 ## **Aggregate - Yellow**
 
@@ -71,7 +71,7 @@
  
 > ![스크린샷%202019-11-27%20오후%205](/img/03_Bizdevops/04/03/image93.png)
 
-**Policy - Lilac**
+## **Policy - Lilac**
 
 1)  보라색 스티커는 이벤트에 반응하여 작동하는 Policy 이다. 이벤트에 반응하기 때문에 이벤트를 수신하는 리스너가
     필요하다. Spring-cloud-Stream 을 사용시 아래처럼 @StreamListener 어노테이션으로
@@ -83,7 +83,7 @@
 > 
 > ![스크린샷%202019-11-27%20오후%205](/img/03_Bizdevops/04/03/image94.png)
 
-**Bounded Context**
+## **Bounded Context**
 
 이벤트 스토밍을 하고 난 후에 여러 Aggregate 들이 관련된 Context 끼리 묶여서 Bounded Context 가
 형성이 된다. 이것은 마이크로 서비스 단위로 쪼갤 수 있는 후보가 된다.  
