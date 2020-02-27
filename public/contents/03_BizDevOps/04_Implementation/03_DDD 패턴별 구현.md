@@ -1,4 +1,4 @@
-# EventStorming 의 결과인 스티키 노트별 구현
+## EventStorming 의 결과인 스티키 노트별 구현
 
 ## **Aggregate - Yellow**
 
