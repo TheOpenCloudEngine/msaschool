@@ -138,12 +138,12 @@
                         >
                         </vue-markdown>
                     </v-col>
-                    <v-row>
+                    <v-row v-if="tree">
                         <v-col cols="12">
                             <v-card outlined class="margin-test" v-for="(item,idx) in items" :to="item.to">
                                 <v-list-item three-line style="padding-left: 0">
                                     <v-img
-                                            :src="imgSrc(item)"
+                                            :src="imgSrcTree(item)"
                                             height="120px"
                                             max-width="120px"
                                             style="margin-right: 20px;"
@@ -165,7 +165,55 @@
                 >
                     <!--<v-divider></v-divider>-->
                     <div class="em-title col">Explore More</div>
-                    <v-row align="center" justify="center" style="max-width:1050px;margin:0 auto;">
+                    <v-row v-if="tree==true" align="center" justify="center" style="max-width:1050px;margin:0 auto;">
+                        <v-col v-for="(item,idx) in items"
+                               style="margin:0px;overflow-x:hidden;"
+                               cols="12"
+                               sm="3"
+                               v-if="idx < 3"
+                        >
+                            <router-link style="text-decoration:none" v-if="item.children" :to="item.route +'/index'">
+                                <v-list-item-avatar
+                                        tile
+                                        width="100%"
+                                        height="auto"
+                                >
+                                    <img :src="imgSrcTree(item)" class="img">
+                                </v-list-item-avatar>
+                                <v-list-item-content>
+                                    <div class="overline mb-1">Content {{idx + 1}}</div>
+                                    <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
+                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully
+                                    </v-list-item-subtitle>
+                                </v-list-item-content>
+                            </router-link>
+                            <router-link style="text-decoration:none" v-else :to="item.to">
+
+                                <v-list-item-avatar
+                                        tile
+                                        width="100%"
+                                        height="auto"
+                                >
+                                    <img :src="imgSrcTree(item)" class="img">
+
+                                    <!-- BizDevOps Explore More 이미지 -->
+                                    <!--
+                                        <img src="/contents/03_method-1.png" class="img" alt="Analysis">
+                                        <img src="/contents/03_method-2.png" class="img" alt="Design">
+                                        <img src="/contents/03_method-3.png" class="img" alt="Implementation">
+                                     -->
+
+                                </v-list-item-avatar>
+                                <v-list-item-content>
+                                    <div class="overline mb-1">Content {{idx + 1}}</div>
+                                    <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
+                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully
+                                    </v-list-item-subtitle>
+                                </v-list-item-content>
+                            </router-link>
+                        </v-col>
+                    </v-row>
+                    <v-row v-else align="center" justify="center" style="max-width:1050px;margin:0 auto;">
                         <v-col v-for="(item,idx) in items"
                                style="margin:0px;overflow-x:hidden;"
                                cols="12"
@@ -220,7 +268,6 @@
                                 </v-list-item-content>
                             </router-link>
                         </v-col>
-
                     </v-row>
                 </v-responsive>
             </template>
@@ -238,7 +285,8 @@
             return {
                 md: '',
                 items: [],
-                aaa: false
+                aaa: false,
+                tree : false
             }
         },
         methods: {
@@ -276,6 +324,42 @@
                     }
                 }
                 console.log(src)
+                src = src.concat('.png')
+                return src
+            },
+            imgSrcTree(item) {
+                var me = this
+                var menu1 = this.$route.params.menu1;
+                var menu2 = this.$route.params.pathMatch;
+
+                menu1 = menu1.substring(0, 1).toUpperCase() + menu1.substring(1)
+                menu2 = menu2.substring(0, 1).toUpperCase() + menu2.substring(1)
+                var tmp = item.to.split('/')
+                var src = '/contents';
+
+
+                for (var i = 1; i < tmp.length; i++) {
+                    if (i == 1) {
+                        src = src.concat('/' + this.value['menuNumber'][this.$route.params.menu1] + '_' + menu1.substring(0, 1).toUpperCase() + menu1.substring(1))
+                    } else {
+                        var tmpSrc = ''
+                        if (tmp[i].includes('_')) {
+                            var tmpSplit = tmp[i].split('_')
+                            for (var y = 0; y < tmpSplit.length; y++) {
+                                if (y == 0) {
+                                    tmpSrc = tmpSrc.concat(tmpSplit[y])
+                                } else {
+                                    tmpSrc = tmpSrc.concat('_' + tmpSplit[y].substring(0, 1).toUpperCase() + tmpSplit[y].substring(1))
+
+                                    if (y == tmpSplit.length - 1) {
+                                        src = src.concat('/' + tmpSrc)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
                 src = src.concat('.png')
                 return src
             }
@@ -332,8 +416,10 @@
 
             if (menu1 == "MSASchool-소개") {
                 me.aaa = true
-
                 console.log("ini")
+            }
+            if (menu1 == '라이브러리') {
+                me.tree = true
             }
         },
         mounted() {
@@ -341,17 +427,31 @@
             let menu1 = this.$route.params.menu1;
             let menu2 = this.$route.params.pathMatch;
             menu2 = '01_' + menu2
-            this.value.items.forEach(function (item) {
-                if (item.to.includes(menu1) && !item.to.includes('overview')) {
-                    me.items.push(item)
-                }
-            })
+
+            if(menu2.includes("/index")) {
+                var tmpMenu2 = menu2.replace("/index", "")
+                this.value.items.forEach(function (item) {
+                    if (item.route == tmpMenu2) {
+                        item.children.forEach(function (listItem) {
+                            me.items.push(listItem)
+                        })
+                    }
+                })
+            } else {
+                this.value.items.forEach(function (item) {
+                    if (item.to.includes(menu1) && !item.to.includes('overview')) {
+                        me.items.push(item)
+                    }
+                })
+            }
+
 
             this.$http.get(`/contents/${this.value['menuNumber'][this.$route.params.menu1]}_${menu1.substring(0, 1).toUpperCase() + menu1.substring(1)}/${menu2}.md`).then(function (result) {
                 me.$nextTick(function () {
                     me.md = result.data
                 })
             })
+
             me.$nextTick(function () {
                 $(document).on('ready', function () {
                     $(".variable").slick({
