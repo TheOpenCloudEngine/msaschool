@@ -260,7 +260,8 @@
                         let tmp = {name: item, to: `/${item}/01_BizDevOps 개요`, model: true}
                         result.push(tmp)
                     } else if (item == 'library') {
-                        let tmp = {name: item, to: `/${item}/02_msa 방법론/index`, model: true}
+                    } else if (item == '라이브러리') {
+                        let tmp = {name: item, to: `/${item}/01_MSA_방법론/index`, model: true}
                         result.push(tmp)
                     } else if (item == 'community') {
                     } else if (item == '커뮤니티') {
