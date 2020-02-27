@@ -131,24 +131,24 @@
                 if (tempFiles.includes('.md')) {
                     var tempFileStructure = tempFiles.replace('./', '').split('/')
                     // 최상위 메뉴 초기화
-                    if (!tempRootPathList[tempFileStructure[0].split('_')[1].toLowerCase()]) {
+                    if (!tempRootPathList[tempFileStructure[0].split('_')[1]]) {
                         // var numberTmp = []
                         // numberTmp[tempFileStructure[0].split('_')[1]] =
-                        me.menuNumber[tempFileStructure[0].split('_')[1].toLowerCase()] = tempFileStructure[0].split('_')[0]
-                        tempRootPathList[tempFileStructure[0].split('_')[1].toLowerCase()] = []
+                        me.menuNumber[tempFileStructure[0].split('_')[1]] = tempFileStructure[0].split('_')[0]
+                        tempRootPathList[tempFileStructure[0].split('_')[1]] = []
                     }
 
                     // 최상위 메뉴에 넣어줌
                     if (tempFileStructure[1].includes('.md')) {
-                        tempRootPathList[tempFileStructure[0].split('_')[1].toLowerCase()].push(tempFileStructure[1])
+                        tempRootPathList[tempFileStructure[0].split('_')[1]].push(tempFileStructure[1])
                     } else {
                         // 2단계 메뉴 초기화
-                        if (!tempRootPathList[tempFileStructure[0].split('_')[1].toLowerCase()][tempFileStructure[1]]) {
-                            tempRootPathList[tempFileStructure[0].split('_')[1].toLowerCase()][tempFileStructure[1]] = []
+                        if (!tempRootPathList[tempFileStructure[0].split('_')[1]][tempFileStructure[1]]) {
+                            tempRootPathList[tempFileStructure[0].split('_')[1]][tempFileStructure[1]] = []
                         }
 
                         // 2단계 메뉴 넣어줌
-                        tempRootPathList[tempFileStructure[0].split('_')[1].toLowerCase()][tempFileStructure[1]].push(tempFileStructure[2])
+                        tempRootPathList[tempFileStructure[0].split('_')[1]][tempFileStructure[1]].push(tempFileStructure[2])
 
                     }
                 }
@@ -165,7 +165,7 @@
             items: function () {
                 var id = this.$route.params.menu1
                 if (this.$route.params.menu1) {
-                    var fileList = this.tempRootPathList[id.toLowerCase()];
+                    var fileList = this.tempRootPathList[id];
                     var result = [];
 
                     if (fileList) {
@@ -256,7 +256,7 @@
                     } else if (item == 'MSA플래닝') {
                         let tmp = {name: item, to: `/${item}/01_MSA 최종목표`, model: true}
                         result.push(tmp)
-                    } else if (item == 'BizDevOps') {
+                    } else if (item == 'Bizdevops') {
                         let tmp = {name: item, to: `/${item}/01_BizDevOps 개요`, model: true}
                         result.push(tmp)
                     } else if (item == '라이브러리') {
