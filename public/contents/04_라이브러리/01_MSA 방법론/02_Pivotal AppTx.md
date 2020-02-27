@@ -1,18 +1,12 @@
-# Pivotal AppTx
+#### 0.0.0.1 Pivotal AppTx
 
-피보탈 AppTx는 크게 OKRs 단계, EventStorming 단계, Boris 단계, SnapE 단계,
-구현(Implementation) 단계의 선순환 사이클로 구성된다.
+피보탈 AppTx는 크게 OKRs 단계, EventStorming 단계, Boris 단계, SnapE 단계, 구현(Implementation) 단계의 선순환 사이클로 구성된다.
 
-![](/img/04_Bizdevops/02/02/image121.png)
+ ![](/contents/04_라이브러리/01/image2.jpg)
+OKR에서는 목표를 정하고, 주요 결과를 세분화하여 정의한다. Business Goal을 설정한 이후, EventStorming 단계에서 기존 레거시를 대상으로 복잡한 비즈니스 영역을 이해하고 문제점을 식별하며, 모노리식 시스템을 분할하는 과정을 수행한다. 이어, Boris단계에선 식별된 비즈니스간 기능을 연결하여 데이터의 흐름을 구성하는 개념 아키텍처를 생성한다.
 
-OKR에서는 목표를 정하고, 주요 결과를 세분화하여 정의한다. Business Goal을 설정한 이후, EventStorming
-단계에서 기존 레거시를 대상으로 복잡한 비즈니스 영역을 이해하고 문제점을 식별하며, 모노리식 시스템을 분할하는 과정을
-수행한다. 이어, Boris단계에선 식별된 비즈니스간 기능을 연결하여 데이터의 흐름을 구성하는 개념 아키텍처를
-생성한다.
+ 유저 스토리와 API, Data간 연관분석을 통해 최종 요구사항(백로그)을 도출하는 SnapE 단계를 거치는데, 이 SnapE에서 도출된 요건이 Pivotal Tracker에서 관리된다. 마지막으로 디자인을 결정하고, 기술 패턴을 선정하여 구현하는 단계가 AppTx를 구성하는 사이클이다.
 
-유저 스토리와 API, Data간 연관분석을 통해 최종 요구사항(백로그)을 도출하는 SnapE 단계를 거치는데, 이 SnapE에서
-도출된 요건이 Pivotal Tracker에서 관리된다. 마지막으로 디자인을 결정하고, 기술 패턴을 선정하여 구현하는 단계가
-AppTx를 구성하는 사이클이다.
 
 **AppTx 방법론 소개자료**
 
