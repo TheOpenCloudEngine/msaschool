@@ -218,7 +218,7 @@
             return {
                 md: '',
                 items: [],
-                aaa: true
+                aaa: false
             }
         },
         methods: {
@@ -329,6 +329,7 @@
             var me = this
             menu2 = '01_' + menu2
             if(menu1 == "introduction"){
+                me.aaa = true
                 me.$nextTick(function () {
                     $(document).on('ready', function() {
                         $(".variable").slick({
