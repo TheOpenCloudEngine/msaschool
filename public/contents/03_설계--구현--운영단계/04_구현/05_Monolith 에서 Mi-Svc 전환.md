@@ -20,13 +20,13 @@
 **Gateway** 는 진입점 통일 역활을 하여 마이크로 서비스를 찾아가는 라우팅 역할을 한다.  
 또한 마이크로 서비스의 최상단에서 갑옷을 입는 역할을 한다. 보안(e.g: prevent DDOS Attack) , 인가(e.g: Access Token), ACL(Access Control List), CORS(Cross-Origin Resource Sharing) 등을 각자의 서비스에서 처리를 하지 않고, **Gateway** 에서 일괄적으로 처리를 함으로서 마이크로 서비스에서는 구현에 좀더 집중을 할 수 있는 환경을 만들어 준다.  
 
-> Gateway 의 자세한 설명은 [[operation-API Gateway]](../07_operation/02_API%20Gateway) page 에서 참고 하면 된다.    
+> Gateway 의 자세한 설명은 [[운영-API Gateway]](../07_운영/02_API%20Gateway) page 에서 참고 하면 된다.    
 
 
 **Service Registry** 는 **Gateway** 에서 각 서비스를 찾아 갈 수 있도록 서비스와 ip 를 가지고 있는 맵 이라고 볼 수 있다. 
 Service Registry 는 client/server side discovery , loadbalancer 라고 불리운다. 서비스를 찾고, 로드벨런싱 하는 역할을 한다.  
 
-> Service Registry 의 자세한 설명은 [[implementation-Service Registry]](./06_Service%20Registry) page 에서 참고 하면 된다.    
+> Service Registry 의 자세한 설명은 [[구현-Service Discovery]](./06_Service%2Discovery) page 에서 참고 하면 된다.    
 
 ## **2. 객체 참조를 어떻게 할 것인가?**
 
