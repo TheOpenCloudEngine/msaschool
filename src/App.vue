@@ -79,10 +79,9 @@
                 </span>
             </v-toolbar-title>
             <v-tabs
+                    class="tab-display"
                     v-model="tab"
-                    background-color="transparent"
                     color="#673ab7"
-                    style="width: 300px"
             >
                 <v-tab
                         v-for="item in tabItems"
@@ -336,3 +335,5 @@
 
     }
 </script>
+<style>
+</style>
