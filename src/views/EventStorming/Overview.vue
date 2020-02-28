@@ -405,6 +405,8 @@
         created() {
             var me = this
             let menu1 = this.$route.params.menu1;
+            let menu2 = this.$route.params.pathMatch;
+            console.log(menu2)
 
             console.log("hit")
 
@@ -412,7 +414,7 @@
                 me.aaa = true
                 console.log("ini")
             }
-            if (menu1 == '관련자료') {
+            if (menu1 == '관련자료' && menu2 == 'MSA 방법론/index') {
                 me.tree = true
             }
         },
