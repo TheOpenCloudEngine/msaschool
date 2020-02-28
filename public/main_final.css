@@ -143,11 +143,11 @@
 .slick-dots li:hover {cursor: pointer;}
 .slick-dots li button {display:none;}
 .slick-dots li:nth-child(1) {background:url('/img/icons/img/ic-carousel-3.png') 10px 52% no-repeat;}
-.slick-dots li:nth-child(1):after {content:'Collaborate';}
+.slick-dots li:nth-child(1):after {content:'단계별 학습';}
 .slick-dots li:nth-child(2) {background:url('/img/icons/img/ic-carousel-2.png') 10px 52% no-repeat;}
-.slick-dots li:nth-child(2):after {content:'Innovate';}
+.slick-dots li:nth-child(2):after {content:'MSA 지식창고';}
 .slick-dots li:nth-child(3) {background:url('/img/icons/img/ic-carousel-1.png') 10px 52% no-repeat;}
-.slick-dots li:nth-child(3):after {content:'Accelerate';}
+.slick-dots li:nth-child(3):after {content:'다양한 교육과정';}
 .slick-dots li.slick-active {background-color:#fff}
 .slick-current {opacity: 1;}
 /* .slick-active {opacity: .5;} */
