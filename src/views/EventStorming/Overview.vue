@@ -85,7 +85,7 @@
                                                  srcset="/img/icons/img/introduction-1.png 1x, /img/icons/img/introduction-1@2x.png 2x, /img/icons/img/introduction-1@3x.png 3x"
                                                  alt="carousel-item">
                                             <div style="margin-top: 244px;">
-                                                <p class="carousel-item_line1">MSA 계획수립에서 운영에 이르는 각 단계별 고려요소 및 분석,설계 접근법에 대한 체계적 학습</p>
+                                                <p class="carousel-item_line1">계획수립에서 운영에 이르는 각 단계별 고려요소 및 분석/접근/실천법에 대한 체계적 학습</p>
                                                 <!--p class="carousel-item_line2">체계적 학습</p-->
                                             </div>
                                         </div>
