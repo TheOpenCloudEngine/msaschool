@@ -266,7 +266,7 @@
                 Object.keys(this.tempRootPathList).forEach(function (item) {
                     console.log(item)
                     if (item == '소개') {
-                        let tmp = {name: item, to: `/${item}/01_MSA School 이란`, model: true};
+                        let tmp = {name: item, to: `/${item}/01_MSA School 소개`, model: true};
                         result.push(tmp)
                     } else if (item == '계획단계') {
                         let tmp = {name: item, to: `/${item}/01_MSA 최종목표`, model: true};
