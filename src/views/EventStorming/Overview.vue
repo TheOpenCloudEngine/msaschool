@@ -6,7 +6,7 @@
                     <div class="hero-section">
                         <div class="container">
                             <div class="hero-section__left">
-                                <h2 class="hero-section-title">Transform the way your team works</h2>
+                                <h2 class="hero-section-title">험난한 Microservice 여정의 길라잡이</h2>
                                 <!--accordion-->
                                 <div class="mat-accordion accordion" id="accordion">
                                     <div class="card">
@@ -16,15 +16,13 @@
                                                 <img src="/img/icons/img/ic-carousel-3.png"
                                                      srcset="/img/icons/img/ic-carousel-3.png 1x, /img/icons/img/ic-carousel-3@2x.png 2x, /img/icons/img/ic-carousel-3@3x.png 3x"
                                                      alt="carousel-item">
-                                                <!--<i class="fa fa-plus"></i>--> Collaborate
+                                                <!--<i class="fa fa-plus"></i>--> 단계별 학습
                                             </button>
                                         </div>
                                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                                              data-parent="#accordion">
                                             <div class="card-body">
-                                                <p>Bring together a cross-functional team to explore a challenge from
-                                                    360
-                                                    degrees</p>
+                                                <p>MSA 계획수립에서 운영에 이르는 각 단계별 고려요소 및 분석/접근/실천법에 대한 체계적 학습</p>
                                                 <img class="carousel-item_img"
                                                      src="/img/icons/img/introduction-1.png"
                                                      srcset="/img/icons/img/introduction-1.png 1x, /img/icons/img/introduction-1@2x.png 2x, /img/icons/img/introduction-1@3x.png 3x"
@@ -40,14 +38,13 @@
                                                 <img src="/img/icons/img/ic-carousel-2.png"
                                                      srcset="/img/icons/img/ic-carousel-2.png 1x, /img/icons/img/ic-carousel-2@2x.png 2x, /img/icons/img/ic-carousel-2@3x.png 3x"
                                                      alt="carousel-item">
-                                                <!--<i class="fa fa-plus"></i>--> Innovate
+                                                <!--<i class="fa fa-plus"></i>--> MSA 지식창고
                                             </button>
                                         </div>
                                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                                              data-parent="#accordion">
                                             <div class="card-body">
-                                                <p>Put the user at the center, jumpstart creativity and release Design
-                                                    Fixation</p>
+                                                <p>MSA 디자인 패턴 소개, 실전 코딩전략, MSA 개발도구 및 수행 방법론, 집단 지성을 위한 에코시스템</p>
                                                 <img class="carousel-item_img"
                                                      src="/img/icons/img/introduction-2.png"
                                                      srcset="/img/icons/img/introduction-2.png 1x, /img/icons/img/introduction-2@2x.png 2x, /img/icons/img/introduction-2@3x.png 3x"
@@ -63,13 +60,13 @@
                                                 <img src="/img/icons/img/ic-carousel-1.png"
                                                      srcset="/img/icons/img/ic-carousel-1.png 1x, /img/icons/img/ic-carousel-1@2x.png 2x, /img/icons/img/ic-carousel-1@3x.png 3x"
                                                      alt="carousel-item">
-                                                <!--<i class="fa fa-plus"></i>--> Accelerate
+                                                <!--<i class="fa fa-plus"></i>--> 다양한 교육과정
                                             </button>
                                         </div>
                                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                                              data-parent="#accordion">
                                             <div class="card-body">
-                                                <p>Make it real as possible and test it fast</p>
+                                                <p>MSA 주제영역별 과정, 클라우드 조직내 역할별 과정 및 기업별 수요에 맞춘 맞춤 교육</p>
                                                 <img class="carousel-item_img"
                                                      src="/img/icons/img/introduction-3.png"
                                                      srcset="/img/icons/img/introduction-3.png 1x, /img/icons/img/introduction-3@2x.png 2x, /img/icons/img/introduction-3@3x.png 3x"
@@ -88,9 +85,8 @@
                                                  srcset="/img/icons/img/introduction-1.png 1x, /img/icons/img/introduction-1@2x.png 2x, /img/icons/img/introduction-1@3x.png 3x"
                                                  alt="carousel-item">
                                             <div style="margin-top: 244px;">
-                                                <p class="carousel-item_line1">Bring together a cross-functional team to
-                                                    explore</p>
-                                                <p class="carousel-item_line2">a challenge from 360 degrees</p>
+                                                <p class="carousel-item_line1">MSA 계획수립에서 운영에 이르는 각 단계별 고려요소 및 분석,설계 접근법에 대한 체계적 학습</p>
+                                                <!--p class="carousel-item_line2">체계적 학습</p-->
                                             </div>
                                         </div>
                                     </div>
@@ -101,9 +97,8 @@
                                                  srcset="/img/icons/img/introduction-2.png 1x, /img/icons/img/introduction-2@2x.png 2x, /img/icons/img/introduction-2@3x.png 3x"
                                                  alt="carousel-item">
                                             <div style="margin-top: 304px;">
-                                                <p class="carousel-item_line1">Put the user at the center, jumpstart
-                                                    creativity</p>
-                                                <p class="carousel-item_line2">and release Design Fixation</p>
+                                                <p class="carousel-item_line1">MSA 디자인 패턴 소개, 실전 코딩전략, MSA 개발도구 및 수행 방법론, 집단 지성을 위한 에코시스템</p>
+                                                <!--p class="carousel-item_line2">and release Design Fixation</p-->
                                             </div>
                                         </div>
                                     </div>
@@ -114,10 +109,9 @@
                                                  srcset="/img/icons/img/introduction-3.png 1x, /img/icons/img/introduction-3@2x.png 2x, /img/icons/img/introduction-3@3x.png 3x"
                                                  alt="carousel-item">
                                             <div style="margin-top: 350px;">
-                                                <p class="carousel-item_line1" style="max-width: 224px;">Make it real as
-                                                    possible</p>
-                                                <p class="carousel-item_line2" style="max-width: 147px;">and test it
-                                                    fast</p>
+                                                <p class="carousel-item_line1" style="max-width: 424px;">MSA 주제영역별 과정, 클라우드 조직내 역할별 과정 및 기업별 수요에 맞춘 맞춤 교육</p>
+                                                <!--p class="carousel-item_line2" style="max-width: 147px;">and test it
+                                                    fast</p-->
                                             </div>
                                         </div>
                                     </div>
