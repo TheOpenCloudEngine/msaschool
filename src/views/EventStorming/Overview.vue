@@ -6,7 +6,7 @@
                     <div class="hero-section">
                         <div class="container">
                             <div class="hero-section__left">
-                                <h2 class="hero-section-title">험난한 Microservice 여정의 길라잡이</h2>
+                                <h2 class="hero-section-title">험난한 Microservices 여정의 길라잡이</h2>
                                 <!--accordion-->
                                 <div class="mat-accordion accordion" id="accordion">
                                     <div class="card">
@@ -44,7 +44,7 @@
                                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                                              data-parent="#accordion">
                                             <div class="card-body">
-                                                <p>MSA 디자인 패턴 소개, 실전 코딩전략, MSA 개발도구 및 수행 방법론, 집단 지성을 위한 에코시스템</p>
+                                                <p>MSA 디자인 패턴 소개, 실전 코딩전략, MSA 개발 도구 및 수행 방법론, 집단 지성을 위한 에코시스템</p>
                                                 <img class="carousel-item_img"
                                                      src="/img/icons/img/introduction-2.png"
                                                      srcset="/img/icons/img/introduction-2.png 1x, /img/icons/img/introduction-2@2x.png 2x, /img/icons/img/introduction-2@3x.png 3x"
@@ -97,7 +97,7 @@
                                                  srcset="/img/icons/img/introduction-2.png 1x, /img/icons/img/introduction-2@2x.png 2x, /img/icons/img/introduction-2@3x.png 3x"
                                                  alt="carousel-item">
                                             <div style="margin-top: 304px;">
-                                                <p class="carousel-item_line1">MSA 디자인 패턴 소개, 실전 코딩전략, MSA 개발도구 및 수행 방법론, 집단 지성을 위한 에코시스템</p>
+                                                <p class="carousel-item_line1">MSA 디자인 패턴 소개, 실전 코딩전략, MSA 개발 도구 및 수행 방법론, 집단 지성을 위한 에코시스템</p>
                                                 <!--p class="carousel-item_line2">and release Design Fixation</p-->
                                             </div>
                                         </div>
