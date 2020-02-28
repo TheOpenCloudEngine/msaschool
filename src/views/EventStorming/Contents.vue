@@ -68,8 +68,10 @@
                         disabled = true;
                     }
                     // console.log(href)
-                    if (text.includes('-')) {
-                        text = text.replace('-', '/')
+                    if (text.includes('---')) {
+                        text = text.replace('---', '&')
+                    } else if (text.includes('--')) {
+                        text = text.replace('--', '/')
                     }
                     var breadTmp = {
                         text: text,

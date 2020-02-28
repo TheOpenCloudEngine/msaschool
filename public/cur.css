@@ -109,9 +109,8 @@ header {box-shadow:0 5px 5px 0 rgba(0,0,0,.15) !important;}
     .col {padding-left:30px !important;padding-right:30px !important;}
 }
 @media (max-width:960px) {
-    .v-sheet .v-app-bar__nav-icon {display:block;}
+    /*.v-sheet .v-app-bar__nav-icon {display:block;}*/
     .logo {max-width:185px !important;cursor:pointer;}
-    .v-tabs {display:none;}
     .v-sheet .v-toolbar__content, .v-sheet .v-toolbar__extension {padding:0px 20px !important}
     .v-slide-group__wrapper {max-width:100%;}
     .uengine {display:none !important;}
@@ -121,4 +120,10 @@ header {box-shadow:0 5px 5px 0 rgba(0,0,0,.15) !important;}
     .v-content .col-sm-3 {max-width:360px;}
     .v-content .v-list-item__subtitle {display:none !important;}
     .markdown-body, .v-breadcrumbs, .v-responsive__content h1, .v-responsive__content .col, .em-title {max-width:100% !important;}
+}
+
+@media (max-width:1100px) {
+    .v-tabs {display:none;}
+    .v-sheet .v-app-bar__nav-icon {display: block;}
+
 }
