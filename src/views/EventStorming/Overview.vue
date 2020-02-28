@@ -408,11 +408,11 @@
 
             console.log("hit")
 
-            if (menu1 == "MSASchool-소개") {
+            if (menu1 == "소개") {
                 me.aaa = true
                 console.log("ini")
             }
-            if (menu1 == '라이브러리') {
+            if (menu1 == '관련자료') {
                 me.tree = true
             }
         },

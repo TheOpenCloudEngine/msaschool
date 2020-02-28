@@ -266,16 +266,17 @@
                 var result = [];
                 Object.keys(this.tempRootPathList).forEach(function (item) {
                     console.log(item)
-                    if (item == 'MSASchool-소개') {
+                    if (item == '소개') {
                         let tmp = {name: item, to: `/${item}/01_MSA School 이란`, model: true};
                         result.push(tmp)
-                    } else if (item == 'MSA플래닝') {
+                    } else if (item == '계획단계') {
                         let tmp = {name: item, to: `/${item}/01_MSA 최종목표`, model: true};
                         result.push(tmp)
-                    } else if (item == 'BizDevOps') {
-                        let tmp = {name: item, to: `/${item}/01_BizDevOps 개요`, model: true};
+                    } else if (item == '설계--구현--운영단계') {
+                        console.log("item")
+                        let tmp = {name: item.replace(/--/g,"/"), to: `/${item}/01_BizDevOps 개요`, model: true};
                         result.push(tmp)
-                    } else if (item == '라이브러리') {
+                    } else if (item == '관련자료') {
                         let tmp = {name: item, to: `/${item}/01_MSA 방법론/index`, model: true};
                         result.push(tmp)
                     } else if (item == '커뮤니티') {
@@ -323,11 +324,11 @@
                 console.log(to, from)
                 console.log((to.params.menu1 != from.params.menu1))
                 console.log(
-                    (to.params.menu1 == 'MSASchool-소개')
+                    (to.params.menu1 == '소개')
                 )
                 console.log(to.params.pathMatch)
                 console.log((to.params.pathMatch == 'MSA School 이란'))
-                if ((to.params.menu1 != from.params.menu1) && (to.params.menu1 == 'MSASchool-소개') && (to.params.pathMatch == 'MSA School 이란')) {
+                if ((to.params.menu1 != from.params.menu1) && (to.params.menu1 == '소개') && (to.params.pathMatch == 'MSA School 이란')) {
                     // location.reload();
                 }
             }
