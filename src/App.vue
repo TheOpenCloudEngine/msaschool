@@ -269,11 +269,11 @@
                         let tmp = {name: item, to: `/${item}/01_MSA School 소개`, model: true};
                         result.push(tmp)
                     } else if (item == '계획단계') {
-                        let tmp = {name: item, to: `/${item}/01_MSA 최종목표`, model: true};
+                        let tmp = {name: item, to: `/${item}/01_최종목표`, model: true};
                         result.push(tmp)
                     } else if (item == '설계--구현--운영단계') {
                         console.log("item")
-                        let tmp = {name: item.replace(/--/g,"/"), to: `/${item}/01_BizDevOps 개요`, model: true};
+                        let tmp = {name: item.replace(/--/g,"/"), to: `/${item}/02_분석/01_관심사 분리`, model: true};
                         result.push(tmp)
                     } else if (item == '관련자료') {
                         let tmp = {name: item, to: `/${item}/01_MSA 방법론/index`, model: true};
