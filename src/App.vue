@@ -326,8 +326,8 @@
                     (to.params.menu1 == '소개')
                 )
                 console.log(to.params.pathMatch)
-                console.log((to.params.pathMatch == 'MSA School 이란'))
-                if ((to.params.menu1 != from.params.menu1) && (to.params.menu1 == '소개') && (to.params.pathMatch == 'MSA School 이란')) {
+                console.log((to.params.pathMatch == 'MSA School 소개'))
+                if ((to.params.menu1 != from.params.menu1) && (to.params.menu1 == '소개') && (to.params.pathMatch == 'MSA School 소개')) {
                     // location.reload();
                 }
             }
