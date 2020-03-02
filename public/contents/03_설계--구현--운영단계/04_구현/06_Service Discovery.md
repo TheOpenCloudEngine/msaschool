@@ -92,6 +92,7 @@ Eureka client는 Eureka(service registry)에 서비스 등록/해제를 자동�
 * Third-Party Registration 장점
     - 서비스 인스턴스와 service registry가의 결합도를 끊을(decoupled) 수 있다.
     - 서비스에 별도의 등록/해제 로직을 구현할 필요가 없다.
+    
 * Third-Party Registration 단점
     - 운영환경에 추가적인 시스템 컴포넌트가 필요하다.
     - 이 시스템은 설치 및 관리되어야 하고, 고가용성을 유지해야 한다.
