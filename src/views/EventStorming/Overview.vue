@@ -304,7 +304,7 @@
                         if (i == tmp.length - 1) {
                             var tmpSplit = tmp[i].split('_')
                             for (var y = 0; y < tmpSplit.length; y++) {
-                                console.log(tmpSplit)
+                                // console.log(tmpSplit)
                                 if (y == 0) {
                                     tmpSrc = tmpSrc.concat(tmpSplit[y])
                                 } else {
@@ -317,7 +317,7 @@
                         }
                     }
                 }
-                console.log(src)
+                // console.log(src)
                 src = src.concat('.png')
                 return src
             },
@@ -406,13 +406,10 @@
             var me = this
             let menu1 = this.$route.params.menu1;
             let menu2 = this.$route.params.pathMatch;
-            console.log(menu2)
-
-            console.log("hit")
 
             if (menu1 == "소개") {
                 me.aaa = true
-                console.log("ini")
+                // console.log("ini")
             }
             if (menu1 == '관련자료' && menu2 == 'MSA 방법론/index') {
                 me.tree = true

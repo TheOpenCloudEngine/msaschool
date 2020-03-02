@@ -122,8 +122,13 @@ header {box-shadow:0 5px 5px 0 rgba(0,0,0,.15) !important;}
     .markdown-body, .v-breadcrumbs, .v-responsive__content h1, .v-responsive__content .col, .em-title {max-width:100% !important;}
 }
 
+@media (max-width:1264px) {
+    .v-sheet .v-app-bar__nav-icon {display: block;}
+    .v-navigation-drawer--is-mobile {
+        margin-top: 84px;
+    }
+}
 @media (max-width:1100px) {
     .v-tabs {display:none;}
-    .v-sheet .v-app-bar__nav-icon {display: block;}
 
 }

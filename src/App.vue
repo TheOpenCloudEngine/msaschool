@@ -7,7 +7,7 @@
                 clipped
                 color="#f5f5f5"
         >
-            <v-list shaped>
+            <v-list shaped v-if="window.width >= 1100">
                 <template v-for="item in items">
                     <v-list-group mandatory
                                   :eager="true"
@@ -44,7 +44,7 @@
                     <v-list-item
                             v-else
                             link
-                            :value="item.model"
+                            v-model="item.model"
                             :key="item.text"
                             :to="item.to"
                             :href="item.href"
@@ -54,6 +54,97 @@
                         <v-list-item-content>
                             <v-list-item-title>
                                 {{ item.text }}
+                            </v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+                </template>
+            </v-list>
+            <v-list expand
+                    shaped v-else-if="window.width < 1101">
+
+                <template v-for="item in tabItems">
+                    <v-list-group mandatory
+                                  :eager="true"
+                                  v-if="item"
+                                  :key="item.name"
+                                  v-model="item.model"
+                                  no-action
+                                  @click.native="getTabItemList(item.name)"
+                    >
+                        <template v-slot:activator>
+                            <v-list-item-content :to="item.to"
+                            >
+                                <v-list-item-title :to="item.to"
+                                >
+                                    {{ item.name }}
+                                </v-list-item-title>
+                            </v-list-item-content>
+                        </template>
+                        <template v-for="moitem in mobileItem">
+                            <v-list-group mandatory
+                                          :eager="true"
+                                          v-if="moitem.children"
+                                          :key="moitem.text"
+                                          :to="moitem.to"
+                                          v-model="moitem.model"
+                                          @click="route(moitem)"
+                                          no-action
+                                          style="margin-bottom: 0px;"
+                            >
+                                <template v-slot:activator>
+                                    <v-list-item-content :to="moitem.to"
+                                                         style="margin-left: -30px;"
+                                    >
+                                        <v-list-item-title :to="moitem.to"
+                                        >
+                                            {{ moitem.text }}
+                                        </v-list-item-title>
+                                    </v-list-item-content>
+                                </template>
+                                <v-list-item
+                                        v-for="(mochild, i) in moitem.children"
+                                        :key="i"
+                                        :to="mochild.to"
+                                >
+                                    <v-list-item-content>
+                                        <v-list-item-title class="subtitle-2">
+                                            {{ mochild.text }}
+                                        </v-list-item-title>
+                                    </v-list-item-content>
+                                </v-list-item>
+                            </v-list-group>
+
+                            <v-list-item
+                                    v-else
+                                    link
+                                    v-model="moitem.model"
+                                    :key="moitem.text"
+                                    :to="moitem.to"
+                                    :href="moitem.href"
+                                    color="#4527A0"
+                                    @click="deselectAll"
+                            >
+                                <v-list-item-content>
+                                    <v-list-item-title>
+                                        {{ moitem.text }}
+                                    </v-list-item-title>
+                                </v-list-item-content>
+                            </v-list-item>
+                        </template>
+                    </v-list-group>
+                    <v-list-item
+                            v-else
+                            link
+                            :value.sync="item.model"
+                            :key="item.name"
+                            :to="item.to"
+                            :href="item.href"
+                            color="#4527A0"
+                            @click="deselectAll"
+                    >
+                        <v-list-item-content>
+                            <v-list-item-title>
+                                {{ item.name }}
                             </v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
@@ -122,6 +213,10 @@
         },
         created() {
             var me = this
+            // console.log("aa")
+            window.addEventListener('resize', this.handleResize);
+            this.handleResize();
+
             const templateFiles = require.context('../public/contents', true)
 
             var tempRootPathList = []
@@ -153,7 +248,9 @@
             })
 
             this.tempRootPathList = tempRootPathList
-
+        },
+        destroyed() {
+            window.removeEventListener('resize', this.handleResize);
         },
         computed: {
             lists: function () {
@@ -161,14 +258,14 @@
                 return {menuNumber: me.menuNumber, items: me.items}
             },
             items: function () {
-                var id = this.$route.params.menu1
+                var id = this.$route.params.menu1;
+
                 if (this.$route.params.menu1) {
                     var fileList = this.tempRootPathList[id];
                     var result = [];
 
                     if (fileList) {
                         var keys = Object.keys(fileList);
-
                         keys.forEach(function (key, idx) {
                             if (fileList[key] instanceof Array) {
 
@@ -183,13 +280,13 @@
                                         })
                                         var text = data.split('_')[1].replace('.md', '');
                                         if (text.includes('---')) {
-                                            text = text.replace('---', '&')
+                                            text = text.replace(/---/g, '&')
                                         } else if (text.includes('--')) {
-                                            text = text.replace('--', '/')
+                                            text = text.replace(/--/g, '/')
                                         }
 
                                         if (!valid) {
-                                            if(idx == 0) {
+                                            if (idx == 0) {
                                                 var ttt = {
                                                     text: key,
                                                     route: key,
@@ -230,7 +327,6 @@
                                                 if (subData.route == key) {
                                                     result[idx].children.push(ttt)
                                                 }
-
                                             })
                                         }
                                     }
@@ -264,22 +360,21 @@
                 // var id = this.$route.params.menu1
                 var result = [];
                 Object.keys(this.tempRootPathList).forEach(function (item) {
-                    console.log(item)
                     if (item == '소개') {
-                        let tmp = {name: item, to: `/${item}/01_MSA School 소개`, model: true};
+                        let tmp = {name: item, to: `/${item}/01_MSA School 소개`, model: false};
                         result.push(tmp)
                     } else if (item == '계획단계') {
-                        let tmp = {name: item, to: `/${item}/01_MSA 최종목표`, model: true};
+                        let tmp = {name: item, to: `/${item}/01_MSA 최종목표`, model: false};
                         result.push(tmp)
                     } else if (item == '설계--구현--운영단계') {
-                        console.log("item")
-                        let tmp = {name: item.replace(/--/g,"/"), to: `/${item}/01_BizDevOps 개요`, model: true};
+                        // console.log("item")
+                        let tmp = {name: item.replace(/--/g, "/"), to: `/${item}/01_BizDevOps 개요`, model: false};
                         result.push(tmp)
                     } else if (item == '관련자료') {
-                        let tmp = {name: item, to: `/${item}/01_MSA 방법론/index`, model: true};
+                        let tmp = {name: item, to: `/${item}/01_MSA 방법론/index`, model: false};
                         result.push(tmp)
                     } else if (item == '커뮤니티') {
-                        let tmp = {name: item, to: `/${item}/01_이벤트 및 공지`, model: true};
+                        let tmp = {name: item, to: `/${item}/01_이벤트 및 공지`, model: false};
                         result.push(tmp)
                     }
 
@@ -295,9 +390,18 @@
             tempRootPathList: [],
             reload: true,
             menuNumber: [],
-            refresh: true
+            refresh: true,
+            window: {
+                width: 0,
+                height: 0
+            },
+            mobileItem: []
         }),
         methods: {
+            handleResize() {
+                this.window.width = window.innerWidth;
+                this.window.height = window.innerHeight;
+            },
             route(to) {
                 var me = this
 
@@ -315,25 +419,155 @@
                     if (item.model)
                         item.model = false;
                 })
+            },
+            getTabItemList(link) {
+                var me = this
+                var id = link
+                if (link.includes('/')) {
+                    id = id.replace(/\//g, "--");
+                }
+                var fileList = this.tempRootPathList[id];
+                var result = [];
+                console.log(link)
+                me.tabItems.forEach(function (item) {
+                    console.log(item.text, link)
+                    if(item.name == link) {
+                        item.model = true
+                    } else {
+                        item.model = false
+                    }
+
+                })
+                if (fileList) {
+                    var keys = Object.keys(fileList);
+                    keys.forEach(function (key, idx) {
+                        if (fileList[key] instanceof Array) {
+                            fileList[key].forEach(function (data) {
+                                if (!data.includes('index')) {
+                                    var valid = false
+                                    result.some(function (validSubMenu) {
+                                        if (validSubMenu.text == key) {
+                                            valid = true
+                                            return;
+                                        }
+                                    })
+                                    var text = data.split('_')[1].replace('.md', '');
+                                    if (text.includes('---')) {
+                                        text = text.replace(/---/g, '&')
+                                    } else if (text.includes('--')) {
+                                        text = text.replace(/--/g, '/')
+                                    }
+
+                                    if (!valid) {
+                                        if (idx == 0) {
+                                            var ttt = {
+                                                text: key,
+                                                route: key,
+                                                model: false,
+                                                folder: true,
+                                                to: `/${id}`,
+                                                children: [
+                                                    {
+                                                        text: text,
+                                                        to: `/${id}/${key}/${data.replace('.md', '')}`
+                                                    }
+                                                ],
+                                            }
+                                        } else {
+                                            console.log(key)
+                                            if (key.includes(me.$route.params.menu2)) {
+                                                var ttt = {
+                                                    text: key,
+                                                    route: key,
+                                                    model: true,
+                                                    folder: true,
+                                                    to: `/${id}`,
+                                                    children: [
+                                                        {
+                                                            text: text,
+                                                            to: `/${id}/${key}/${data.replace('.md', '')}`
+                                                        }
+                                                    ],
+                                                }
+                                            } else {
+                                                var ttt = {
+                                                    text: key,
+                                                    route: key,
+                                                    model: false,
+                                                    folder: true,
+                                                    to: `/${id}`,
+                                                    children: [
+                                                        {
+                                                            text: text,
+                                                            to: `/${id}/${key}/${data.replace('.md', '')}`
+                                                        }
+                                                    ],
+                                                }
+                                            }
+
+                                        }
+
+                                        result.push(ttt)
+                                    } else {
+                                        var ttt = {
+                                            text: text,
+                                            to: `/${id}/${key}/${data.replace('.md', '')}`
+                                        }
+
+                                        result.forEach(function (subData, idx) {
+                                            if (subData.route == key) {
+                                                result[idx].children.push(ttt)
+                                            }
+
+                                        })
+                                    }
+                                }
+                            })
+                        } else {
+                            // 서브메뉴 없을 때
+                            var tmp = {
+                                text: fileList[key].replace('.md', ''),
+                                to: '/' + id + '/' + fileList[key].replace('.md', '').trim()
+                            }
+                            result.push(tmp)
+                        }
+                    })
+                    result.sort(function (a, b) {
+                        return a.text < b.text ? -1 : a.text > b.text ? 1 : 0;
+                    })
+                    result.forEach(function (item) {
+                        item.text = item.text.split('_')[1]
+                    })
+                }
+                me.mobileItem = result
             }
+
         },
         watch: {
             '$route'(to, from) {
                 var me = this
-                console.log(to, from)
-                console.log((to.params.menu1 != from.params.menu1))
-                console.log(
-                    (to.params.menu1 == '소개')
-                )
-                console.log(to.params.pathMatch)
-                console.log((to.params.pathMatch == 'MSA School 소개'))
                 if ((to.params.menu1 != from.params.menu1) && (to.params.menu1 == '소개') && (to.params.pathMatch == 'MSA School 소개')) {
-                    // location.reload();
+                    location.reload();
                 }
+            },
+            drawer: function (newVal, oldVal) {
+                var me = this
+                console.log(newVal, oldVal)
+                var text = me.$route.params.menu1;
+                if (text.includes('--')) {
+                    text = text.replace(/--/g, '/')
+                }
+                me.tabItems.forEach(function (item) {
+                    if (text == item.name) {
+                        item.model = true
+                    }
+                    me.getTabItemList(text)
+                })
             }
         }
 
     }
 </script>
 <style>
+    /*.theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled)*/
 </style>

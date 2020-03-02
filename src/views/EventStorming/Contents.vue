@@ -69,9 +69,9 @@
                     }
                     // console.log(href)
                     if (text.includes('---')) {
-                        text = text.replace('---', '&')
+                        text = text.replace(/---/g, '&')
                     } else if (text.includes('--')) {
-                        text = text.replace('--', '/')
+                        text = text.replace(/--/g, '/')
                     }
                     var breadTmp = {
                         text: text,
