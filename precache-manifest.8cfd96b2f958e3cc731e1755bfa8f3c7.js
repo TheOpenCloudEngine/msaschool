@@ -400,7 +400,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/04_구현/07_마이크로 서비스 보안.md"
   },
   {
-    "revision": "f7b064538de2048905f187a81249a9ce",
+    "revision": "df5a26efb0e63bb232fae22ee3ecf2d7",
     "url": "/contents/03_설계--구현--운영단계/04_구현/08_프론트엔드 서비스.md"
   },
   {
@@ -408,15 +408,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/04_구현/index.md"
   },
   {
-    "revision": "d41d8cd98f00b204e9800998ecf8427e",
+    "revision": "0931ab173fceb2242f24458d2f0c9447",
     "url": "/contents/03_설계--구현--운영단계/05_통합/01_Integration by UI.md"
   },
   {
-    "revision": "d41d8cd98f00b204e9800998ecf8427e",
+    "revision": "915ea7db4b75ec3cb8b0dbe1f89644f9",
     "url": "/contents/03_설계--구현--운영단계/05_통합/02_Integration by Req-Res.md"
   },
   {
-    "revision": "d41d8cd98f00b204e9800998ecf8427e",
+    "revision": "b34dec8b46d2d9ca0d67529581e889d1",
     "url": "/contents/03_설계--구현--운영단계/05_통합/03_Integration by EDA.md"
   },
   {
@@ -676,7 +676,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_커뮤니티/05_교육 수강기관.md"
   },
   {
-    "revision": "f9a73706a23f2c3bbb91",
+    "revision": "ffa79a5cd08bef7dbd17",
     "url": "/css/app.15c265a9.css"
   },
   {
@@ -1552,6 +1552,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/03_Bizdevops/04/07/oauth2flow.png"
   },
   {
+    "revision": "74d81e3b72d5406027d4c2d75bc11e80",
+    "url": "/img/03_Bizdevops/05/01/03_05_01_01.png"
+  },
+  {
+    "revision": "6c6e9f7e415e19c07880189fae19d473",
+    "url": "/img/03_Bizdevops/05/01/ui-integrate.png"
+  },
+  {
     "revision": "4107a50f73ee2fb5521a19bebc354b05",
     "url": "/img/03_Bizdevops/07/01/image96.png"
   },
@@ -1780,12 +1788,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/index.003de827.png"
   },
   {
-    "revision": "af4c460c933811090eb8fc299df227f4",
+    "revision": "eb2f4980c010b5937c136b4ce45d30d4",
     "url": "/index.html"
   },
   {
-    "revision": "f9a73706a23f2c3bbb91",
-    "url": "/js/app.a2f5c0d5.js"
+    "revision": "ffa79a5cd08bef7dbd17",
+    "url": "/js/app.bb228f57.js"
   },
   {
     "revision": "836924f29294ff23069a",
