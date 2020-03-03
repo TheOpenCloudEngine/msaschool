@@ -1,16 +1,25 @@
 <template>
     <v-container>
-        <v-breadcrumbs :items="breadCrumb" large>
-            <template v-slot:divider>
-                <v-icon>mdi-chevron-right</v-icon>
-            </template>
-        </v-breadcrumbs>
-        <v-divider></v-divider>
-        <vue-markdown
-                class="markdown-body"
-                :source="md"
-        >
-        </vue-markdown>
+        <v-responsive>
+            <v-col style="padding-top: 0px; padding-bottom: 0px;">
+                <v-breadcrumbs style="padding-top: 20px!important; padding-bottom: 10px!important;" :items="breadCrumb" large>
+                    <template v-slot:divider>
+                        <v-icon>mdi-chevron-right</v-icon>
+                    </template>
+                </v-breadcrumbs>
+            </v-col>
+            <v-divider></v-divider>
+            <v-col cols="6">
+                <vue-markdown
+                        class="markdown-body"
+                        :source="md"
+                >
+                </vue-markdown>
+            </v-col>
+            <v-col cols="6">
+                <div id="disqus_thread"></div>
+            </v-col>
+        </v-responsive>
     </v-container>
 </template>
 
@@ -49,10 +58,10 @@
 
                     if (idx != 0) {
                         text = me.$route.params[key].split('_')[1]
-
+                        console.log(Object.keys(me.$route.params).length)
                         for (var i = 0; i < idx + 1; i++) {
                             // console.log(`/${me.$route.params[Object.keys(me.$route.params)[i]]}`);
-                            if (i == 1 && idx == 1) {
+                            if (Object.keys(me.$route.params).length > 2 && i == 1 && idx == 1) {
                                 href = href.concat(`/${me.$route.params[Object.keys(me.$route.params)[i]]}/index`);
                             } else {
                                 href = href.concat(`/${me.$route.params[Object.keys(me.$route.params)[i]]}`);
@@ -87,6 +96,13 @@
             }
         },
         mounted() {
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://msaschool-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+
             var me = this;
             let menu1 = this.$route.params.menu1;
             let menu2 = this.$route.params.menu2;

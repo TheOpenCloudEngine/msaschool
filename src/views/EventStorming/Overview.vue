@@ -262,7 +262,11 @@
                                 </v-list-item-content>
                             </router-link>
                         </v-col>
+
                     </v-row>
+                    <v-col cols="6">
+                        <div id="disqus_thread"></div>
+                    </v-col>
                 </v-responsive>
             </template>
         </v-row>
@@ -411,11 +415,18 @@
                 me.aaa = true
                 // console.log("ini")
             }
-            if (menu1 == '관련자료' && menu2 == 'MSA 방법론/index') {
-                me.tree = true
-            }
+            // if (menu1 == '관련자료' && menu2 == 'MSA 방법론/index') {
+            //     me.tree = true
+            // }
         },
         mounted() {
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://msaschool-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+
             var me = this;
             let menu1 = this.$route.params.menu1;
             let menu2 = this.$route.params.pathMatch;

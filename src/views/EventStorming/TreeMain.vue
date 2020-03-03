@@ -3,7 +3,7 @@
         <v-row no-gutters>
             <template>
                 <v-col>
-                    <v-breadcrumbs :items="breadCrumb" large>
+                    <v-breadcrumbs style="padding-top: 20px!important; padding-bottom: 10px!important;" :items="breadCrumb" large>
                         <template v-slot:divider>
                             <v-icon>mdi-chevron-right</v-icon>
                         </template>
@@ -71,6 +71,9 @@
                             </router-link>
                         </v-col>
                     </v-row>
+                    <v-col cols="6">
+                        <div id="disqus_thread"></div>
+                    </v-col>
                 </v-responsive>
             </template>
         </v-row>
@@ -158,6 +161,11 @@
                     if (idx == me.$route.params.length - 1) {
                         disabled = true;
                     }
+                    if (text.includes('---')) {
+                        text = text.replace(/---/g, '&')
+                    } else if (text.includes('--')) {
+                        text = text.replace(/--/g, '/')
+                    }
                     var breadTmp = {
                         text: text,
                         disabled: disabled,
@@ -173,6 +181,13 @@
             }
         },
         mounted() {
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://msaschool-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+
             var me = this;
             var menu1 = this.$route.params.menu1;
             var menu2 = this.$route.params.menu2;

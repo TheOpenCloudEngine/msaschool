@@ -183,7 +183,7 @@
                 </v-tab>
             </v-tabs>
             <v-spacer/>
-            <v-img style="margin-top: 5px;" max-width="100px" width="100px" src="/img/icons/logo_uengine.png"></v-img>
+            <v-img max-width="73px" max-height="100px" src="/img/icons/logo_uengine_color.png"></v-img>
         </v-app-bar>
         <v-content>
             <v-container
@@ -247,7 +247,9 @@
                 }
             })
 
-            this.tempRootPathList = tempRootPathList
+            this.tempRootPathList = tempRootPathList;
+
+
         },
         destroyed() {
             window.removeEventListener('resize', this.handleResize);
@@ -268,7 +270,6 @@
                         var keys = Object.keys(fileList);
                         keys.forEach(function (key, idx) {
                             if (fileList[key] instanceof Array) {
-
                                 fileList[key].forEach(function (data) {
                                     if (!data.includes('index')) {
                                         var valid = false
@@ -315,7 +316,6 @@
                                                     ],
                                                 }
                                             }
-
                                             result.push(ttt)
                                         } else {
                                             var ttt = {
@@ -368,10 +368,10 @@
                         result.push(tmp)
                     } else if (item == '설계--구현--운영단계') {
                         console.log("item")
-                        let tmp = {name: item.replace(/--/g,"/"), to: `/${item}/02_분석/01_관심사 분리`, model: false};
+                        let tmp = {name: item.replace(/--/g, "/"), to: `/${item}/02_분석/index`, model: false};
                         result.push(tmp)
                     } else if (item == '관련자료') {
-                        let tmp = {name: item, to: `/${item}/01_MSA 방법론/index`, model: false};
+                        let tmp = {name: item, to: `/${item}/02_MSA 방법론/index`, model: false};
                         result.push(tmp)
                     } else if (item == '커뮤니티') {
                         let tmp = {name: item, to: `/${item}/01_이벤트 및 공지`, model: false};
@@ -428,16 +428,15 @@
                 }
                 var fileList = this.tempRootPathList[id];
                 var result = [];
-                console.log(link)
                 me.tabItems.forEach(function (item) {
-                    console.log(item.text, link)
-                    if(item.name == link) {
+                    if (item.name == link) {
                         item.model = true
                     } else {
                         item.model = false
                     }
 
                 })
+
                 if (fileList) {
                     var keys = Object.keys(fileList);
                     keys.forEach(function (key, idx) {
@@ -445,6 +444,7 @@
                             fileList[key].forEach(function (data) {
                                 if (!data.includes('index')) {
                                     var valid = false
+
                                     result.some(function (validSubMenu) {
                                         if (validSubMenu.text == key) {
                                             valid = true
@@ -460,21 +460,54 @@
 
                                     if (!valid) {
                                         if (idx == 0) {
-                                            var ttt = {
-                                                text: key,
-                                                route: key,
-                                                model: false,
-                                                folder: true,
-                                                to: `/${id}`,
-                                                children: [
-                                                    {
-                                                        text: text,
-                                                        to: `/${id}/${key}/${data.replace('.md', '')}`
-                                                    }
-                                                ],
+                                            console.log(idx, key, me.$route.params)
+                                            // if(me.$route.params.pathMatch != undefined) {
+                                            //     if (key.includes(me.$route.params.pathMatch.replace('/index', ''))) {
+                                            //         var ttt = {
+                                            //             text: key,
+                                            //             route: key,
+                                            //             model: true,
+                                            //             folder: true,
+                                            //             to: `/${id}`,
+                                            //             children: [
+                                            //                 {
+                                            //                     text: text,
+                                            //                     to: `/${id}/${key}/${data.replace('.md', '')}`
+                                            //                 }
+                                            //             ],
+                                            //         }
+                                            //     }
+                                            // } else
+                                                if (key.includes(me.$route.params.menu2)) {
+                                                var ttt = {
+                                                    text: key,
+                                                    route: key,
+                                                    model: true,
+                                                    folder: true,
+                                                    to: `/${id}`,
+                                                    children: [
+                                                        {
+                                                            text: text,
+                                                            to: `/${id}/${key}/${data.replace('.md', '')}`
+                                                        }
+                                                    ],
+                                                }
+                                            } else {
+                                                var ttt = {
+                                                    text: key,
+                                                    route: key,
+                                                    model: false,
+                                                    folder: true,
+                                                    to: `/${id}`,
+                                                    children: [
+                                                        {
+                                                            text: text,
+                                                            to: `/${id}/${key}/${data.replace('.md', '')}`
+                                                        }
+                                                    ],
+                                                }
                                             }
                                         } else {
-                                            console.log(key)
                                             if (key.includes(me.$route.params.menu2)) {
                                                 var ttt = {
                                                     text: key,
@@ -506,7 +539,6 @@
                                             }
 
                                         }
-
                                         result.push(ttt)
                                     } else {
                                         var ttt = {
@@ -552,7 +584,6 @@
             },
             drawer: function (newVal, oldVal) {
                 var me = this
-                console.log(newVal, oldVal)
                 var text = me.$route.params.menu1;
                 if (text.includes('--')) {
                     text = text.replace(/--/g, '/')
