@@ -364,13 +364,13 @@
                         let tmp = {name: item, to: `/${item}/01_MSA School 소개`, model: false};
                         result.push(tmp)
                     } else if (item == '계획단계') {
-                        let tmp = {name: item, to: `/${item}/01_최종목표`, model: false};
+                        let tmp = {name: item, to: `/${item}/01_최종목표 수립`, model: false};
                         result.push(tmp)
                     } else if (item == '설계--구현--운영단계') {
                         console.log("item")
                         let tmp = {name: item.replace(/--/g, "/"), to: `/${item}/02_분석/index`, model: false};
                         result.push(tmp)
-                    } else if (item == '관련자료') {
+                    } else if (item == '참고자료') {
                         let tmp = {name: item, to: `/${item}/02_MSA 방법론/index`, model: false};
                         result.push(tmp)
                     } else if (item == '커뮤니티') {
