@@ -492,20 +492,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/04_관련자료/02_MSA 방법론.png"
   },
   {
-    "revision": "6b26d3c35e6b033b18fb6014e78cf471",
-    "url": "/contents/04_관련자료/02_MSA 방법론/01_IBM Garage for Cloud.PNG"
-  },
-  {
     "revision": "a97342afb03f9a22adb66264cd8e1a03",
     "url": "/contents/04_관련자료/02_MSA 방법론/01_IBM Garage for Cloud.md"
   },
   {
-    "revision": "5ffd1256fb6adfd42c70466fed78917e",
-    "url": "/contents/04_관련자료/02_MSA 방법론/02_Pivotal AppTx.PNG"
+    "revision": "6b26d3c35e6b033b18fb6014e78cf471",
+    "url": "/contents/04_관련자료/02_MSA 방법론/01_IBM Garage for Cloud.png"
   },
   {
     "revision": "f297ec5b9cd2b4fdb31dace730803479",
     "url": "/contents/04_관련자료/02_MSA 방법론/02_Pivotal AppTx.md"
+  },
+  {
+    "revision": "5ffd1256fb6adfd42c70466fed78917e",
+    "url": "/contents/04_관련자료/02_MSA 방법론/02_Pivotal AppTx.png"
   },
   {
     "revision": "c5343459b201de519d5cf21a1d5d1a1c",
@@ -513,31 +513,31 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "2c9cf9318c20c66209b02932f5bf54e9",
-    "url": "/contents/04_관련자료/03_MSA 전환전략.PNG"
-  },
-  {
-    "revision": "acfb688aee7be3a473e8c1fb812e7f7f",
-    "url": "/contents/04_관련자료/03_MSA 전환전략/01_전환대상 식별.PNG"
+    "url": "/contents/04_관련자료/03_MSA 전환전략.png"
   },
   {
     "revision": "d32890c7564f9ad881529179832947b0",
     "url": "/contents/04_관련자료/03_MSA 전환전략/01_전환대상 식별.md"
   },
   {
-    "revision": "1aa1e007c287ee4beff8501aad401abc",
-    "url": "/contents/04_관련자료/03_MSA 전환전략/02_세부 평가지표.PNG"
+    "revision": "acfb688aee7be3a473e8c1fb812e7f7f",
+    "url": "/contents/04_관련자료/03_MSA 전환전략/01_전환대상 식별.png"
   },
   {
     "revision": "db4be39ea345a2198985be1616f14558",
     "url": "/contents/04_관련자료/03_MSA 전환전략/02_세부 평가지표.md"
   },
   {
-    "revision": "958616d9c45b7035c16bafb845f4ee77",
-    "url": "/contents/04_관련자료/03_MSA 전환전략/03_전환방식 선정.PNG"
+    "revision": "1aa1e007c287ee4beff8501aad401abc",
+    "url": "/contents/04_관련자료/03_MSA 전환전략/02_세부 평가지표.png"
   },
   {
     "revision": "a5fbcec43fdcbb70c21646a5225aacb4",
     "url": "/contents/04_관련자료/03_MSA 전환전략/03_전환방식 선정.md"
+  },
+  {
+    "revision": "958616d9c45b7035c16bafb845f4ee77",
+    "url": "/contents/04_관련자료/03_MSA 전환전략/03_전환방식 선정.png"
   },
   {
     "revision": "9d68c8b87cfa2f46e54d6797e73dfc94",
@@ -700,7 +700,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_커뮤니티/05_교육 수강기관.md"
   },
   {
-    "revision": "6c501e7db025728874a3",
+    "revision": "cd5428b6b9a9cca3adca",
     "url": "/css/app.73b56e75.css"
   },
   {
@@ -1116,6 +1116,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/highlight/styles/zenburn.css"
   },
   {
+    "revision": "6b26d3c35e6b033b18fb6014e78cf471",
+    "url": "/img/01_IBM Garage for Cloud.6b26d3c3.png"
+  },
+  {
     "revision": "ab076c7b6d2403f736ba51b46468cc73",
     "url": "/img/01_Introduction/01/image2.png"
   },
@@ -1124,8 +1128,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/01_관심사 분리.003de827.png"
   },
   {
+    "revision": "acfb688aee7be3a473e8c1fb812e7f7f",
+    "url": "/img/01_전환대상 식별.acfb688a.png"
+  },
+  {
     "revision": "fb24ad43cbf970e2bbfbb80bfc9656ce",
     "url": "/img/02_MSA 방법론.fb24ad43.png"
+  },
+  {
+    "revision": "5ffd1256fb6adfd42c70466fed78917e",
+    "url": "/img/02_Pivotal AppTx.5ffd1256.png"
   },
   {
     "revision": "d2e6b7463888800e2a9cdf3f1891a835",
@@ -1170,6 +1182,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f1b2d1e701807b220afe738e8aa74ae2",
     "url": "/img/02_Planning/04/image13.png"
+  },
+  {
+    "revision": "1aa1e007c287ee4beff8501aad401abc",
+    "url": "/img/02_세부 평가지표.1aa1e007.png"
   },
   {
     "revision": "003de8278904af3ee3ccab75ecd5b5f9",
@@ -1696,12 +1712,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/03_Bizdevops/07/index/image95.png"
   },
   {
+    "revision": "2c9cf9318c20c66209b02932f5bf54e9",
+    "url": "/img/03_MSA 전환전략.2c9cf931.png"
+  },
+  {
     "revision": "ffbf977e989e97692a7d55a25a3c9933",
     "url": "/img/03_모노리식의 한계.ffbf977e.png"
   },
   {
     "revision": "e7fe74da555828acc5f1975a2efc85bc",
     "url": "/img/03_예제 도메인.e7fe74da.png"
+  },
+  {
+    "revision": "958616d9c45b7035c16bafb845f4ee77",
+    "url": "/img/03_전환방식 선정.958616d9.png"
   },
   {
     "revision": "99740ed86eedfc02ff24a118b4c47bc3",
@@ -1824,12 +1848,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/index.003de827.png"
   },
   {
-    "revision": "da62b857fd5da2101e6752def0fd6e0f",
+    "revision": "0b826d59eb253689c660274cd9746066",
     "url": "/index.html"
   },
   {
-    "revision": "6c501e7db025728874a3",
-    "url": "/js/app.f656260b.js"
+    "revision": "cd5428b6b9a9cca3adca",
+    "url": "/js/app.f7ff8f8d.js"
   },
   {
     "revision": "836924f29294ff23069a",
