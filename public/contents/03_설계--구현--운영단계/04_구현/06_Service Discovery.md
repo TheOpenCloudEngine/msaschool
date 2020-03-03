@@ -8,6 +8,7 @@
 
 Service discovery 기능은 기본적으로 서비스를 등록하고 등록된 서비스의 목록을 리턴하는 기능이지만 Health check 를 통해서 현재 서비스가 가능한 서비스를 판별한 후, 서비스가 가능한 서비스 목록만 보여 준다던가, 서비스간의 부하 분산 비율을 조정하는 등의 확장이 가능하다.  
 
+<br/>
 
 ## Client-Side discovery , loadbalancing
 
@@ -31,6 +32,8 @@ Service discovery 기능은 기본적으로 서비스를 등록하고 등록된 
     - 각 서비스마다 서비스 레지스트리를 구현해야 하는 종속성이 생긴다. 
     - 만약 서비스마다 다른 언어를 사용하고 있다면 언어별 또는 프레임워크별로 구현해야 한다.
 
+<br/>
+
 ## Server-Side discovery , loadbalancing
 
 ![server side discovery](/img/03_Bizdevops/04/06/03_04_06_02.png)
@@ -53,6 +56,8 @@ Service discovery 기능은 기본적으로 서비스를 등록하고 등록된 
     - 로드벨런서는 배포 환경에 구축이 되어야 한다.
     - public cloud 에서 (예: aws, gcp) 로드 벨런서를 생성하면 각 환경에 맞는 로드벨런서 (aws ELB, 구글 로드 밸런서) 등이 자동 생성되지만, private cloud 에서는 로드벨런서를 직접 생성해 주어야 한다. (예: MetalLB 등)
     - 서비스 디스커버리가 죽으면 전체 시스템이 동작하지 않기 때문에 고가용성 등 더 많은 관리가 필요하다.
+
+<br/>
 
 ## registration 방식 
 
