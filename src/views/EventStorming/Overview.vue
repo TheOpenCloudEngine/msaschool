@@ -85,7 +85,7 @@
                                                  srcset="/img/icons/img/introduction-1.png 1x, /img/icons/img/introduction-1@2x.png 2x, /img/icons/img/introduction-1@3x.png 3x"
                                                  alt="carousel-item">
                                             <div style="margin-top: 244px;">
-                                                <p class="carousel-item_line1">계획수립에서 운영에 이르는 각 단계별 고려 요소 및 분석/접근/실천법에 대한 체계적 학습</p>
+                                                <p class="carousel-item_line1">계획에서 운영까지 전 생애 주기에 걸친 단계별 고려 요소 및 분석/접근/실천법 제시</p>
                                                 <!--p class="carousel-item_line2">체계적 학습</p-->
                                             </div>
                                         </div>
@@ -97,7 +97,7 @@
                                                  srcset="/img/icons/img/introduction-2.png 1x, /img/icons/img/introduction-2@2x.png 2x, /img/icons/img/introduction-2@3x.png 3x"
                                                  alt="carousel-item">
                                             <div style="margin-top: 304px;">
-                                                <p class="carousel-item_line1">E-커머스 예제 실전 코딩, 참고 도서, 교육 영상, MSA 개발 도구, 수행 방법론 소개</p>
+                                                <p class="carousel-item_line1">실행 가능한 E-Commerce 실전 코드 중심의 디자인 패턴, 구현 전략, 적용 사례 소개</p>
                                                 <!--p class="carousel-item_line2">and release Design Fixation</p-->
                                             </div>
                                         </div>
@@ -109,7 +109,7 @@
                                                  srcset="/img/icons/img/introduction-3.png 1x, /img/icons/img/introduction-3@2x.png 2x, /img/icons/img/introduction-3@3x.png 3x"
                                                  alt="carousel-item">
                                             <div style="margin-top: 350px;">
-                                                <p class="carousel-item_line1" style="max-width: 424px;">주제 영역별 4개 과정, 역할별 3개 과정, 기업별 희망 주제에 따른 맞춤 교육</p>
+                                                <p class="carousel-item_line1" style="max-width: 424px;">주제 영역별 4개 과정, 담당 역할별 3개 과정, 교육신청을 통한 맞춤 교육 실시</p>
                                                 <!--p class="carousel-item_line2" style="max-width: 147px;">and test it
                                                     fast</p-->
                                             </div>

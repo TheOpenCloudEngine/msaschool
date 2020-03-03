@@ -10,6 +10,7 @@
 
 ![](/img/03_Bizdevops/04/05/03_04_05_01.png)  
 
+<br/>
 
 ## **1. API 를 어떻게 통합할 것인가?**
 
@@ -27,6 +28,8 @@
 Service Registry 는 client/server side discovery , loadbalancer 라고 불리운다. 서비스를 찾고, 로드벨런싱 하는 역할을 한다.  
 
 > Service Registry 의 자세한 설명은 [[구현-Service Discovery]](./06_Service%2Discovery) page 에서 참고 하면 된다.    
+
+<br/>
 
 ## **2. 객체 참조를 어떻게 할 것인가?**
 
@@ -46,6 +49,8 @@ Service Registry 는 client/server side discovery , loadbalancer 라고 불리�
     
     Entity 간에 Primary Key 를 이용하여 객체 참조를 할때 Aggregate Root 를 통해서만 호출을 하는 것이 좋다. Aggregate 는 수많은 Entity 를 포함하는데 그중 대표격인 것이 Aggregate Root 이다. 예를 들어 상품 이라는 Aggregate 가 있을때 속성으로는 상품 디테일, 재고, 가격비교 등을 하위 Aggregate 로 가지고 있을 수 있다. 이때 재고 라는 Aggregate 를 객체를 바로 외부에서 호출 하여 CUD 가 일어나게 된다면 데이터가 일그러지는 경우가 생긴다. 재고라는 Aggregate 를 객체를 접근 하고 싶을때는 상품이라는 Aggregate Root 를 통하여 호출하는 채널을 일원화 시켜야 한다.  
     
+<br/>
+
 ## **3. 어떻게 (다시) 상호 연동시킬 것인가?**
 
 모노리스를 마이크로 서비스로 일괄적으로 변경하는 방법은 실패 가능성이 매우 크다. 리스크를 줄이기 위해서는 우선적으로 **Core Domain** 과 **Supportive Domain** 을 나눈 후에 **Supportive Domain** 을 조금씩 마이크로 서비스로 분리를 하는 방법이다. 서비스는 분리 하였지만 여전히 서로간의 통신은 하여야 하기 때문에 이런 경우에 사용하는 방법은 다음과 같다.
@@ -152,11 +157,15 @@ public interface DeliveryService {
 
 만약 기존의 레거시 시스템을 전혀 수정을 할 수 없는 상황이라면 CDC (Change Data Capturing) 이 대안이 된다. CDC 기능은 소스코드가 아닌 DB 에서 변경되는 Log 를 모니터링 하여서 Event 로 자동 퍼블리시 하는 방식이다. 현재 대부분의 DB 에서 이 방식을 지원하고 있고, 오픈소스로는 Debezium, Eventuate Tram 등이 존재 한다.
 
+<br/>
+
 
 ## **4. 중복된 기능과 데이터를 어떻게 할 것인가?**
 모노리스 시스템을 개발 할때, 우리는 공통된 기능들을 처리 하기 위해서 Util 등을 만들어 사용하였고, 혹은 공통 프레임워크를 적용하기 위하여 공통된 Library 를 만들어서 사용하곤 했었었다. 모노리스를 마이크로 서비스로 전환하게 됨으로서 이러한 공통 기능들을 어떻게 처리해야할지 고민해야 한다. 재사용 통한 경제성(SOA사상, 디펜던시발생)과 **자율적 창발** (낮은 간섭과 빠른 출시)의 트레이드 오프에서 후자의 전략을 선택 하는 것을 추천한다. **재사용하지 않고 중복 구현하는 것이 MSA 스러운 것** 이라고 할 수 있다. 또한 마이크로 서비스로 분리를 하면서 Polyglot 환경으로 간다면 고민을 할 필요가 없이 새로 구현을 해야 한다. java library 를 사용하였었는데 python 에서는 사용 할 수 없는 원리랑 같다.  
 
 다만 예외 상황도 발생 할 수 있다. 모든 서비스에서 공통적으로 사용하게 되는 (데이터 참조에 intensive 한 서비스 (인증정보 등)) Utility 서비스 성격으로 구현 하는 것이 좋다.  
+
+<br/>
 
 ## **5. 서비스 분리에 따른 통합인증은 어떻게 할 것인가?** 
 
