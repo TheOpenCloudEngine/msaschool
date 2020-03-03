@@ -6,6 +6,8 @@
 
 위 그림에서 왼쪽 그림이 마이크로 서비스에서 지향하는 ui 를 통하여 데이터를 통합 하는 모형이다. Stateful or Stateless 서비스 들이 ui 에서 자신의 영역을 가지고 있는 것이다. 자신의 영역을 가지고 있다는 말은 각 서비스들이 ui 까지 간섭을 한다는 의미이다. 하지만 수많은 서비스들이 ui 를 간섭한다면 ui 에서는 혼란 스럽지 않을까? 이럴때 필요한 기술이 **Web Components 기법** 이다.  
 
+<br/>
+
 ### Web Components 기법
 
 facebook 이나 amazon 같은 site 는 겉보기에는 하나의 통합된 site 이지만 내부적으로는 100개가 넘는 마이크로 서비스들을 호출하여 각각의 데이터를 가져 오고 있다. 각각의 서비스들은 꾸준히 업그레이드를 하고 있기에, 지속적으로 ui 나 data 가 변경이 될 것이다. ui 를 담당하는 팀은 각 서비스들의 데이터를 잘 배치하고, 재사용성을 높이고, 꾸준히 업그레이드를 해줘야 하는데 이는 일반적인 HTML 로는 표현이 너무 복잡해 진다.  
@@ -25,4 +27,50 @@ facebook 이나 amazon 같은 site 는 겉보기에는 하나의 통합된 site 
 위와같이 Web Components 을 사용하여 Custom Tag 를 생성 한 후 해당 Tag 는 각각의 서비스에게 위임을 하는 형식으로 개발이 되고, 최종적으로 ui 를 담당하는 팀은 해당 태그를 적절한 위치에 배치를 시키면 된다. 예를 들어 '주문' 기능을 가진 버튼을 생성시, 주문 영역에 해당하는 부분을 `<order> </order>` 라는 커스텀 태그로 선언하고, 해당 태그를 주문 팀에서 화면까지 만들도록 관리를 하는 것이다.  
 
 이와같이 Tag 로 만들시 장점은 재사용이 가능하고, ui 도 마이크로 서비스에서 처럼 분리된 영역으로 개발이 가능해 진다. 또한 재사용성이 늘어나니 테넌트별로 각기 다른 ui 를 표현 할 수 있다.  
+
+
+<br/>
+
+## Web Components 기법을 사용한 쇼핑몰 적용 예제
+
+* 프론트 엔드를 개발 할때 package 를 나누어서 각 마이크로 서비스가 담당하도록 설계를 하였다.
+    - order package 는 Order 서비스 팀에서 관리를 한다.
+
+<img src="/img/03_Bizdevops/05/01/03_05_01_03.png" alt="" title="" width="40%" height="30%" />  
+
+* `<template>` 을 사용하여 소스코드는 템플릿화 시켜서 중복 사용하거나, 필요한 화면에서 태그로 호출하여 사용하도록 설정함
+
+```html
+<template>
+    <v-dialog v-model="buyDialog" width="800">
+        <order
+                v-if="buyDialog"
+                v-model="buy"
+                @cancel="buyDialog=false"
+        ></order>
+    </v-dialog>
+
+    <v-dialog v-model="editDialog" width="500" >
+        <product-add
+                v-if="editDialog"
+                v-model="edit"
+                @cancel="editDialog=false"
+        ></product-add>
+    </v-dialog>
+</template>
+```
+
+참고 소스 코드 : 
+[Client - UI]: https://github.com/event-storming/ui
+
+<br/>
+
+## UI 통합 개발시 주의 사항
+
+UI 개발시 가장 하지 말아야 할 안티패턴으로 UI 에서 순차적인 호출로 트랜젝션을 묶으려는 방법이다. 
+주문이 성공 하고 난 후에 상품의 재고량을 바꾼다는 프로세스가 있을시, 클라이언트에서 순차적으로 호출을 한다면 위와 같은 그림이 나올 것이다. 클라이언트의 네트워크는 언제든 끈길수 있고, 해킹의 가능성이 있으니 운이 좋으면 성공 할수도 있지만 **실패한다면 영원한 데이터의 불일치가 나올수 있으니 절대로 하면 안된다**. 두번째 호출시 네트워크가 끈긴다면 재고량이 수정이 안될것이고, 두번째 호출 url 만 알아내어 악의적으로 호출을 할 수도 있으니, 트렌젝션 관련한 호출은 서버단에서 한번에 처리를 해야 한다.  
+
+<img src="/img/03_Bizdevops/05/01/03_05_01_05.png" alt="" title="" width="70%" height="70%" />
+
+ 
 
