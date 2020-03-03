@@ -31,9 +31,46 @@ facebook 이나 amazon 같은 site 는 겉보기에는 하나의 통합된 site 
 
 <br/>
 
-## UI Mashups
+## Web Components 기법을 사용한 쇼핑몰 적용 예제
 
+* 프론트 엔드를 개발 할때 package 를 나누어서 각 마이크로 서비스가 담당하도록 설계를 하였다.
+    - order package 는 Order 서비스 팀에서 관리를 한다.
+
+<img src="/img/03_Bizdevops/05/01/03_05_01_03.png" alt="" title="" width="40%" height="30%" />  
+
+* `<template>` 을 사용하여 소스코드는 템플릿화 시켜서 중복 사용하거나, 필요한 화면에서 태그로 호출하여 사용하도록 설정함
+
+```html
+<template>
+    <v-dialog v-model="buyDialog" width="800">
+        <order
+                v-if="buyDialog"
+                v-model="buy"
+                @cancel="buyDialog=false"
+        ></order>
+    </v-dialog>
+
+    <v-dialog v-model="editDialog" width="500" >
+        <product-add
+                v-if="editDialog"
+                v-model="edit"
+                @cancel="editDialog=false"
+        ></product-add>
+    </v-dialog>
+</template>
+```
+
+참고 소스 코드 : 
+[Client - UI]: https://github.com/event-storming/ui
 
 <br/>
 
 ## UI 통합 개발시 주의 사항
+
+UI 개발시 가장 하지 말아야 할 안티패턴으로 UI 에서 순차적인 호출로 트랜젝션을 묶으려는 방법이다. 
+주문이 성공 하고 난 후에 상품의 재고량을 바꾼다는 프로세스가 있을시, 클라이언트에서 순차적으로 호출을 한다면 위와 같은 그림이 나올 것이다. 클라이언트의 네트워크는 언제든 끈길수 있고, 해킹의 가능성이 있으니 운이 좋으면 성공 할수도 있지만 **실패한다면 영원한 데이터의 불일치가 나올수 있으니 절대로 하면 안된다**. 두번째 호출시 네트워크가 끈긴다면 재고량이 수정이 안될것이고, 두번째 호출 url 만 알아내어 악의적으로 호출을 할 수도 있으니, 트렌젝션 관련한 호출은 서버단에서 한번에 처리를 해야 한다.  
+
+<img src="/img/03_Bizdevops/05/01/03_05_01_05.png" alt="" title="" width="70%" height="70%" />
+
+ 
+
