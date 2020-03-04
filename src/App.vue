@@ -578,7 +578,8 @@
         watch: {
             '$route'(to, from) {
                 var me = this
-                if ((to.params.menu1 != from.params.menu1) && (to.params.menu1 == '소개') && (to.params.pathMatch == 'MSA School 소개')) {
+                console.log(to,from)
+                if ((to.params.menu1 == '소개') && (to.params.pathMatch == 'MSA School 소개')) {
                     location.reload();
                 }
             },
