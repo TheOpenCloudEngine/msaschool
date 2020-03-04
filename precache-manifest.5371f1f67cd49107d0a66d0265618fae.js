@@ -172,12 +172,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/01_소개/02/image2.JPG"
   },
   {
-    "revision": "28cbcdf4fffdbd9539105c9302c26011",
-    "url": "/contents/01_소개/02_시작에 앞서...PNG"
+    "revision": "87224907d1ce29dad0e62c7b24a8a514",
+    "url": "/contents/01_소개/02_예제 도메인.md"
   },
   {
-    "revision": "4f2384436b90e4dbeb92d20fb43f92bc",
-    "url": "/contents/01_소개/02_시작에 앞서...md"
+    "revision": "e7fe74da555828acc5f1975a2efc85bc",
+    "url": "/contents/01_소개/02_예제 도메인.png"
   },
   {
     "revision": "d9333b15fadbdd74c22900b1166950dc",
@@ -200,12 +200,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/01_소개/03/image5.JPG"
   },
   {
-    "revision": "87224907d1ce29dad0e62c7b24a8a514",
-    "url": "/contents/01_소개/03_예제 도메인.md"
+    "revision": "1d776e44fe074bd49753b0ff05bad5b2",
+    "url": "/contents/01_소개/03_사용 플랫폼.PNG"
   },
   {
-    "revision": "e7fe74da555828acc5f1975a2efc85bc",
-    "url": "/contents/01_소개/03_예제 도메인.png"
+    "revision": "33ed7ac7151bdb019d61bc2a0df12525",
+    "url": "/contents/01_소개/03_사용 플랫폼.md"
   },
   {
     "revision": "bb732e0b038cd151d69f14bbbc856b32",
@@ -216,12 +216,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/01_소개/04/image2.JPG"
   },
   {
-    "revision": "1d776e44fe074bd49753b0ff05bad5b2",
-    "url": "/contents/01_소개/04_사용 플랫폼.PNG"
+    "revision": "28cbcdf4fffdbd9539105c9302c26011",
+    "url": "/contents/01_소개/04_관련 리소스.PNG"
   },
   {
-    "revision": "33ed7ac7151bdb019d61bc2a0df12525",
-    "url": "/contents/01_소개/04_사용 플랫폼.md"
+    "revision": "fdd44300e7fa0ce2f211b2e4ad4b7802",
+    "url": "/contents/01_소개/04_관련 리소스.md"
   },
   {
     "revision": "093a8fa0624907fddd5c943a5fbcc887",
@@ -249,43 +249,43 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "4274d60b8b5bcf75a32bfdc9c83bc632",
-    "url": "/contents/02_계획단계/01_최종목표.PNG"
+    "url": "/contents/02_계획단계/01_최종목표 수립.PNG"
   },
   {
-    "revision": "087fdb560f63d344db9d5c1788173590",
-    "url": "/contents/02_계획단계/01_최종목표.md"
+    "revision": "67f0086a01d41451c40459e4c3a36976",
+    "url": "/contents/02_계획단계/01_최종목표 수립.md"
   },
   {
     "revision": "2c9cf9318c20c66209b02932f5bf54e9",
-    "url": "/contents/02_계획단계/02_구현전략 수립.PNG"
+    "url": "/contents/02_계획단계/02_프로젝트 구현전략.PNG"
   },
   {
-    "revision": "3b2b7cdb4ba95d62086a08045ea51e57",
-    "url": "/contents/02_계획단계/02_구현전략 수립/01_성숙도 모델.PNG"
+    "revision": "8fd6c4252d68e288a4b18b8ce38c6ffe",
+    "url": "/contents/02_계획단계/02_프로젝트 구현전략/01_단계별 수행목표.PNG"
   },
   {
-    "revision": "5616a1476015bb9d7dccca48ede3805b",
-    "url": "/contents/02_계획단계/02_구현전략 수립/01_성숙도 모델.md"
+    "revision": "ca8767061d870cc14ac2e304e3cd4fe3",
+    "url": "/contents/02_계획단계/02_프로젝트 구현전략/01_단계별 수행목표.md"
   },
   {
-    "revision": "a78b8aa2809dbc628540a804d590a035",
-    "url": "/contents/02_계획단계/02_구현전략 수립/02_세분화 수준.PNG"
+    "revision": "e4d40f3f7578ce0f9187d4a887cafdfc",
+    "url": "/contents/02_계획단계/02_프로젝트 구현전략/02_세분화 수준.PNG"
   },
   {
     "revision": "4374edbe71713244e78b4fa1cd519033",
-    "url": "/contents/02_계획단계/02_구현전략 수립/02_세분화 수준.md"
+    "url": "/contents/02_계획단계/02_프로젝트 구현전략/02_세분화 수준.md"
   },
   {
-    "revision": "1060e1aeb8ccafb2d621f2b41843247e",
-    "url": "/contents/02_계획단계/02_구현전략 수립/03_구현 패턴.PNG"
+    "revision": "4418653cafa40166bf0c641e652fb161",
+    "url": "/contents/02_계획단계/02_프로젝트 구현전략/03_구현 패턴.PNG"
   },
   {
     "revision": "2608fba883605a071e6bc2691aaa362f",
-    "url": "/contents/02_계획단계/02_구현전략 수립/03_구현 패턴.md"
+    "url": "/contents/02_계획단계/02_프로젝트 구현전략/03_구현 패턴.md"
   },
   {
-    "revision": "7bb385a46db42bd04cbdb34459814614",
-    "url": "/contents/02_계획단계/02_구현전략 수립/index.md"
+    "revision": "a75812d49cee78006bca56eb4eb61767",
+    "url": "/contents/02_계획단계/02_프로젝트 구현전략/index.md"
   },
   {
     "revision": "054cb915b176d522354321138b03366a",
@@ -300,12 +300,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/02_계획단계/03/image3.JPG"
   },
   {
-    "revision": "92061c2075af9705a8483fe2600ffd15",
-    "url": "/contents/02_계획단계/03_테스트 계획.PNG"
+    "revision": "ebcd2f0bfb6cce1bf06846a46b59ca82",
+    "url": "/contents/02_계획단계/03_품질관리 계획.PNG"
   },
   {
-    "revision": "3704dfd2c4a96d8932fdf4d8621359f8",
-    "url": "/contents/02_계획단계/03_테스트 계획.md"
+    "revision": "92061c2075af9705a8483fe2600ffd15",
+    "url": "/contents/02_계획단계/03_품질관리 계획/03_테스트 계획.PNG"
+  },
+  {
+    "revision": "ac8e5c214372cb81ef9ce40885f2256c",
+    "url": "/contents/02_계획단계/03_품질관리 계획/03_테스트 계획.md"
+  },
+  {
+    "revision": "a7b304b226bf86466da5d52879cede1a",
+    "url": "/contents/02_계획단계/03_품질관리 계획/index.md"
   },
   {
     "revision": "f260d1fd8c0f52e2d07cfa59badcc485",
@@ -488,132 +496,140 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/07_운영/index.md"
   },
   {
-    "revision": "fb24ad43cbf970e2bbfbb80bfc9656ce",
-    "url": "/contents/04_관련자료/02_MSA 방법론.png"
+    "revision": "a42844c0fccb40509c8109223dfcecb0",
+    "url": "/contents/04_참고자료/01/image1.jpg"
   },
   {
-    "revision": "a97342afb03f9a22adb66264cd8e1a03",
-    "url": "/contents/04_관련자료/02_MSA 방법론/01_IBM Garage for Cloud.md"
+    "revision": "d4721b710fa48a6c9987c73ded6e5c66",
+    "url": "/contents/04_참고자료/01/image2.jpg"
+  },
+  {
+    "revision": "fb24ad43cbf970e2bbfbb80bfc9656ce",
+    "url": "/contents/04_참고자료/02_MSA 방법론.png"
+  },
+  {
+    "revision": "fdd55d5032ae4f692d22a9a8a1dd8653",
+    "url": "/contents/04_참고자료/02_MSA 방법론/01_IBM Garage for Cloud.md"
   },
   {
     "revision": "6b26d3c35e6b033b18fb6014e78cf471",
-    "url": "/contents/04_관련자료/02_MSA 방법론/01_IBM Garage for Cloud.png"
+    "url": "/contents/04_참고자료/02_MSA 방법론/01_IBM Garage for Cloud.png"
   },
   {
-    "revision": "f297ec5b9cd2b4fdb31dace730803479",
-    "url": "/contents/04_관련자료/02_MSA 방법론/02_Pivotal AppTx.md"
+    "revision": "961f5c93cb668f088d9a78db3d664c15",
+    "url": "/contents/04_참고자료/02_MSA 방법론/02_Pivotal AppTx.md"
   },
   {
     "revision": "5ffd1256fb6adfd42c70466fed78917e",
-    "url": "/contents/04_관련자료/02_MSA 방법론/02_Pivotal AppTx.png"
+    "url": "/contents/04_참고자료/02_MSA 방법론/02_Pivotal AppTx.png"
   },
   {
-    "revision": "c5343459b201de519d5cf21a1d5d1a1c",
-    "url": "/contents/04_관련자료/02_MSA 방법론/index.md"
+    "revision": "5b66a899599f8b1108016a798388d119",
+    "url": "/contents/04_참고자료/02_MSA 방법론/index.md"
   },
   {
     "revision": "2c9cf9318c20c66209b02932f5bf54e9",
-    "url": "/contents/04_관련자료/03_MSA 전환전략.png"
+    "url": "/contents/04_참고자료/03_MSA 전환전략.png"
   },
   {
-    "revision": "d32890c7564f9ad881529179832947b0",
-    "url": "/contents/04_관련자료/03_MSA 전환전략/01_전환대상 식별.md"
+    "revision": "436e4f191aca14e25809c986f9602035",
+    "url": "/contents/04_참고자료/03_MSA 전환전략/01_전환대상 식별.md"
   },
   {
     "revision": "acfb688aee7be3a473e8c1fb812e7f7f",
-    "url": "/contents/04_관련자료/03_MSA 전환전략/01_전환대상 식별.png"
+    "url": "/contents/04_참고자료/03_MSA 전환전략/01_전환대상 식별.png"
   },
   {
-    "revision": "db4be39ea345a2198985be1616f14558",
-    "url": "/contents/04_관련자료/03_MSA 전환전략/02_세부 평가지표.md"
+    "revision": "ebeda35ea0afcbf82736c85000db2148",
+    "url": "/contents/04_참고자료/03_MSA 전환전략/02_세부 평가지표.md"
   },
   {
     "revision": "1aa1e007c287ee4beff8501aad401abc",
-    "url": "/contents/04_관련자료/03_MSA 전환전략/02_세부 평가지표.png"
+    "url": "/contents/04_참고자료/03_MSA 전환전략/02_세부 평가지표.png"
   },
   {
-    "revision": "a5fbcec43fdcbb70c21646a5225aacb4",
-    "url": "/contents/04_관련자료/03_MSA 전환전략/03_전환방식 선정.md"
+    "revision": "e69327669c5bd764dd0270e179d84d7a",
+    "url": "/contents/04_참고자료/03_MSA 전환전략/03_전환방식 선정.md"
   },
   {
     "revision": "958616d9c45b7035c16bafb845f4ee77",
-    "url": "/contents/04_관련자료/03_MSA 전환전략/03_전환방식 선정.png"
+    "url": "/contents/04_참고자료/03_MSA 전환전략/03_전환방식 선정.png"
   },
   {
     "revision": "9d68c8b87cfa2f46e54d6797e73dfc94",
-    "url": "/contents/04_관련자료/03_MSA 전환전략/index.md"
+    "url": "/contents/04_참고자료/03_MSA 전환전략/index.md"
   },
   {
     "revision": "8f74fd077480629774507c8ed07cadc5",
-    "url": "/contents/04_관련자료/04/image1.jpg"
+    "url": "/contents/04_참고자료/04/image1.jpg"
   },
   {
     "revision": "75b045ba5f62a4af0825dc5ef54c078b",
-    "url": "/contents/04_관련자료/04/image2.jpg"
+    "url": "/contents/04_참고자료/04/image2.jpg"
   },
   {
     "revision": "0e82dbcaa2197191f1a07bbe8ae84096",
-    "url": "/contents/04_관련자료/04/image3.jpg"
+    "url": "/contents/04_참고자료/04/image3.jpg"
   },
   {
     "revision": "dea4cb87c4b524eb005cc23352c71a6c",
-    "url": "/contents/04_관련자료/04/image4.jpg"
+    "url": "/contents/04_참고자료/04/image4.jpg"
   },
   {
     "revision": "c4958ee94573133f3abc6371ee712eeb",
-    "url": "/contents/04_관련자료/04/image5.jpg"
+    "url": "/contents/04_참고자료/04/image5.jpg"
   },
   {
     "revision": "1a8476c2c533c1a826eb0c0125a7c1be",
-    "url": "/contents/04_관련자료/04/image6.jpg"
+    "url": "/contents/04_참고자료/04/image6.jpg"
   },
   {
     "revision": "b726da77ef1bd2552998a51c673d3d1d",
-    "url": "/contents/04_관련자료/04/image7.jpg"
+    "url": "/contents/04_참고자료/04/image7.jpg"
   },
   {
     "revision": "68b329da9893e34099c7d8ad5cb9c940",
-    "url": "/contents/04_관련자료/04/index"
+    "url": "/contents/04_참고자료/04/index"
   },
   {
     "revision": "b61617217526f1fa52eb9719fe89015e",
-    "url": "/contents/04_관련자료/04_MSA 참고자료.png"
+    "url": "/contents/04_참고자료/04_부가자료.png"
   },
   {
-    "revision": "fb61236e72be15f23361c4614cd5ae34",
-    "url": "/contents/04_관련자료/04_MSA 참고자료/01_참고 도서.md"
+    "revision": "67328147f651b529bbce1969de60a592",
+    "url": "/contents/04_참고자료/04_부가자료/01_참고 도서.md"
   },
   {
     "revision": "1ead6a786225eb9305e69e4dac94c1d9",
-    "url": "/contents/04_관련자료/04_MSA 참고자료/01_참고 도서.png"
+    "url": "/contents/04_참고자료/04_부가자료/01_참고 도서.png"
   },
   {
     "revision": "0045689e6e1fd6ec5d44ed1fe0b50f7b",
-    "url": "/contents/04_관련자료/04_MSA 참고자료/02_교육 영상.md"
+    "url": "/contents/04_참고자료/04_부가자료/02_교육 영상.md"
   },
   {
     "revision": "913ef9d65bfa0b1b3475bbff153bde76",
-    "url": "/contents/04_관련자료/04_MSA 참고자료/02_교육 영상.png"
+    "url": "/contents/04_참고자료/04_부가자료/02_교육 영상.png"
   },
   {
     "revision": "ca84fd2ae906e6c4877e2e92b9dfdb24",
-    "url": "/contents/04_관련자료/04_MSA 참고자료/03_MSA 블로그.md"
+    "url": "/contents/04_참고자료/04_부가자료/03_MSA 블로그.md"
   },
   {
     "revision": "38a4dfa148ce2343a183e081c14e3ed2",
-    "url": "/contents/04_관련자료/04_MSA 참고자료/03_MSA 블로그.png"
+    "url": "/contents/04_참고자료/04_부가자료/03_MSA 블로그.png"
   },
   {
     "revision": "7ae672e27e1f0f294b01817e8d640984",
-    "url": "/contents/04_관련자료/04_MSA 참고자료/04_샘플 코드.md"
+    "url": "/contents/04_참고자료/04_부가자료/04_샘플 코드.md"
   },
   {
     "revision": "d564bd398974af0084eab85aaf154ace",
-    "url": "/contents/04_관련자료/04_MSA 참고자료/04_샘플 코드.png"
+    "url": "/contents/04_참고자료/04_부가자료/04_샘플 코드.png"
   },
   {
     "revision": "9b617fe2f185007612cae4135564c845",
-    "url": "/contents/04_관련자료/04_MSA 참고자료/index.md"
+    "url": "/contents/04_참고자료/04_부가자료/index.md"
   },
   {
     "revision": "217f6c70243056d0fc2bf801bc594d86",
@@ -640,7 +656,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_커뮤니티/02_MSA 교육과정.PNG"
   },
   {
-    "revision": "23f6e98de405ec9c4cf998a3c306fc81",
+    "revision": "c9eb9abda51523ba1217ee062576030a",
     "url": "/contents/05_커뮤니티/02_MSA 교육과정.md"
   },
   {
@@ -652,7 +668,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_커뮤니티/03_커리큘럼 소개/01_액터별 교육.PNG"
   },
   {
-    "revision": "1d690232806f8f759ddb1b952197221b",
+    "revision": "cd61c191d5f50b32168b79a428e8c9ad",
     "url": "/contents/05_커뮤니티/03_커리큘럼 소개/01_액터별 교육.md"
   },
   {
@@ -660,7 +676,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_커뮤니티/03_커리큘럼 소개/02_주제별 교육.PNG"
   },
   {
-    "revision": "00dbb6bfc13f12d6a64111932fb57b64",
+    "revision": "987b64175b28fc3e6f45cbcd2c75a541",
     "url": "/contents/05_커뮤니티/03_커리큘럼 소개/02_주제별 교육.md"
   },
   {
@@ -700,8 +716,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_커뮤니티/05_교육 수강기관.md"
   },
   {
-    "revision": "69db114b1b15abab52c8",
-    "url": "/css/app.73b56e75.css"
+    "revision": "47b8d2f55ac88edb7b7e",
+    "url": "/css/app.b21ed628.css"
   },
   {
     "revision": "836924f29294ff23069a",
@@ -1198,6 +1214,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "003de8278904af3ee3ccab75ecd5b5f9",
     "url": "/img/02_에자일 환경분석.003de827.png"
+  },
+  {
+    "revision": "e7fe74da555828acc5f1975a2efc85bc",
+    "url": "/img/02_예제 도메인.e7fe74da.png"
   },
   {
     "revision": "0c16169d8cfe03696b9c185ba76dbe68",
@@ -1732,10 +1752,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/03_모노리식의 한계.ffbf977e.png"
   },
   {
-    "revision": "e7fe74da555828acc5f1975a2efc85bc",
-    "url": "/img/03_예제 도메인.e7fe74da.png"
-  },
-  {
     "revision": "958616d9c45b7035c16bafb845f4ee77",
     "url": "/img/03_전환방식 선정.958616d9.png"
   },
@@ -1777,7 +1793,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "b61617217526f1fa52eb9719fe89015e",
-    "url": "/img/04_MSA 참고자료.b6161721.png"
+    "url": "/img/04_부가자료.b6161721.png"
   },
   {
     "revision": "d564bd398974af0084eab85aaf154ace",
@@ -1828,6 +1844,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/image1.9c9209ac.jpg"
   },
   {
+    "revision": "a42844c0fccb40509c8109223dfcecb0",
+    "url": "/img/image1.a42844c0.jpg"
+  },
+  {
     "revision": "d9333b15fadbdd74c22900b1166950dc",
     "url": "/img/image1.d9333b15.jpg"
   },
@@ -1842,6 +1862,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9a50ba388d5a9f45088edc5574d846a4",
     "url": "/img/image2.9a50ba38.jpg"
+  },
+  {
+    "revision": "d4721b710fa48a6c9987c73ded6e5c66",
+    "url": "/img/image2.d4721b71.jpg"
   },
   {
     "revision": "0e82dbcaa2197191f1a07bbe8ae84096",
@@ -1864,12 +1888,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/index.003de827.png"
   },
   {
-    "revision": "9cf7d20b05f7a74cb8a055ffe2f1b31a",
+    "revision": "d4754725c96946cf72a0461ed007a893",
     "url": "/index.html"
   },
   {
-    "revision": "69db114b1b15abab52c8",
-    "url": "/js/app.3c92def7.js"
+    "revision": "47b8d2f55ac88edb7b7e",
+    "url": "/js/app.4e112c2d.js"
   },
   {
     "revision": "836924f29294ff23069a",
