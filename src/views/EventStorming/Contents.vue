@@ -2,7 +2,8 @@
     <v-container>
         <v-responsive>
             <v-col style="padding-top: 0px; padding-bottom: 0px;">
-                <v-breadcrumbs style="padding-top: 20px!important; padding-bottom: 10px!important;" :items="breadCrumb" large>
+                <v-breadcrumbs style="padding-top: 20px!important; padding-bottom: 10px!important;" :items="breadCrumb"
+                               large>
                     <template v-slot:divider>
                         <v-icon>mdi-chevron-right</v-icon>
                     </template>
@@ -111,14 +112,19 @@
             menu1 = menu1.substring(0, 1).toUpperCase() + menu1.substring(1)
             menu2 = menu2.substring(0, 1).toUpperCase() + menu2.substring(1)
 
-
             if (menu3) {
                 this.$http.get(`/contents/${this.value['menuNumber'][this.$route.params.menu1]}_${menu1.substring(0, 1).toUpperCase() + menu1.substring(1)}/${menu2}/${menu3}.md`).then(function (result) {
-                    me.md = result.data
+                    me.$nextTick(function () {
+                        me.md = result.data
+                        hljs.initHighlightingOnLoad();
+
+                    })
                 })
             } else {
                 this.$http.get(`/contents/${this.value['menuNumber'][this.$route.params.menu1]}_${menu1.substring(0, 1).toUpperCase() + menu1.substring(1)}/${menu2}.md`).then(function (result) {
-                    me.md = result.data
+                    me.$nextTick(function () {
+                        me.md = result.data
+                    })
                 })
             }
         },
@@ -127,6 +133,8 @@
 </script>
 
 <style scoped>
+
+
     .v-application .headline {
         font-family: 'Nanum Gothic', sans-serif !important;
     }
