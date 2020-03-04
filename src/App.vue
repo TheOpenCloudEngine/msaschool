@@ -602,4 +602,7 @@
 </script>
 <style>
     /*.theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled)*/
+    .v-application code {
+        color: #000000 !important;
+    }
 </style>
