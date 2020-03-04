@@ -148,3 +148,6 @@ siege 툴을 사용하여 부하를 주게 되면 http1MaxPendingRequests: 1 로
 ```
 siege -c2 –t10S  -v --content-type "application/json" 'http://orders:8080/orders POST {"productId":2,"quantity":1}'
 ```
+
+> 참고:
+> http://itnp.kr/post/istio-circuit-break
