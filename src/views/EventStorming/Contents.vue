@@ -237,7 +237,15 @@
         watch: {
             md: {
                 handler() {
-                    hljs.initHighlightingOnLoad();
+                    var me = this
+                    me.$nextTick(function () {
+                        let targets = document.querySelectorAll('code')
+                        targets.forEach((target) => {
+                            // if a value is directly assigned to the directive, use this
+                            // instead of the element content.
+                            hljs.highlightBlock(target)
+                        })
+                    })
                 }
             }
         },

@@ -71,8 +71,6 @@
                             </router-link>
                         </v-col>
                     </v-row>
-                    <v-divider></v-divider>
-
                     <v-col cols="6">
                         <div id="disqus_thread"></div>
                     </v-col>
