@@ -384,11 +384,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/03_설계/index.md"
   },
   {
-    "revision": "5f1b8f8efac54b807e6c43c6ce3fb216",
+    "revision": "75c02a5cbeeb60782704b94580141e13",
     "url": "/contents/03_설계--구현--운영단계/04_구현/01_Hexagonal Architecture.md"
   },
   {
-    "revision": "fefee187fa3a31ba3afd3f8ab8b198ae",
+    "revision": "3627a7da5f9fe1da2c496c0ec68f6e3a",
     "url": "/contents/03_설계--구현--운영단계/04_구현/02_MSA Chassis.md"
   },
   {
@@ -424,7 +424,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/05_통합/01_Integration by UI.md"
   },
   {
-    "revision": "915ea7db4b75ec3cb8b0dbe1f89644f9",
+    "revision": "d07b95745820315ea0f522db62c5825b",
     "url": "/contents/03_설계--구현--운영단계/05_통합/02_Integration by Req-Res.md"
   },
   {
@@ -433,14 +433,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "d41d8cd98f00b204e9800998ecf8427e",
-    "url": "/contents/03_설계--구현--운영단계/05_통합/04_Issue in Req-Res Model.md"
-  },
-  {
-    "revision": "d41d8cd98f00b204e9800998ecf8427e",
     "url": "/contents/03_설계--구현--운영단계/05_통합/05_Eventual transaction---Saga.md"
   },
   {
-    "revision": "d41d8cd98f00b204e9800998ecf8427e",
+    "revision": "d5310b24612fc6e49bfdf1008236def3",
     "url": "/contents/03_설계--구현--운영단계/05_통합/06_Data Projection.md"
   },
   {
@@ -716,8 +712,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_커뮤니티/05_교육 수강기관.md"
   },
   {
-    "revision": "47b8d2f55ac88edb7b7e",
-    "url": "/css/app.b21ed628.css"
+    "revision": "5b4bdfd670a07ddfdc00",
+    "url": "/css/app.c78ab5b7.css"
   },
   {
     "revision": "836924f29294ff23069a",
@@ -1640,6 +1636,22 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/03_Bizdevops/05/01/ui-integrate.png"
   },
   {
+    "revision": "27feba8a453b8096039eea67f2fb035c",
+    "url": "/img/03_Bizdevops/05/02/2PC.png"
+  },
+  {
+    "revision": "bef07423bf9b6d98de83046584f14030",
+    "url": "/img/03_Bizdevops/05/02/CB.png"
+  },
+  {
+    "revision": "b08b2461c9df2cd1a7c57fe281f2e8bc",
+    "url": "/img/03_Bizdevops/05/02/TCC.png"
+  },
+  {
+    "revision": "acdb17a5048b248749cf592e773a030f",
+    "url": "/img/03_Bizdevops/05/02/issue_Req.png"
+  },
+  {
     "revision": "4107a50f73ee2fb5521a19bebc354b05",
     "url": "/img/03_Bizdevops/07/01/image96.png"
   },
@@ -1888,12 +1900,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/index.003de827.png"
   },
   {
-    "revision": "d4754725c96946cf72a0461ed007a893",
+    "revision": "baa29c2af4472583395ac4f8c4679864",
     "url": "/index.html"
   },
   {
-    "revision": "47b8d2f55ac88edb7b7e",
-    "url": "/js/app.4e112c2d.js"
+    "revision": "5b4bdfd670a07ddfdc00",
+    "url": "/js/app.de8c3ac2.js"
   },
   {
     "revision": "836924f29294ff23069a",
