@@ -460,24 +460,6 @@
 
                                     if (!valid) {
                                         if (idx == 0) {
-                                            console.log(idx, key, me.$route.params)
-                                            // if(me.$route.params.pathMatch != undefined) {
-                                            //     if (key.includes(me.$route.params.pathMatch.replace('/index', ''))) {
-                                            //         var ttt = {
-                                            //             text: key,
-                                            //             route: key,
-                                            //             model: true,
-                                            //             folder: true,
-                                            //             to: `/${id}`,
-                                            //             children: [
-                                            //                 {
-                                            //                     text: text,
-                                            //                     to: `/${id}/${key}/${data.replace('.md', '')}`
-                                            //                 }
-                                            //             ],
-                                            //         }
-                                            //     }
-                                            // } else
                                                 if (key.includes(me.$route.params.menu2)) {
                                                 var ttt = {
                                                     text: key,

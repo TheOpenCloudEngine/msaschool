@@ -92,7 +92,8 @@ Istio 를 사용하는 방법은 소스코드를 수정할 필요가 없습니�
 
 가장먼저 3개의 서비스를 istio 로 배포를 합니다.  
 
-```shell script
+```Shell-session
+
 kubectl get deploy orders -o yaml > order_deploy.yaml 
 kubectl apply -f <(istioctl kube-inject -f order_deploy.yaml) 
 kubectl get deploy products -o yaml > products_deploy.yaml 

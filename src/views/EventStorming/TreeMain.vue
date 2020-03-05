@@ -149,13 +149,23 @@
                             if (i == 1) {
                                 href = href.concat(`/${me.$route.params[Object.keys(me.$route.params)[i]]}/index`);
                             } else {
-                                href = href.concat(`/${me.$route.params[Object.keys(me.$route.params)[i]]}`);
+                                href = href.concat(`/#/${me.$route.params[Object.keys(me.$route.params)[i]]}`);
                             }
                         }
 
                     } else {
                         text = me.$route.params[key]
-                        href = href.concat(`/${me.$route.params[Object.keys(me.$route.params)[0]]}/overview`)
+                        if(text=='소개')  {
+                            href = '/#/소개/01_MSA%20School%20소개'
+                        } else if (text == '계획단계') {
+                            href = '/#/계획단계/01_최종목표%20수립'
+                        } else if (text=='설계--구현--운영단계') {
+                            href = '/#/설계--구현--운영단계/02_분석/index'
+                        } else if (text == '참고자료') {
+                            href = '/#/참고자료/02_MSA%20방법론/index'
+                        } else if (text=='커뮤니티') {
+                            href = '/#/커뮤니티/01_이벤트%20및%20공지'
+                        }
                     }
 
                     if (idx == me.$route.params.length - 1) {
