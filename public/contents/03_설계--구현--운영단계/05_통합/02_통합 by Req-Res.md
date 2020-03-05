@@ -123,6 +123,7 @@ siege -c2 –t10S  -v --content-type "application/json" 'http://orders:8080/ord
 아래 설정은 두가지 방법을 모두 사용하여 설정을 하였지만 오류가 발생하지 않기 때문에 outlierDetection 부분은 무시가 되고, connectionPool 설정으로 서킷브레이커를 작동시킵니다. 
 
 ```yaml
+
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
