@@ -1,4 +1,4 @@
-# 도구를 통한 MSA설계
+## MSAEasy 사용법
 
 예제 프로젝트는 주문 서비스와 배송 서비스 2개의 서비스를 EventStorming하여 Spring-boot로 실행되는 Java
 Project를 생성하고 이들을 구글 클라우드의 쿠버네티스에 자동 배포하는 과정이다.

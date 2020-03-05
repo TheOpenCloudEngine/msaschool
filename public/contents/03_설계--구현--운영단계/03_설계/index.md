@@ -1,4 +1,4 @@
-# Design
+## 설계(Design) 단계 
 
 MSA 아키텍처는 크게 Inner와 Outer로 구분된다. On-Premise에 직접 구축하지 않고 상용 Cloud 벤더의
 Platform을 사용한다면, Outer 아키텍처는 Cloud가 제공하는 관리형 모듈과 PaaS 런타임의 조합으로 설계 가능하다.
