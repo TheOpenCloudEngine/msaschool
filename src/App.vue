@@ -183,7 +183,7 @@
                 </v-tab>
             </v-tabs>
             <v-spacer/>
-            <v-img max-width="73px" max-height="100px" src="/img/icons/logo_uengine_color.png"></v-img>
+            <v-img max-width="73px" max-height="100px" src="/img/icons/logo_uengine_color.png" onclick="window.open('http://uengine.org','_blank')"></v-img>
         </v-app-bar>
         <v-content>
             <v-container

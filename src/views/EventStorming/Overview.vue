@@ -164,7 +164,6 @@
                                style="margin:0px;overflow-x:hidden;"
                                cols="12"
                                sm="3"
-                               v-if="idx < 3"
                         >
                             <router-link style="text-decoration:none" v-if="item.children" :to="item.route +'/index'">
                                 <v-list-item-avatar
@@ -238,6 +237,7 @@
                                 </v-list-item-content>
                             </router-link>
                             <router-link style="text-decoration:none" v-else :to="item.to">
+                                <v-divider></v-divider>
 
                                 <v-list-item-avatar
                                         tile
@@ -257,8 +257,8 @@
                                 <v-list-item-content>
                                     <div class="overline mb-1">Content {{idx + 1}}</div>
                                     <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
-                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully
-                                    </v-list-item-subtitle>
+<!--                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully-->
+<!--                                    </v-list-item-subtitle>-->
                                 </v-list-item-content>
                             </router-link>
                         </v-col>

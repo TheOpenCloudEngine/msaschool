@@ -65,12 +65,14 @@
                                 <v-list-item-content>
                                     <div class="overline mb-1">Content {{idx + 1}}</div>
                                     <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
-                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully
-                                    </v-list-item-subtitle>
+<!--                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully-->
+<!--                                    </v-list-item-subtitle>-->
                                 </v-list-item-content>
                             </router-link>
                         </v-col>
                     </v-row>
+                    <v-divider></v-divider>
+
                     <v-col cols="6">
                         <div id="disqus_thread"></div>
                     </v-col>
