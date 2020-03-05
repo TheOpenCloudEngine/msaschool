@@ -82,6 +82,7 @@ Feign Client 의 사용 방법을 알아 보겠다.
 먼저 모노리스 시스템이 아래와 같이 구현되어 있다. Order.java 에서 주문이 들어왔을때 배송을 시작하도록 하는 코드 이다.
 
 ```java
+
 public class Order {
     /**
      * 주문이 들어옴
@@ -96,12 +97,14 @@ public class Order {
 ```
 
 ```java
+
 public interface DeliveryService {
     void startDelivery(Delivery delivery);
 }
 ```
 
 ```java
+
 @Service
 public class DeliveryServiceImpl implements DeliveryService{
 
