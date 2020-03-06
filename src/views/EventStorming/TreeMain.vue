@@ -3,7 +3,8 @@
         <v-row no-gutters>
             <template>
                 <v-col>
-                    <v-breadcrumbs style="padding-top: 20px!important; padding-bottom: 10px!important;" :items="breadCrumb" large>
+                    <v-breadcrumbs style="padding-top: 20px!important; padding-bottom: 10px!important;"
+                                   :items="breadCrumb" large>
                         <template v-slot:divider>
                             <v-icon>mdi-chevron-right</v-icon>
                         </template>
@@ -48,13 +49,13 @@
                     <!--<v-divider></v-divider>-->
                     <div class="em-title col">Explore More</div>
                     <v-row align="center" justify="center" style="max-width:1050px;margin:0 auto;">
-                        <v-col v-for="(item,idx) in items"
+                        <v-col v-for="(item,idx) in exploreItems"
                                style="margin:10px;overflow-x:hidden;"
                                cols="12"
                                sm="3"
                                v-if="idx < 3"
                         >
-                            <router-link style="text-decoration:none" :to="item.to">
+                            <router-link style="text-decoration:none" :to="item.to+'/'+item.route + '/index'">
                                 <v-list-item-avatar
                                         tile
                                         width="100%"
@@ -63,10 +64,8 @@
                                     <img :src="imgSrc(item)" class="img">
                                 </v-list-item-avatar>
                                 <v-list-item-content>
-                                    <div class="overline mb-1">Content {{idx + 1}}</div>
+                                    <div class="overline mb-1">{{item.status}}</div>
                                     <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
-<!--                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully-->
-<!--                                    </v-list-item-subtitle>-->
                                 </v-list-item-content>
                             </router-link>
                         </v-col>
@@ -79,7 +78,6 @@
         </v-row>
     </v-container>
 </template>
-
 <script>
     export default {
         name: "treemain",
@@ -155,19 +153,18 @@
 
                     } else {
                         text = me.$route.params[key]
-                        if(text=='소개')  {
+                        if (text == '소개') {
                             href = '/#/소개/01_MSA%20School%20소개'
                         } else if (text == '계획단계') {
                             href = '/#/계획단계/01_최종목표%20수립'
-                        } else if (text=='설계--구현--운영단계') {
+                        } else if (text == '설계--구현--운영단계') {
                             href = '/#/설계--구현--운영단계/02_분석/index'
                         } else if (text == '참고자료') {
                             href = '/#/참고자료/02_MSA%20방법론/index'
-                        } else if (text=='커뮤니티') {
+                        } else if (text == '커뮤니티') {
                             href = '/#/커뮤니티/01_이벤트%20및%20공지'
                         }
                     }
-
                     if (idx == me.$route.params.length - 1) {
                         disabled = true;
                     }
@@ -188,6 +185,39 @@
 
 
                 return tmp
+            },
+            exploreItems() {
+                var me = this
+                // console.log(me.items)
+                let menu1 = this.$route.params.menu1;
+                let menu2 = this.$route.params.menu2;
+                let menu3 = this.$route.params.menu3;
+                var result = [];
+                var count = 0;
+                var nextEnd = false;
+
+                this.value.items.forEach(function (item, idx) {
+                    // console.log(me.$route.path, item)
+                    if (me.$route.path.includes(item.route)) {
+                        // console.log(idx)
+                        count = idx;
+                    }
+                })
+                this.value.items.some(function (item, idx) {
+                    if (nextEnd == true) {
+                        return;
+                    } else if (idx == count - 1) {
+                        item.status = 'prev'
+                        result.push(item)
+                    } else if (idx == count + 1) {
+                        result.push(item)
+                        item.status = 'next'
+                        nextEnd = true
+                    }
+                })
+
+                return result
+
             }
         },
         mounted() {
@@ -213,6 +243,7 @@
                 }
             })
 
+
             this.$http.get(`/contents/${this.value['menuNumber'][this.$route.params.menu1]}_${menu1.substring(0, 1).toUpperCase() + menu1.substring(1)}/${menu2}/index.md`).then(function (result) {
                 me.md = result.data
             })
@@ -224,6 +255,7 @@
     .margin-test {
         margin-bottom: 10px;
     }
+
     li a {
         text-decoration: none;
     }

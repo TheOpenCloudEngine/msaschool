@@ -175,15 +175,16 @@
                     color="#673ab7"
             >
                 <v-tab
-                        v-for="item in tabItems"
-                        :key="item.name"
+                        v-for="(item, key) in tabItems"
                         :to="item.to"
+                        :key="item.id"
                 >
                     {{ item.name }}
                 </v-tab>
             </v-tabs>
             <v-spacer/>
-            <v-img max-width="73px" max-height="100px" src="/img/icons/logo_uengine_color.png" onclick="window.open('http://uengine.org','_blank')"></v-img>
+            <v-img max-width="73px" max-height="100px" src="/img/icons/logo_uengine_color.png"
+                   onclick="window.open('http://uengine.org','_blank')"></v-img>
         </v-app-bar>
         <v-content>
             <v-container
@@ -202,7 +203,6 @@
 
 <script>
     export default {
-
         props: {
             source: String,
         },
@@ -211,9 +211,12 @@
             var id = this.$route.params.menu1
 
         },
+        mounted() {
+            var me = this
+
+        },
         created() {
             var me = this
-            // console.log("aa")
             window.addEventListener('resize', this.handleResize);
             this.handleResize();
 
@@ -239,16 +242,13 @@
                         if (!tempRootPathList[tempFileStructure[0].split('_')[1]][tempFileStructure[1]]) {
                             tempRootPathList[tempFileStructure[0].split('_')[1]][tempFileStructure[1]] = []
                         }
-
                         // 2단계 메뉴 넣어줌
                         tempRootPathList[tempFileStructure[0].split('_')[1]][tempFileStructure[1]].push(tempFileStructure[2])
-
                     }
                 }
             })
 
             this.tempRootPathList = tempRootPathList;
-
 
         },
         destroyed() {
@@ -261,11 +261,10 @@
             },
             items: function () {
                 var id = this.$route.params.menu1;
-
+                var me = this
                 if (this.$route.params.menu1) {
                     var fileList = this.tempRootPathList[id];
                     var result = [];
-
                     if (fileList) {
                         var keys = Object.keys(fileList);
                         keys.forEach(function (key, idx) {
@@ -287,7 +286,7 @@
                                         }
 
                                         if (!valid) {
-                                            if (idx == 0) {
+                                            if (me.$route.params.menu2 == key) {
                                                 var ttt = {
                                                     text: key,
                                                     route: key,
@@ -359,25 +358,32 @@
             tabItems: function () {
                 // var id = this.$route.params.menu1
                 var result = [];
+                var me = this
+                var modelStatus = false;
                 Object.keys(this.tempRootPathList).forEach(function (item) {
+                    let tmp;
+                    var modelStatus;
+
                     if (item == '소개') {
-                        let tmp = {name: item, to: `/${item}/01_MSA School 소개`, model: false};
+                        tmp = {id: 1, name: item, to: `/${item}/01_MSA School 소개`, model: false};
                         result.push(tmp)
                     } else if (item == '계획단계') {
-                        let tmp = {name: item, to: `/${item}/01_최종목표 수립`, model: false};
+                        tmp = {id: 2, name: item, to: `/${item}/01_최종목표 수립`, model: false};
                         result.push(tmp)
                     } else if (item == '설계--구현--운영단계') {
-                        console.log("item")
-                        let tmp = {name: item.replace(/--/g, "/"), to: `/${item}/02_분석/index`, model: false};
+                        tmp = {id: 3, name: item.replace(/--/g, "/"), to: `/${item}/02_분석/index`, model: false};
                         result.push(tmp)
                     } else if (item == '참고자료') {
-                        let tmp = {name: item, to: `/${item}/02_MSA 방법론/index`, model: false};
+                        tmp = {id: 4, name: item, to: `/${item}/02_MSA 방법론/index`, model: false};
                         result.push(tmp)
                     } else if (item == '커뮤니티') {
-                        let tmp = {name: item, to: `/${item}/01_이벤트 및 공지`, model: false};
+                        tmp = {id: 5, name: item, to: `/${item}/01_이벤트 및 공지`, model: false};
                         result.push(tmp)
                     }
-
+                    if (me.$route.params.menu1 == item) {
+                        console.log(tmp.id)
+                        me.tab = tmp.to
+                    }
                 })
                 return result
             }
@@ -434,7 +440,6 @@
                     } else {
                         item.model = false
                     }
-
                 })
 
                 if (fileList) {
@@ -460,7 +465,7 @@
 
                                     if (!valid) {
                                         if (idx == 0) {
-                                                if (key.includes(me.$route.params.menu2)) {
+                                            if (key.includes(me.$route.params.menu2)) {
                                                 var ttt = {
                                                     text: key,
                                                     route: key,
@@ -560,7 +565,6 @@
         watch: {
             '$route'(to, from) {
                 var me = this
-                console.log(to,from)
                 if ((to.params.menu1 == '소개') && (to.params.pathMatch == 'MSA School 소개')) {
                     location.reload();
                 }

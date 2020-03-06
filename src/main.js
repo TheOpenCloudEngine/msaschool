@@ -12,7 +12,7 @@ Vue.component('VueMarkdown', VueMarkdown)
 
 Vue.config.productionTip = false;
 Vue.prototype.$http = axios;
-
+Vue.prototype.$EventBus = new Vue()
 
 new Vue({
   router,

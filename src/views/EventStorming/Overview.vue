@@ -415,9 +415,7 @@
                 me.aaa = true
                 // console.log("ini")
             }
-            // if (menu1 == '관련자료' && menu2 == 'MSA 방법론/index') {
-            //     me.tree = true
-            // }
+
         },
         mounted() {
             (function () { // DON'T EDIT BELOW THIS LINE
