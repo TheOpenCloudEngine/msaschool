@@ -61,7 +61,7 @@
                                         width="100%"
                                         height="auto"
                                 >
-                                    <img :src="imgSrc(item)" class="img">
+                                    <img :src="imgSrcTree(item)" class="img">
                                 </v-list-item-avatar>
                                 <v-list-item-content>
                                     <div class="overline mb-1">{{item.status}}</div>
@@ -124,6 +124,22 @@
                         }
                     }
                 }
+
+                src = src.concat('.png')
+                return src
+            },
+            imgSrcTree(item) {
+                var me = this
+                var menu1 = this.$route.params.menu1;
+                var menu2 = this.$route.params.menu2;
+
+                menu1 = menu1.substring(0, 1).toUpperCase() + menu1.substring(1)
+                menu2 = menu2.substring(0, 1).toUpperCase() + menu2.substring(1)
+                var tmp = item.to.split('/')
+                var src = '/contents';
+                console.log(item)
+
+                src = src.concat('/' + this.value['menuNumber'][this.$route.params.menu1] + '_' + menu1 + '/' + item.route)
 
                 src = src.concat('.png')
                 return src
