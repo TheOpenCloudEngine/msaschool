@@ -156,7 +156,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/component.json"
   },
   {
-    "revision": "b94674deb8d462cecd55178efc362069",
+    "revision": "19a686dfd12ef80c35ae70669a0b27ca",
     "url": "/contents/01_소개/01_MSA School 소개.md"
   },
   {
@@ -308,11 +308,35 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/02_계획단계/03/image3.jpg"
   },
   {
+    "revision": "98f07c3beef084d0a6dbc1402c822a4d",
+    "url": "/contents/02_계획단계/03/image4.jpg"
+  },
+  {
+    "revision": "ec49ee5aa0250ccd78340e83dc215e45",
+    "url": "/contents/02_계획단계/03/image5.jpg"
+  },
+  {
+    "revision": "700fc4f7d208244412449accd31cd65c",
+    "url": "/contents/02_계획단계/03/image6.jpg"
+  },
+  {
+    "revision": "614a7448d9394a1841fa6d9d3f5ce172",
+    "url": "/contents/02_계획단계/03/image7.jpg"
+  },
+  {
+    "revision": "8f51121ff19bbbb1433dc89ef5e23fef",
+    "url": "/contents/02_계획단계/03/image8.jpg"
+  },
+  {
+    "revision": "5bcc98fe98ddb801ddf2271555e1e25b",
+    "url": "/contents/02_계획단계/03/image9.jpg"
+  },
+  {
     "revision": "ebcd2f0bfb6cce1bf06846a46b59ca82",
     "url": "/contents/02_계획단계/03_품질관리 계획.png"
   },
   {
-    "revision": "6d4db02921b578783b852feaefafab4c",
+    "revision": "3d3ffb6c6c4978a3325f0ee6f8ca8050",
     "url": "/contents/02_계획단계/03_품질관리 계획/01_시스템 보안.md"
   },
   {
@@ -320,7 +344,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/02_계획단계/03_품질관리 계획/01_시스템 보안.png"
   },
   {
-    "revision": "8dda741fb2fa8e0a5a5377b26f67524d",
+    "revision": "40e4158443322155c1e88fac0d8294a1",
     "url": "/contents/02_계획단계/03_품질관리 계획/02_성능 확보 방안.md"
   },
   {
@@ -388,7 +412,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/03_설계/01_접근법과 분석패턴.png"
   },
   {
-    "revision": "c0e58f02acbce26868ab07f82b425147",
+    "revision": "9e72abeedc97ee673b96c2f700016ce2",
     "url": "/contents/03_설계--구현--운영단계/03_설계/02_도메인 주도 설계.md"
   },
   {
@@ -404,7 +428,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/03_설계/03_이벤트스토밍.png"
   },
   {
-    "revision": "f94e1df1d5d9d105e0952107f56378c4",
+    "revision": "20195068963ccba1dbfdebae8c918ae6",
     "url": "/contents/03_설계--구현--운영단계/03_설계/04_서비스 서열과 역학관계.md"
   },
   {
@@ -464,11 +488,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/05_통합.png"
   },
   {
-    "revision": "46894ee7cf2f20841b416c7c4e8c445c",
+    "revision": "441159a9423f33f20c34ddb64c9dc15d",
     "url": "/contents/03_설계--구현--운영단계/05_통합/01_UI 부터 통합.md"
   },
   {
-    "revision": "2c7bef63b54b699a08b87d682e6ba16a",
+    "revision": "7ccc71aa8817f47f46079da11e26e552",
     "url": "/contents/03_설계--구현--운영단계/05_통합/02_Req-Res 부터 통합.md"
   },
   {
@@ -476,16 +500,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/05_통합/03_EventDriven 부터 통합.md"
   },
   {
-    "revision": "502d5c94c962f243d530e08dafbbdece",
+    "revision": "2bfe869d79250ffcbd2b20f5dfe12e7b",
     "url": "/contents/03_설계--구현--운영단계/05_통합/05_최종 트랜젝션---Saga.md"
   },
   {
-    "revision": "f0e34c39f754ff54c9200486cf73f523",
+    "revision": "43c8ccf193812d510d7d09ff64314340",
     "url": "/contents/03_설계--구현--운영단계/05_통합/06_데이터 프로젝션.md"
   },
   {
     "revision": "e95828c79a623df0685c4a3520dd3c05",
-    "url": "/contents/03_설계--구현--운영단계/05_통합/07_명령 및 쿼리 역할구분.md"
+    "url": "/contents/03_설계--구현--운영단계/05_통합/07_CQRS.md"
   },
   {
     "revision": "300e60c46c9f7a0d61af613b49bef373",
@@ -512,11 +536,75 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/06_배포/index.md"
   },
   {
+    "revision": "b6a5ea732b1477ad10f26d0f95347ef2",
+    "url": "/contents/03_설계--구현--운영단계/07/logging01.jpg"
+  },
+  {
+    "revision": "d78ff8c10cdeaf1f9486ff9cdaff77ef",
+    "url": "/contents/03_설계--구현--운영단계/07/logging02.jpg"
+  },
+  {
+    "revision": "f54a3297c14e594ac921e44f0e18c795",
+    "url": "/contents/03_설계--구현--운영단계/07/logging03.jpg"
+  },
+  {
+    "revision": "04e37a3351acde998f11fb0b5dc0d12a",
+    "url": "/contents/03_설계--구현--운영단계/07/logging04.jpg"
+  },
+  {
+    "revision": "d729aaa7821dd33c8b560c9b180f6502",
+    "url": "/contents/03_설계--구현--운영단계/07/monitoring01.jpg"
+  },
+  {
+    "revision": "f619677548bb612bbc09d5381fa95c97",
+    "url": "/contents/03_설계--구현--운영단계/07/monitoring02.jpg"
+  },
+  {
+    "revision": "a83bd22458665c064b29d4956d2c82f3",
+    "url": "/contents/03_설계--구현--운영단계/07/monitoring03.jpg"
+  },
+  {
+    "revision": "a3bbdc56d90a9dd8410d66cf97fd014f",
+    "url": "/contents/03_설계--구현--운영단계/07/monitoring04.jpg"
+  },
+  {
+    "revision": "12a555560818d845e06be199870b06c0",
+    "url": "/contents/03_설계--구현--운영단계/07/monitoring05.jpg"
+  },
+  {
+    "revision": "978d3604d9428e8aeb7a9c3b868e0866",
+    "url": "/contents/03_설계--구현--운영단계/07/monitoring06.jpg"
+  },
+  {
+    "revision": "8ac86ed433cb95af5ba9cbb8b983f04c",
+    "url": "/contents/03_설계--구현--운영단계/07/monitoring07.jpg"
+  },
+  {
+    "revision": "fcff8547c8c7017267bb07c9f975439e",
+    "url": "/contents/03_설계--구현--운영단계/07/monitoring08.jpg"
+  },
+  {
+    "revision": "1df09d07ead26cd0c8d0cbecc71a46f3",
+    "url": "/contents/03_설계--구현--운영단계/07/tracing01.jpg"
+  },
+  {
+    "revision": "5c500c523e3231fe44ecb736712682f0",
+    "url": "/contents/03_설계--구현--운영단계/07/tracing02.jpg"
+  },
+  {
+    "revision": "f6e5c2d64cab6cb68fd7dec0989b28b8",
+    "url": "/contents/03_설계--구현--운영단계/07/tracing03.jpg"
+  },
+  {
+    "revision": "6d7cdb89dce4b9dba45336a08a88f998",
+    "url": "/contents/03_설계--구현--운영단계/07/tracing04.jpg"
+  },
+  {
     "revision": "bde4914c5ad1f3ac67f2c6839da2aaf4",
     "url": "/contents/03_설계--구현--운영단계/07_운영.png"
   },
   {
-    "revision": "b8ecef37cba9d4fbf0f38389bd60a0d2",
+    "revision": "89744a051841c4c2ea5b508bc588ebc8",
     "url": "/contents/03_설계--구현--운영단계/07_운영/01_로깅 (Logging).md"
   },
   {
@@ -524,7 +612,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/07_운영/01_로깅 (Logging).png"
   },
   {
-    "revision": "95965c4615cc0e4c5a138c67b7b2c4be",
+    "revision": "96a113a7710cebaddf700178f33c0487",
     "url": "/contents/03_설계--구현--운영단계/07_운영/02_모니터링 (Monitoring).md"
   },
   {
@@ -532,7 +620,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/07_운영/02_모니터링 (Monitoring).png"
   },
   {
-    "revision": "decbc49c1d5b5e3172220a6ea95f26a7",
+    "revision": "422c3c597e249061b87ac6faa6ac4103",
     "url": "/contents/03_설계--구현--운영단계/07_운영/03_트레이싱 (Tracing).md"
   },
   {
@@ -576,8 +664,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/04_참고자료/02_MSA 방법론/index.md"
   },
   {
-    "revision": "2c9cf9318c20c66209b02932f5bf54e9",
-    "url": "/contents/04_참고자료/03_MSA 전환전략.png"
+    "revision": "76f33d329979ba3ba437a5ebfb95dc37",
+    "url": "/contents/04_참고자료/03_MSA도구 - MSAEasy.png"
   },
   {
     "revision": "ee7ccf10dad0382764114022c737347b",
@@ -628,6 +716,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/04_참고자료/04/index"
   },
   {
+    "revision": "2c9cf9318c20c66209b02932f5bf54e9",
+    "url": "/contents/04_참고자료/04_MSA 전환전략.png"
+  },
+  {
     "revision": "ce3b226e1a91e36a527dda21a961ca64",
     "url": "/contents/04_참고자료/04_MSA 전환전략/01_전환대상 식별.md"
   },
@@ -652,7 +744,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/04_참고자료/04_MSA 전환전략/03_전환방식 선정.png"
   },
   {
-    "revision": "5822842c00ad9fbb8afe863d73b9e863",
+    "revision": "c4864924b69a0bd8961ca730aa220362",
     "url": "/contents/04_참고자료/04_MSA 전환전략/04_전환이슈 및 솔루션.md"
   },
   {
@@ -664,8 +756,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/04_참고자료/04_MSA 전환전략/index.md"
   },
   {
-    "revision": "b61617217526f1fa52eb9719fe89015e",
-    "url": "/contents/04_참고자료/04_부가자료.png"
+    "revision": "a1b257e17e59936d34ced0f56f73acd0",
+    "url": "/contents/04_참고자료/05_MSA Outer 아키텍처.png"
   },
   {
     "revision": "453988cf573f64c0a24c4e37219b7aed",
@@ -692,7 +784,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/04_참고자료/05_MSA Outer 아키텍처/04_Container Management.png"
   },
   {
-    "revision": "38351e4e2c39f3f7513ae92bfb19fd56",
+    "revision": "4d2a04016b21e3fdec91e1c6064c1c7a",
     "url": "/contents/04_참고자료/05_MSA Outer 아키텍처/05_Backing Service.md"
   },
   {
@@ -710,6 +802,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "87bad655f321ba4d75ebd30684198e5d",
     "url": "/contents/04_참고자료/05_MSA Outer 아키텍처/index.md"
+  },
+  {
+    "revision": "b61617217526f1fa52eb9719fe89015e",
+    "url": "/contents/04_참고자료/06_부가자료.png"
   },
   {
     "revision": "e67fdfbbc9b6c4600f3d677b0e88da86",
@@ -832,8 +928,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_커뮤니티/05_교육 수강기관.png"
   },
   {
-    "revision": "86a80adcd3b4721a3c9a",
-    "url": "/css/app.c2e1152f.css"
+    "revision": "4cbeac5c491415dfb37c",
+    "url": "/css/app.495c1bb9.css"
   },
   {
     "revision": "836924f29294ff23069a",
@@ -1464,7 +1560,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/03_Bizdevops/02/05/image27.png"
   },
   {
-    "revision": "17be61c285325298e6b9198101f111db",
+    "revision": "2c72f34e03210bdc139290f4110017f9",
     "url": "/img/03_Bizdevops/02/05/image28.png"
   },
   {
@@ -2016,8 +2112,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/03_MSA 블로그.38a4dfa1.png"
   },
   {
-    "revision": "2c9cf9318c20c66209b02932f5bf54e9",
-    "url": "/img/03_MSA 전환전략.2c9cf931.png"
+    "revision": "76f33d329979ba3ba437a5ebfb95dc37",
+    "url": "/img/03_MSA도구 - MSAEasy.76f33d32.png"
   },
   {
     "revision": "dd5e0ad93e3da3bb5881e814c021cc2f",
@@ -2104,6 +2200,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/04_Library/03/04/image128.png"
   },
   {
+    "revision": "2c9cf9318c20c66209b02932f5bf54e9",
+    "url": "/img/04_MSA 전환전략.2c9cf931.png"
+  },
+  {
     "revision": "28cbcdf4fffdbd9539105c9302c26011",
     "url": "/img/04_관련 리소스.28cbcdf4.png"
   },
@@ -2114,10 +2214,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "76c3c8cb721a67877c8f760943e482ec",
     "url": "/img/04_구현.76c3c8cb.png"
-  },
-  {
-    "revision": "b61617217526f1fa52eb9719fe89015e",
-    "url": "/img/04_부가자료.b6161721.png"
   },
   {
     "revision": "d564bd398974af0084eab85aaf154ace",
@@ -2156,6 +2252,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/05_Community/05/image133.png"
   },
   {
+    "revision": "a1b257e17e59936d34ced0f56f73acd0",
+    "url": "/img/05_MSA Outer 아키텍처.a1b257e1.png"
+  },
+  {
     "revision": "861db2e9d2885c76a1f0dfc08acacfc4",
     "url": "/img/05_SW 및 교구.861db2e9.png"
   },
@@ -2178,6 +2278,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2830026417174f9793b994351bf56663",
     "url": "/img/06_배포.28300264.png"
+  },
+  {
+    "revision": "b61617217526f1fa52eb9719fe89015e",
+    "url": "/img/06_부가자료.b6161721.png"
   },
   {
     "revision": "4f4a9675e7e11f197ac377d2a7d9399a",
@@ -2296,6 +2400,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/image4.69800a55.jpg"
   },
   {
+    "revision": "98f07c3beef084d0a6dbc1402c822a4d",
+    "url": "/img/image4.98f07c3b.jpg"
+  },
+  {
     "revision": "dea4cb87c4b524eb005cc23352c71a6c",
     "url": "/img/image4.dea4cb87.jpg"
   },
@@ -2308,31 +2416,115 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/image5.c4958ee9.jpg"
   },
   {
+    "revision": "ec49ee5aa0250ccd78340e83dc215e45",
+    "url": "/img/image5.ec49ee5a.jpg"
+  },
+  {
     "revision": "1a8476c2c533c1a826eb0c0125a7c1be",
     "url": "/img/image6.1a8476c2.jpg"
+  },
+  {
+    "revision": "700fc4f7d208244412449accd31cd65c",
+    "url": "/img/image6.700fc4f7.jpg"
+  },
+  {
+    "revision": "614a7448d9394a1841fa6d9d3f5ce172",
+    "url": "/img/image7.614a7448.jpg"
+  },
+  {
+    "revision": "8f51121ff19bbbb1433dc89ef5e23fef",
+    "url": "/img/image8.8f51121f.jpg"
+  },
+  {
+    "revision": "5bcc98fe98ddb801ddf2271555e1e25b",
+    "url": "/img/image9.5bcc98fe.jpg"
   },
   {
     "revision": "003de8278904af3ee3ccab75ecd5b5f9",
     "url": "/img/index.003de827.png"
   },
   {
+    "revision": "b6a5ea732b1477ad10f26d0f95347ef2",
+    "url": "/img/logging01.b6a5ea73.jpg"
+  },
+  {
+    "revision": "d78ff8c10cdeaf1f9486ff9cdaff77ef",
+    "url": "/img/logging02.d78ff8c1.jpg"
+  },
+  {
+    "revision": "f54a3297c14e594ac921e44f0e18c795",
+    "url": "/img/logging03.f54a3297.jpg"
+  },
+  {
+    "revision": "04e37a3351acde998f11fb0b5dc0d12a",
+    "url": "/img/logging04.04e37a33.jpg"
+  },
+  {
+    "revision": "d729aaa7821dd33c8b560c9b180f6502",
+    "url": "/img/monitoring01.d729aaa7.jpg"
+  },
+  {
+    "revision": "f619677548bb612bbc09d5381fa95c97",
+    "url": "/img/monitoring02.f6196775.jpg"
+  },
+  {
+    "revision": "a83bd22458665c064b29d4956d2c82f3",
+    "url": "/img/monitoring03.a83bd224.jpg"
+  },
+  {
+    "revision": "a3bbdc56d90a9dd8410d66cf97fd014f",
+    "url": "/img/monitoring04.a3bbdc56.jpg"
+  },
+  {
+    "revision": "12a555560818d845e06be199870b06c0",
+    "url": "/img/monitoring05.12a55556.jpg"
+  },
+  {
+    "revision": "978d3604d9428e8aeb7a9c3b868e0866",
+    "url": "/img/monitoring06.978d3604.jpg"
+  },
+  {
+    "revision": "8ac86ed433cb95af5ba9cbb8b983f04c",
+    "url": "/img/monitoring07.8ac86ed4.jpg"
+  },
+  {
+    "revision": "fcff8547c8c7017267bb07c9f975439e",
+    "url": "/img/monitoring08.fcff8547.jpg"
+  },
+  {
     "revision": "ae99e619d69bc9d53f0256babbfc087c",
     "url": "/img/overview.ae99e619.png"
   },
   {
-    "revision": "af9d691a03f5a00a69cf84bc6bcdd4a8",
+    "revision": "1df09d07ead26cd0c8d0cbecc71a46f3",
+    "url": "/img/tracing01.1df09d07.jpg"
+  },
+  {
+    "revision": "5c500c523e3231fe44ecb736712682f0",
+    "url": "/img/tracing02.5c500c52.jpg"
+  },
+  {
+    "revision": "f6e5c2d64cab6cb68fd7dec0989b28b8",
+    "url": "/img/tracing03.f6e5c2d6.jpg"
+  },
+  {
+    "revision": "6d7cdb89dce4b9dba45336a08a88f998",
+    "url": "/img/tracing04.6d7cdb89.jpg"
+  },
+  {
+    "revision": "30c6c41606bdcdfaa9b9c9ca65c25c48",
     "url": "/index.html"
   },
   {
-    "revision": "86a80adcd3b4721a3c9a",
-    "url": "/js/app.dcfe3066.js"
+    "revision": "4cbeac5c491415dfb37c",
+    "url": "/js/app.9577d17b.js"
   },
   {
     "revision": "836924f29294ff23069a",
     "url": "/js/chunk-vendors.d6b936ca.js"
   },
   {
-    "revision": "dcb1c0a1ce11288973f381754cd0f9a0",
+    "revision": "931d24f03da7fe7c8a2db51874914250",
     "url": "/main_final.css"
   },
   {
