@@ -55,13 +55,26 @@
                                sm="3"
                                v-if="idx < 3"
                         >
-                            <router-link style="text-decoration:none" :to="item.to+'/'+item.route + '/index'">
+                            <router-link v-if="item.children" style="text-decoration:none" :to="item.to+'/'+item.route + '/index'">
                                 <v-list-item-avatar
                                         tile
                                         width="100%"
                                         height="auto"
                                 >
                                     <img :src="imgSrcTree(item)" class="img">
+                                </v-list-item-avatar>
+                                <v-list-item-content>
+                                    <div class="overline mb-1">{{item.status}}</div>
+                                    <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
+                                </v-list-item-content>
+                            </router-link>
+                            <router-link v-else style="text-decoration:none" :to="item.to">
+                                <v-list-item-avatar
+                                        tile
+                                        width="100%"
+                                        height="auto"
+                                >
+                                    <img :src="imgSrc(item)" class="img">
                                 </v-list-item-avatar>
                                 <v-list-item-content>
                                     <div class="overline mb-1">{{item.status}}</div>
@@ -137,7 +150,6 @@
                 menu2 = menu2.substring(0, 1).toUpperCase() + menu2.substring(1)
                 var tmp = item.to.split('/')
                 var src = '/contents';
-                console.log(item)
 
                 src = src.concat('/' + this.value['menuNumber'][this.$route.params.menu1] + '_' + menu1 + '/' + item.route)
 
@@ -219,13 +231,16 @@
                         count = idx;
                     }
                 })
+
                 this.value.items.some(function (item, idx) {
                     if (nextEnd == true) {
                         return;
                     } else if (idx == count - 1) {
+                        console.log(item)
                         item.status = 'prev'
                         result.push(item)
                     } else if (idx == count + 1) {
+                        console.log(item)
                         result.push(item)
                         item.status = 'next'
                         nextEnd = true
