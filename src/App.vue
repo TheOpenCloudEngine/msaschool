@@ -376,7 +376,7 @@
                     } else if (item == '참고자료') {
                         tmp = {id: 4, name: item, to: `/${item}/02_MSA 방법론/index`, model: false};
                         result.push(tmp)
-                    } else if (item == '커뮤니티') {
+                    } else if (item == '커뮤니티 및 교육') {
                         tmp = {id: 5, name: item, to: `/${item}/01_이벤트 및 공지`, model: false};
                         result.push(tmp)
                     }
