@@ -85,7 +85,7 @@
                                                  srcset="/img/icons/img/introduction-1.png 1x, /img/icons/img/introduction-1@2x.png 2x, /img/icons/img/introduction-1@3x.png 3x"
                                                  alt="carousel-item">
                                             <div style="margin-top: 244px;">
-                                                <p class="carousel-item_line1">계획에서 운영까지 전 생애 주기에 걸친 단계별 고려 요소 및 분석/접근/실천법 제시</p>
+                                                <p class="carousel-item_line1">계획에서 운영까지 End-to-End 학습을 위한 단계별 효율적인 실천법 제시</p>
                                                 <!--p class="carousel-item_line2">체계적 학습</p-->
                                             </div>
                                         </div>
