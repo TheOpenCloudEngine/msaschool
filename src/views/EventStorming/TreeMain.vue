@@ -4,10 +4,10 @@
             <template>
                 <v-col>
                     <v-row>
-                        <v-col cols="3">
+                        <v-col v-if="window.width > 1100" cols="3">
                             <v-spacer></v-spacer>
                         </v-col>
-                        <v-col>
+                        <v-col v-if="window.width > 1100" cols="5">
                             <v-breadcrumbs style="padding-top: 20px!important; padding-bottom: 10px!important;"
                                            :items="breadCrumb" large>
                                 <template v-slot:divider>
@@ -15,8 +15,19 @@
                                 </template>
                             </v-breadcrumbs>
                         </v-col>
-                        <v-col>
-                            <v-img style="margin-top: 5px" max-width="150px" max-height="50px" v-if="breadCrumbImg" :src="getBreadCrumbImg()"></v-img>
+                        <v-col v-else cols="7">
+                            <v-breadcrumbs style="padding-top: 20px!important; padding-bottom: 10px!important;"
+                                           :items="breadCrumb" large>
+                                <template v-slot:divider>
+                                    <v-icon>mdi-chevron-right</v-icon>
+                                </template>
+                            </v-breadcrumbs>
+                        </v-col>
+                        <v-col v-if="window.width < 1100" align-self="center" cols="4">
+                            <v-img style="margin-top: 5px" min-width="150px;" max-width="150px" max-height="50px" v-if="breadCrumbImg" :src="getBreadCrumbImg()"></v-img>
+                        </v-col>
+                        <v-col v-else align-self="center" cols="2">
+                            <v-img style="margin-top: 5px" min-width="150px;" max-width="150px" max-height="50px" v-if="breadCrumbImg" :src="getBreadCrumbImg()"></v-img>
                         </v-col>
                     </v-row>
                 </v-col>
@@ -113,7 +124,8 @@
             }
         },
         props: {
-            value: Object
+            value: Object,
+            window: Object
         },
         methods: {
             getBreadCrumbImg() {

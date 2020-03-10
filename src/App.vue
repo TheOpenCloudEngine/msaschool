@@ -191,7 +191,7 @@
                     fluid
                     v-if="reload"
             >
-                <router-view :key="$route.fullPath" v-model="lists"></router-view>
+                <router-view :key="$route.fullPath" v-model="lists" :window="window"></router-view>
             </v-container>
         </v-content>
 
