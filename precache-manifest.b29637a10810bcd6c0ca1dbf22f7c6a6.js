@@ -156,7 +156,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/component.json"
   },
   {
-    "revision": "19a686dfd12ef80c35ae70669a0b27ca",
+    "revision": "124708df82f42a4c39ee1eaaf107c6aa",
     "url": "/contents/01_소개/01_MSA School 소개.md"
   },
   {
@@ -216,12 +216,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/01_소개/04/image2.jpg"
   },
   {
-    "revision": "fdd44300e7fa0ce2f211b2e4ad4b7802",
-    "url": "/contents/01_소개/04_관련 리소스.md"
-  },
-  {
-    "revision": "28cbcdf4fffdbd9539105c9302c26011",
-    "url": "/contents/01_소개/04_관련 리소스.png"
+    "revision": "de7f9479a9c7608a6a26151e2feccdec",
+    "url": "/contents/01_소개/04_예제 애플리케이션 둘러보기.md"
   },
   {
     "revision": "093a8fa0624907fddd5c943a5fbcc887",
@@ -232,12 +228,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/01_소개/05/image2.jpg"
   },
   {
+    "revision": "fdd44300e7fa0ce2f211b2e4ad4b7802",
+    "url": "/contents/01_소개/05_관련 리소스.md"
+  },
+  {
+    "revision": "28cbcdf4fffdbd9539105c9302c26011",
+    "url": "/contents/01_소개/05_관련 리소스.png"
+  },
+  {
     "revision": "bc5c1a0b65baf4e5f5ae0e2df9d26296",
-    "url": "/contents/01_소개/05_SW 및 교구.md"
+    "url": "/contents/01_소개/06_SW 및 교구.md"
   },
   {
     "revision": "861db2e9d2885c76a1f0dfc08acacfc4",
-    "url": "/contents/01_소개/05_SW 및 교구.png"
+    "url": "/contents/01_소개/06_SW 및 교구.png"
   },
   {
     "revision": "33ce267f5f630df07398b075ee22df30",
@@ -392,7 +396,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/02_분석/03_레가시 모노리식의 한계점.png"
   },
   {
-    "revision": "0e24605c566ae4760b6193a1f72e5cda",
+    "revision": "43ae70e52edb12f147b71c1edc3c2085",
     "url": "/contents/03_설계--구현--운영단계/02_분석/index.md"
   },
   {
@@ -501,7 +505,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "2bfe869d79250ffcbd2b20f5dfe12e7b",
-    "url": "/contents/03_설계--구현--운영단계/05_통합/05_최종 트랜젝션---Saga.md"
+    "url": "/contents/03_설계--구현--운영단계/05_통합/05_최종 트랜잭션---Saga.md"
   },
   {
     "revision": "43c8ccf193812d510d7d09ff64314340",
@@ -620,7 +624,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/07_운영/02_모니터링 (Monitoring).png"
   },
   {
-    "revision": "422c3c597e249061b87ac6faa6ac4103",
+    "revision": "10a9de8cf2f87eeab3c6b81b4760e550",
     "url": "/contents/03_설계--구현--운영단계/07_운영/03_트레이싱 (Tracing).md"
   },
   {
@@ -845,94 +849,94 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "74c4d4c738ba94d6d35a4af2c7b489e3",
-    "url": "/contents/05_커뮤니티/01_이벤트 및 공지.md"
+    "url": "/contents/05_커뮤니티 및 교육/01_이벤트 및 공지.md"
   },
   {
     "revision": "217f6c70243056d0fc2bf801bc594d86",
-    "url": "/contents/05_커뮤니티/01_이벤트 및 공지.png"
+    "url": "/contents/05_커뮤니티 및 교육/01_이벤트 및 공지.png"
   },
   {
     "revision": "88c9218ecf3e10b39f3a95aa236c01d7",
-    "url": "/contents/05_커뮤니티/02/image1.jpg"
+    "url": "/contents/05_커뮤니티 및 교육/02/image1.jpg"
   },
   {
     "revision": "9a50ba388d5a9f45088edc5574d846a4",
-    "url": "/contents/05_커뮤니티/02/image2.jpg"
+    "url": "/contents/05_커뮤니티 및 교육/02/image2.jpg"
   },
   {
     "revision": "68b329da9893e34099c7d8ad5cb9c940",
-    "url": "/contents/05_커뮤니티/02/index"
+    "url": "/contents/05_커뮤니티 및 교육/02/index"
   },
   {
     "revision": "035c96b770044fb479702c3b5acad3ba",
-    "url": "/contents/05_커뮤니티/02_MSA 교육과정.md"
+    "url": "/contents/05_커뮤니티 및 교육/02_MSA 교육과정.md"
   },
   {
     "revision": "ac938182940e983945442fc1e286cb54",
-    "url": "/contents/05_커뮤니티/02_MSA 교육과정.png"
+    "url": "/contents/05_커뮤니티 및 교육/02_MSA 교육과정.png"
   },
   {
     "revision": "b91ec09fcfd70cbceea5833c74806a56",
-    "url": "/contents/05_커뮤니티/03_커리큘럼 소개.png"
+    "url": "/contents/05_커뮤니티 및 교육/03_커리큘럼 소개.png"
   },
   {
     "revision": "f62a70c9ac293aa0b302adeafc298a19",
-    "url": "/contents/05_커뮤니티/03_커리큘럼 소개/01_액터별 교육.md"
+    "url": "/contents/05_커뮤니티 및 교육/03_커리큘럼 소개/01_액터별 교육.md"
   },
   {
     "revision": "075ba8fc61b65c9c4a2a8f8a907c40d2",
-    "url": "/contents/05_커뮤니티/03_커리큘럼 소개/01_액터별 교육.png"
+    "url": "/contents/05_커뮤니티 및 교육/03_커리큘럼 소개/01_액터별 교육.png"
   },
   {
     "revision": "1425a87ef2fa78b28a839a075031a10a",
-    "url": "/contents/05_커뮤니티/03_커리큘럼 소개/02_주제별 교육.md"
+    "url": "/contents/05_커뮤니티 및 교육/03_커리큘럼 소개/02_주제별 교육.md"
   },
   {
     "revision": "b45185c86cacd6802fa1610a30ac3126",
-    "url": "/contents/05_커뮤니티/03_커리큘럼 소개/02_주제별 교육.png"
+    "url": "/contents/05_커뮤니티 및 교육/03_커리큘럼 소개/02_주제별 교육.png"
   },
   {
     "revision": "9c9209ac07d6cf22eec44f3476834429",
-    "url": "/contents/05_커뮤니티/04/image1.jpg"
+    "url": "/contents/05_커뮤니티 및 교육/04/image1.jpg"
   },
   {
     "revision": "b24f5bb20e2083b6355fdf94d99a7965",
-    "url": "/contents/05_커뮤니티/04/image2.jpg"
+    "url": "/contents/05_커뮤니티 및 교육/04/image2.jpg"
   },
   {
     "revision": "68b329da9893e34099c7d8ad5cb9c940",
-    "url": "/contents/05_커뮤니티/04/index"
+    "url": "/contents/05_커뮤니티 및 교육/04/index"
   },
   {
     "revision": "3f8137570b8137f66ad01ae7fc639a13",
-    "url": "/contents/05_커뮤니티/04_교육상담 및 신청.md"
+    "url": "/contents/05_커뮤니티 및 교육/04_교육상담 및 신청.md"
   },
   {
     "revision": "bb9278a589848f95ec4348791d683c4c",
-    "url": "/contents/05_커뮤니티/04_교육상담 및 신청.png"
+    "url": "/contents/05_커뮤니티 및 교육/04_교육상담 및 신청.png"
   },
   {
     "revision": "5a08b3a235403b447326820eb7caa154",
-    "url": "/contents/05_커뮤니티/05/image1.jpg"
+    "url": "/contents/05_커뮤니티 및 교육/05/image1.jpg"
   },
   {
     "revision": "68b329da9893e34099c7d8ad5cb9c940",
-    "url": "/contents/05_커뮤니티/05/index"
+    "url": "/contents/05_커뮤니티 및 교육/05/index"
   },
   {
     "revision": "336466ce5ec303f40a164ee29f46f065",
-    "url": "/contents/05_커뮤니티/05_교육 수강기관.md"
+    "url": "/contents/05_커뮤니티 및 교육/05_교육 수강기관.md"
   },
   {
     "revision": "7216e1eccdbac943bb73a75c2a7236f6",
-    "url": "/contents/05_커뮤니티/05_교육 수강기관.png"
+    "url": "/contents/05_커뮤니티 및 교육/05_교육 수강기관.png"
   },
   {
-    "revision": "4cbeac5c491415dfb37c",
-    "url": "/css/app.495c1bb9.css"
+    "revision": "5171da059a5a1ef7c200",
+    "url": "/css/app.40702071.css"
   },
   {
-    "revision": "836924f29294ff23069a",
+    "revision": "e3d64c2bff5546f34073",
     "url": "/css/chunk-vendors.d649098c.css"
   },
   {
@@ -2204,10 +2208,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/04_MSA 전환전략.2c9cf931.png"
   },
   {
-    "revision": "28cbcdf4fffdbd9539105c9302c26011",
-    "url": "/img/04_관련 리소스.28cbcdf4.png"
-  },
-  {
     "revision": "bb9278a589848f95ec4348791d683c4c",
     "url": "/img/04_교육상담 및 신청.bb9278a5.png"
   },
@@ -2256,8 +2256,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/05_MSA Outer 아키텍처.a1b257e1.png"
   },
   {
-    "revision": "861db2e9d2885c76a1f0dfc08acacfc4",
-    "url": "/img/05_SW 및 교구.861db2e9.png"
+    "revision": "28cbcdf4fffdbd9539105c9302c26011",
+    "url": "/img/05_관련 리소스.28cbcdf4.png"
   },
   {
     "revision": "7216e1eccdbac943bb73a75c2a7236f6",
@@ -2270,6 +2270,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "14331c1fc7e03dd5a3c2a443f8f9405f",
     "url": "/img/05_통합.14331c1f.png"
+  },
+  {
+    "revision": "861db2e9d2885c76a1f0dfc08acacfc4",
+    "url": "/img/06_SW 및 교구.861db2e9.png"
   },
   {
     "revision": "7c56fab836bff50f3d536987ed32b32d",
@@ -2512,19 +2516,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/tracing04.6d7cdb89.jpg"
   },
   {
-    "revision": "30c6c41606bdcdfaa9b9c9ca65c25c48",
+    "revision": "fe3079e0ccf03e652071ea7fa4543426",
     "url": "/index.html"
   },
   {
-    "revision": "4cbeac5c491415dfb37c",
-    "url": "/js/app.9577d17b.js"
+    "revision": "5171da059a5a1ef7c200",
+    "url": "/js/app.ff7edaa8.js"
   },
   {
-    "revision": "836924f29294ff23069a",
-    "url": "/js/chunk-vendors.d6b936ca.js"
+    "revision": "e3d64c2bff5546f34073",
+    "url": "/js/chunk-vendors.95fdf1ad.js"
   },
   {
-    "revision": "931d24f03da7fe7c8a2db51874914250",
+    "revision": "7b2d85bfcd4a834e66f89d48e83638af",
     "url": "/main_final.css"
   },
   {

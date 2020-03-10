@@ -7,7 +7,7 @@ MSA School 은 이러한 시장 상황에서 보다 구체적이고 실행 가�
 
 <br/>
 
-**MSA 스쿨은 BizDevOps 기반의 End-to-End 학습을 위한 단계별 실천법을 제공합니다.**
+**MSA 스쿨은 BizDevOps의 전 과정에 걸친 End-to-End 학습을 위한 단계별 실천법을 제공합니다.**
 >
 >- BizDevOps 툴 체인은 분석(Analysis), 설계(Design), 구현(Implementation), 통합(Integration), 배포(Deployment), 운영(Operation)의 6단계로 구성됩니다.
 >

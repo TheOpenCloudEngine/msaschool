@@ -143,11 +143,11 @@
 .slick-dots li:hover {cursor: pointer;}
 .slick-dots li button {display:none;}
 .slick-dots li:nth-child(1) {background:url('/img/icons/img/ic-carousel-3.png') 10px 52% no-repeat;}
-.slick-dots li:nth-child(1):after {content:'BizDevOps 기반 학습';}
+.slick-dots li:nth-child(1):after {content:'BizDevOps 전 과정 지원';}
 .slick-dots li:nth-child(2) {background:url('/img/icons/img/ic-carousel-2.png') 10px 52% no-repeat;}
-.slick-dots li:nth-child(2):after {content:'MSA코드 인 프랙티스';}
+.slick-dots li:nth-child(2):after {content:'실전 MSA 코드 활용';}
 .slick-dots li:nth-child(3) {background:url('/img/icons/img/ic-carousel-1.png') 10px 52% no-repeat;}
-.slick-dots li:nth-child(3):after {content:'주제별 특화된 교육과정';}
+.slick-dots li:nth-child(3):after {content:'눈높이에 맞춘 특화된 교육';}
 .slick-dots li.slick-active {background-color:#fff}
 .slick-current {opacity: 1;}
 /* .slick-active {opacity: .5;} */
