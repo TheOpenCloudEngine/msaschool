@@ -1,14 +1,22 @@
 <template>
     <v-container>
         <v-responsive>
-            <v-col style="padding-top: 0px; padding-bottom: 0px;">
-                <v-breadcrumbs style="padding-top: 20px!important; padding-bottom: 10px!important;" :items="breadCrumb"
-                               large>
-                    <template v-slot:divider>
-                        <v-icon>mdi-chevron-right</v-icon>
-                    </template>
-                </v-breadcrumbs>
-            </v-col>
+            <v-row>
+                <v-col cols="3">
+                    <v-spacer></v-spacer>
+                </v-col>
+                <v-col>
+                    <v-breadcrumbs style="padding-top: 20px!important; padding-bottom: 10px!important;"
+                                   :items="breadCrumb" large>
+                        <template v-slot:divider>
+                            <v-icon>mdi-chevron-right</v-icon>
+                        </template>
+                    </v-breadcrumbs>
+                </v-col>
+                <v-col>
+                    <v-img style="margin-top: 5px" max-width="150px" max-height="50px" v-if="breadCrumbImg" :src="getBreadCrumbImg()"></v-img>
+                </v-col>
+            </v-row>
             <v-divider></v-divider>
             <v-col cols="6">
                 <vue-markdown
@@ -19,41 +27,42 @@
             </v-col>
             <v-divider></v-divider>
 
-                    <v-row align="center" justify="center" style="max-width:1050px;margin:0 auto;">
-                        <v-col v-for="(item,idx) in exploreItems"
-                               style="margin:10px;overflow-x:hidden;"
-                               cols="12"
-                               sm="3"
-                               v-if="idx < 3"
+            <v-row align="center" justify="center" style="max-width:1050px;margin:0 auto;">
+                <v-col v-for="(item,idx) in exploreItems"
+                       style="margin:10px;overflow-x:hidden;"
+                       cols="12"
+                       sm="3"
+                       v-if="idx < 3"
+                >
+                    <router-link v-if="item.children" style="text-decoration:none"
+                                 :to="item.to+'/'+item.route + '/index'">
+                        <v-list-item-avatar
+                                tile
+                                width="100%"
+                                height="auto"
                         >
-                            <router-link v-if="item.children" style="text-decoration:none" :to="item.to+'/'+item.route + '/index'">
-                                <v-list-item-avatar
-                                        tile
-                                        width="100%"
-                                        height="auto"
-                                >
-                                    <img :src="imgSrcTree(item)" class="img">
-                                </v-list-item-avatar>
-                                <v-list-item-content>
-                                    <div class="overline mb-1">{{item.status}}</div>
-                                    <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
-                                </v-list-item-content>
-                            </router-link>
-                            <router-link v-else style="text-decoration:none" :to="item.to">
-                                <v-list-item-avatar
-                                        tile
-                                        width="100%"
-                                        height="auto"
-                                >
-                                    <img :src="imgSrc(item)" class="img">
-                                </v-list-item-avatar>
-                                <v-list-item-content>
-                                    <div class="overline mb-1">{{item.status}}</div>
-                                    <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
-                                </v-list-item-content>
-                            </router-link>
-                        </v-col>
-                    </v-row>
+                            <img :src="imgSrcTree(item)" class="img">
+                        </v-list-item-avatar>
+                        <v-list-item-content>
+                            <div class="overline mb-1">{{item.status}}</div>
+                            <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
+                        </v-list-item-content>
+                    </router-link>
+                    <router-link v-else style="text-decoration:none" :to="item.to">
+                        <v-list-item-avatar
+                                tile
+                                width="100%"
+                                height="auto"
+                        >
+                            <img :src="imgSrc(item)" class="img">
+                        </v-list-item-avatar>
+                        <v-list-item-content>
+                            <div class="overline mb-1">{{item.status}}</div>
+                            <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
+                        </v-list-item-content>
+                    </router-link>
+                </v-col>
+            </v-row>
             <v-col cols="6">
                 <div id="disqus_thread"></div>
             </v-col>
@@ -68,7 +77,8 @@
             return {
                 items: [],
                 md: '',
-                aaa: true
+                aaa: true,
+                breadCrumbImg: false
             }
         },
         props: {
@@ -124,7 +134,20 @@
 
                 src = src.concat('.png')
                 return src
-            }
+            },
+            getBreadCrumbImg() {
+                var menu1 = this.$route.params.menu1;
+                var menu2 = this.$route.params.menu2;
+
+                console.log(menu1, menu2)
+                var src = '/contents';
+
+                src = src.concat('/' + this.value['menuNumber'][this.$route.params.menu1] + '_' + menu1 + '/' + menu2)
+
+                src = src.concat('.png')
+                return src
+
+            },
         },
         computed: {
             breadCrumb() {
@@ -259,6 +282,14 @@
                 s.setAttribute('data-timestamp', +new Date());
                 (d.head || d.body).appendChild(s);
             })();
+
+            var me = this;
+
+            var menu1 = this.$route.params.menu1;
+            var menu2 = this.$route.params.menu2;
+            if (menu1 == '설계--구현--운영단계') {
+                me.breadCrumbImg = true
+            }
         },
         watch: {
             md: {
@@ -279,8 +310,6 @@
 </script>
 
 <style scoped>
-
-
     .v-application .headline {
         font-family: 'Nanum Gothic', sans-serif !important;
     }

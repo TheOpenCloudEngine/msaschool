@@ -3,12 +3,22 @@
         <v-row no-gutters>
             <template>
                 <v-col>
-                    <v-breadcrumbs style="padding-top: 20px!important; padding-bottom: 10px!important;"
-                                   :items="breadCrumb" large>
-                        <template v-slot:divider>
-                            <v-icon>mdi-chevron-right</v-icon>
-                        </template>
-                    </v-breadcrumbs>
+                    <v-row>
+                        <v-col cols="3">
+                            <v-spacer></v-spacer>
+                        </v-col>
+                        <v-col>
+                            <v-breadcrumbs style="padding-top: 20px!important; padding-bottom: 10px!important;"
+                                           :items="breadCrumb" large>
+                                <template v-slot:divider>
+                                    <v-icon>mdi-chevron-right</v-icon>
+                                </template>
+                            </v-breadcrumbs>
+                        </v-col>
+                        <v-col>
+                            <v-img style="margin-top: 5px" max-width="150px" max-height="50px" v-if="breadCrumbImg" :src="getBreadCrumbImg()"></v-img>
+                        </v-col>
+                    </v-row>
                 </v-col>
                 <v-responsive
                         width="100%"
@@ -55,7 +65,8 @@
                                sm="3"
                                v-if="idx < 3"
                         >
-                            <router-link v-if="item.children" style="text-decoration:none" :to="item.to+'/'+item.route + '/index'">
+                            <router-link v-if="item.children" style="text-decoration:none"
+                                         :to="item.to+'/'+item.route + '/index'">
                                 <v-list-item-avatar
                                         tile
                                         width="100%"
@@ -97,16 +108,31 @@
         data() {
             return {
                 items: [],
-                md: ''
+                md: '',
+                breadCrumbImg: false
             }
         },
         props: {
             value: Object
         },
         methods: {
+            getBreadCrumbImg() {
+                var menu1 = this.$route.params.menu1;
+                var menu2 = this.$route.params.menu2;
+
+                console.log(menu1, menu2)
+                var src = '/contents';
+
+                src = src.concat('/' + this.value['menuNumber'][this.$route.params.menu1] + '_' + menu1 + '/' + menu2)
+
+                src = src.concat('.png')
+                return src
+
+            },
             // route
             imgSrc(item) {
                 var me = this
+                var menu1 = this.$route.params.menu1;
                 var menu1 = this.$route.params.menu1;
                 var menu2 = this.$route.params.menu2;
 
@@ -262,7 +288,9 @@
             var me = this;
             var menu1 = this.$route.params.menu1;
             var menu2 = this.$route.params.menu2;
-
+            if (menu1 == '설계--구현--운영단계') {
+                me.breadCrumbImg = true
+            }
             menu1 = menu1.substring(0, 1).toUpperCase() + menu1.substring(1)
             menu2 = menu2.substring(0, 1).toUpperCase() + menu2.substring(1)
 
@@ -273,7 +301,6 @@
                     })
                 }
             })
-
 
             this.$http.get(`/contents/${this.value['menuNumber'][this.$route.params.menu1]}_${menu1.substring(0, 1).toUpperCase() + menu1.substring(1)}/${menu2}/index.md`).then(function (result) {
                 me.md = result.data
