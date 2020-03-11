@@ -504,7 +504,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/05_통합/03_EventDriven 부터 통합.md"
   },
   {
-    "revision": "2bfe869d79250ffcbd2b20f5dfe12e7b",
+    "revision": "29eb894cd8be948b6c4ee298455291c1",
     "url": "/contents/03_설계--구현--운영단계/05_통합/05_최종 트랜잭션---Saga.md"
   },
   {
@@ -524,15 +524,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/06_배포.png"
   },
   {
-    "revision": "0de6bb96dc39a3dc91c623524d36cfa5",
+    "revision": "e039e3b3e013e722bda0e6d33bebee22",
     "url": "/contents/03_설계--구현--운영단계/06_배포/01_CI--CD.md"
   },
   {
-    "revision": "6e1f24cc797c63f589202e92caba271b",
+    "revision": "c0e7d3dc749fd06df9fc1d6f930d523b",
     "url": "/contents/03_설계--구현--운영단계/06_배포/02_파이프라인.md"
   },
   {
-    "revision": "a9cc0c9b5035ea68373865ec5c0cd3b4",
+    "revision": "f3e884b49d664846037dc1225ae494dd",
     "url": "/contents/03_설계--구현--운영단계/06_배포/03_배포전략.md"
   },
   {
@@ -932,8 +932,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_커뮤니티 및 교육/05_교육 수강기관.png"
   },
   {
-    "revision": "5171da059a5a1ef7c200",
-    "url": "/css/app.40702071.css"
+    "revision": "f547a4f8ed335862864a",
+    "url": "/css/app.49830b81.css"
   },
   {
     "revision": "e3d64c2bff5546f34073",
@@ -2012,6 +2012,54 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/03_Bizdevops/05/05/lab03.png"
   },
   {
+    "revision": "b9fa3abd4245cb821373592ecb71d087",
+    "url": "/img/03_Bizdevops/06/ProcessChange1.png"
+  },
+  {
+    "revision": "a79ac696bf52349a82efc65442c05bf7",
+    "url": "/img/03_Bizdevops/06/ProcessChange2.png"
+  },
+  {
+    "revision": "df4fd1178d4457722924dafc0ba0d934",
+    "url": "/img/03_Bizdevops/06/cicd01.png"
+  },
+  {
+    "revision": "73465003d0498508c215926f1ad9f96b",
+    "url": "/img/03_Bizdevops/06/cicd03.png"
+  },
+  {
+    "revision": "c9a8605405949c9cf6e06ff50b616750",
+    "url": "/img/03_Bizdevops/06/cicdTool01.png"
+  },
+  {
+    "revision": "891ad13d00f4fe2ac3f750fd38b20eae",
+    "url": "/img/03_Bizdevops/06/deploystrategies.png"
+  },
+  {
+    "revision": "22c95763f8c37b213ca8cc606d3e61e8",
+    "url": "/img/03_Bizdevops/06/gcpsample01.png"
+  },
+  {
+    "revision": "2e2e03c855b3406e7b8489b715b8260c",
+    "url": "/img/03_Bizdevops/06/gcpsample02.png"
+  },
+  {
+    "revision": "81788e892058bcf09cf0e3509c41200c",
+    "url": "/img/03_Bizdevops/06/gcpsample03.png"
+  },
+  {
+    "revision": "d0a5372700ca47b21a6438e91b64e8a1",
+    "url": "/img/03_Bizdevops/06/gcpsample04.png"
+  },
+  {
+    "revision": "9fcb0aeda87b90bc06409444e1be2006",
+    "url": "/img/03_Bizdevops/06/gcpsample05.png"
+  },
+  {
+    "revision": "03d5784e9906db052e62f3f2161f2a12",
+    "url": "/img/03_Bizdevops/06/gcpsample06.png"
+  },
+  {
     "revision": "10cb39929b9a4f32705376f3ff5d73b5",
     "url": "/img/03_Bizdevops/07/01/image96.png"
   },
@@ -2516,12 +2564,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/tracing04.6d7cdb89.jpg"
   },
   {
-    "revision": "fe3079e0ccf03e652071ea7fa4543426",
+    "revision": "edb73d1107bff73038286125c63963ab",
     "url": "/index.html"
   },
   {
-    "revision": "5171da059a5a1ef7c200",
-    "url": "/js/app.ff7edaa8.js"
+    "revision": "f547a4f8ed335862864a",
+    "url": "/js/app.f2887646.js"
   },
   {
     "revision": "e3d64c2bff5546f34073",
