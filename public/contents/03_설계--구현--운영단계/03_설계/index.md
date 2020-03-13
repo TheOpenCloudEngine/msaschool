@@ -23,3 +23,5 @@ MSA 아키텍처는 크게 Inner와 Outer로 구분된다. On-Premise에 직접 
   - API First Design에 따른 이벤트 및 폴리시 도출
 
   - Non-Blocking 및 타임 디커플링이 가능한 Pub/ Sub기반 컨텍스트 매핑
+
+---
