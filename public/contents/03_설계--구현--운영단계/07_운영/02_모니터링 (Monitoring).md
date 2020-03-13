@@ -52,19 +52,19 @@ GCP 메뉴의 'OPERATIONS > 모니터링 > 모니터링 개요' 메뉴로 접속
 GCP Stackdriver가 모니터링을 위해 제공하는 Metric 정보는 아주 다양합니다. 
 
 12st 쇼핑몰 컨테이너들의 기본적인 CPU 및 메모리 사용현황 모니터링을 위해, 먼저 커스텀 대쉬보드를 생성하고 모니터링 할 차트(Portal 의 포틀릿 개념)를 하나 하나 추가해 줍니다.
->
-> 1. 'New Dashboard Name' 창에서 새로운 이름을 입력합니다.
-> 2. 새로운 Dashboard 창에서 우측 상단의 'ADD CHART'를 선택합니다.
->
+
+1. 'New Dashboard Name' 창에서 새로운 이름을 입력합니다.
+2. 새로운 Dashboard 창에서 우측 상단의 'ADD CHART'를 선택합니다.
+
 ><div style="text-align: center;">
 
 > ![](/contents/03_설계--구현--운영단계/07/monitoring04.jpg)
   </div>
   
-> 3. 차트 생성 화면에서 모니터링 할 리소스 유형과 메트릭 정보, 조회할 핕터 정보를 선택합니다.
-> 여기서는 "GKE Container", "CPU Usage", project_id = "Project-for-MSASchool"을 각각 선택합니다. 
-> 
-> 4. 저장(SAVE)을 클릭합니다.
+3. 차트 생성 화면에서 모니터링 할 리소스 유형과 메트릭 정보, 조회할 핕터 정보를 선택합니다.
+ 여기서는 "GKE Container", "CPU Usage", project_id = "Project-for-MSASchool"을 각각 선택합니다. 
+ 
+4. 저장(SAVE)을 클릭합니다.
 
 <div style="text-align: center;">
 
@@ -72,7 +72,7 @@ GCP Stackdriver가 모니터링을 위해 제공하는 Metric 정보는 아주 �
 
 </div>
 
-> 5. 설정한 메트릭 정보를 기반으로 한 대시보드 화면이 생성되고, 12st 쇼핑몰에 대한 통합 모니터링이 가능합니다. 
+5. 설정한 메트릭 정보를 기반으로 한 대시보드 화면이 생성되고, 12st 쇼핑몰에 대한 통합 모니터링이 가능합니다. 
 <div style="text-align: center;">
 
 > ![](/contents/03_설계--구현--운영단계/07/monitoring06.jpg)
@@ -88,8 +88,8 @@ GCP Stackdriver 모니터링은 알림을 위한 리소스의 메트릭 설정 �
 
 <br/>
 
-> 1. 모니터링 화면의 왼쪽 메뉴에서 '알림'을 선택하고 나타나는 화면에서 상단의 'CREATE POLICY'를 클릭합니다.
-> 2. 새로운 알림정책 화면에서 조건을 지정하고, 알림을 수신할 채널 유형과 대상을 입력합니다.
+1. 모니터링 화면의 왼쪽 메뉴에서 '알림'을 선택하고 나타나는 화면에서 상단의 'CREATE POLICY'를 클릭합니다.
+2. 새로운 알림정책 화면에서 조건을 지정하고, 알림을 수신할 채널 유형과 대상을 입력합니다.
 
 <div style="text-align: center;">
 
@@ -97,8 +97,8 @@ GCP Stackdriver 모니터링은 알림을 위한 리소스의 메트릭 설정 �
 
 </div>
 
-> Notification 의 'ADD NOTIFICATION CHANNEL'을 선택하여 나타나는 창에서 알림 유형과 해당 정보를 입력합니다.
->
+3. Notification 의 'ADD NOTIFICATION CHANNEL'을 선택하여 나타나는 창에서 알림 유형과 해당 정보를 입력합니다.
+
 <div style="text-align: center;">
 
 >![](/contents/03_설계--구현--운영단계/07/monitoring08.jpg)
