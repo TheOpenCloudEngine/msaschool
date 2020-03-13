@@ -69,7 +69,7 @@ Java 로 개발을 한다면, 서킷브레이커를 적용할때 Netflix 에서 
 > [java 방식 CircuitBreaker] https://bcho.tistory.com/1247
 > [javascript 방식 CircuitBreaker] https://velog.io/@vies00/Circuit-Breaker-Pattern
 
-Istio 를 사용하는 방법은 소스코드를 수정할 필요가 없습니다. 쿠버네티스에 배포되어있는 서비스에 sidecar 를 추가하여 네트워크 트레픽을 모니터링 후 지정한 시간을 오버하거나, 에러율이 높으면 트레픽을 끈어버리는 방법 입니다. 다만 직접 소스코드를 수정하지 못하니, fall-back 같은 처리는 하지 못합니다.  
+Istio 를 사용하는 방법은 소스코드를 수정할 필요가 없습니다. 쿠버네티스에 배포되어있는 서비스에 sidecar 를 추가하여 네트워크 트래픽을 모니터링 후 지정한 시간을 오버하거나, 에러율이 높으면 트래픽을 끈어버리는 방법 입니다. 다만 직접 소스코드를 수정하지 못하니, fall-back 같은 처리는 하지 못합니다.  
 
 
 #### 사전 준비사항:
@@ -113,8 +113,8 @@ siege -c2 –t10S  -v --content-type "application/json" 'http://orders:8080/ord
 
 서킷브레이커가 없기 때문에 호출은 정상적으로 이루어 집니다. 적은 사용자가 짧은 시간동안 호출을 한것이기 때문인데, 만약 서버가 과부하를 걸릴정도로 사용자를 늘려서 호출한다면 서비스는 다운이 될 것입니다. (서비스별로 과부하를 체크하는 부분은 다르기 때문에 사용자를 늘려서 호출 하는 방법은 테스트를 안합니다)
 
-이제 Product 서비스에 서킷브레이커를 적용하여 보겠습니다. istio 에서 서킷브레이커 설정은 DestinationRule을 설정하고 trafficPolicy 값으로 트레픽을 제어하는 방식으로 설정합니다.  
-트레픽이 이상한지를 체크하는 connectionPool 방법과 오류나 응답체크를 하는 outlierDetection 설정으로 크게 두가지 방법이 있습니다.
+이제 Product 서비스에 서킷브레이커를 적용하여 보겠습니다. istio 에서 서킷브레이커 설정은 DestinationRule을 설정하고 trafficPolicy 값으로 트래픽을 제어하는 방식으로 설정합니다.  
+트래픽이 이상한지를 체크하는 connectionPool 방법과 오류나 응답체크를 하는 outlierDetection 설정으로 크게 두가지 방법이 있습니다.
 
 * connectionPool :  지정된 서비스에 connections를 제한하여 가능 용량 이상의 트래픽 증가에 따른 서비스 Pending 상태를 막도록 circuit break 를 작동시키는 방법
 
