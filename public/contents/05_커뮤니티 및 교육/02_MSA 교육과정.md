@@ -8,7 +8,7 @@ MSA 스쿨이 제공하는 교육은 엑터별 교육과 MSA 주제별 교육으
 
 <div style="text-align: center;">
 
- ![](/contents/05_커뮤니티/02/image1.jpg)
+ ![](/contents/05_커뮤니티%20및%20교육/02/image1.jpg)
  
 </div>
  
@@ -31,7 +31,7 @@ MSA팀 내에서 코드의 구현 Role을 가진 개발자 과정으로, 업무�
 
 <div style="text-align: center;">
 
- ![](/contents/05_커뮤니티/02/image2.jpg)
+ ![](/contents/05_커뮤니티%20및%20교육/02/image2.jpg)
 
 </div>
 
