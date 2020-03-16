@@ -73,7 +73,7 @@ Policy는 스티커 팔레트에서 라일락색 아이콘이 지칭합니다.
 
 ### **\[Policy 추가하기\]**
 
-스티커 팔레트에서 라일락색 아이콘을 캔버스로 Drag & Drop하여 Policy를 추가한다
+스티커 팔레트에서 라일락색 아이콘을 캔버스로 Drag & Drop하여 Policy를 추가합니다.
 ![](/img/03_Bizdevops/03/03/image51.png)
 
 ![](/img/03_Bizdevops/03/03/image52.png)

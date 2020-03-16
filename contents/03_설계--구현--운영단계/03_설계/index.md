@@ -1,8 +1,8 @@
 ## 설계(Design) 단계 
 
-MSA 아키텍처는 크게 Inner와 Outer로 구분된다. On-Premise에 직접 구축하지 않고 상용 Cloud 벤더의 Platform을 사용한다면, Outer 아키텍처는 Cloud가 제공하는 관리형 모듈과 PaaS 런타임의 조합으로 설계 가능하다.
+MSA 아키텍처는 크게 Inner와 Outer로 구분됩니다. On-Premise에 직접 구축하지 않고 상용 Cloud 벤더의 Platform을 사용한다면, Outer 아키텍처는 Cloud가 제공하는 관리형 모듈과 PaaS 런타임의 조합으로 설계 가능합니다.
 
-이번 단계에서는 Inner 아키텍처 설계 시, DDD패턴 중 이벤트스토밍을 활용하여 단위 마이크로서비스 및 서비스간 커뮤니케이션을 설계하는 방법론에 대해 기술한다. (Outer Design은 6단계: Operation의 ‘Operation 아키텍처’에서 상세히 기술한다.)
+이번 단계에서는 Inner 아키텍처 설계 시, DDD패턴 중 이벤트스토밍을 활용하여 단위 마이크로서비스 및 서비스간 커뮤니케이션을 설계하는 방법론에 대해 기술합니다. (Outer Design은 참고자료의 ‘MSA Outer 아키텍처’에서 상세히 기술합니다.)
 
 **MSA 설계시, 식별 대상**
 
@@ -23,3 +23,5 @@ MSA 아키텍처는 크게 Inner와 Outer로 구분된다. On-Premise에 직접 
   - API First Design에 따른 이벤트 및 폴리시 도출
 
   - Non-Blocking 및 타임 디커플링이 가능한 Pub/ Sub기반 컨텍스트 매핑
+
+---
