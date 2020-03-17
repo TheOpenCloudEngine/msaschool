@@ -220,7 +220,7 @@
                     } else {
                         text = me.$route.params[key]
                         if (text == '소개') {
-                            href = '/#/소개/01_MSA%20School%20소개'
+                            href = '/'
                         } else if (text == '계획단계') {
                             href = '/#/계획단계/01_최종목표%20수립'
                         } else if (text == '설계--구현--운영단계') {

@@ -42,14 +42,26 @@
                     </v-list-group>
 
                     <v-list-item
+                            v-else-if="item.to=='/소개/01_MSA School 소개'"
+                            @click="refreshPage()"
+                            v-model="item.model"
+                            :key="item.text"
+                            color="#4527A0"
+                    >
+                        <v-list-item-content>
+                            <v-list-item-title>
+                                {{ item.text }}
+                            </v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+                    <v-list-item
                             v-else
                             link
                             v-model="item.model"
-                            :key="item.text"
                             :to="item.to"
-                            :href="item.href"
+                            :key="item.text"
                             color="#4527A0"
-                            @click="deselectAll"
+                            @click="deselectAll()"
                     >
                         <v-list-item-content>
                             <v-list-item-title>
@@ -174,10 +186,11 @@
                     v-model="tab"
                     color="#673ab7"
             >
+
                 <v-tab
                         v-for="(item, key) in tabItems"
-                        :to="item.to"
                         :key="item.id"
+                        @click="locatePage(item)"
                 >
                     {{ item.name }}
                 </v-tab>
@@ -319,7 +332,8 @@
                                         } else {
                                             var ttt = {
                                                 text: text,
-                                                to: `/${id}/${key}/${data.replace('.md', '')}`
+                                                to: `/${id}/${key}/${data.replace('.md', '')}`,
+                                                model: false
                                             }
 
                                             result.forEach(function (subData, idx) {
@@ -334,7 +348,8 @@
                                 // 서브메뉴 없을 때
                                 var tmp = {
                                     text: fileList[key].replace('.md', ''),
-                                    to: '/' + id + '/' + fileList[key].replace('.md', '').trim()
+                                    to: '/' + id + '/' + fileList[key].replace('.md', '').trim(),
+                                    model: false
                                 }
                                 result.push(tmp)
 
@@ -365,7 +380,7 @@
                     var modelStatus;
 
                     if (item == '소개') {
-                        tmp = {id: 1, name: item, to: `/${item}/01_MSA School 소개`, model: false};
+                        tmp = {id: 1, name: item, to: `/`, model: false };
                         result.push(tmp)
                     } else if (item == '계획단계') {
                         tmp = {id: 2, name: item, to: `/${item}/01_최종목표 수립`, model: false};
@@ -380,9 +395,9 @@
                         tmp = {id: 5, name: item, to: `/${item}/01_이벤트 및 공지`, model: false};
                         result.push(tmp)
                     }
-                    if (me.$route.params.menu1 == item) {
+                    if (me.$route.params.menu1.replace('/') == item) {
                         console.log(tmp.id)
-                        me.tab = tmp.to
+                        me.tab = tmp.id - 1
                     }
                 })
                 return result
@@ -404,15 +419,32 @@
             mobileItem: []
         }),
         methods: {
+            refreshPage(){
+                window.location.href = '/'
+            },
+            locatePage(item) {
+                if(item.id == 1) {
+                    window.location.href = '/'
+                } else {
+                    this.$router.push(item.to)
+                }
+            },
             handleResize() {
                 this.window.width = window.innerWidth;
                 this.window.height = window.innerHeight;
             },
             route(to) {
                 var me = this
-
                 to.model = true
-                this.$router.push({path: to.to + '/' + to.route + '/index'})
+                console.log(to)
+                if(to.route != undefined) {
+                    this.$router.push({path: to.to + '/' + to.route + '/index'})
+                } else if (to.to == '/소개/01_MSA School 소개') {
+                    window.location.href = '/'
+                } else {
+                    this.$router.push(to.to)
+                }
+
 
                 this.$nextTick(function () {
                     to.model = true
@@ -565,9 +597,6 @@
         watch: {
             '$route'(to, from) {
                 var me = this
-                if ((to.params.menu1 == '소개') && (to.params.pathMatch == 'MSA School 소개')) {
-                    location.reload();
-                }
             },
             drawer: function (newVal, oldVal) {
                 var me = this
@@ -581,7 +610,8 @@
                     }
                     me.getTabItemList(text)
                 })
-            }
+            },
+
         }
 
     }
