@@ -346,10 +346,11 @@
 		min-width: 100%
 	}
 	.hero-section__left h2.hero-section-title {
-		font-size: 42px;
+		font-size: 35px;
 		max-width: 100%;
 		padding: 0 20px;
-		margin: 0 0 29px
+		margin: 0 0 29px;
+		text-align: center;
 	}
 	.content-section {
 		padding: 30px
