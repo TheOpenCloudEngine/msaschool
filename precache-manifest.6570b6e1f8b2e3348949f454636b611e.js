@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bef7c419a531e5061ff5cd138ef6fa3c",
+    "revision": "2717a63fc2134d44b124e2233b589c3e",
     "url": "/Gothic-A1/OFL.txt"
   },
   {
@@ -484,7 +484,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/04_구현.png"
   },
   {
-    "revision": "5d302c6ab4bf3bd54725bdd3b3eef791",
+    "revision": "f8be9a53c09a940303182214e8a0a26d",
     "url": "/contents/03_설계--구현--운영단계/04_구현/03_마이크로서비스 구현.md"
   },
   {
@@ -968,7 +968,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_커뮤니티 및 교육/05/index"
   },
   {
-    "revision": "da01a4a7d2cbf67d4b7658a6d8b43643",
+    "revision": "d2b1abd46e0740b0c99c69b400d3bf49",
     "url": "/contents/05_커뮤니티 및 교육/05_교육 수강기관.md"
   },
   {
@@ -976,15 +976,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_커뮤니티 및 교육/05_교육 수강기관.png"
   },
   {
-    "revision": "497b78c8d226c01aa4bb",
-    "url": "/css/app.8be546a7.css"
+    "revision": "acbc13ab1557f4b86a49",
+    "url": "/css/app.1968678d.css"
   },
   {
-    "revision": "14af97528abab55aa7e3",
-    "url": "/css/chunk-vendors.d649098c.css"
+    "revision": "c9a2595075c1913376e3",
+    "url": "/css/chunk-vendors.5fe038c6.css"
   },
   {
-    "revision": "2fde43af7faa2298a3ecb09db1066268",
+    "revision": "8c158f721313ede981f6a3d7b2202a85",
     "url": "/cur.css"
   },
   {
@@ -2728,16 +2728,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/tracing04.6d7cdb89.jpg"
   },
   {
-    "revision": "33ee787e10090fc706b08d2ff50abfef",
+    "revision": "3fa10346c85f9bfceb339fa866ff49ce",
     "url": "/index.html"
   },
   {
-    "revision": "497b78c8d226c01aa4bb",
-    "url": "/js/app.940b0d14.js"
+    "revision": "acbc13ab1557f4b86a49",
+    "url": "/js/app.27bdab50.js"
   },
   {
-    "revision": "14af97528abab55aa7e3",
-    "url": "/js/chunk-vendors.ea397d7f.js"
+    "revision": "c9a2595075c1913376e3",
+    "url": "/js/chunk-vendors.95fdf1ad.js"
   },
   {
     "revision": "151ec07b9eead081795a7333270bd3ea",
@@ -2814,5 +2814,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f5309cf6905194850b44fb78b8028b95",
     "url": "/slick/slick.scss"
+  },
+  {
+    "revision": "3f59528b8c030cdbd9c63cff9afc519d",
+    "url": "/test.html"
   }
 ]);
