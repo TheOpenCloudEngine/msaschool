@@ -484,12 +484,44 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/04_구현.png"
   },
   {
-    "revision": "f8be9a53c09a940303182214e8a0a26d",
+    "revision": "4c17fb0cca29b42f72515addd37c6859",
     "url": "/contents/03_설계--구현--운영단계/04_구현/03_마이크로서비스 구현.md"
   },
   {
     "revision": "0da183a0ffd8f0fef25500fc700eeb7c",
     "url": "/contents/03_설계--구현--운영단계/04_구현/03_마이크로서비스 구현.png"
+  },
+  {
+    "revision": "c34ebb1051c7f2bf71896be0e4f2413e",
+    "url": "/contents/03_설계--구현--운영단계/04_구현/04_EventDriven 구현.md"
+  },
+  {
+    "revision": "603c806e3ddbfe4c7438e0ae9ecaf78e",
+    "url": "/contents/03_설계--구현--운영단계/04_구현/04_EventDriven 구현.png"
+  },
+  {
+    "revision": "16fa59a669df7ccd16c58c9ea73fc2e1",
+    "url": "/contents/03_설계--구현--운영단계/04_구현/05_Monolith to Mi-svc 구현.md"
+  },
+  {
+    "revision": "603c806e3ddbfe4c7438e0ae9ecaf78e",
+    "url": "/contents/03_설계--구현--운영단계/04_구현/05_Monolith to Mi-svc 구현.png"
+  },
+  {
+    "revision": "2df25be43944333f50e69f7508bace16",
+    "url": "/contents/03_설계--구현--운영단계/04_구현/06_Gateway 구현.md"
+  },
+  {
+    "revision": "603c806e3ddbfe4c7438e0ae9ecaf78e",
+    "url": "/contents/03_설계--구현--운영단계/04_구현/06_Gateway 구현.png"
+  },
+  {
+    "revision": "f0001b1ced3e2dc2436843fbb8188583",
+    "url": "/contents/03_설계--구현--운영단계/04_구현/10_카프카 설치 및 기동.md"
+  },
+  {
+    "revision": "603c806e3ddbfe4c7438e0ae9ecaf78e",
+    "url": "/contents/03_설계--구현--운영단계/04_구현/10_카프카 설치 및 기동.png"
   },
   {
     "revision": "b82bb9d4a0c7bb570f561cb6d89183f0",
@@ -524,7 +556,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/05_통합/03_EventDriven 부터 통합.png"
   },
   {
-    "revision": "29eb894cd8be948b6c4ee298455291c1",
+    "revision": "54059e0d735c6ddcf5233e77c2f44324",
     "url": "/contents/03_설계--구현--운영단계/05_통합/05_최종 트랜잭션---Saga.md"
   },
   {
@@ -968,7 +1000,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_커뮤니티 및 교육/05/index"
   },
   {
-    "revision": "d2b1abd46e0740b0c99c69b400d3bf49",
+    "revision": "d49465fe97c365c154a31d80632d708b",
     "url": "/contents/05_커뮤니티 및 교육/05_교육 수강기관.md"
   },
   {
@@ -976,7 +1008,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_커뮤니티 및 교육/05_교육 수강기관.png"
   },
   {
-    "revision": "acbc13ab1557f4b86a49",
+    "revision": "174cb006326eaed8d82a",
     "url": "/css/app.1968678d.css"
   },
   {
@@ -2004,6 +2036,30 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/03_Bizdevops/04/05/03_04_05_07.png"
   },
   {
+    "revision": "e3ac0df927a8c470d5e8e6950c45f40d",
+    "url": "/img/03_Bizdevops/04/05/03_04_05_11.png"
+  },
+  {
+    "revision": "a54c6c24c0c69551c60a5050027888b6",
+    "url": "/img/03_Bizdevops/04/05/03_04_05_12.png"
+  },
+  {
+    "revision": "fd7d5c956060357b77aab4857bc02764",
+    "url": "/img/03_Bizdevops/04/05/03_04_05_14.png"
+  },
+  {
+    "revision": "791a34428f6524f9ade7f57274dcba10",
+    "url": "/img/03_Bizdevops/04/05/03_04_05_15.png"
+  },
+  {
+    "revision": "68e64d4532840fffbc177b3ccce95075",
+    "url": "/img/03_Bizdevops/04/05/03_04_05_16.png"
+  },
+  {
+    "revision": "91332ea1c236cd87f679bb24f20d0320",
+    "url": "/img/03_Bizdevops/04/05/03_04_05_17.png"
+  },
+  {
     "revision": "17d4bb3eb42a30bde52caa127c713cc3",
     "url": "/img/03_Bizdevops/04/06/03_04_06_01.png"
   },
@@ -2138,6 +2194,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "bac047bfff1b9ddcde7649bbd1ea7134",
     "url": "/img/03_Bizdevops/05/05/lab03.png"
+  },
+  {
+    "revision": "03c0d4e66565043bc5bcd1842310f6a6",
+    "url": "/img/03_Bizdevops/05/05/lab04.png"
   },
   {
     "revision": "b9fa3abd4245cb821373592ecb71d087",
@@ -2364,6 +2424,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/04_Container Management.84640b1c.png"
   },
   {
+    "revision": "603c806e3ddbfe4c7438e0ae9ecaf78e",
+    "url": "/img/04_EventDriven 구현.603c806e.png"
+  },
+  {
     "revision": "99740ed86eedfc02ff24a118b4c47bc3",
     "url": "/img/04_Library/02/01/image120.png"
   },
@@ -2456,6 +2520,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/05_MSA Outer 아키텍처.a1b257e1.png"
   },
   {
+    "revision": "603c806e3ddbfe4c7438e0ae9ecaf78e",
+    "url": "/img/05_Monolith to Mi-svc 구현.603c806e.png"
+  },
+  {
     "revision": "28cbcdf4fffdbd9539105c9302c26011",
     "url": "/img/05_관련 리소스.28cbcdf4.png"
   },
@@ -2474,6 +2542,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "14331c1fc7e03dd5a3c2a443f8f9405f",
     "url": "/img/05_통합.14331c1f.png"
+  },
+  {
+    "revision": "603c806e3ddbfe4c7438e0ae9ecaf78e",
+    "url": "/img/06_Gateway 구현.603c806e.png"
   },
   {
     "revision": "861db2e9d2885c76a1f0dfc08acacfc4",
@@ -2514,6 +2586,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "bb52acec34aff13e19ff4e0a4f29932a",
     "url": "/img/08_프론트-엔드 설계.bb52acec.png"
+  },
+  {
+    "revision": "603c806e3ddbfe4c7438e0ae9ecaf78e",
+    "url": "/img/10_카프카 설치 및 기동.603c806e.png"
   },
   {
     "revision": "2a87d76d4feb62f17e629d082902a3c2",
@@ -2728,12 +2804,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/tracing04.6d7cdb89.jpg"
   },
   {
-    "revision": "3fa10346c85f9bfceb339fa866ff49ce",
+    "revision": "e332bd5f66635681a54db1cf7b0c16cb",
     "url": "/index.html"
   },
   {
-    "revision": "acbc13ab1557f4b86a49",
-    "url": "/js/app.27bdab50.js"
+    "revision": "174cb006326eaed8d82a",
+    "url": "/js/app.6ebe3ce6.js"
   },
   {
     "revision": "c9a2595075c1913376e3",
@@ -2814,9 +2890,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f5309cf6905194850b44fb78b8028b95",
     "url": "/slick/slick.scss"
-  },
-  {
-    "revision": "3f59528b8c030cdbd9c63cff9afc519d",
-    "url": "/test.html"
   }
 ]);
