@@ -484,6 +484,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/04_구현.png"
   },
   {
+    "revision": "1226bba88085c96fdf522f497f8c75e4",
+    "url": "/contents/03_설계--구현--운영단계/04_구현/01_사전학습.md"
+  },
+  {
+    "revision": "340d7bbf1681aa9ea5d498d37ef13022",
+    "url": "/contents/03_설계--구현--운영단계/04_구현/02_Quick Tour.md"
+  },
+  {
     "revision": "4c17fb0cca29b42f72515addd37c6859",
     "url": "/contents/03_설계--구현--운영단계/04_구현/03_마이크로서비스 구현.md"
   },
@@ -612,6 +620,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/06_배포/03_배포전략.png"
   },
   {
+    "revision": "05e36ea1f89dd9e2b5ce9cfb7cc436b5",
+    "url": "/contents/03_설계--구현--운영단계/06_배포/06_CI--CD 실습스크립트.md"
+  },
+  {
     "revision": "37ef1a551bda224de46ed6100c0a8186",
     "url": "/contents/03_설계--구현--운영단계/06_배포/index.md"
   },
@@ -708,8 +720,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/07_운영/03_트레이싱 (Tracing).png"
   },
   {
+    "revision": "458b724e510571eef1dfb03a1ba131e3",
+    "url": "/contents/03_설계--구현--운영단계/07_운영/04_컨테이너 오케스트레이션.md"
+  },
+  {
     "revision": "4940449120ac492a20b4a060f013d25c",
     "url": "/contents/03_설계--구현--운영단계/07_운영/index.md"
+  },
+  {
+    "revision": "e6ce5f2061a4c9ebcd70d2ee9d395cfe",
+    "url": "/contents/03_설계--구현--운영단계/08_참고자료/01_실습중 오류 대처.md"
   },
   {
     "revision": "a42844c0fccb40509c8109223dfcecb0",
@@ -1008,7 +1028,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_커뮤니티 및 교육/05_교육 수강기관.png"
   },
   {
-    "revision": "174cb006326eaed8d82a",
+    "revision": "fad0da393aa44e3a93e2",
     "url": "/css/app.1968678d.css"
   },
   {
@@ -1960,6 +1980,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/03_Bizdevops/04/02/image89.png"
   },
   {
+    "revision": "48fed5f6de31a6c9103a944ea62614da",
+    "url": "/img/03_Bizdevops/04/02/stmfork.png"
+  },
+  {
     "revision": "d4f17ed74771d3055177a5040ed01150",
     "url": "/img/03_Bizdevops/04/03/code01.png"
   },
@@ -2804,12 +2828,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/tracing04.6d7cdb89.jpg"
   },
   {
-    "revision": "e332bd5f66635681a54db1cf7b0c16cb",
+    "revision": "563a3e75ac73ef69468fddf121463f16",
     "url": "/index.html"
   },
   {
-    "revision": "174cb006326eaed8d82a",
-    "url": "/js/app.6ebe3ce6.js"
+    "revision": "fad0da393aa44e3a93e2",
+    "url": "/js/app.bdcab15b.js"
   },
   {
     "revision": "c9a2595075c1913376e3",
