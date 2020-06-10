@@ -1,8 +1,8 @@
-## 도구(MSAEz)를 통한 CNA 개발
+## 도구(MSA-Ez)를 활용한 CNA 개발
 
-### type 1. intellij IDE
+### type A. 도구 및 Local IDE 활용
 <details>
-<summary>type 1. intellij IDE</summary>
+<summary>type A. 도구 및 Local IDE 활용</summary>
 <p>
 
 - 시나리오 : 주문팀에서 주문 발생(Ordered)시, 배송팀에서 주문에 따른 배송을 생성하고, 배송 이벤트(Shipped)를 발행한다.
@@ -126,11 +126,12 @@
 </details>
 <br />
 
+<hr/>
 
+### type B. 도구 및 Cloud IDE 활용
 
-### type 2. cloud IDE
 <details>
-<summary>type 2. cloud IDE</summary>
+<summary>type B. 도구 및 Cloud IDE 활용</summary>
 <p>
 
 
@@ -265,6 +266,5 @@
 
 </p>
 </details>
-<hr />
 <br />
 
