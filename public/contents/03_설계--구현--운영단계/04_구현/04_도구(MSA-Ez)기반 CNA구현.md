@@ -1,8 +1,8 @@
 ## 도구(MSA-Ez)를 활용한 CNA 개발
 
-### type A. 도구 및 Local IDE 활용
+### 이벤트스토밍 도구와 Local IDE 활용
 <details>
-<summary>type A. 도구 및 Local IDE 활용</summary>
+<summary>MSA-Ez 도구를 통한 모델링과 생성된 코드를 Local IDE 활용하여 구현</summary>
 <p>
 
 - 시나리오 : 주문팀에서 주문 발생(Ordered)시, 배송팀에서 주문에 따른 배송을 생성하고, 배송 이벤트(Shipped)를 발행한다.
@@ -128,10 +128,10 @@
 
 <hr/>
 
-### type B. 도구 및 Cloud IDE 활용
+### 이벤트스토밍 도구와 Cloud IDE 활용
 
 <details>
-<summary>type B. 도구 및 Cloud IDE 활용</summary>
+<summary>MSA-Ez 도구를 통한 모델링과 생성된 코드를 도구가 제공하는 Cloud IDE 활용하여 구현</summary>
 <p>
 
 

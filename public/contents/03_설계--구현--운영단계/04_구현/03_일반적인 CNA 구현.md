@@ -1,4 +1,4 @@
-## SPRING INITIALIZR를 활용한 일반적인 CNA 구현 실습
+## SPRING INITIALIZR를 활용한 일반적인 CNA 구현
 
 이번 시간은 이벤트 스토밍 결과를 EventDriven 방식을 사용하여, 실제 코드로 변환하는 실습을 하겠습니다.
 
