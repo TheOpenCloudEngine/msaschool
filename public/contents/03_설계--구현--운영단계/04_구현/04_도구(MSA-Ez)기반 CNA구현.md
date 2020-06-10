@@ -2,7 +2,7 @@
 
 ### 이벤트스토밍 도구와 Local IDE 활용
 <details>
-<summary>MSA-Ez 도구를 통한 모델링과 생성된 코드를 Local IDE 활용하여 구현</summary>
+<summary>MSA-Ez 도구 기반 모델링으로 생성된 코드를 Local IDE를 활용해 구현</summary>
 <p>
 
 - 시나리오 : 주문팀에서 주문 발생(Ordered)시, 배송팀에서 주문에 따른 배송을 생성하고, 배송 이벤트(Shipped)를 발행한다.
@@ -131,7 +131,7 @@
 ### 이벤트스토밍 도구와 Cloud IDE 활용
 
 <details>
-<summary>MSA-Ez 도구를 통한 모델링과 생성된 코드를 도구가 제공하는 Cloud IDE 활용하여 구현</summary>
+<summary>MSA-Ez 도구 기반 모델링으로 생성된 코드를 도구가 제공하는 Cloud IDE를 활용해 구현</summary>
 <p>
 
 
