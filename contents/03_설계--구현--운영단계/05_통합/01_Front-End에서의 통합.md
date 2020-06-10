@@ -1,4 +1,4 @@
-## Microservice Integration with by UI
+## Microservice Integration by UI
 
 마이크로 서비스의 통합을 위하여 기존에 Join SQL 등을 사용하지 않고 프론트-엔드 기술이나 API Gateway 를 통하여 서비스간 데이터를 통합해야 합니다. 그중 프론트엔드에서 데이터를 통합하기 위한 접근 방법으로는 W3C 의 Web Components 기법과 MVVM 그리고 REST API 전용 스크립트를 이용하는것이 유용 합니다. 
 

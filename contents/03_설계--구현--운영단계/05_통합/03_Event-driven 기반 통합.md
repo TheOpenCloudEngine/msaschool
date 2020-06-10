@@ -1,4 +1,4 @@
-## Microservice Integration with by Event-Driven
+## Microservice Integration by EVENT-DRIVEN
 
 이벤트 드리븐은 도메인에서 발생하는 **이벤트**를 비동기 호출로 상호 통신하는 방법입니다. 이 방법론이 마이크로 서비스에 적용되어 통합(Integration)을 수행하는 아키텍처를 이벤트 드리븐 마이크로 서비스(EDM) or 이벤트 드리븐 아키텍처(EDA)라고 부릅니다. 
 
