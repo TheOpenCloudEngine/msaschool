@@ -139,7 +139,7 @@
  
 - Step-1. 도구를 통한 마이크로서비스 모델링
   - http://msaez.io/ 접속
-  - 샘플 모델 http://msaez.io/#/storming/VdykvRQp3sZo5sXWaKm6iy81wop2/mine/530eba2af53a4a0a2d63975e06b1d828/-M91BRFWY2cmCKGeHUh_
+  - 샘플 모델 http://msaez.io/#/storming/VdykvRQp3sZo5sXWaKm6iy81wop2/every/530eba2af53a4a0a2d63975e06b1d828/-M91_7Gi-gscoAfWAJ16
   - 참고 영상 :  https://youtu.be/C1B5O6CM9zs
   - 고려사항 
     - Project Name에 '-'과 같은 문자가 포함되지 않았는가 ?
@@ -234,7 +234,7 @@
 - Step-8. 동기호출(Request/Response) 
   - Order.java에서 FeignClient 구현
     Order.java 36행
-    cancellation.setOrderId("this.getId()");
+    cancellation.setOrderId(this.getId());
     cancellation.setStatus("CANCELED");
 
   - external/CancellationService.java 파일의 11행 url 변경
