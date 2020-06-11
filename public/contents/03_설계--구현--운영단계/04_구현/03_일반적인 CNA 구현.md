@@ -74,10 +74,10 @@
 
 	- 파일 두개만 만들었지만 Aggregate 와 Command 가 생성 된 것을 확인 할 수 있습니다.
 
-6. Event 를 생성 합니다.
-	- 이벤트는 일어난 사실에 대한 결과이기 때문에 P.P 형식으로 작성을 합니다.
+6. Event 를 생성합니다.
+	- 이벤트는 일어난 사실에 대한 결과이기 때문에 과거분사(PP, Past Participle) 형식으로 작성을 합니다.
 	- 상품 정보가 변경 되었을때 변경 사실을 알리는 ProductChanged 이벤트를 만들어 봅니다.
-	- ProductChanged 클레스를 생성 하고, 변수를 설정합니다.
+	- ProductChanged 클레스를 생성하고, 변수를 설정합니다.
 	- 이벤트는 다른 서비스에서 받아보는 정보입니다. 그렇기 때문에 자세하게 적어주어야 할 필요가 있습니다. json 으로 데이터를 보내기 때문에 eventType 이라는 변수를 만들고, 생성자에서 이벤트 이름을 적어 줍니다.
 	- 세부 정보도 다른 서비스에서 명확히 이해하기 쉽도록 그냥 name 이 아닌 productName 이런식으로 작성하여 주었습니다.
 	```java
@@ -95,9 +95,9 @@
     }
 	```
 
-7. Event 를 발송 하겠습니다.
-	- 이벤트는 Aggregate 의 변화에 의해서 발생하기 때문에, 이벤트를 보내는 로직은 Entity의 lifecycle 에 작성을 하게 됩니다.
-	- Product.java 에 데이터가 입력되었을때의 lifecycle 인 @PostPersist 어노테이션에 이벤트를 생성 하여 값을 셋팅 합니다
+7. 생성된 Event 를 발송합니다.
+	- 이벤트는 Aggregate 내의 상태 변화에 의해서 발생하기 때문에, 이벤트를 보내는 로직은 Entity의 lifecycle 에 작성을 하게 됩니다.
+	- Product.java 에 데이터가 입력되었을때의 Lifecycle 인 @PostPersist 어노테이션에 이벤트를 생성 하여 값을 셋팅 합니다
 	- ObjectMapper 를 사용하여 json 으로 변환 합니다.
 
 	```java
@@ -124,7 +124,11 @@
 		`{"eventType":"ProductChanged","productId":1,"productName":"TV","productStock":10}`
 
 8. 서비스에 카프카 연결
-	- spring cloud streams kafka 방식을 사용 하기 위하여 다음의 라이브러리를 pom.xml 에 추가합니다.  
+    - Spring Cloud Stream Application 모델
+    
+    	![code02](/img/03_Bizdevops/04/03/spring-cloud-binder.png)
+    	
+	- Spring Cloud Streams Application에서 Kafka 바인더를 사용하기 위하여 다음 라이브러리를 pom.xml 에 추가합니다.  
 
 	```xml
 
@@ -139,8 +143,8 @@
 	</dependency>
 	```
 
-	- spring cloud 는 spring-boot 와 버전에 대한 종속성이 있습니다. 그리하여 각각의 spring-cloud 프로젝트 별로 버전을 직접 명시하지 않고, 종속성을 선언하여 주는 <dependencyManagement> 를 사용하여야 합니다.
-	- 아래와 같이 <dependencyManagement> 를 pom.xml 에 추가하여 줍니다.
+	- spring cloud 는 spring-boot 와 버전에 대한 종속성이 있습니다. 그리하여 각각의 spring-cloud 프로젝트 별로 버전을 직접 명시하지 않고, 종속성을 선언하는 &lt;dependencyManagement&gt; 를 사용하여야 합니다.
+	- 아래와 같이 &lt;dependencyManagement&gt; 를 pom.xml 에 추가하여 줍니다.
 	```xml
 
 	<dependencyManagement>
@@ -156,10 +160,10 @@
 	</dependencyManagement>
 	```	
 
-	- pom.xml 에서 ${} 로 시작하는 부분은 변수(properties)	처리를 하겠다는 의미입니다. 상단의 <properties> 부분에 위에서 변수처리함 <spring-cloud.version> 를 추가하여 줍니다.
-	- 여기서 버전을 명시할때 주의할 점은 spring-boot 와 spring-cloud 의 버전이 일치해야 합니다.
-	- 버전을 확인하는곳은 스프링 클라우드 site 에서 확인 할 수 있습니다.
-	    - https://spring.io/projects/spring-cloud 의 Release Trains 부분 참고  
+	- pom.xml 에서 ${} 로 시작하는 부분은 변수(properties) 처리를 하겠다는 의미입니다. 상단의 <properties> 부분에 위에서 변수처리함 <spring-cloud.version> 를 추가하여 줍니다.
+	- 여기서 버전을 명시할때 주의할 점은 Spring-boot에 매핑되는 Spring-cloud 버전을 사용해야 합니다.
+	- 매핑되는 버전 정보는 스프링 클라우드 Site에서 확인 할 수 있습니다.
+	    - https://spring.io/projects/spring-cloud 의 Release Trains 참고  
  
 	```xml
  
@@ -186,8 +190,8 @@
 	}
 	```
 
-	- stream 을 kafka 와 연결하기 위하여 application.yaml 파일에 아래과 같은 설정을 추가 합니다.
-		- kafka brokers로 localhost:9092 를 사용한다는 의미입니다. 카프카를 로컬에 설치시 기본 포트가 9092 번 입니다.
+	- stream 을 kafka 와 연결하기 위하여 application.yaml 파일에 아래 설정을 추가 합니다.
+		- kafka brokers로 localhost:9092 를 사용한다는 의미입니다. 카프카 설치시 기본 포트가 9092 입니다.
 		- bindings.input 과 bindings.output 은 기본 채널입니다. 만약 채널명을 변경 하고 싶으면 Processor 를 새로만들어야 합니다.
 		> https://github.com/event-storming/products/blob/master/src/main/java/com/example/template/config/kafka/KafkaProcessor.java  
 		
@@ -215,7 +219,7 @@
 
 9. 이벤트를 kafka 에 발송
 	- 좀전에 수정하였던 `@PostPersist` 부분에 스트림 메세지를 발송하는 부분을 수정합니다.
-	- getBean 으로 클레스를 가져오는 부분은, JPA 라이프 싸이클은 Spring 의 라이프 싸이클과 다르게 돌기 때문에, @Autowired 등의 Bean 을 가져오는 방법을 사용 할 수 없어서, 직접 컨텍스트에서 가져왔습니다.  
+	- Spring 에서 Bean으로 등록되지 않은 객체에서 Bean 객체를 사용하기 위해 @Autowired 대신, 직접 applicationContext 에서 getBean으로 참조합니다.  
 
 	```java
 
@@ -244,15 +248,16 @@
     }
 	```
 
-	- 수정 후 서비스 재시작 후 카프카에 메세지가 도달하는지 확인 합니다.
-	- 다음은 mac 에서 brew 로 설치한 카프카 경로에 topic 이라는 메세지 컨슈머에서 본 내용입니다.
+	- 수정 후 서비스를 재시작한 다음 REST API로 상품 등록 시, 카프카에 이벤트 메시지가 도달하는지 확인 합니다.
+	- 메시지는 Kafka Consumer로써 shop 토픽(topic) 모니터링으로 확인 가능합니다.
 	- http POST localhost:8080/products name="TV" stock=10
 	- /usr/local/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic topic --from-beginning
 
 	![code02](/img/03_Bizdevops/04/03/code03.png)
 
 10. 이벤트를 수신하는 Policy 를 생성합니다.
-	- 실제로는 폴리시는 다른 서비스에서 수신을 해야합니다. 즉 상품 서비스에서 ProductChanged 이벤트가 발생하면 주문 서비스나 배송 서비스에서 수신을 하는 것이지만, 편의상 메세지 받는 방법만 확인 하겠습니다.
+	- Event에 대응되는 Policy(폴리시)는 다른 마이크로서비스(팀)에서 수신 합니다. 
+	즉, 상품 서비스에서 ProductChanged 이벤트가 발생하면 주문이나 배송 서비스에서 이를 수신 후 각 서비스에 맞는 Biz-Logic을 처리하지만, 편의상 Kafka로부터 메세지 수신만 확인 하겠습니다.
 	- DemoApplication.java 에 메서드를 추가하고 `@StreamListener(Processor.INPUT)` 를 추가하여 스트림을 수신합니다.
 
 	```java
