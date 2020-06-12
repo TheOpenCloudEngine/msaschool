@@ -145,8 +145,8 @@
                                     <v-list-item-content>
                                         <div class="overline mb-1">Content {{idx +1}}</div>
                                         <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
-                                        <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully
-                                        </v-list-item-subtitle>
+<!--                                        <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully-->
+<!--                                        </v-list-item-subtitle>-->
                                     </v-list-item-content>
 
                                 </v-list-item>
@@ -176,8 +176,8 @@
                                 <v-list-item-content>
                                     <div class="overline mb-1">Content {{idx + 1}}</div>
                                     <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
-                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully
-                                    </v-list-item-subtitle>
+<!--                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully-->
+<!--                                    </v-list-item-subtitle>-->
                                 </v-list-item-content>
                             </router-link>
                             <router-link style="text-decoration:none" v-else :to="item.to">
@@ -200,8 +200,8 @@
                                 <v-list-item-content>
                                     <div class="overline mb-1">Content {{idx + 1}}</div>
                                     <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
-                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully
-                                    </v-list-item-subtitle>
+<!--                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully-->
+<!--                                    </v-list-item-subtitle>-->
                                 </v-list-item-content>
                             </router-link>
                         </v-col>
@@ -232,8 +232,8 @@
                                 <v-list-item-content>
                                     <div class="overline mb-1">Content {{idx + 1}}</div>
                                     <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
-                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully
-                                    </v-list-item-subtitle>
+<!--                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully-->
+<!--                                    </v-list-item-subtitle>-->
                                 </v-list-item-content>
                             </router-link>
                             <router-link style="text-decoration:none" v-else :to="item.to">
@@ -264,9 +264,7 @@
                         </v-col>
 
                     </v-row>
-                    <v-col cols="6">
-                        <div id="disqus_thread"></div>
-                    </v-col>
+
                 </v-responsive>
             </template>
         </v-row>
@@ -418,12 +416,6 @@
 
         },
         mounted() {
-            (function () { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://msaschool-io.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
 
             var me = this;
             let menu1 = this.$route.params.menu1;
