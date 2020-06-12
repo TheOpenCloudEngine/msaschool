@@ -74,9 +74,7 @@
                     </router-link>
                 </v-col>
             </v-row>
-            <v-col cols="6">
-                <div id="disqus_thread"></div>
-            </v-col>
+
         </v-responsive>
     </v-container>
 </template>
@@ -288,12 +286,6 @@
             }
         },
         mounted() {
-            (function () { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://msaschool-io.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
 
             var me = this;
 
