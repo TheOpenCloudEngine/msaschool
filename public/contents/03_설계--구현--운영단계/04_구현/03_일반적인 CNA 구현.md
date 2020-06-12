@@ -1,8 +1,11 @@
 ## SPRING INITIALIZR를 활용한 일반적인 CNA 구현
 
-이번 시간은 이벤트 스토밍 결과를 EventDriven 방식을 사용하여, 실제 코드로 변환하는 실습을 하겠습니다.
+이벤트 스토밍 결과를 Cloud Native Application(CNA) 구축 시 많이 적용되는 Spring Boot(스프링 부트)와 EventDriven 방식을 사용하여, 실제 코드로 변환하는 실습을 하겠습니다.
+로컬에서 테스트하기 위해 HTTP Client 툴을 먼저 설치합니다.
 
-1. 스프링 부트를 처음 시작할때 가장 좋은 방법은 https://start.spring.io/ 에서 시작하는 것입니다. 브라우저에서 접속 다음 사이트를 접속하여 스프링 부트를 시작합니다
+- REST Client 툴 httpie 설치(Windows): https://github.com/TheOpenCloudEngine/uEngine-cloud/wiki/Httpie-%EC%84%A4%EC%B9%98
+
+1. 스프링 부트를 처음 시작할 때 가장 좋은 방법은 https://start.spring.io/ 에서 시작하는 것입니다. 브라우저에서 접속 다음 사이트를 접속하여 스프링 부트를 시작합니다
 	- https://start.spring.io/
 
 2. Maven Project 와 Java 를 선택하고 디펜던시에 다음을 추가하여 Generate 버튼을 클릭하여 프로젝트를 생성 합니다.
@@ -219,8 +222,19 @@
 
 9. 이벤트를 kafka 에 발송
 	- 좀전에 수정하였던 `@PostPersist` 부분에 스트림 메세지를 발송하는 부분을 수정합니다.
-	- Spring 에서 Bean으로 등록되지 않은 객체에서 Bean 객체를 사용하기 위해 @Autowired 대신, 직접 applicationContext 에서 getBean으로 참조합니다.  
-
+	- 라이브러리 임포트
+	
+	```java   
+ 
+        import org.springframework.cloud.stream.messaging.Processor;
+        import org.springframework.messaging.MessageChannel;
+        import org.springframework.messaging.MessageHeaders;
+        import org.springframework.messaging.support.MessageBuilder;
+        import org.springframework.util.MimeTypeUtils;
+	```
+	  
+- Spring 에서 Bean으로 등록되지 않은 객체에서 Bean 객체를 사용하기 위해 @Autowired 대신, 직접 applicationContext 에서 getBean으로 참조합니다.  
+  
 	```java
 
 	@PostPersist
@@ -248,16 +262,16 @@
     }
 	```
 
-	- 수정 후 서비스를 재시작한 다음 REST API로 상품 등록 시, 카프카에 이벤트 메시지가 도달하는지 확인 합니다.
-	- 메시지는 Kafka Consumer로써 shop 토픽(topic) 모니터링으로 확인 가능합니다.
-	- http POST localhost:8080/products name="TV" stock=10
-	- /usr/local/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic topic --from-beginning
+- 수정 후 서비스를 재시작한 다음 REST API로 상품 등록 시, 카프카에 이벤트 메시지가 도달하는지 확인 합니다.
+- 메시지는 Kafka Consumer로써 shop 토픽(topic) 모니터링으로 확인 가능합니다.
+- http POST localhost:8080/products name="TV" stock=10
+- /usr/local/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic shop --from-beginning
 
 	![code02](/img/03_Bizdevops/04/03/code03.png)
 
 10. 이벤트를 수신하는 Policy 를 생성합니다.
 	- Event에 대응되는 Policy(폴리시)는 다른 마이크로서비스(팀)에서 수신 합니다. 
-	즉, 상품 서비스에서 ProductChanged 이벤트가 발생하면 주문이나 배송 서비스에서 이를 수신 후 각 서비스에 맞는 Biz-Logic을 처리하지만, 편의상 Kafka로부터 메세지 수신만 확인 하겠습니다.
+	즉, 상품 서비스에서 ProductChanged 이벤트가 발생하면 주문이나 배송 서비스에서 이를 수신 후 각 서비스에 맞는 Biz-Logic을 처리하지만, 편의상 Kafka로부터 메세지 수신만 확인합니다.
 	- DemoApplication.java 에 메서드를 추가하고 `@StreamListener(Processor.INPUT)` 를 추가하여 스트림을 수신합니다.
 
 	```java
