@@ -1,21 +1,21 @@
 ## SPRING INITIALIZR를 활용한 일반적인 CNA 구현
 
-이벤트 스토밍 결과를 Cloud Native Application(CNA) 구축 시 많이 적용되는 Spring Boot(스프링 부트)와 EventDriven 방식을 사용하여, 실제 코드로 변환하는 실습을 하겠습니다.
+이번 시간은 이벤트스토밍 결과를 Cloud Native Application(CNA) 구축 시 많이 적용되는 Spring Boot(스프링 부트)와 EventDriven 방식을 사용하여, 실제 코드로 변환하는 실습을 진행합니다.
 로컬에서 테스트하기 위해 HTTP Client 툴을 먼저 설치합니다.
 
 - REST Client 툴 httpie 설치(Windows): https://github.com/TheOpenCloudEngine/uEngine-cloud/wiki/Httpie-%EC%84%A4%EC%B9%98
 
 
-1. 스프링 부트를 처음 시작할 때 가장 좋은 방법은 https://start.spring.io/ 에서 시작하는 것입니다. 브라우저에서 접속 다음 사이트를 접속하여 스프링 부트를 시작합니다.
+1. 스프링 부트를 처음 시작할 때 가장 좋은 방법은 https://start.spring.io/ 에서 시작하는 것입니다. 브라우저에서 다음 사이트를 접속하여 스프링 부트를 시작합니다.
 
 	- https://start.spring.io/
 
 
 2. Maven Project 와 Java 를 선택하고, 디펜던시(Dependencies)에 다음을 추가하여 Generate 버튼으로 다운로드 받은 후, 로컬 IDE(IntelliJ)에 프로젝트를 로드 합니다.
 
-	- Rest Repository : 레파지토리 패턴을 사용 가능하도록 해줍니다.
-	- Spring Data JPA : Entity 등의 DDD 패턴
-	- H2	: 메모리 DB
+	- Rest Repository : 레파지토리 패턴을 통해 CRUD API를 생성해 줍니다.
+	- Spring Data JPA : Java Persistence API의 약어, 자바 ORM 기술에 대한 표준 명세로 API 기반 영속성 관리 도구
+	- H2	: Java 기반 오픈소스 인메모리 DB
 	
     ![Policy](/img/03_Bizdevops/04/03/code01.png)
 
