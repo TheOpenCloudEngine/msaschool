@@ -2,7 +2,7 @@
 
 ### 이벤트스토밍 도구와 Local IDE 활용
 <details>
-<summary>MSA-Ez 도구를 통한 모델링과 생성된 코드를 Local IDE 활용하여 구현</summary>
+<summary>MSA-Ez 도구 기반 모델링으로 생성된 코드를 Local IDE를 활용해 구현</summary>
 <p>
 
 - 시나리오 : 주문팀에서 주문 발생(Ordered)시, 배송팀에서 주문에 따른 배송을 생성하고, 배송 이벤트(Shipped)를 발행한다.
@@ -10,7 +10,7 @@
 - Step-1. 도구를 통한 마이크로서비스 모델링
   - http://msaez.io/ 접속
   - 샘플 모델 http://msaez.io/#/storming/nZJ2QhwVc4NlVJPbtTkZ8x9jclF2/every/1da4daa3c330f0f4960de6aefbe48f16/-M71ZQnITgjFnat_EsHk
-  - 참고 영상 :  https://youtu.be/C1B5O6CM9zs
+  - 참고 영상 : https://youtu.be/C1B5O6CM9zs
   - 고려사항 
     - Project Name에 '-'과 같은 문자가 포함되지 않았는가 ?
     - 바운디드 컨텍스트에 객체가 제대로 포함되었는가 ?
@@ -22,12 +22,13 @@
     - 생성 이벤트(~등록됨, ~생성됨) 트리거를  PostPersist 시점으로 Hooking 하였는가 ?
     - 삭제 이벤트(~삭제됨) 트리거를 prePersist 시점으로 Hooking 하였는가 ?
     
-- Step-3. 코드 Preview, Download, and Open in IntelliJ IDE
+- Step-3. Local IDE 에서 구현하기 위해, 코드를 다운받은 뒤 IntelliJ에서 오픈
+  - MSAEz 에서 코드 Preview, Download, and Open in IntelliJ IDE
   - 참고영상 : https://youtu.be/S2ig_1AL8JE
   
-- Step-4. CNA 구현에 필요한 Software 설치 및 테스트
+- Step-4. CNA 구현에 필요한 Software 로컬 설치 및 테스트
   - 참고영상 :  https://youtu.be/bk9Sr1rZg5w
-  - Kafka 설치 (Linux)
+  - Kafka 설치 (Linux 사용시)
     curl -o kafka2.5.tgz -l http://mirror.navercorp.com/apache/kafka/2.5.0/kafka_2.13-2.5.0.tgz
     tar -xvf kafka2.5.tgz
   - zookeeper 실행
@@ -37,9 +38,9 @@
     cd  kafka_2.13-2.5.0/bin
     ./kafka-server-start.sh ../config/server.properties
     
-  - Topic을 통한 메세지 통신 예시
+  - Topic을 통한 메세지 통신 (예시)
     - 토픽 생성
-      cd  kafka_2.13-2.5.0/bin
+      cd kafka_2.13-2.5.0/bin
       ./kafka-topics.sh --zookeeper localhost:2181 --topic eventTopic --create --partitions 1 --replication-factor 1
     - 토픽 리스트 보기
       ./kafka-topics.sh --zookeeper localhost:2181 --list
@@ -50,57 +51,56 @@
       
 - Step-5. order 서비스의 이벤트 Publish 
   - 참고영상 : https://youtu.be/-0qyOsDfnEQ
-  - MSA가 ubuntu kafka Server를 사용하도록 설정
-    - Ubuntu에서 ifconfig 실행 후, IP 정보를 windows hosts 파일에 등록
-    - xxx.xx.xx.xxx    HOSTNAME.localdomain
-    - application.yml 에도 broker IP설정
+  - 마이크로서비스가 Linux(Ubuntu)에 설치한 kafka Server를 사용하도록 설정
+    - application.yml 에 broker IP 설정
       - 16행, brokers: xxx.xxx.xx.xx:9092
-  - order MSA 실행 및 REST 호출 
+  - Order MSA 실행 및 REST API로 주문 생성 
     - http POST http://localhost:8081/orders productId=1001 qty=3
-    - kafka Consumer에서 이벤트 Publish 확인 
+    - kafka Consumer 에서 이벤트 Publish 확인 
   - Trouble Shooting
     - [Error] org.springframework.messaging.MessageDeliveryException: Dispatcher has no subscribers..... 
-      - Solution : PolicyHandler.java 에 아래 코드 추가
-      
+      - Solution : PolicyHandler.java 에 아래 코드 추가      
       @StreamListener(KafkaProcessor.INPUT)
       public void onEvent(@Payload String message) { }
       
     - Connection to node -1 could not be established. Broker may not be available.
-      - Solution : Kafka Server를 인식하지 못해 발생, kafka Server의 실행 상태를 확인하거나, Windows hosts 화일에 kafka broker정보의 정상 등록 확인
-      
-      xxx.xx.xx.xxx    HOSTNAME.localdomain
+      - Solution : Kafka Server를 인식하지 못해 발생, kafka Server의 정상 실행 상태 확인
       
     - An exception occurred while running. null: InvocationTargetException: Either 'name' or 'value' must be provided in @FeignClient
       - Solution : FeignClient가 사용된 코드의 name, 또는 value 확인
+      
     - Port Binding 오류 시,
       - Solution : 실행 중인 서비스가 정상적으로 종료되지 않아 발생한 Port 충돌로, 종료되지 않은 프로세스를 확인하고 종료 후 재실행
-      
       - 프로세스 확인 및 종료 방법
-      netstat -ano | findstr PID :808
-      taskkill /pid 18264 /f
+        - netstat -ano | findstr PID :808
+        - taskkill /pid 18264 /f
       
       
 - Step-6. delivery Policy(PolicyHandler.java) Biz-Logic 구현 및 테스트 
   - 참고영상 : https://youtu.be/3alTcOnkTdY
-  - delivery PolicyHandler Code
+  - delivery PolicyHandler 코드 샘플
     ````java
     
-    @Autowired
-    DeliveryRepository deliveryRepository;
+    @Service
+    public class PolicyHandler{
     
-    @StreamListener(KafkaProcessor.INPUT)
-    public void wheneverOrdered_Ship(@Payload Ordered ordered){
+        @Autowired
+        DeliveryRepository deliveryRepository;
     
-        if(ordered.isMe()){
-            Delivery delivery = new Delivery();
-            delivery.setOrderId(ordered.getId());
-            delivery.setStatus(Shipped);
-    
-            deliveryRepository.save(delivery);
+        @StreamListener(KafkaProcessor.INPUT)
+        public void wheneverOrdered_Ship(@Payload Ordered ordered){
+        
+            if(ordered.isMe()){
+                Delivery delivery = new Delivery();
+                delivery.setOrderId(ordered.getId());
+                delivery.setStatus("SHIPPED");
+        
+                deliveryRepository.save(delivery);
+            }
         }
     }
     ````
-  - delivery MSA 실행 및 REST 호출 
+  - delivery MSA 실행 및 REST API로 주문 생성 
     - http POST http://localhost:8081/orders productId=1002 qty=3
     - kafka Consumer에서 이벤트 Publish 확인 
   - 테스트 고려사항 :
@@ -116,7 +116,7 @@
   - Order.java에서 FeignClient 구현
     Order.java 36행
     cancellation.setOrderId(this.getId());
-    cancellation.setStatus(CANCELED);
+    cancellation.setStatus("CANCELED");
   - http DELETE http://localhost:8081/orders/1
   
 - Step-9. CQRS (Dashboard, Mypage,... ) 추가
@@ -131,7 +131,7 @@
 ### 이벤트스토밍 도구와 Cloud IDE 활용
 
 <details>
-<summary>MSA-Ez 도구를 통한 모델링과 생성된 코드를 도구가 제공하는 Cloud IDE 활용하여 구현</summary>
+<summary>MSA-Ez 도구 기반 모델링으로 생성된 코드를 도구가 제공하는 Cloud IDE를 활용해 구현</summary>
 <p>
 
 
@@ -139,7 +139,7 @@
  
 - Step-1. 도구를 통한 마이크로서비스 모델링
   - http://msaez.io/ 접속
-  - 샘플 모델 http://msaez.io/#/storming/VdykvRQp3sZo5sXWaKm6iy81wop2/mine/530eba2af53a4a0a2d63975e06b1d828/-M91BRFWY2cmCKGeHUh_
+  - 샘플 모델 http://msaez.io/#/storming/VdykvRQp3sZo5sXWaKm6iy81wop2/every/530eba2af53a4a0a2d63975e06b1d828/-M91_7Gi-gscoAfWAJ16
   - 참고 영상 :  https://youtu.be/C1B5O6CM9zs
   - 고려사항 
     - Project Name에 '-'과 같은 문자가 포함되지 않았는가 ?
@@ -234,7 +234,7 @@
 - Step-8. 동기호출(Request/Response) 
   - Order.java에서 FeignClient 구현
     Order.java 36행
-    cancellation.setOrderId("this.getId()");
+    cancellation.setOrderId(this.getId());
     cancellation.setStatus("CANCELED");
 
   - external/CancellationService.java 파일의 11행 url 변경
