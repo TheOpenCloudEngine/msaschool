@@ -113,15 +113,12 @@
   - 포트를 통한 서비스 실행 확인 : netstat -ano | findstr PID :808
   
 - Step-8. 동기호출(Request/Response) 
-  - Order.java에서 FeignClient 구현
+  - Order.java 에서 FeignClient 구현
     Order.java 36행
-    cancellation.setOrderId(this.getId());
+    cancellation.setOrderId(this.getId());  // Type 이 맞지 않은 경우, Casting (cancellation.setOrderId(String.valueOf(this.getId()));
     cancellation.setStatus("CANCELED");
   - http DELETE http://localhost:8081/orders/1
   
-- Step-9. CQRS (Dashboard, Mypage,... ) 추가
-
-
 </p>
 </details>
 <br />
@@ -258,9 +255,9 @@
       - ex) http (게이트웨이 External-IP:8080)/orders productId="1001" qty=10          
      
 - 동기호출(Request/Response) 
-  - Order.java에서 FeignClient 구현
+  - Order.java 에서 FeignClient 구현
     Order.java 36행
-    cancellation.setOrderId(this.getId());
+    cancellation.setOrderId(this.getId());  // Type 이 맞지 않은 경우, Casting (cancellation.setOrderId(String.valueOf(this.getId()));
     cancellation.setStatus("CANCELED");
 
   - external/CancellationService.java 파일의 11행 url 변경
@@ -286,9 +283,6 @@
 
   ```
   
-- Step-9. CQRS (Dashboard, Mypage,... )
-
-
 
 </p>
 </details>

@@ -76,3 +76,47 @@ CQRS 적용시 (오른쪽 모형) 우선적으로 명령과 쿼리에 해당 하
 
 <br/>
 
+## CQRS Lab. (Local)
+
+<br/>
+
+- Step-1. CQRS View 모델링
+  - 구현 단계에서 Fork 한 모델(shopide)을 MSAEz 도구에 Load 합니다.
+  - 스티커 팔레트로부터 View 를 Drag 하여 적절한 위치에 두고, 'OrderStatus' View를 가진 Bounded Context를 추가합니다.
+
+![](/contents/03_설계--구현--운영단계/04/view-img.png) 
+
+
+- Step-2. CQRS View 속성 정의
+  - View (Materialized View) Attributes
+
+![](/contents/03_설계--구현--운영단계/04/view-attributes.png)   
+
+
+- Step-3. (이벤트 기반) CQRS View Data Projection 
+  - CREATE (based on 'Ordered' Event)
+  
+![](/contents/03_설계--구현--운영단계/04/view-define-create.png)     
+  
+  - UPDATE (based on 'Shipped', 'DeliveryCanceled' Events)
+ 
+![](/contents/03_설계--구현--운영단계/04/view-define-update.png)     
+
+
+- Step-4. Code Preview & Download Archive & Load on IDE
+  - CQRS View 에서 정의한 속성과 참조 Event 속성 간 Type 불일치 오류 시, Casting 으로 교정합니다. (String.ValueOf, Long.ValueOf) 
+  - Data Projection은 PolicyHandler가 아닌, ~ViewHandler에 코드가 자동 생성됩니다.
+
+- Step-5. CQRS Test
+  - 주문, 배송, CQRS 서비스를 기동하고 새로운 주문을 생성합니다.
+    - http http://localhost:8081/order productId="1001" qty=10
+    
+  - Kafka로부터 Event 및 CQRS Data를 확인합니다.
+    - kafka Consumer: (kafka-console-consumer.bat --bootstrap-server http://localhost:9092 --topic shopide --from-beginning) 
+    - CQRS 확인: http http://localhost:8083/orderStatuses
+    
+  - 해당 주문을 취소한 뒤, CQRS Data를 확인합니다.
+    - http DELETE http://localhost:8081/order/1   
+    - CQRS 확인: http http://localhost:8083/orderStatuses     
+<br/>
+
