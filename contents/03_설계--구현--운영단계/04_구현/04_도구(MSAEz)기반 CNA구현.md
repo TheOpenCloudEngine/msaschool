@@ -113,15 +113,12 @@
   - 포트를 통한 서비스 실행 확인 : netstat -ano | findstr PID :808
   
 - Step-8. 동기호출(Request/Response) 
-  - Order.java에서 FeignClient 구현
+  - Order.java 에서 FeignClient 구현
     Order.java 36행
-    cancellation.setOrderId(this.getId());
+    cancellation.setOrderId(this.getId());  // Type 이 맞지 않은 경우, Casting (cancellation.setOrderId(String.valueOf(this.getId()));
     cancellation.setStatus("CANCELED");
   - http DELETE http://localhost:8081/orders/1
   
-- Step-9. CQRS (Dashboard, Mypage,... ) 추가
-
-
 </p>
 </details>
 <br />
@@ -226,15 +223,41 @@
   - cd gateway
   - mvn spring-boot:run
 
-  - 게이트웨이 주소를 통하여 주문 발송
+  - 게이트웨이 주소를 통한 주문 생성
   - http POST http://localhost:8088/orders productId=1002 qty=3
   - kafka Consumer에서 이벤트 확인 
 
-  
-- Step-8. 동기호출(Request/Response) 
-  - Order.java에서 FeignClient 구현
+<br/>
+
+### Advanced Lab.
+
+- AWS Cloud 배포
+  - Cloud Cluster & ECR Setup 
+    - https://workflowy.com/s/msa/27a0ioMCzlpV04Ib#/64eb06e54637
+     
+  - Kafka Setup on Cluster
+    - 참조: (http://msaschool.io/#/%EC%84%A4%EA%B3%84--%EA%B5%AC%ED%98%84--%EC%9A%B4%EC%98%81%EB%8B%A8%EA%B3%84/04_%EA%B5%AC%ED%98%84/10_%EC%9D%B4%EB%B2%A4%ED%8A%B8%EA%B8%B0%EB%B0%98%20%EB%A9%94%EC%84%B8%EC%A7%80%20%EC%B1%84%EB%84%90)
+    
+  - 방법 1) 학습한 AWS의 CI/CD 파이프라인을 이용하거나, 방법 2) CLI 기반 Docker Image Build & Container Deploy 명령어 활용     
+    - Maven Build 
+      - mvn package
+    - Docker image Build & Push
+      - order, delivery, API Gateway 각각에 대해 수행
+      - ex) docker build -t 052937454741.dkr.ecr.ca-central-1.amazonaws.com/admin00-delivery:v1 .  
+      - ex) docker push 052937454741.dkr.ecr.ca-central-1.amazonaws.com/admin00-delivery:v1  
+    - Deploy to Kubernetes
+      - ex) kubectl create deploy order --image=052937454741.dkr.ecr.ca-central-1.amazonaws.com/admin00-delivery:v1
+      - ex) kubectl expose deploy order --type=ClusterIP --port=8080
+      - 단, 트래픽을 라우팅하도록 설정된 Gateway는 LoadBalancer type으로 Service를 생성
+      
+    - 게이트웨이를 통한 주문 생성 및 Kafka Event 모니터링
+      - kubectl -n kafka exec -ti my-kafka-0 -- /usr/bin/kafka-console-consumer --bootstrap-server my-kafka:9092 --topic shopide --from-beginning
+      - ex) http (게이트웨이 External-IP:8080)/orders productId="1001" qty=10          
+     
+- 동기호출(Request/Response) 
+  - Order.java 에서 FeignClient 구현
     Order.java 36행
-    cancellation.setOrderId(this.getId());
+    cancellation.setOrderId(this.getId());  // Type 이 맞지 않은 경우, Casting (cancellation.setOrderId(String.valueOf(this.getId()));
     cancellation.setStatus("CANCELED");
 
   - external/CancellationService.java 파일의 11행 url 변경
@@ -260,9 +283,6 @@
 
   ```
   
-- Step-9. CQRS (Dashboard, Mypage,... ) 추가
-
-
 
 </p>
 </details>

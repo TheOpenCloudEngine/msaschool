@@ -192,10 +192,18 @@
 
 - DemoApplication.java 파일에 스트림을 바인딩 합니다.
   - @EnableBinding(Processor.class)
-  - streams 은 메세지의 흐름입니다. 즉 input 메세지와 output 메세지가 존재합니다.
-  - Processor 방식은 input 과 output 을 둘다 사용하는 방식입니다.
+  - streams 은 메세지의 흐름으로 input 메세지와 output 메세지가 존재합니다.
+  - Processor 방식은 input 과 output 을 모두 사용하는 방식입니다.
       
-	```java
+	```java  
+ 
+    import org.springframework.boot.SpringApplication;
+    import org.springframework.boot.autoconfigure.SpringBootApplication;
+    import org.springframework.cloud.stream.annotation.EnableBinding;
+    import org.springframework.cloud.stream.annotation.StreamListener;
+    import org.springframework.cloud.stream.messaging.Processor;
+    import org.springframework.context.ApplicationContext;
+    import org.springframework.messaging.handler.annotation.Payload;
  
 	@SpringBootApplication
 	@EnableBinding(Processor.class)
@@ -281,7 +289,7 @@
   - 수정 후 서비스를 재시작한 다음 REST API로 상품 등록 시, 카프카에 이벤트 메시지가 도달하는지 확인 합니다.
   - 메시지는 Kafka Consumer로써 shop 토픽(topic) 모니터링으로 확인 가능합니다.
   - http POST localhost:8080/products name="TV" stock=10
-  - /usr/local/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic shop --from-beginning
+  - [kafka 설치폴더]/bin/windows/kafka-console-consumer --bootstrap-server localhost:9092 --topic shop --from-beginning
 
 	![code02](/img/03_Bizdevops/04/03/code03.png)
 

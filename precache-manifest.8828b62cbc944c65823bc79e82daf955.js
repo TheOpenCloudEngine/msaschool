@@ -480,6 +480,22 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/03_설계/index.md"
   },
   {
+    "revision": "a53e765fc110decce7a26e3079e7eff6",
+    "url": "/contents/03_설계--구현--운영단계/04/view-attributes.png"
+  },
+  {
+    "revision": "acd107fdf2fe77a3cfecfaaef1b37441",
+    "url": "/contents/03_설계--구현--운영단계/04/view-define-create.png"
+  },
+  {
+    "revision": "58b7f4b1610f18517ec5d6e3f63f0a62",
+    "url": "/contents/03_설계--구현--운영단계/04/view-define-update.png"
+  },
+  {
+    "revision": "842c9e222a2567195396d601c0e362b5",
+    "url": "/contents/03_설계--구현--운영단계/04/view-img.png"
+  },
+  {
     "revision": "76c3c8cb721a67877c8f760943e482ec",
     "url": "/contents/03_설계--구현--운영단계/04_구현.png"
   },
@@ -500,7 +516,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/04_구현/02_CNA 구현 프레임워크.png"
   },
   {
-    "revision": "8e388954064ef8d68ba68c0c65731250",
+    "revision": "9b79622f806427140c646c162715bc20",
     "url": "/contents/03_설계--구현--운영단계/04_구현/03_일반적인 CNA 구현.md"
   },
   {
@@ -508,7 +524,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/04_구현/03_일반적인 CNA 구현.png"
   },
   {
-    "revision": "4831825a4d96532566fcdecd41ffa22b",
+    "revision": "8c858449b8a12009b7b318d20028f488",
     "url": "/contents/03_설계--구현--운영단계/04_구현/04_도구(MSAEz)기반 CNA구현.md"
   },
   {
@@ -532,7 +548,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/04_구현/06_게이트웨이(Gateway).png"
   },
   {
-    "revision": "2c804aa89d1414f1e3cb64f1a570a6e5",
+    "revision": "8cfcfb3a1abc48c6b5183c588f3e89ee",
     "url": "/contents/03_설계--구현--운영단계/04_구현/10_이벤트기반 메세지 채널.md"
   },
   {
@@ -588,7 +604,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/05_통합/06_데이터 프로젝션.png"
   },
   {
-    "revision": "e95828c79a623df0685c4a3520dd3c05",
+    "revision": "5b1cb90baad658da22264f3acb5ab27d",
     "url": "/contents/03_설계--구현--운영단계/05_통합/07_CQRS.md"
   },
   {
@@ -716,7 +732,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/07_운영/01_마이크로서비스 모니터링.png"
   },
   {
-    "revision": "9af0d1aba914c92e53348de61b74f6ce",
+    "revision": "f8497d197d394aa8c8793672b29583b9",
     "url": "/contents/03_설계--구현--운영단계/07_운영/04_컨테이너 오케스트레이션.md"
   },
   {
@@ -1028,7 +1044,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_커뮤니티 및 교육/05_교육 수강기관.png"
   },
   {
-    "revision": "0512dd13df4bdd832244",
+    "revision": "a45ff4c79c8ca3080c1c",
     "url": "/css/app.3c499490.css"
   },
   {
@@ -2820,12 +2836,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/tracing04.6d7cdb89.jpg"
   },
   {
-    "revision": "cdad3ccf07952a13b9591a16346c5aaf",
+    "revision": "a53e765fc110decce7a26e3079e7eff6",
+    "url": "/img/view-attributes.a53e765f.png"
+  },
+  {
+    "revision": "acd107fdf2fe77a3cfecfaaef1b37441",
+    "url": "/img/view-define-create.acd107fd.png"
+  },
+  {
+    "revision": "58b7f4b1610f18517ec5d6e3f63f0a62",
+    "url": "/img/view-define-update.58b7f4b1.png"
+  },
+  {
+    "revision": "842c9e222a2567195396d601c0e362b5",
+    "url": "/img/view-img.842c9e22.png"
+  },
+  {
+    "revision": "410e0333fb1f92682022c8aa122f81cd",
     "url": "/index.html"
   },
   {
-    "revision": "0512dd13df4bdd832244",
-    "url": "/js/app.2a62de8a.js"
+    "revision": "a45ff4c79c8ca3080c1c",
+    "url": "/js/app.61513093.js"
   },
   {
     "revision": "70aaf2a5ff0e271325d3",
