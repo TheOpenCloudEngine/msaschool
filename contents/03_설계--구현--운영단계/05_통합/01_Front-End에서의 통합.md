@@ -1,10 +1,11 @@
 ## Microservice Integration by UI
 
 마이크로 서비스의 통합을 위하여 기존에 Join SQL 등을 사용하지 않고 프론트-엔드 기술이나 API Gateway 를 통하여 서비스간 데이터를 통합해야 합니다. 그중 프론트엔드에서 데이터를 통합하기 위한 접근 방법으로는 W3C 의 Web Components 기법과 MVVM 그리고 REST API 전용 스크립트를 이용하는것이 유용 합니다. 
+<br/>
 
 ![ui](/img/03_Bizdevops/05/01/ui-integrate.png)
 
-위 그림에서 왼쪽 그림이 마이크로 서비스에서 지향하는 ui 를 통하여 데이터를 통합 하는 모형입니다. Stateful or Stateless 서비스 들이 ui 에서 자신의 영역을 가지고 있는 것입니다. 자신의 영역을 가지고 있다는 말은 각 서비스들이 ui 까지 간섭을 한다는 의미입니다. 하지만 수많은 서비스들이 ui 를 간섭한다면 ui 에서는 혼란 스럽지 않을까? 이럴때 필요한 기술이 **Web Components 기법** 입니다.  
+전통적인 3-Tier(MvC) 구조의 어플리케이션에서는 오른쪽 모형처럼 Server Side에서 UI 페이지가 생성되었으나, 최근 마이크로서비스에서는 MVVM (Model-View-ViewModel) 패턴을 적용해 좀더 효율적인 UI를 구성할 수 있습니다. 
 
 <br/>
 

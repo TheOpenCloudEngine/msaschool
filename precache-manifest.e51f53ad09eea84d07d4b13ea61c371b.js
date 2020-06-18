@@ -200,7 +200,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/01_소개/03/image5.jpg"
   },
   {
-    "revision": "ecb2c5fabba12b2da36a9d4ba1062415",
+    "revision": "e898a454b3c37e6a13c647a22ce4d031",
     "url": "/contents/01_소개/03_사용 플랫폼.md"
   },
   {
@@ -216,7 +216,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/01_소개/04/image2.jpg"
   },
   {
-    "revision": "10cf60f99806a8196fba1799427d63f6",
+    "revision": "fc42c8d6472d2d8d6a22ba97253eda5d",
     "url": "/contents/01_소개/04_예제 애플리케이션 둘러보기.md"
   },
   {
@@ -241,11 +241,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "be06d3a13be65708a205fdfb0b73c69c",
-    "url": "/contents/01_소개/06_SW 및 교구.md"
+    "url": "/contents/01_소개/06_유틸리티 및 도구.md"
   },
   {
     "revision": "861db2e9d2885c76a1f0dfc08acacfc4",
-    "url": "/contents/01_소개/06_SW 및 교구.png"
+    "url": "/contents/01_소개/06_유틸리티 및 도구.png"
   },
   {
     "revision": "33ce267f5f630df07398b075ee22df30",
@@ -260,7 +260,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/02_계획단계/01/overview.png"
   },
   {
-    "revision": "5761945337645197fc925abee6889ac7",
+    "revision": "012ae2d5ea21721009c62921ba2bf079",
     "url": "/contents/02_계획단계/01_최종목표 수립.md"
   },
   {
@@ -412,7 +412,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/03_설계.png"
   },
   {
-    "revision": "4170172ee25722d929822ca68ffaa541",
+    "revision": "d3d0973910b4cc842f0e904b00c09d4c",
     "url": "/contents/03_설계--구현--운영단계/03_설계/01_접근법과 분석패턴.md"
   },
   {
@@ -436,7 +436,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/03_설계/03_이벤트스토밍.png"
   },
   {
-    "revision": "c25db96ea4a702237c59d94f727b22ea",
+    "revision": "1501f923dfdfd31a92060b83aff11d17",
     "url": "/contents/03_설계--구현--운영단계/03_설계/04_서비스 서열과 역학관계.md"
   },
   {
@@ -444,7 +444,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/03_설계/04_서비스 서열과 역학관계.png"
   },
   {
-    "revision": "12ed1ac08d685db24cd13fee0afdd26c",
+    "revision": "e26936b47e29f05dc337759d2eecddf7",
     "url": "/contents/03_설계--구현--운영단계/03_설계/05_아키텍처 설계.md"
   },
   {
@@ -476,7 +476,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/03_설계/08_프론트-엔드 설계.png"
   },
   {
-    "revision": "4ab14c03be2c71ada3ea708dff9cd2b4",
+    "revision": "c3b6230bc70b096d53863ce791497047",
     "url": "/contents/03_설계--구현--운영단계/03_설계/index.md"
   },
   {
@@ -564,7 +564,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/05_통합.png"
   },
   {
-    "revision": "94eb6b241d54c722817f75c149c2c4e7",
+    "revision": "fa6de884862f241bee3baedeb05422c8",
     "url": "/contents/03_설계--구현--운영단계/05_통합/01_Front-End에서의 통합.md"
   },
   {
@@ -572,7 +572,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/05_통합/01_Front-End에서의 통합.png"
   },
   {
-    "revision": "ed342a3789213cc0adc89fc1d3d1ec9d",
+    "revision": "7381fb8844cb14c1f174eb6213239785",
     "url": "/contents/03_설계--구현--운영단계/05_통합/02_동기호출에 의한 통합.md"
   },
   {
@@ -596,7 +596,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/05_통합/05_이벤추얼 트랜잭션---Saga.png"
   },
   {
-    "revision": "1a7f0c85dfa63e1eaa20957e8f09bdba",
+    "revision": "0b16c38761236024bda97a62928b3082",
     "url": "/contents/03_설계--구현--운영단계/05_통합/06_데이터 프로젝션.md"
   },
   {
@@ -612,7 +612,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/05_통합/07_CQRS.png"
   },
   {
-    "revision": "0d2c3227b61e2011f245181dd67ac9dc",
+    "revision": "7ded2efa51157a0f0fe7eb9376dbfc84",
     "url": "/contents/03_설계--구현--운영단계/05_통합/index.md"
   },
   {
@@ -1044,7 +1044,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_커뮤니티 및 교육/05_교육 수강기관.png"
   },
   {
-    "revision": "a45ff4c79c8ca3080c1c",
+    "revision": "45b442739fa437929259",
     "url": "/css/app.3c499490.css"
   },
   {
@@ -2576,10 +2576,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/05_통합.14331c1f.png"
   },
   {
-    "revision": "861db2e9d2885c76a1f0dfc08acacfc4",
-    "url": "/img/06_SW 및 교구.861db2e9.png"
-  },
-  {
     "revision": "7c56fab836bff50f3d536987ed32b32d",
     "url": "/img/06_Telemetry.7c56fab8.png"
   },
@@ -2602,6 +2598,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "83b25d7f203419c0d3285a706256306e",
     "url": "/img/06_실습 스크립트.83b25d7f.png"
+  },
+  {
+    "revision": "861db2e9d2885c76a1f0dfc08acacfc4",
+    "url": "/img/06_유틸리티 및 도구.861db2e9.png"
   },
   {
     "revision": "8534df403468d24b4c37db58f65ef940",
@@ -2852,12 +2852,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/view-img.842c9e22.png"
   },
   {
-    "revision": "410e0333fb1f92682022c8aa122f81cd",
+    "revision": "7ff7e9cd68dfe087c22ae8c001bcc94e",
     "url": "/index.html"
   },
   {
-    "revision": "a45ff4c79c8ca3080c1c",
-    "url": "/js/app.61513093.js"
+    "revision": "45b442739fa437929259",
+    "url": "/js/app.7eb60579.js"
   },
   {
     "revision": "70aaf2a5ff0e271325d3",
