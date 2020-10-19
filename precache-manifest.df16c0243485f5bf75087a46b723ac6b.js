@@ -732,7 +732,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/07_운영/01_마이크로서비스 모니터링.png"
   },
   {
-    "revision": "71eb1fbc15c6e1806a758d88e05a9fe5",
+    "revision": "d73a10e0f449c15707d1f8d572ec3bca",
     "url": "/contents/03_설계--구현--운영단계/07_운영/04_컨테이너 오케스트레이션.md"
   },
   {
