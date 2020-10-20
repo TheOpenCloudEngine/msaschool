@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.df16c0243485f5bf75087a46b723ac6b.js"
+  "/precache-manifest.e369f4c5c227f18b7c4002c768c60066.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "msaschool"});
