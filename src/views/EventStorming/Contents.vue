@@ -38,42 +38,42 @@
             </v-col>
             <v-divider></v-divider>
 
-            <v-row align="center" justify="center" style="max-width:1050px;margin:0 auto;">
-                <v-col v-for="(item,idx) in exploreItems"
-                       style="margin:10px;overflow-x:hidden;"
-                       cols="12"
-                       sm="3"
-                       v-if="idx < 3"
-                >
-                    <router-link v-if="item.children" style="text-decoration:none"
-                                 :to="item.to+'/'+item.route + '/index'">
-                        <v-list-item-avatar
-                                tile
-                                width="100%"
-                                height="auto"
-                        >
-                            <img :src="imgSrcTree(item)" class="img">
-                        </v-list-item-avatar>
-                        <v-list-item-content>
-                            <div class="overline mb-1">{{item.status}}</div>
-                            <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
-                        </v-list-item-content>
-                    </router-link>
-                    <router-link v-else style="text-decoration:none" :to="item.to">
-                        <v-list-item-avatar
-                                tile
-                                width="100%"
-                                height="auto"
-                        >
-                            <img :src="imgSrc(item)" class="img">
-                        </v-list-item-avatar>
-                        <v-list-item-content>
-                            <div class="overline mb-1">{{item.status}}</div>
-                            <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
-                        </v-list-item-content>
-                    </router-link>
-                </v-col>
-            </v-row>
+<!--            <v-row align="center" justify="center" style="max-width:1050px;margin:0 auto;">-->
+<!--                <v-col v-for="(item,idx) in exploreItems"-->
+<!--                       style="margin:10px;overflow-x:hidden;"-->
+<!--                       cols="12"-->
+<!--                       sm="3"-->
+<!--                       v-if="idx < 3"-->
+<!--                >-->
+<!--                    <router-link v-if="item.children" style="text-decoration:none"-->
+<!--                                 :to="item.to+'/'+item.route + '/index'">-->
+<!--                        <v-list-item-avatar-->
+<!--                                tile-->
+<!--                                width="100%"-->
+<!--                                height="auto"-->
+<!--                        >-->
+<!--                            <img :src="imgSrcTree(item)" class="img">-->
+<!--                        </v-list-item-avatar>-->
+<!--                        <v-list-item-content>-->
+<!--                            <div class="overline mb-1">{{item.status}}</div>-->
+<!--                            <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>-->
+<!--                        </v-list-item-content>-->
+<!--                    </router-link>-->
+<!--                    <router-link v-else style="text-decoration:none" :to="item.to">-->
+<!--                        <v-list-item-avatar-->
+<!--                                tile-->
+<!--                                width="100%"-->
+<!--                                height="auto"-->
+<!--                        >-->
+<!--                            <img :src="imgSrc(item)" class="img">-->
+<!--                        </v-list-item-avatar>-->
+<!--                        <v-list-item-content>-->
+<!--                            <div class="overline mb-1">{{item.status}}</div>-->
+<!--                            <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>-->
+<!--                        </v-list-item-content>-->
+<!--                    </router-link>-->
+<!--                </v-col>-->
+<!--            </v-row>-->
 
         </v-responsive>
     </v-container>
@@ -82,12 +82,14 @@
 <script>
     export default {
         name: "overview",
+        metaInfo: {
+            title: 'Vue Test'
+        },
         data() {
             return {
                 items: [],
                 md: '',
-                aaa: true,
-                breadCrumbImg: false
+                breadCrumbImg: false,
             }
         },
         props: {
@@ -254,6 +256,7 @@
             }
         },
         beforeMount() {
+            console.log(this._hasMetaInfo)
             var me = this;
             let menu1 = this.$route.params.menu1;
             let menu2 = this.$route.params.menu2;
@@ -271,7 +274,6 @@
                 }
             })
 
-            me.aaa = true
             menu1 = menu1.substring(0, 1).toUpperCase() + menu1.substring(1)
             menu2 = menu2.substring(0, 1).toUpperCase() + menu2.substring(1)
 

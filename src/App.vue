@@ -7,6 +7,7 @@
                 clipped
                 color="#f5f5f5"
         >
+<!--            <v-btn @click="domainList()">list</v-btn>-->
             <v-list shaped v-if="window.width >= 1100">
                 <template v-for="item in items">
                     <v-list-group mandatory
@@ -47,6 +48,7 @@
                             v-model="item.model"
                             :key="item.text"
                             color="#4527A0"
+                            style="padding-left: 20px;"
                     >
                         <v-list-item-content>
                             <v-list-item-title>
@@ -62,6 +64,7 @@
                             :key="item.text"
                             color="#4527A0"
                             @click="deselectAll()"
+                            style="padding-left: 20px;"
                     >
                         <v-list-item-content>
                             <v-list-item-title>
@@ -117,6 +120,7 @@
                                         v-for="(mochild, i) in moitem.children"
                                         :key="i"
                                         :to="mochild.to"
+
                                 >
                                     <v-list-item-content>
                                         <v-list-item-title class="subtitle-2">
@@ -135,6 +139,7 @@
                                     :href="moitem.href"
                                     color="#4527A0"
                                     @click="deselectAll"
+                                    style="padding-left: 20px;"
                             >
                                 <v-list-item-content>
                                     <v-list-item-title>
@@ -152,6 +157,7 @@
                             :to="item.to"
                             :href="item.href"
                             color="#4527A0"
+                            style="padding-left: 20px;"
                             @click="deselectAll"
                     >
                         <v-list-item-content>
@@ -262,7 +268,6 @@
             })
 
             this.tempRootPathList = tempRootPathList;
-
         },
         destroyed() {
             window.removeEventListener('resize', this.handleResize);
@@ -380,7 +385,7 @@
                     var modelStatus;
 
                     if (item == '소개') {
-                        tmp = {id: 1, name: item, to: `/`, model: false };
+                        tmp = {id: 1, name: item, to: `/`, model: false};
                         result.push(tmp)
                     } else if (item == '계획단계') {
                         tmp = {id: 2, name: item, to: `/${item}/01_최종목표 수립`, model: false};
@@ -408,6 +413,7 @@
             drawer: null,
             tab: {},
             test: '',
+            linkList: [],
             tempRootPathList: [],
             reload: true,
             menuNumber: [],
@@ -419,11 +425,11 @@
             mobileItem: []
         }),
         methods: {
-            refreshPage(){
+            refreshPage() {
                 window.location.href = '/'
             },
             locatePage(item) {
-                if(item.id == 1) {
+                if (item.id == 1) {
                     window.location.href = '/'
                 } else {
                     this.$router.push(item.to)
@@ -437,7 +443,7 @@
                 var me = this
                 to.model = true
                 console.log(to)
-                if(to.route != undefined) {
+                if (to.route != undefined) {
                     this.$router.push({path: to.to + '/' + to.route + '/index'})
                 } else if (to.to == '/소개/01_MSA School 소개') {
                     window.location.href = '/'
@@ -457,6 +463,22 @@
                     if (item.model)
                         item.model = false;
                 })
+            },
+            domainList() {
+                const templateFiles = require.context('../public/contents', true)
+                var fileList = []
+                var me = this
+                templateFiles.keys().forEach(function (item) {
+                    if (item.includes('.md')) {
+                        if (item.includes('index.md')) {
+                            fileList.push('/' + item.replace('index.md', '').replace('./', '').replaceAll(" ", "%20"));
+                        } else {
+                            fileList.push('/' + item.replace('.md', '').replace('./', '').replaceAll(" ", "%20"));
+                        }
+                    }
+                })
+
+                console.log(JSON.stringify(fileList))
             },
             getTabItemList(link) {
                 var me = this
@@ -558,13 +580,14 @@
                                             }
 
                                         }
+                                        me.linkList.push(`/${id}/${key}/${data.replace('.md', '')}`);
                                         result.push(ttt)
                                     } else {
                                         var ttt = {
                                             text: text,
                                             to: `/${id}/${key}/${data.replace('.md', '')}`
                                         }
-
+                                        me.linkList.push(ttt.to);
                                         result.forEach(function (subData, idx) {
                                             if (subData.route == key) {
                                                 result[idx].children.push(ttt)
@@ -580,6 +603,7 @@
                                 text: fileList[key].replace('.md', ''),
                                 to: '/' + id + '/' + fileList[key].replace('.md', '').trim()
                             }
+                            me.linkList.push(tmp.to);
                             result.push(tmp)
                         }
                     })
