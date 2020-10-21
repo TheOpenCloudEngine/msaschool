@@ -76,14 +76,14 @@ CI 는 보통 소스코드를 병합, 빌드, 테스트 단계까지를 칭하�
 ## 파이프라인 샘플
 ![](/img/03_Bizdevops/06/cicdTool01.png)
 
-위 파이프라인은 GitLab + Jenkins + Docker + Spinnaker + Helm + Kubernetes  를 사용하여 구성한 예 입니다. 먼저 다양한 도구를 사용하였는데 사용한 도구 설명을 먼저 하겠습니다.
+위 파이프라인은 GitLab + Jenkins + Docker + Spinnaker + Helm + Kubernetes 를 사용하여 구성한 예 입니다. 먼저 다양한 도구를 사용하였는데 사용한 도구 설명을 먼저 하겠습니다.
 
 * GitLab - 소스코드 형상관리 도구
 * Jenkins - CI 도구
 * Docker - 컨테이너 도구
 * Spinnaker - CD 도구
 * Helm - 쿠버네티스 패키지 관리 도구
-* Kubernetes  - 배포 플랫폼
+* Kubernetes - 배포 플랫폼
 
 #### 프로세스 설명
 
