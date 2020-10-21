@@ -148,7 +148,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Gothic-A1/stylesheet2.css"
   },
   {
-    "revision": "06df565ca5c574bd3f3cd5d32956768a",
+    "revision": "cbdba584cd110e96e416e4c906c193f3",
     "url": "/app.html"
   },
   {
@@ -736,7 +736,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/07_운영/01_마이크로서비스 모니터링.png"
   },
   {
-    "revision": "71eb1fbc15c6e1806a758d88e05a9fe5",
+    "revision": "d73a10e0f449c15707d1f8d572ec3bca",
     "url": "/contents/03_설계--구현--운영단계/07_운영/04_컨테이너 오케스트레이션.md"
   },
   {
@@ -748,8 +748,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/07_운영/index.md"
   },
   {
-    "revision": "e6ce5f2061a4c9ebcd70d2ee9d395cfe",
-    "url": "/contents/03_설계--구현--운영단계/08_참고자료/01_실습중 오류 대처.md"
+    "revision": "dc5c9df85a0e94968e4bc599a818a93a",
+    "url": "/contents/03_설계--구현--운영단계/08_Trouble Shooting/01_오류 유형별 디버깅.md"
+  },
+  {
+    "revision": "83b55efe1e59368518b8340fe99befee",
+    "url": "/contents/03_설계--구현--운영단계/08_Trouble Shooting/01_오류 유형별 디버깅.png"
+  },
+  {
+    "revision": "79bc1da103ce6a8465770a3c6204fad1",
+    "url": "/contents/03_설계--구현--운영단계/08_Trouble Shooting/02_환경설정 및 명령어 디버깅.md"
+  },
+  {
+    "revision": "c9964d9d8960e27661aff892fb810860",
+    "url": "/contents/03_설계--구현--운영단계/08_Trouble Shooting/02_환경설정 및 명령어 디버깅.png"
   },
   {
     "revision": "a42844c0fccb40509c8109223dfcecb0",
@@ -1048,7 +1060,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_커뮤니티 및 교육/05_교육 수강기관.png"
   },
   {
-    "revision": "69a925ee2dda3f3d4e47",
+    "revision": "5d64e539419729fe1ace",
     "url": "/css/app.0db3b420.css"
   },
   {
@@ -1560,6 +1572,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/01_액터별 교육.075ba8fc.png"
   },
   {
+    "revision": "83b55efe1e59368518b8340fe99befee",
+    "url": "/img/01_오류 유형별 디버깅.83b55efe.png"
+  },
+  {
     "revision": "217f6c70243056d0fc2bf801bc594d86",
     "url": "/img/01_이벤트 및 공지.217f6c70.png"
   },
@@ -1694,6 +1710,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2c9cf9318c20c66209b02932f5bf54e9",
     "url": "/img/02_프로젝트 구현전략.2c9cf931.png"
+  },
+  {
+    "revision": "c9964d9d8960e27661aff892fb810860",
+    "url": "/img/02_환경설정 및 명령어 디버깅.c9964d9d.png"
   },
   {
     "revision": "0c16169d8cfe03696b9c185ba76dbe68",
@@ -2856,8 +2876,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/view-img.842c9e22.png"
   },
   {
-    "revision": "69a925ee2dda3f3d4e47",
-    "url": "/js/app.bb5cdeb5.js"
+    "revision": "5d64e539419729fe1ace",
+    "url": "/js/app.d13700f6.js"
   },
   {
     "revision": "01ad39bfe6074eebd66f",
@@ -2876,7 +2896,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/robots.txt"
   },
   {
-    "revision": "36254354848d006b2654c098032fa44c",
+    "revision": "24d5e5b752f2be7b472260aca4a3215b",
     "url": "/sitemap.xml"
   },
   {
