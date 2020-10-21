@@ -2896,7 +2896,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/robots.txt"
   },
   {
-    "revision": "24d5e5b752f2be7b472260aca4a3215b",
+    "revision": "48754972890c1c9ce71b2fd0aa4e144a",
     "url": "/sitemap.xml"
   },
   {
