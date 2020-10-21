@@ -3,8 +3,8 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-        <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
     <url> 
         <loc>http://msaschool.io/#/소개/01_MSA%20School%20소개</loc>
@@ -47,7 +47,7 @@
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
-        <loc>http://msaschool.io/#/계획단계/02_프로젝트%20구현전략/index</loc>
+        <loc>http://msaschool.io/#/계획단계/02_프로젝트%20구현전략/</loc>
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
@@ -63,7 +63,7 @@
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
-        <loc>http://msaschool.io/#/계획단계/03_품질관리%20계획/index</loc>
+        <loc>http://msaschool.io/#/계획단계/03_품질관리%20계획/</loc>
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
@@ -79,7 +79,7 @@
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
-        <loc>http://msaschool.io/#/설계--구현--운영단계/02_분석/index</loc>
+        <loc>http://msaschool.io/#/설계--구현--운영단계/02_분석/</loc>
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
@@ -115,7 +115,7 @@
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
-        <loc>http://msaschool.io/#/설계--구현--운영단계/03_설계/index</loc>
+        <loc>http://msaschool.io/#/설계--구현--운영단계/03_설계/</loc>
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
@@ -147,7 +147,7 @@
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
-        <loc>http://msaschool.io/#/설계--구현--운영단계/04_구현/index</loc>
+        <loc>http://msaschool.io/#/설계--구현--운영단계/04_구현/</loc>
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
@@ -175,7 +175,7 @@
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
-        <loc>http://msaschool.io/#/설계--구현--운영단계/05_통합/index</loc>
+        <loc>http://msaschool.io/#/설계--구현--운영단계/05_통합/</loc>
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
@@ -195,7 +195,7 @@
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
-        <loc>http://msaschool.io/#/설계--구현--운영단계/06_배포/index</loc>
+        <loc>http://msaschool.io/#/설계--구현--운영단계/06_배포/</loc>
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
@@ -207,7 +207,7 @@
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
-        <loc>http://msaschool.io/#/설계--구현--운영단계/07_운영/index</loc>
+        <loc>http://msaschool.io/#/설계--구현--운영단계/07_운영/</loc>
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
@@ -223,7 +223,7 @@
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
-        <loc>http://msaschool.io/#/참고자료/02_MSA%20방법론/index</loc>
+        <loc>http://msaschool.io/#/참고자료/02_MSA%20방법론/</loc>
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
@@ -251,7 +251,7 @@
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
-        <loc>http://msaschool.io/#/참고자료/04_MSA%20전환전략/index</loc>
+        <loc>http://msaschool.io/#/참고자료/04_MSA%20전환전략/</loc>
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
@@ -275,7 +275,7 @@
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
-        <loc>http://msaschool.io/#/참고자료/05_MSA%20Outer%20아키텍처/index</loc>
+        <loc>http://msaschool.io/#/참고자료/05_MSA%20Outer%20아키텍처/</loc>
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
@@ -295,7 +295,7 @@
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
-        <loc>http://msaschool.io/#/참고자료/06_부가자료/index</loc>
+        <loc>http://msaschool.io/#/참고자료/06_부가자료/</loc>
         <lastmod>2020-10-21T03:25:54+00:00</lastmod>
     </url>
     <url> 
