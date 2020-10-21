@@ -154,118 +154,118 @@
                         </v-col>
                     </v-row>
                 </v-responsive>
-                <v-responsive
-                        width="100%"
-                >
-                    <!--<v-divider></v-divider>-->
-                    <div class="em-title col">Explore More</div>
-                    <v-row v-if="tree==true" align="center" justify="center" style="max-width:1050px;margin:0 auto;">
-                        <v-col v-for="(item,idx) in items"
-                               style="margin:0px;overflow-x:hidden;"
-                               cols="12"
-                               sm="3"
-                        >
-                            <router-link style="text-decoration:none" v-if="item.children" :to="item.route +'/index'">
-                                <v-list-item-avatar
-                                        tile
-                                        width="100%"
-                                        height="auto"
-                                >
-                                    <img :src="imgSrcTree(item)" class="img">
-                                </v-list-item-avatar>
-                                <v-list-item-content>
-                                    <div class="overline mb-1">Content {{idx + 1}}</div>
-                                    <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
-<!--                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully-->
-<!--                                    </v-list-item-subtitle>-->
-                                </v-list-item-content>
-                            </router-link>
-                            <router-link style="text-decoration:none" v-else :to="item.to">
+<!--                <v-responsive-->
+<!--                        width="100%"-->
+<!--                >-->
+<!--                    &lt;!&ndash;<v-divider></v-divider>&ndash;&gt;-->
+<!--                    <div class="em-title col">Explore More</div>-->
+<!--                    <v-row v-if="tree==true" align="center" justify="center" style="max-width:1050px;margin:0 auto;">-->
+<!--                        <v-col v-for="(item,idx) in items"-->
+<!--                               style="margin:0px;overflow-x:hidden;"-->
+<!--                               cols="12"-->
+<!--                               sm="3"-->
+<!--                        >-->
+<!--                            <router-link style="text-decoration:none" v-if="item.children" :to="item.route +'/index'">-->
+<!--                                <v-list-item-avatar-->
+<!--                                        tile-->
+<!--                                        width="100%"-->
+<!--                                        height="auto"-->
+<!--                                >-->
+<!--                                    <img :src="imgSrcTree(item)" class="img">-->
+<!--                                </v-list-item-avatar>-->
+<!--                                <v-list-item-content>-->
+<!--                                    <div class="overline mb-1">Content {{idx + 1}}</div>-->
+<!--                                    <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>-->
+<!--&lt;!&ndash;                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </v-list-item-subtitle>&ndash;&gt;-->
+<!--                                </v-list-item-content>-->
+<!--                            </router-link>-->
+<!--                            <router-link style="text-decoration:none" v-else :to="item.to">-->
 
-                                <v-list-item-avatar
-                                        tile
-                                        width="100%"
-                                        height="auto"
-                                >
-                                    <img :src="imgSrcTree(item)" class="img">
+<!--                                <v-list-item-avatar-->
+<!--                                        tile-->
+<!--                                        width="100%"-->
+<!--                                        height="auto"-->
+<!--                                >-->
+<!--                                    <img :src="imgSrcTree(item)" class="img">-->
 
-                                    <!-- BizDevOps Explore More 이미지 -->
-                                    <!--
-                                        <img src="/contents/03_method-1.png" class="img" alt="Analysis">
-                                        <img src="/contents/03_method-2.png" class="img" alt="Design">
-                                        <img src="/contents/03_method-3.png" class="img" alt="Implementation">
-                                     -->
+<!--                                    &lt;!&ndash; BizDevOps Explore More 이미지 &ndash;&gt;-->
+<!--                                    &lt;!&ndash;-->
+<!--                                        <img src="/contents/03_method-1.png" class="img" alt="Analysis">-->
+<!--                                        <img src="/contents/03_method-2.png" class="img" alt="Design">-->
+<!--                                        <img src="/contents/03_method-3.png" class="img" alt="Implementation">-->
+<!--                                     &ndash;&gt;-->
 
-                                </v-list-item-avatar>
-                                <v-list-item-content>
-                                    <div class="overline mb-1">Content {{idx + 1}}</div>
-                                    <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
-<!--                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully-->
-<!--                                    </v-list-item-subtitle>-->
-                                </v-list-item-content>
-                            </router-link>
-                        </v-col>
-                    </v-row>
-                    <v-row v-else align="center" justify="center" style="max-width:1050px;margin:0 auto;">
-                        <v-col v-for="(item,idx) in items"
-                               style="margin:0px;overflow-x:hidden;"
-                               cols="12"
-                               sm="3"
-                               v-if="idx < 3"
-                        >
-                            <router-link style="text-decoration:none" v-if="item.children" :to="item.route +'/index'">
-                                <v-list-item-avatar
-                                        tile
-                                        width="100%"
-                                        height="auto"
-                                >
-                                    <img :src="imgSrc(item)" class="img">
+<!--                                </v-list-item-avatar>-->
+<!--                                <v-list-item-content>-->
+<!--                                    <div class="overline mb-1">Content {{idx + 1}}</div>-->
+<!--                                    <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>-->
+<!--&lt;!&ndash;                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </v-list-item-subtitle>&ndash;&gt;-->
+<!--                                </v-list-item-content>-->
+<!--                            </router-link>-->
+<!--                        </v-col>-->
+<!--                    </v-row>-->
+<!--                    <v-row v-else align="center" justify="center" style="max-width:1050px;margin:0 auto;">-->
+<!--                        <v-col v-for="(item,idx) in items"-->
+<!--                               style="margin:0px;overflow-x:hidden;"-->
+<!--                               cols="12"-->
+<!--                               sm="3"-->
+<!--                               v-if="idx < 3"-->
+<!--                        >-->
+<!--                            <router-link style="text-decoration:none" v-if="item.children" :to="item.route +'/index'">-->
+<!--                                <v-list-item-avatar-->
+<!--                                        tile-->
+<!--                                        width="100%"-->
+<!--                                        height="auto"-->
+<!--                                >-->
+<!--                                    <img :src="imgSrc(item)" class="img">-->
 
-                                    <!-- BizDevOps Explore More 이미지 -->
-                                    <!--
-                                        <img src="/contents/03_method-1.png" class="img" alt="Analysis">
-                                        <img src="/contents/03_method-2.png" class="img" alt="Design">
-                                        <img src="/contents/03_method-3.png" class="img" alt="Implementation">
-                                     -->
+<!--                                    &lt;!&ndash; BizDevOps Explore More 이미지 &ndash;&gt;-->
+<!--                                    &lt;!&ndash;-->
+<!--                                        <img src="/contents/03_method-1.png" class="img" alt="Analysis">-->
+<!--                                        <img src="/contents/03_method-2.png" class="img" alt="Design">-->
+<!--                                        <img src="/contents/03_method-3.png" class="img" alt="Implementation">-->
+<!--                                     &ndash;&gt;-->
 
-                                </v-list-item-avatar>
-                                <v-list-item-content>
-                                    <div class="overline mb-1">Content {{idx + 1}}</div>
-                                    <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
-<!--                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully-->
-<!--                                    </v-list-item-subtitle>-->
-                                </v-list-item-content>
-                            </router-link>
-                            <router-link style="text-decoration:none" v-else :to="item.to">
-                                <v-divider></v-divider>
+<!--                                </v-list-item-avatar>-->
+<!--                                <v-list-item-content>-->
+<!--                                    <div class="overline mb-1">Content {{idx + 1}}</div>-->
+<!--                                    <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>-->
+<!--&lt;!&ndash;                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </v-list-item-subtitle>&ndash;&gt;-->
+<!--                                </v-list-item-content>-->
+<!--                            </router-link>-->
+<!--                            <router-link style="text-decoration:none" v-else :to="item.to">-->
+<!--                                <v-divider></v-divider>-->
 
-                                <v-list-item-avatar
-                                        tile
-                                        width="100%"
-                                        height="auto"
-                                >
-                                    <img :src="imgSrc(item)" class="img">
+<!--                                <v-list-item-avatar-->
+<!--                                        tile-->
+<!--                                        width="100%"-->
+<!--                                        height="auto"-->
+<!--                                >-->
+<!--                                    <img :src="imgSrc(item)" class="img">-->
 
-                                    <!-- BizDevOps Explore More 이미지 -->
-                                    <!--
-                                        <img src="/contents/03_method-1.png" class="img" alt="Analysis">
-                                        <img src="/contents/03_method-2.png" class="img" alt="Design">
-                                        <img src="/contents/03_method-3.png" class="img" alt="Implementation">
-                                     -->
+<!--                                    &lt;!&ndash; BizDevOps Explore More 이미지 &ndash;&gt;-->
+<!--                                    &lt;!&ndash;-->
+<!--                                        <img src="/contents/03_method-1.png" class="img" alt="Analysis">-->
+<!--                                        <img src="/contents/03_method-2.png" class="img" alt="Design">-->
+<!--                                        <img src="/contents/03_method-3.png" class="img" alt="Implementation">-->
+<!--                                     &ndash;&gt;-->
 
-                                </v-list-item-avatar>
-                                <v-list-item-content>
-                                    <div class="overline mb-1">Content {{idx + 1}}</div>
-                                    <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
-<!--                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully-->
-<!--                                    </v-list-item-subtitle>-->
-                                </v-list-item-content>
-                            </router-link>
-                        </v-col>
+<!--                                </v-list-item-avatar>-->
+<!--                                <v-list-item-content>-->
+<!--                                    <div class="overline mb-1">Content {{idx + 1}}</div>-->
+<!--                                    <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>-->
+<!--&lt;!&ndash;                                    <v-list-item-subtitle>Greyhound divisely hello coldly fonwderfully&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </v-list-item-subtitle>&ndash;&gt;-->
+<!--                                </v-list-item-content>-->
+<!--                            </router-link>-->
+<!--                        </v-col>-->
 
-                    </v-row>
+<!--                    </v-row>-->
 
-                </v-responsive>
+<!--                </v-responsive>-->
             </template>
         </v-row>
     </v-container>

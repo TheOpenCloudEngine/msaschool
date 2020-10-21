@@ -6,7 +6,8 @@ import './registerServiceWorker'
 import vuetify from './plugins/vuetify';
 import VueMarkdown from 'vue-markdown'
 import axios from 'axios'
-
+import Meta from 'vue-meta';
+Vue.use(Meta);
 // Vue.component(VueMarkdown, 'VueMarkdown');
 Vue.component('VueMarkdown', VueMarkdown)
 

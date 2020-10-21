@@ -61,48 +61,48 @@
                         </v-col>
                     </v-row>
                 </v-responsive>
-                <v-responsive
-                        width="100%"
-                >
-                    <!--<v-divider></v-divider>-->
-                    <div class="em-title col">Explore More</div>
-                    <v-row align="center" justify="center" style="max-width:1050px;margin:0 auto;">
-                        <v-col v-for="(item,idx) in exploreItems"
-                               style="margin:10px;overflow-x:hidden;"
-                               cols="12"
-                               sm="3"
-                               v-if="idx < 3"
-                        >
-                            <router-link v-if="item.children" style="text-decoration:none"
-                                         :to="item.to+'/'+item.route + '/index'">
-                                <v-list-item-avatar
-                                        tile
-                                        width="100%"
-                                        height="auto"
-                                >
-                                    <img :src="imgSrcTree(item)" class="img">
-                                </v-list-item-avatar>
-                                <v-list-item-content>
-                                    <div class="overline mb-1">{{item.status}}</div>
-                                    <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
-                                </v-list-item-content>
-                            </router-link>
-                            <router-link v-else style="text-decoration:none" :to="item.to">
-                                <v-list-item-avatar
-                                        tile
-                                        width="100%"
-                                        height="auto"
-                                >
-                                    <img :src="imgSrc(item)" class="img">
-                                </v-list-item-avatar>
-                                <v-list-item-content>
-                                    <div class="overline mb-1">{{item.status}}</div>
-                                    <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>
-                                </v-list-item-content>
-                            </router-link>
-                        </v-col>
-                    </v-row>
-                </v-responsive>
+<!--                <v-responsive-->
+<!--                        width="100%"-->
+<!--                >-->
+<!--                    &lt;!&ndash;<v-divider></v-divider>&ndash;&gt;-->
+<!--                    <div class="em-title col">Explore More</div>-->
+<!--                    <v-row align="center" justify="center" style="max-width:1050px;margin:0 auto;">-->
+<!--                        <v-col v-for="(item,idx) in exploreItems"-->
+<!--                               style="margin:10px;overflow-x:hidden;"-->
+<!--                               cols="12"-->
+<!--                               sm="3"-->
+<!--                               v-if="idx < 3"-->
+<!--                        >-->
+<!--                            <router-link v-if="item.children" style="text-decoration:none"-->
+<!--                                         :to="item.to+'/'+item.route + '/index'">-->
+<!--                                <v-list-item-avatar-->
+<!--                                        tile-->
+<!--                                        width="100%"-->
+<!--                                        height="auto"-->
+<!--                                >-->
+<!--                                    <img :src="imgSrcTree(item)" class="img">-->
+<!--                                </v-list-item-avatar>-->
+<!--                                <v-list-item-content>-->
+<!--                                    <div class="overline mb-1">{{item.status}}</div>-->
+<!--                                    <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>-->
+<!--                                </v-list-item-content>-->
+<!--                            </router-link>-->
+<!--                            <router-link v-else style="text-decoration:none" :to="item.to">-->
+<!--                                <v-list-item-avatar-->
+<!--                                        tile-->
+<!--                                        width="100%"-->
+<!--                                        height="auto"-->
+<!--                                >-->
+<!--                                    <img :src="imgSrc(item)" class="img">-->
+<!--                                </v-list-item-avatar>-->
+<!--                                <v-list-item-content>-->
+<!--                                    <div class="overline mb-1">{{item.status}}</div>-->
+<!--                                    <v-list-item-title class="headline mb-1">{{item.text}}</v-list-item-title>-->
+<!--                                </v-list-item-content>-->
+<!--                            </router-link>-->
+<!--                        </v-col>-->
+<!--                    </v-row>-->
+<!--                </v-responsive>-->
             </template>
         </v-row>
     </v-container>
