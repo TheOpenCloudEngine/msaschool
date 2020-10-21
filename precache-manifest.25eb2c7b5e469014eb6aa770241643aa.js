@@ -744,11 +744,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/07_운영/index.md"
   },
   {
-    "revision": "9215e3fcfed18cb83d9b19e23cca0072",
-    "url": "/contents/03_설계--구현--운영단계/08_Trouble Shooting/01_오류 유형별  디버깅.md"
+    "revision": "83b55efe1e59368518b8340fe99befee",
+    "url": "/contents/03_설계--구현--운영단계/08_Trouble Shooting/01_오류 유형별 디버깅.png"
   },
   {
-    "revision": "61e924b747a9f1103cde42ffa5f7ebc6",
+    "revision": "dc5c9df85a0e94968e4bc599a818a93a",
+    "url": "/contents/03_설계--구현--운영단계/08_Trouble Shooting/01_오류 유형별 디버깅.md"
+  },
+  {
+    "revision": "c9964d9d8960e27661aff892fb810860",
+    "url": "/contents/03_설계--구현--운영단계/08_Trouble Shooting/02_환경설정 및 명령어 디버깅.png"
+  },
+  {
+    "revision": "79bc1da103ce6a8465770a3c6204fad1",
     "url": "/contents/03_설계--구현--운영단계/08_Trouble Shooting/02_환경설정 및 명령어 디버깅.md"
   },
   {
@@ -1048,7 +1056,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_커뮤니티 및 교육/05_교육 수강기관.png"
   },
   {
-    "revision": "d2f0afa3a0a03ae8e4ff",
+    "revision": "56966870edfddbf9f825",
     "url": "/css/app.7ecbdb58.css"
   },
   {
@@ -1560,6 +1568,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/01_액터별 교육.075ba8fc.png"
   },
   {
+    "revision": "83b55efe1e59368518b8340fe99befee",
+    "url": "/img/01_오류 유형별 디버깅.83b55efe.png"
+  },
+  {
     "revision": "217f6c70243056d0fc2bf801bc594d86",
     "url": "/img/01_이벤트 및 공지.217f6c70.png"
   },
@@ -1694,6 +1706,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2c9cf9318c20c66209b02932f5bf54e9",
     "url": "/img/02_프로젝트 구현전략.2c9cf931.png"
+  },
+  {
+    "revision": "c9964d9d8960e27661aff892fb810860",
+    "url": "/img/02_환경설정 및 명령어 디버깅.c9964d9d.png"
   },
   {
     "revision": "0c16169d8cfe03696b9c185ba76dbe68",
@@ -2856,12 +2872,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/view-img.842c9e22.png"
   },
   {
-    "revision": "0d3c4162df739a2e0faa92970c3b6d2d",
+    "revision": "fa0f96f655a2f94256ab7bae370b6900",
     "url": "/index.html"
   },
   {
-    "revision": "d2f0afa3a0a03ae8e4ff",
-    "url": "/js/app.a9331a77.js"
+    "revision": "56966870edfddbf9f825",
+    "url": "/js/app.37611afa.js"
   },
   {
     "revision": "14af97528abab55aa7e3",
