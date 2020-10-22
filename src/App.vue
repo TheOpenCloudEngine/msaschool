@@ -643,6 +643,6 @@
         color: #000000 !important;
     }
     .v-application--is-ltr .v-list-group--no-action>.v-list-group__items>.v-list-item {
-        padding-left: 24px !important
+        padding-left: 15px !important
     }
 </style>
