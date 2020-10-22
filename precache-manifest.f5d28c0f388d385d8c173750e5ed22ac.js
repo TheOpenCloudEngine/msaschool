@@ -148,7 +148,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Gothic-A1/stylesheet2.css"
   },
   {
-    "revision": "3189da07538e3b5002cd91cb5eac3937",
+    "revision": "ef61185be10361118ca9bf67dc96976b",
     "url": "/app.html"
   },
   {
@@ -748,20 +748,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/07_운영/index.md"
   },
   {
-    "revision": "83b55efe1e59368518b8340fe99befee",
-    "url": "/contents/03_설계--구현--운영단계/08_Trouble Shooting/01_오류 유형별 디버깅.png"
-  },
-  {
     "revision": "fb1e28e4255780c34853fde9c1b10671",
-    "url": "/contents/03_설계--구현--운영단계/08_Trouble Shooting/01_오류 유형별 디버깅.md"
+    "url": "/contents/03_설계--구현--운영단계/08_체크포인트/01_오류 유형별 체크포인트.md"
   },
   {
-    "revision": "c9964d9d8960e27661aff892fb810860",
-    "url": "/contents/03_설계--구현--운영단계/08_Trouble Shooting/02_환경설정 및 명령어 디버깅.png"
+    "revision": "83b55efe1e59368518b8340fe99befee",
+    "url": "/contents/03_설계--구현--운영단계/08_체크포인트/01_오류 유형별 체크포인트.png"
   },
   {
     "revision": "be594450dde41cd43c20a6c66a314842",
-    "url": "/contents/03_설계--구현--운영단계/08_Trouble Shooting/02_환경설정 및 명령어 디버깅.md"
+    "url": "/contents/03_설계--구현--운영단계/08_체크포인트/02_환경설정 및 명령어 체크포인트.md"
+  },
+  {
+    "revision": "c9964d9d8960e27661aff892fb810860",
+    "url": "/contents/03_설계--구현--운영단계/08_체크포인트/02_환경설정 및 명령어 체크포인트.png"
   },
   {
     "revision": "a42844c0fccb40509c8109223dfcecb0",
@@ -1060,15 +1060,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_커뮤니티 및 교육/05_교육 수강기관.png"
   },
   {
-    "revision": "8b818b6816022f4c3aefca863cc1d997",
+    "revision": "7ab2779446a401c7a08f9fc718d0e128",
     "url": "/contents/05_커뮤니티 및 교육/06_커뮤니티.md"
   },
   {
-    "revision": "9fff3d5960a7fa8a2909",
-    "url": "/css/app.50ba3eb6.css"
+    "revision": "57d48059753e708e811d",
+    "url": "/css/app.cbebfcd3.css"
   },
   {
-    "revision": "a266540292350a9180ff",
+    "revision": "9c5ae6ad6bf20ed589cb",
     "url": "/css/chunk-vendors.c449afab.css"
   },
   {
@@ -1577,7 +1577,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "83b55efe1e59368518b8340fe99befee",
-    "url": "/img/01_오류 유형별 디버깅.83b55efe.png"
+    "url": "/img/01_오류 유형별 체크포인트.83b55efe.png"
   },
   {
     "revision": "217f6c70243056d0fc2bf801bc594d86",
@@ -1717,7 +1717,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "c9964d9d8960e27661aff892fb810860",
-    "url": "/img/02_환경설정 및 명령어 디버깅.c9964d9d.png"
+    "url": "/img/02_환경설정 및 명령어 체크포인트.c9964d9d.png"
   },
   {
     "revision": "0c16169d8cfe03696b9c185ba76dbe68",
@@ -2580,6 +2580,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/05_Community/05/image133.png"
   },
   {
+    "revision": "5f62aa2261e683be36468c3fc09f7043",
+    "url": "/img/05_Community/06/img_facebook.png"
+  },
+  {
+    "revision": "00e09630c66c1c49da8d813d2bd1838d",
+    "url": "/img/05_Community/06/img_spectrum.png"
+  },
+  {
     "revision": "a1b257e17e59936d34ced0f56f73acd0",
     "url": "/img/05_MSA Outer 아키텍처.a1b257e1.png"
   },
@@ -2880,12 +2888,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/view-img.842c9e22.png"
   },
   {
-    "revision": "9fff3d5960a7fa8a2909",
-    "url": "/js/app.a99a4455.js"
+    "revision": "57d48059753e708e811d",
+    "url": "/js/app.a922bea2.js"
   },
   {
-    "revision": "a266540292350a9180ff",
-    "url": "/js/chunk-vendors.3684962a.js"
+    "revision": "9c5ae6ad6bf20ed589cb",
+    "url": "/js/chunk-vendors.5981bc87.js"
   },
   {
     "revision": "151ec07b9eead081795a7333270bd3ea",
