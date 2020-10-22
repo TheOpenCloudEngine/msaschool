@@ -48,7 +48,6 @@
                             v-model="item.model"
                             :key="item.text"
                             color="#4527A0"
-                            style="padding-left: 20px;"
                     >
                         <v-list-item-content>
                             <v-list-item-title>
@@ -64,7 +63,6 @@
                             :key="item.text"
                             color="#4527A0"
                             @click="deselectAll()"
-                            style="padding-left: 20px;"
                     >
                         <v-list-item-content>
                             <v-list-item-title>
@@ -139,7 +137,6 @@
                                     :href="moitem.href"
                                     color="#4527A0"
                                     @click="deselectAll"
-                                    style="padding-left: 20px;"
                             >
                                 <v-list-item-content>
                                     <v-list-item-title>
@@ -644,5 +641,8 @@
     /*.theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled)*/
     .v-application code {
         color: #000000 !important;
+    }
+    .v-application--is-ltr .v-list-group--no-action>.v-list-group__items>.v-list-item {
+        padding-left: 24px !important
     }
 </style>
