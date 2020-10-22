@@ -83,7 +83,7 @@
     export default {
         name: "overview",
         metaInfo: {
-            title: 'Vue Test'
+            title: 'MSA School'
         },
         data() {
             return {
