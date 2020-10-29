@@ -736,7 +736,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/07_운영/01_마이크로서비스 모니터링.png"
   },
   {
-    "revision": "458efeac213ea0655c47ea2d5fb52677",
+    "revision": "90aba2a01abca87a93738aa0752e6590",
     "url": "/contents/03_설계--구현--운영단계/07_운영/04_컨테이너 오케스트레이션.md"
   },
   {
@@ -1060,7 +1060,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/05_커뮤니티 및 교육/05_교육 수강기관.png"
   },
   {
-    "revision": "1f5946cf566e3126e891ddfba61749be",
+    "revision": "fb374bf01178a7e0eebef8d19dd10ac0",
     "url": "/contents/05_커뮤니티 및 교육/06_커뮤니티.md"
   },
   {
