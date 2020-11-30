@@ -220,7 +220,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/01_소개/04/image2.jpg"
   },
   {
-    "revision": "fc42c8d6472d2d8d6a22ba97253eda5d",
+    "revision": "d35b278bf9970672c05613e90ff35653",
     "url": "/contents/01_소개/04_예제 애플리케이션 둘러보기.md"
   },
   {
@@ -552,7 +552,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/04_구현/06_게이트웨이(Gateway).png"
   },
   {
-    "revision": "8cfcfb3a1abc48c6b5183c588f3e89ee",
+    "revision": "0a3e378d4469f1c2624202f32f6aa8e0",
     "url": "/contents/03_설계--구현--운영단계/04_구현/10_이벤트기반 메세지 채널.md"
   },
   {
@@ -736,7 +736,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/07_운영/01_마이크로서비스 모니터링.png"
   },
   {
-    "revision": "90aba2a01abca87a93738aa0752e6590",
+    "revision": "9b77282f922b991606b56d80e0817a5a",
     "url": "/contents/03_설계--구현--운영단계/07_운영/04_컨테이너 오케스트레이션.md"
   },
   {
@@ -756,7 +756,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/08_체크포인트/01_오류 유형별.png"
   },
   {
-    "revision": "4c02c2708f7d10e53ac5b367e2a17a0f",
+    "revision": "76c345b32d366ef6bc76989b0192a8f2",
     "url": "/contents/03_설계--구현--운영단계/08_체크포인트/02_환경설정 및 명령어.md"
   },
   {
