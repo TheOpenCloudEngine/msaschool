@@ -648,7 +648,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/06_배포/03_배포 전략.png"
   },
   {
-    "revision": "f974af528b02fe32509d797612c21bc5",
+    "revision": "05997efc5a9e46233acce48a87b5b6cf",
     "url": "/contents/03_설계--구현--운영단계/06_배포/06_실습 스크립트.md"
   },
   {
