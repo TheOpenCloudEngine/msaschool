@@ -200,7 +200,7 @@ Event 스티커에서 화살표 모양 아이콘을 선택, 또는 Drag 하여 �
 
 ![](/img/03_Bizdevops/03/03/image63.png)
 
-![](/img/03_Bizdevops/03/03/image43.png)
+![](/img/03_Bizdevops/03/02/image43.png)
 
 ### **\[Relation 속성 설정\]**
 

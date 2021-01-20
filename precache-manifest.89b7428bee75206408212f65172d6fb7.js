@@ -736,7 +736,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/03_설계--구현--운영단계/07_운영/01_마이크로서비스 모니터링.png"
   },
   {
-    "revision": "9038a9aa99b12d9647ab05bf63f67dcb",
+    "revision": "3c430b0a3940c50043445a3a42c882e0",
     "url": "/contents/03_설계--구현--운영단계/07_운영/04_컨테이너 오케스트레이션.md"
   },
   {
@@ -800,7 +800,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/contents/04_참고자료/03_MSA도구 - MSAEasy.png"
   },
   {
-    "revision": "0c439c27b63c29a775b91a67906e77e4",
+    "revision": "777fa4cca2588740a22dcb4294c50e22",
     "url": "/contents/04_참고자료/03_MSA도구 - MSAEasy/01_MSAEasy 사용법.md"
   },
   {
